@@ -1,0 +1,95 @@
+id: kv:2610.00001v1
+version: 1
+title: 'Sebeni morphotactic post-training on MULTI13: SFT, DPO and APO arms with SmolLM2-135M'
+authors:
+- name: Sebastien Diarra
+abstract: 'Three post-training arms of Sebeni, a morphotactic generation toolkit for extremely low-resource
+  Manding languages, on the MULTI13 scope (13 languages). Each arm distils the grammar and dictionary,
+  fine-tunes SmolLM2-135M with 4-bit LoRA for 500 steps on the packaged 300-sample dataset with a 10%
+  held-out split, and scores the held-out test set (phi, MER, MCS, UWEC). Code: github.com/mlsftwrs/sebeni
+  at commit 8e66775, with K-Veritas capture added to the CLI.'
+tags:
+- nlp
+- low-resource-languages
+- manding
+- morphology
+- post-training
+license: MIT
+published: '2026-10-06'
+status: published
+results:
+- metric: phi
+  value: 0.849638
+- metric: mer
+  value: 5.16667
+- metric: mcs
+  value: 0.865169
+- metric: uwec
+  value: 0.769663
+- metric: phi
+  value: 0.849638
+- metric: mer
+  value: 5.16667
+- metric: mcs
+  value: 0.865169
+- metric: uwec
+  value: 0.769663
+- metric: phi
+  value: 0.849638
+- metric: mer
+  value: 5.16667
+- metric: mcs
+  value: 0.865169
+- metric: uwec
+  value: 0.769663
+reports:
+- id: r1
+  label: SFT arm
+  session: 34a907d4-eef2-4113-8d4c-abdd4dd19473
+  data_hash: 1c1699a5bb61643823134d4b20b8cbf76989b4df4327e1bd9ed91816f2e2d177
+  sealed_at: '2026-10-05T06:21:42.72501772Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00001/v1/reports/r1.pdf
+      sha256: 4a6ef8c7ed1f6bcd3c1af4057fd1870532ebb5d4c95cbc7b7fec9701f1458b97
+      size: 9209188
+    bundle:
+      path: bundles/2610.00001v1/r1.kvbundle.zip
+      sha256: 199eb8b7c51638eae96fa0c03f3f5834f1b16c35debd164a5a4999b69388553a
+      size: 352689
+- id: r2
+  label: DPO arm
+  session: 8d6d5da7-860c-4796-9004-b106bfeeab72
+  data_hash: b2c776c815223b6b9677d4aa01595ece5ca4c79c02fde0bbdd361ba783e7b4d8
+  sealed_at: '2026-10-05T07:29:01.36130103Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00001/v1/reports/r2.pdf
+      sha256: d6cd2489aa7e223b79fe5ede12864e2a689c1da03093eb7bcf2ed0a25bc35454
+      size: 10417341
+    bundle:
+      path: bundles/2610.00001v1/r2.kvbundle.zip
+      sha256: b88486ea00ad32dd4baaed944b0a415e59f7166d1664ca1c60cbe4f3263f521c
+      size: 354075
+- id: r3
+  label: APO arm
+  session: ca7dc592-2ee6-408e-812c-242702f7472a
+  data_hash: 3d35b38ed6fb3a13c0ac03d020b070894bb4f1d5469f322ef456aca5b4eff9a6
+  sealed_at: '2026-10-05T08:35:40.67932167Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00001/v1/reports/r3.pdf
+      sha256: 442c651ab9985d1b4821bcbdaa2bca5a57c6bf0b7ce707ef98cacf1649a4c7a0
+      size: 10277968
+    bundle:
+      path: bundles/2610.00001v1/r3.kvbundle.zip
+      sha256: 62f040330bb576322043e72745134b995ff5b696bdfa1f8c62fa006027af6947
+      size: 355434
+files:
+  record:
+    path: records/2610/2610.00001/v1/record.pdf
+    sha256: bb0ec7ddc501e28d20588d4c23275c733f5deaac9a633daa06c1e3eba42f0ad4
+    size: 62010
