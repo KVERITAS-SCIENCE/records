@@ -100,13 +100,3 @@ files:
     path: records/2610/2610.00001/v1/record.pdf
     sha256: 8560d43ed802e7cf3001fd66669b1836d3fcab3b6f8a2c2f8eb65aa0b8a257fc
     size: 62683
-corrections:
-- date: '2026-10-07'
-  fields:
-  - purpose
-  - type
-  - field
-  - code
-  text: Added purpose, type of work, field and code repository.
-  by: Mamadou2727
-  issue: null
