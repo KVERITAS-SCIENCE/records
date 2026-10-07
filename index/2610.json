@@ -152,5 +152,19 @@
     "type": "Artifact evaluation",
     "field": "Machine learning",
     "path": "records/2610/2610.00011/v1"
+  },
+  {
+    "id": "kv:2610.00012v1",
+    "title": "Reproduction of rasbt/LLMs-from-scratch: GPT-2 fine-tuning for spam classification",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Other",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00012/v1"
   }
 ]

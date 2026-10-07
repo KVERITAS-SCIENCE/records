@@ -1,0 +1,50 @@
+id: kv:2610.00012v1
+version: 1
+title: 'Reproduction of rasbt/LLMs-from-scratch: GPT-2 fine-tuning for spam classification'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the chapter 6 script gpt_class_finetune.py unmodified at the pinned commit: loads the pretrained
+  GPT-2 124M weights, replaces the output head with a two-class classifier, and fine-tunes on the UCI
+  SMS Spam Collection for 5 epochs with AdamW (lr 5e-5), reporting training and validation loss and accuracy.
+  One NVIDIA RTX 5060 Ti.'
+tags:
+- gpt-2
+- fine-tuning
+- text-classification
+- llm
+license: Apache-2.0
+purpose: Independent reproduction
+type: Other
+field: Natural language processing
+original_code: https://github.com/rasbt/LLMs-from-scratch/tree/cdbd33e6d57a71e20ea31434841095fac50cecd8
+published: '2026-10-07'
+status: published
+issue: 15
+results:
+- metric: final_train_accuracy
+  value: 100
+- metric: final_val_accuracy
+  value: 97.5
+reports:
+- id: r1
+  label: GPT-2 spam classification fine-tuning
+  session: 24fa0d67-4ada-4055-bb24-d0bbf7257b07
+  data_hash: 0e679d2750be501506cdce3c313cf4c7517b8764e6495f6425cfc40170929ce8
+  sealed_at: '2026-10-07T15:54:41.699138429Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00012/v1/reports/r1.pdf
+      sha256: d2b8fc3c98a95d94c08f151967f8c35de473ca57708ecd37c37c0fe2c0ef9f5e
+      size: 524578
+    bundle:
+      path: bundles/2610.00012v1/r1.kvbundle.zip
+      sha256: c48ba9b0e18a012a4ec84ffd175e42d62e13f1ecf9979d7a4a2a5631760909c4
+      size: 2128660
+files:
+  record:
+    path: records/2610/2610.00012/v1/record.pdf
+    sha256: 82a90af0e8a18a189e8c45eada04fe94d0eb278c396c23017960cd531447934b
+    size: 9888
