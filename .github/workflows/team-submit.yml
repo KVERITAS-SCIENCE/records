@@ -1,0 +1,69 @@
+name: team-submit
+
+# Opens a submission issue as github-actions[bot], for records submitted by the K-Veritas team.
+# Issues opened with the workflow token start no other workflow, so the checks run here.
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Issue title
+        required: true
+      body:
+        description: Name of the issue body file on the "submissions" pre-release
+        required: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/kveritas" https://raw.githubusercontent.com/27-GROUP/kveritas-releases/main/bin/kveritas-linux-amd64
+          chmod +x "$RUNNER_TEMP/kveritas"
+          pip install -q pyyaml
+      - name: Open issue
+        id: open
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ inputs.title }}
+          BODY: ${{ inputs.body }}
+        run: |
+          gh release download submissions -p "$BODY" -D "$RUNNER_TEMP" --clobber
+          url=$(gh issue create --title "$TITLE" --label submission --body-file "$RUNNER_TEMP/$BODY")
+          echo "number=${url##*/}" >> "$GITHUB_OUTPUT"
+          echo "body_file=$RUNNER_TEMP/$BODY" >> "$GITHUB_OUTPUT"
+      - name: Check
+        id: check
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BODY_FILE: ${{ steps.open.outputs.body_file }}
+          ISSUE_AUTHOR: github-actions[bot]
+          ISSUE_LABELS: '["submission"]'
+          ISSUE_NUMBER: ${{ steps.open.outputs.number }}
+          KVERITAS_BIN: ${{ runner.temp }}/kveritas
+          OUT: ${{ runner.temp }}/out
+        run: ISSUE_BODY="$(cat "$BODY_FILE")" python scripts/records.py check
+      - name: Report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ steps.open.outputs.number }}
+          OUTCOME: ${{ steps.check.outcome }}
+          OUT: ${{ runner.temp }}/out
+        run: |
+          if [ ! -f "$OUT/comment.md" ]; then
+            gh issue comment "$NUMBER" --body "The checks could not complete. A maintainer will look at it."
+            exit 0
+          fi
+          gh issue comment "$NUMBER" --body-file "$OUT/comment.md"
+          if [ "$OUTCOME" = success ]; then
+            gh issue edit "$NUMBER" --add-label checks-passed
+          else
+            gh issue edit "$NUMBER" --add-label rejected
+            gh issue close "$NUMBER" --reason "not planned"
+          fi

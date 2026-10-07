@@ -240,7 +240,9 @@ def build(work: Path) -> dict:
                       "Sealed reports", "Report labels"):
             if not fields.get(field):
                 raise Rejected(f"'{field}' is required")
-        submitter = {"name": fields["Your name"], "github": author}
+        submitter = {"name": fields["Your name"]}
+        if not author.endswith("[bot]"):
+            submitter["github"] = author
         if fields.get("Your affiliation"):
             submitter["affiliation"] = fields["Your affiliation"]
         meta = {"submitted_by": submitter}
