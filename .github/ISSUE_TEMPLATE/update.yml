@@ -1,0 +1,75 @@
+name: Update a record
+description: Publish a new version of a record you submitted.
+title: "[Update] kv:"
+labels: ["update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the original submitter or a maintainer can update a record. Earlier versions stay published. Leave a field empty to keep it as it is.
+  - type: input
+    id: record
+    attributes:
+      label: Record ID
+      placeholder: 2610.00001
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: What changed
+      description: Shown on the new version.
+    validations:
+      required: true
+  - type: textarea
+    id: add
+    attributes:
+      label: Add reports
+      description: Drag new report PDFs here, in order.
+  - type: textarea
+    id: add_labels
+    attributes:
+      label: Labels for added reports
+      description: One per line, same order.
+  - type: textarea
+    id: bundles
+    attributes:
+      label: Code bundles
+      description: Bundles for the added reports. Existing reports keep theirs.
+  - type: input
+    id: remove
+    attributes:
+      label: Remove reports
+      placeholder: r2, r3
+  - type: input
+    id: title
+    attributes:
+      label: Title
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: Full list, one per line. Replaces the current list.
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+  - type: input
+    id: license
+    attributes:
+      label: Code licence
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I ran these experiments, or the authors asked me to submit them.
+          required: true
+        - label: The bundles contain no secrets (keys, tokens, passwords) and nothing I may not publish.
+          required: true
+        - label: Records are public and permanent; corrections are new versions.
+          required: true

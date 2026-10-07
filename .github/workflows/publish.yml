@@ -1,0 +1,104 @@
+name: publish
+
+on:
+  issues:
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      cover:
+        description: "Regenerate record.pdf for a published version, e.g. 2610.00001v1"
+        required: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency: publish
+
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || (github.event.label.name == 'approved' && github.event.issue.state == 'open')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/kveritas" https://raw.githubusercontent.com/27-GROUP/kveritas-releases/main/bin/kveritas-linux-amd64
+          chmod +x "$RUNNER_TEMP/kveritas"
+          pip install -q pyyaml
+      - name: Approval
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SENDER: ${{ github.event.sender.login }}
+          LABELS: ${{ toJSON(github.event.issue.labels.*.name) }}
+        run: |
+          level=$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$SENDER/permission" -q .permission)
+          case "$level" in admin|maintain) ;; *) echo "approved by $SENDER ($level), not a maintainer"; exit 1 ;; esac
+          echo "$LABELS" | grep -q '"checks-passed"' || { echo "checks have not passed"; exit 1; }
+          if echo "$LABELS" | grep -q '"published"'; then echo "already published"; exit 1; fi
+      - name: Author permission
+        id: perm
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+        run: echo "level=$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$AUTHOR/permission" -q .permission 2>/dev/null || echo none)" >> "$GITHUB_OUTPUT"
+      - name: Build
+        id: build
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_LABELS: ${{ toJSON(github.event.issue.labels.*.name) }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          AUTHOR_PERMISSION: ${{ steps.perm.outputs.level }}
+          COVER: ${{ inputs.cover }}
+          KVERITAS_BIN: ${{ runner.temp }}/kveritas
+          OUT: ${{ runner.temp }}/out
+        run: |
+          if [ -n "$COVER" ]; then
+            python scripts/records.py cover "$COVER"
+          else
+            python scripts/records.py publish
+          fi
+      - name: Push
+        id: push
+        if: steps.build.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COVER: ${{ inputs.cover }}
+          OUT: ${{ runner.temp }}/out
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add records index
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          if [ -n "$COVER" ]; then msg="cover $COVER"; else msg="publish $(cat "$OUT/published.txt")"; fi
+          git commit -q -m "$msg"
+          git push -q
+          if [ -f "$OUT/published.txt" ]; then
+            full=$(cat "$OUT/published.txt")
+            gh release create "$full" "$OUT"/assets/*.kvbundle.zip --title "kv:$full" --notes "Code bundles for kv:$full."
+          fi
+      - name: Report
+        if: github.event_name == 'issues' && always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          OUTCOME: ${{ steps.build.outcome }}
+          PUSHED: ${{ steps.push.outcome }}
+          OUT: ${{ runner.temp }}/out
+        run: |
+          if [ "$PUSHED" = success ] && [ -f "$OUT/published.txt" ]; then
+            gh issue comment "$NUMBER" --body-file "$OUT/comment.md"
+            gh issue edit "$NUMBER" --add-label published --remove-label approved
+            gh issue close "$NUMBER" --reason completed
+          elif [ "$OUTCOME" = failure ] && [ -f "$OUT/comment.md" ]; then
+            gh issue comment "$NUMBER" --body-file "$OUT/comment.md"
+            gh issue edit "$NUMBER" --add-label rejected --remove-label approved --remove-label checks-passed
+            gh issue close "$NUMBER" --reason "not planned"
+          else
+            gh issue edit "$NUMBER" --remove-label approved
+          fi

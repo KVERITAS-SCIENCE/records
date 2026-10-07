@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and problems
+    url: https://github.com/27-GROUP/kveritas-releases/issues
+    about: Anything other than submitting or updating a record.

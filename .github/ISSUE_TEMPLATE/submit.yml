@@ -1,0 +1,84 @@
+name: Submit a record
+description: Publish sealed K-Veritas reports as a record.
+title: "[Submission] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read the [rules](https://github.com/KVERITAS-SCIENCE/records#rules) first. Automatic checks run when you submit; a failed check rejects the submission.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: One per line, in order. `Name` or `Name (Affiliation)`.
+    validations:
+      required: true
+  - type: input
+    id: submitter
+    attributes:
+      label: Your name
+      description: Shown as "Submitted by", with your GitHub account.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your affiliation
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: What the experiments do. Plain text.
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma separated.
+  - type: input
+    id: license
+    attributes:
+      label: Code licence
+      placeholder: MIT
+    validations:
+      required: true
+  - type: textarea
+    id: reports
+    attributes:
+      label: Sealed reports
+      description: Drag the report PDFs here, in order. Sealed through the K-Veritas server with `--disclosure open`.
+    validations:
+      required: true
+  - type: textarea
+    id: labels
+    attributes:
+      label: Report labels
+      description: One short label per line, same order as the reports (e.g. Main results).
+    validations:
+      required: true
+  - type: textarea
+    id: bundles
+    attributes:
+      label: Code bundles
+      description: Drag every `.kvbundle.zip` here. Matched to reports by the hash each report signed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I ran these experiments, or the authors asked me to submit them.
+          required: true
+        - label: The bundles contain no secrets (keys, tokens, passwords) and nothing I may not publish.
+          required: true
+        - label: Records are public and permanent; corrections are new versions.
+          required: true

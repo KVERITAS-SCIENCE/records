@@ -1,17 +1,73 @@
 # K-Veritas Records
 
-Published K-Veritas records. Pages: [kveritas.org/records](https://kveritas.org/records)
+Published experiments, each sealed to the code, hardware and time that produced it. Pages:
+[kveritas.org/records](https://kveritas.org/records)
+
+## Submit
+
+[Open a submission issue](https://github.com/KVERITAS-SCIENCE/records/issues/new?template=submit.yml). Attach the sealed reports and their code bundles.
+
+Before submitting:
+
+```
+kveritas init --disclosure open
+kveritas run -- <command>        # every run, failed ones included
+kveritas seal
+```
+
+Submit `report.pdf` and `report.pdf.kvbundle.zip`. Never `report.pdf.provkey.json`.
+
+## Rules
+
+- Reports sealed through the K-Veritas server, not `--local`.
+- Open disclosure: every report has its code bundle.
+- Every run anchor intact.
+- One record per paper or project; up to 50 reports.
+- A report belongs to one record only.
+- Bundles hold no secrets and nothing you may not publish.
+- Submitted by you, or by you for the authors with their consent.
+
+## Process
+
+1. **Automatic checks** run on the issue: each report verifies, each bundle matches the hash its report
+   signed, no report is already published, the form is complete.
+2. **Failed check: rejected.** The issue is closed with the reason. Fix it and open a new issue.
+3. **Passed check: review.** A maintainer checks the artifact, never the science: names fit the
+   submitter, title and abstract describe the work, licence stated, no withheld files left unexplained.
+4. **Approved: published.** The record gets its ID and page, the code bundles go to a Release, and the
+   issue is closed with the link.
+
+Editing an open issue reruns the checks.
+
+## Update
+
+[Open an update issue](https://github.com/KVERITAS-SCIENCE/records/issues/new?template=update.yml) with the record ID. Add or remove reports, or
+change title, authors, abstract, tags or licence. Same checks and review. Only the original submitter or a
+maintainer can update. Earlier versions stay published.
+
+## Records
+
+- ID `kv:YYMM.NNNNNvV`: month published, sequence, version. Never reused.
+- Every number comes from the signed reports. Title, authors and abstract come from the submitter,
+  reviewed for completeness.
+- `record.pdf` is an unsigned cover page; its SHA-256 is in `metadata.yaml`. The sealed reports are
+  authoritative.
+- Listed, not endorsed.
+- Never edited; corrections are new versions. Retractions stay visible with the reason. Takedowns only
+  for legal problems or leaked secrets.
+- Record pages CC-BY 4.0; code under the licence the submitter declared.
 
 ## Layout
 
 ```
 index/<yymm>.json                     records published that month
 records/<yymm>/<id>/v<n>/
-  metadata.yaml                       title, authors, abstract, file hashes
+  metadata.yaml                       title, authors, submitter, abstract, file hashes
+  record.pdf                          cover page
   reports/r<k>.pdf                    sealed reports, untouched
 ```
 
-Code bundles: attached to the GitHub Release `<id>v<n>`.
+Code bundles: on the Release `<id>v<n>`.
 
 ## Verify
 

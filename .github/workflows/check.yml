@@ -1,0 +1,65 @@
+name: check
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: issue-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: >-
+      github.event.issue.state == 'open' &&
+      !contains(github.event.issue.labels.*.name, 'published') &&
+      (contains(github.event.issue.labels.*.name, 'submission') || contains(github.event.issue.labels.*.name, 'update'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/kveritas" https://raw.githubusercontent.com/27-GROUP/kveritas-releases/main/bin/kveritas-linux-amd64
+          chmod +x "$RUNNER_TEMP/kveritas"
+          pip install -q pyyaml
+      - name: Author permission
+        id: perm
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+        run: echo "level=$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$AUTHOR/permission" -q .permission 2>/dev/null || echo none)" >> "$GITHUB_OUTPUT"
+      - name: Check
+        id: check
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_LABELS: ${{ toJSON(github.event.issue.labels.*.name) }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          AUTHOR_PERMISSION: ${{ steps.perm.outputs.level }}
+          KVERITAS_BIN: ${{ runner.temp }}/kveritas
+          OUT: ${{ runner.temp }}/out
+        run: python scripts/records.py check
+      - name: Report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          OUTCOME: ${{ steps.check.outcome }}
+          OUT: ${{ runner.temp }}/out
+        run: |
+          if [ ! -f "$OUT/comment.md" ]; then
+            gh issue comment "$NUMBER" --body "The checks could not complete. A maintainer will look at it."
+            exit 0
+          fi
+          gh issue comment "$NUMBER" --body-file "$OUT/comment.md"
+          if [ "$OUTCOME" = success ]; then
+            gh issue edit "$NUMBER" --add-label checks-passed --remove-label rejected
+          else
+            gh issue edit "$NUMBER" --add-label rejected --remove-label checks-passed
+            gh issue close "$NUMBER" --reason "not planned"
+          fi
