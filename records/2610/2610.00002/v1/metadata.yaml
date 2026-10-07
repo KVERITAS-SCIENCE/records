@@ -1,0 +1,53 @@
+id: kv:2610.00002v1
+version: 1
+title: 'Reproduction of omihub777/ViT-CIFAR: ViT from scratch on CIFAR-10'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Trained the repo''s 6.3M-parameter Vision Transformer from scratch on CIFAR-10 with the README
+  command (200 epochs, Adam lr 1e-3, 5 warmup epochs then cosine, label smoothing, AutoAugment, 16-bit
+  mixed precision, seed 42), logging with the CSV logger since no Comet key is used. Compatibility changes
+  for current Python and PyTorch: pytorch-lightning 1.5.10 instead of the pinned 1.2.1, np.int replaced
+  by int in autoaugment.py, and the per-epoch lr log call given on_epoch=True. Validation accuracy each
+  epoch from the logged metrics. CIFAR-10 downloaded by torchvision. Single NVIDIA RTX 5060 Ti 16 GB,
+  PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- vision-transformer
+- cifar-10
+- image-classification
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2010.11929
+original_code: https://github.com/omihub777/ViT-CIFAR/tree/ab9043ea44cfe8311d30295fc0e0467d676187f1
+published: '2026-10-07'
+status: published
+issue: 6
+results:
+- metric: final_val_acc
+  value: 0.9035000205039978
+- metric: best_val_acc
+  value: 0.9042999744415283
+reports:
+- id: r1
+  label: ViT CIFAR-10 (200 epochs)
+  session: 646c4f50-56b1-4486-b475-0f6bf715ee9e
+  data_hash: 8ad214670a49a524d44d306473e42acf0853b332774cc38bf3a255843ccbf792
+  sealed_at: '2026-10-07T04:57:24.471649181Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00002/v1/reports/r1.pdf
+      sha256: 4173299f186e162faa0c74a8bd541a5602fc3fb8322eee07c093e46240d50431
+      size: 8537115
+    bundle:
+      path: bundles/2610.00002v1/r1.kvbundle.zip
+      sha256: fa194f38343ff664c9c71fbc4a149952fd2a49c76be10d7e80c1f886d3ece655
+      size: 15798
+files:
+  record:
+    path: records/2610/2610.00002/v1/record.pdf
+    sha256: 078867b30fbeb7922e6eba48bc5a98bfd31dfd1194439899780b7d25b7aecb88
+    size: 9809

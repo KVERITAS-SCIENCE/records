@@ -12,5 +12,19 @@
     "purpose": "Official implementation",
     "type": "Research paper",
     "field": "Natural language processing"
+  },
+  {
+    "id": "kv:2610.00002v1",
+    "title": "Reproduction of omihub777/ViT-CIFAR: ViT from scratch on CIFAR-10",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00002/v1"
   }
 ]
