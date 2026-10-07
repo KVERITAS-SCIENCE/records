@@ -50,6 +50,82 @@ body:
       placeholder: MIT
     validations:
       required: true
+  - type: dropdown
+    id: purpose
+    attributes:
+      label: Purpose
+      description: An independent reproduction must link the original code.
+      options:
+        - Official implementation
+        - Independent reproduction
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: work_type
+    attributes:
+      label: Type of work
+      options:
+        - Research paper
+        - Thesis
+        - Course assignment
+        - Benchmark or leaderboard entry
+        - Artifact evaluation
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: course
+    attributes:
+      label: Course assignment
+      description: Only for course assignments.
+      options:
+        - label: The instructor allows publishing this assignment.
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field
+      options:
+        - Machine learning
+        - Natural language processing
+        - Computer vision
+        - Robotics
+        - Systems and performance
+        - Databases
+        - Networking
+        - Security and cryptography
+        - Programming languages and compilers
+        - Algorithms and theory
+        - Human-computer interaction
+        - Scientific computing
+        - Bioinformatics and health
+        - Physics and astronomy
+        - Chemistry and materials
+        - Earth and climate
+        - Engineering
+        - Mathematics and statistics
+        - Economics and social science
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper link
+      description: Optional, can be added later with an update.
+      placeholder: https://arxiv.org/abs/...
+  - type: input
+    id: code
+    attributes:
+      label: Code repository
+      description: Optional. Where you host the code.
+      placeholder: https://github.com/...
+  - type: input
+    id: original
+    attributes:
+      label: Original code
+      description: Required for an independent reproduction. The code being reproduced.
+      placeholder: https://github.com/...
   - type: textarea
     id: reports
     attributes:

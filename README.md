@@ -26,6 +26,12 @@ Submit `report.pdf` and `report.pdf.kvbundle.zip`. Never `report.pdf.provkey.jso
 - A report belongs to one record only.
 - Bundles hold no secrets and nothing you may not publish.
 - Submitted by you, or by you for the authors with their consent.
+- Purpose: official implementation, independent reproduction, or other. A reproduction links the
+  original code.
+- Type of work: research paper, thesis, course assignment, benchmark or leaderboard entry, artifact
+  evaluation, other. A course assignment needs the instructor's permission to publish.
+- Field: any discipline, not only computer science.
+- Paper link and code repository: optional, can be added later.
 
 ## Process
 
@@ -41,9 +47,13 @@ Editing an open issue reruns the checks.
 
 ## Update
 
-[Open an update issue](https://github.com/KVERITAS-SCIENCE/records/issues/new?template=update.yml) with the record ID. Add or remove reports, or
-change title, authors, abstract, tags or licence. Same checks and review. Only the original submitter or a
-maintainer can update. Earlier versions stay published.
+[Open an update issue](https://github.com/KVERITAS-SCIENCE/records/issues/new?template=update.yml) with the record ID. Only the original
+submitter or a maintainer can update. Same checks and review.
+
+- **Reports added or removed: new version.** Earlier versions stay published.
+- **Anything else: correction.** Title, authors, abstract, tags, licence, purpose, type, field, paper
+  or code link. Applied to the current version in place, logged under `corrections` in
+  `metadata.yaml`, no new version.
 
 ## Records
 
@@ -53,8 +63,9 @@ maintainer can update. Earlier versions stay published.
 - `record.pdf` is an unsigned cover page; its SHA-256 is in `metadata.yaml`. The sealed reports are
   authoritative.
 - Listed, not endorsed.
-- Never edited; corrections are new versions. Retractions stay visible with the reason. Takedowns only
-  for legal problems or leaked secrets.
+- Reports never change; changing them makes a new version. Descriptive fields are corrected in place,
+  each correction logged. Retractions stay visible with the reason. Takedowns only for legal problems
+  or leaked secrets.
 - Record pages CC-BY 4.0; code under the licence the submitter declared.
 
 ## Layout
@@ -62,7 +73,7 @@ maintainer can update. Earlier versions stay published.
 ```
 index/<yymm>.json                     records published that month
 records/<yymm>/<id>/v<n>/
-  metadata.yaml                       title, authors, submitter, abstract, file hashes
+  metadata.yaml                       title, authors, submitter, purpose, links, file hashes, corrections
   record.pdf                          cover page
   reports/r<k>.pdf                    sealed reports, untouched
 ```

@@ -31,6 +31,26 @@ ATTACHMENT = re.compile(r"\[([^\]\n]+)\]\((https://github\.com/user-attachments/
 RECORD_ID = re.compile(r"(?:kv:)?(\d{4}\.\d{5})(?:v\d+)?")
 MAX_FILE = 60 * 1024 * 1024
 MAX_REPORTS = 50
+REPRODUCTION = "Independent reproduction"
+COURSE = "Course assignment"
+CHOICES = {
+    "purpose": ("Official implementation", REPRODUCTION, "Other"),
+    "type": ("Research paper", "Thesis", COURSE, "Benchmark or leaderboard entry", "Artifact evaluation", "Other"),
+    "field": (
+        "Machine learning", "Natural language processing", "Computer vision", "Robotics", "Systems and performance",
+        "Databases", "Networking", "Security and cryptography", "Programming languages and compilers",
+        "Algorithms and theory", "Human-computer interaction", "Scientific computing", "Bioinformatics and health",
+        "Physics and astronomy", "Chemistry and materials", "Earth and climate", "Engineering",
+        "Mathematics and statistics", "Economics and social science", "Other",
+    ),
+}
+LINKS = ("paper", "code", "original_code")
+# Form label -> metadata key, for everything a correction may change without a new version.
+DESCRIPTIVE = (
+    ("Title", "title"), ("Abstract", "abstract"), ("Code licence", "license"), ("Purpose", "purpose"),
+    ("Type of work", "type"), ("Field", "field"), ("Paper link", "paper"), ("Code repository", "code"),
+    ("Original code", "original_code"),
+)
 
 
 class Rejected(Exception):
@@ -122,13 +142,48 @@ def checked_terms(fields: dict) -> bool:
     return "- [ ]" not in terms and terms.count("- [X]") + terms.count("- [x]") >= 3
 
 
+def apply_fields(fields: dict, meta: dict) -> list[str]:
+    """Copy descriptive form fields into meta; returns the keys that changed."""
+    changed = []
+    for label, key in DESCRIPTIVE:
+        value = fields.get(label, "").strip()
+        if not value:
+            continue
+        if key in CHOICES and value not in CHOICES[key]:
+            raise Rejected(f"'{label}' must be one of: {', '.join(CHOICES[key])}")
+        if key in LINKS and not re.fullmatch(r"https://\S{4,300}", value):
+            raise Rejected(f"'{label}' must be an https:// link")
+        if meta.get(key) != value:
+            meta[key] = value
+            changed.append(key)
+    if fields.get("Authors"):
+        authors = authors_of(fields["Authors"])
+        if authors != meta.get("authors"):
+            meta["authors"] = authors
+            changed.append("authors")
+    if fields.get("Tags"):
+        tags = [t.strip() for t in fields["Tags"].split(",") if t.strip()]
+        if tags != meta.get("tags"):
+            meta["tags"] = tags
+            changed.append("tags")
+    return changed
+
+
+def validate(meta: dict, fields: dict) -> None:
+    if not meta.get("authors"):
+        raise Rejected("at least one author is required")
+    if meta.get("purpose") == REPRODUCTION and not meta.get("original_code"):
+        raise Rejected("an independent reproduction needs the 'Original code' link")
+    if meta.get("type") == COURSE and "[X]" not in fields.get("Course assignment", "").upper():
+        raise Rejected("a course assignment needs the instructor's permission to publish (tick the box)")
+
+
 def build(work: Path) -> dict:
-    """Turn the issue into a submission folder; returns metadata and report facts."""
+    """Turn the issue into a submission: a new record, a new version, or a correction."""
     fields = form(os.environ.get("ISSUE_BODY", ""))
     labels = json.loads(os.environ.get("ISSUE_LABELS", "[]"))
     author = os.environ.get("ISSUE_AUTHOR", "")
     maintainer = os.environ.get("AUTHOR_PERMISSION", "") in ("admin", "maintain")
-    update = "update" in labels
     if not checked_terms(fields):
         raise Rejected("all three terms must be accepted")
 
@@ -137,7 +192,7 @@ def build(work: Path) -> dict:
     reports: list[dict] = []
     supersedes = ""
 
-    if update:
+    if "update" in labels:
         m = RECORD_ID.fullmatch(fields.get("Record ID", "").strip())
         if not m or not versions(m.group(1)):
             raise Rejected("Record ID does not name a published record")
@@ -147,12 +202,23 @@ def build(work: Path) -> dict:
         owner = (prev.get("submitted_by") or {}).get("github")
         if not maintainer and (not owner or owner != author):
             raise Rejected(f"only the original submitter{f' (@{owner})' if owner else ''} or a maintainer can update this record")
-        if not fields.get("What changed", "").strip():
+        note = fields.get("What changed", "").strip()
+        if not note:
             raise Rejected("describe what changed")
         remove = {r.strip() for r in re.split(r"[,\s]+", fields.get("Remove reports", "")) if r.strip()}
         unknown = remove - {r["id"] for r in prev["reports"]}
         if unknown:
             raise Rejected(f"cannot remove unknown reports: {', '.join(sorted(unknown))}")
+        new_reports = fields.get("Add reports", "")
+        meta = {k: v for k, v in prev.items() if k not in ("id", "version", "published", "status", "issue", "results", "reports", "files", "changes", "corrections")}
+        changed = apply_fields(fields, meta)
+        validate(meta, fields)
+
+        if not remove and not attachments(new_reports):
+            if not changed:
+                raise Rejected("nothing changed")
+            return {"kind": "correction", "vdir": latest, "id": prev["id"], "changed": changed, "note": note, "by": author, "meta": meta}
+
         prev_full = prev["id"].removeprefix("kv:")
         for r in prev["reports"]:
             if r["id"] in remove:
@@ -162,34 +228,20 @@ def build(work: Path) -> dict:
                 subprocess.run(["gh", "release", "download", prev_full, "-R", REPO, "-p", f"{r['id']}.kvbundle.zip",
                                 "-D", str(work / "bundles"), "--clobber"], check=True, timeout=300)
             reports.append({"id": r["id"], "label": r["label"]})
-        meta = {k: prev[k] for k in ("title", "authors", "abstract", "tags", "license") if k in prev}
-        meta["submitted_by"] = prev["submitted_by"]
-        for key, field in (("title", "Title"), ("abstract", "Abstract"), ("license", "Code licence")):
-            if fields.get(field):
-                meta[key] = fields[field]
-        if fields.get("Authors"):
-            meta["authors"] = authors_of(fields["Authors"])
-        if fields.get("Tags"):
-            meta["tags"] = [t.strip() for t in fields["Tags"].split(",") if t.strip()]
-        meta["changes"] = {"text": fields["What changed"].strip(), "by": author}
-        meta["_overridden"] = any(fields.get(f) for f in ("Title", "Authors", "Abstract", "Tags", "Code licence"))
-        new_reports, new_labels, new_bundles = fields.get("Add reports", ""), fields.get("Labels for added reports", ""), fields.get("Code bundles", "")
+        meta["changes"] = {"text": note, "by": author}
+        new_labels, new_bundles = fields.get("Labels for added reports", ""), fields.get("Code bundles", "")
         next_n = max((int(r["id"][1:]) for r in prev["reports"]), default=0) + 1
     else:
-        for field in ("Title", "Authors", "Your name", "Abstract", "Code licence", "Sealed reports", "Report labels"):
+        for field in ("Title", "Authors", "Your name", "Abstract", "Code licence", "Purpose", "Type of work", "Field",
+                      "Sealed reports", "Report labels"):
             if not fields.get(field):
                 raise Rejected(f"'{field}' is required")
         submitter = {"name": fields["Your name"], "github": author}
         if fields.get("Your affiliation"):
             submitter["affiliation"] = fields["Your affiliation"]
-        meta = {
-            "title": fields["Title"],
-            "authors": authors_of(fields["Authors"]),
-            "submitted_by": submitter,
-            "abstract": fields["Abstract"],
-            "tags": [t.strip() for t in fields.get("Tags", "").split(",") if t.strip()],
-            "license": fields["Code licence"],
-        }
+        meta = {"submitted_by": submitter}
+        apply_fields(fields, meta)
+        validate(meta, fields)
         new_reports, new_labels, new_bundles = fields["Sealed reports"], fields["Report labels"], fields.get("Code bundles", "")
         next_n = 1
 
@@ -210,13 +262,13 @@ def build(work: Path) -> dict:
         raise Rejected("a record needs at least one report")
     if len(reports) > MAX_REPORTS:
         raise Rejected(f"at most {MAX_REPORTS} reports per record")
-    if not meta.get("authors"):
-        raise Rejected("at least one author is required")
     meta["reports"] = reports
-    return {"meta": meta, "supersedes": supersedes}
+    return {"kind": "version" if supersedes else "new", "meta": meta, "supersedes": supersedes}
 
 
 def check(work: Path, sub: dict) -> list[dict]:
+    if sub["kind"] == "correction":
+        return []
     meta, supersedes = sub["meta"], sub["supersedes"]
     bundles = {p: sha256(p) for p in (work / "bundles").glob("*.kvbundle.zip")}
     used: set[Path] = set()
@@ -249,10 +301,6 @@ def check(work: Path, sub: dict) -> list[dict]:
     for f, h in zip(facts, hashes):
         if h in taken and taken[h] != supersedes:
             raise Rejected(f"{f['meta']['id']}: already published in kv:{taken[h]}")
-    if supersedes:
-        prev = {r["data_hash"] for r in yaml.safe_load((versions(supersedes)[-1] / "metadata.yaml").read_text())["reports"]}
-        if set(hashes) == prev and not sub["meta"].get("_overridden"):
-            raise Rejected("nothing changed: same reports and no new title, authors, abstract, tags or licence")
     return facts
 
 
@@ -322,6 +370,7 @@ def publish(sub: dict, facts: list[dict]) -> str:
         "abstract": " ".join(str(meta["abstract"]).split()),
         "tags": meta.get("tags") or [],
         "license": meta["license"],
+        **{k: meta[k] for k in ("purpose", "type", "field", "paper", "code", "original_code") if meta.get(k)},
         "published": today.strftime("%Y-%m-%d"),
         "status": "published",
         "issue": int(os.environ.get("ISSUE_NUMBER", "0")) or None,
@@ -342,19 +391,55 @@ def publish(sub: dict, facts: list[dict]) -> str:
         "submitted_by": meta["submitted_by"]["name"],
         "published": published["published"],
         "reports": len(reports),
+        **{k: meta[k] for k in ("purpose", "type", "field") if meta.get(k)},
         "path": str(vdir.relative_to(ROOT)),
     })
     index.parent.mkdir(exist_ok=True)
     index.write_text(json.dumps(entries, indent=2) + "\n")
     (OUT / "published.txt").write_text(full)
+    (OUT / "done.txt").write_text(f"publish {full}")
+    return full
+
+
+def correct(sub: dict) -> str:
+    """Change descriptive fields of the latest version in place; reports and their hashes stay as they are."""
+    vdir, meta = sub["vdir"], sub["meta"]
+    md = yaml.safe_load((vdir / "metadata.yaml").read_text())
+    for key in sub["changed"]:
+        md[key] = meta[key]
+    md.setdefault("corrections", []).append({
+        "date": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d"),
+        "fields": sub["changed"],
+        "text": sub["note"],
+        "by": sub["by"],
+        "issue": int(os.environ.get("ISSUE_NUMBER", "0")) or None,
+    })
+    (vdir / "metadata.yaml").write_text(yaml.safe_dump(md, sort_keys=False, allow_unicode=True, width=100))
+    write_cover(vdir)
+    for index in ROOT.glob("index/*.json"):
+        entries = json.loads(index.read_text())
+        for e in entries:
+            if e["id"] == md["id"]:
+                e["title"] = md["title"]
+                e["authors"] = [a["name"] for a in md["authors"]]
+                for k in ("purpose", "type", "field"):
+                    if md.get(k):
+                        e[k] = md[k]
+        index.write_text(json.dumps(entries, indent=2) + "\n")
+    full = md["id"].removeprefix("kv:")
+    (OUT / "done.txt").write_text(f"correct {full}")
     return full
 
 
 def summary(sub: dict, facts: list[dict]) -> str:
+    if sub["kind"] == "correction":
+        return (f"**Automatic checks passed.** Correction of {sub['id']}: {', '.join(sub['changed'])}.\n\n"
+                "The reports are unchanged, so this corrects the current version in place; no new version. "
+                "A maintainer reviews it next; the `approved` label applies it.")
     rows = "\n".join(
         f"| {f['meta']['id']} | {f['meta']['label']} | {len(f['seal'].get('runs') or [])} | "
         f"`{f['seal']['seal']['data_hash'][:16]}` |" for f in facts)
-    kind = f"Update of kv:{sub['supersedes']}" if sub["supersedes"] else "New record"
+    kind = f"New version of kv:{sub['supersedes']}" if sub["supersedes"] else "New record"
     return (f"**Automatic checks passed.** {kind}, {len(facts)} report(s).\n\n"
             f"| Report | Label | Runs | Data hash |\n|---|---|---|---|\n{rows}\n\n"
             "Each report verifies as server-signed with every run anchor intact, and each bundle matches "
@@ -384,6 +469,12 @@ def main() -> None:
         sys.exit(1)
     if cmd == "check":
         (OUT / "comment.md").write_text(summary(sub, facts))
+        return
+    if sub["kind"] == "correction":
+        full = correct(sub)
+        (OUT / "comment.md").write_text(
+            f"**Corrected [kv:{full}](https://kveritas.org/records/{full}) in place:** {', '.join(sub['changed'])}. "
+            "The correction is logged on the record.")
         return
     full = publish(sub, facts)
     (OUT / "comment.md").write_text(

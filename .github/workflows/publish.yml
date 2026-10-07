@@ -75,7 +75,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add records index
           git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
-          if [ -n "$COVER" ]; then msg="cover $COVER"; else msg="publish $(cat "$OUT/published.txt")"; fi
+          if [ -n "$COVER" ]; then msg="cover $COVER"; else msg="$(cat "$OUT/done.txt")"; fi
           git commit -q -m "$msg"
           git push -q
           if [ -f "$OUT/published.txt" ]; then
@@ -91,7 +91,7 @@ jobs:
           PUSHED: ${{ steps.push.outcome }}
           OUT: ${{ runner.temp }}/out
         run: |
-          if [ "$PUSHED" = success ] && [ -f "$OUT/published.txt" ]; then
+          if [ "$PUSHED" = success ] && [ -f "$OUT/done.txt" ]; then
             gh issue comment "$NUMBER" --body-file "$OUT/comment.md"
             gh issue edit "$NUMBER" --add-label published --remove-label approved
             gh issue close "$NUMBER" --reason completed
