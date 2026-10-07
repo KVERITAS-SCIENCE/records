@@ -1,0 +1,49 @@
+id: kv:2610.00005v1
+version: 1
+title: 'Reproduction of tysam-code/hlb-CIFAR10: hlb-CIFAR10 speed training'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran main.py unmodified at the pinned commit: the script''s default 25 independent CIFAR-10
+  training runs of the hlb-CIFAR10 network (about 12 epochs each, label smoothing, EMA), reporting per-epoch
+  losses and accuracies and the mean and variance of the final EMA validation accuracy across runs. CIFAR-10
+  downloaded by torchvision. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- cifar-10
+- speedrun
+- image-classification
+license: Apache-2.0
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Computer vision
+original_code: https://github.com/tysam-code/hlb-CIFAR10/tree/993965202fc4dc05b699a39db33c00f1c7f647fd
+published: '2026-10-07'
+status: published
+issue: 3
+results:
+- metric: mean_final_ema_val_acc
+  value: 0.9403558969497681
+- metric: var_final_ema_val_acc
+  value: 2.031707253991044e-06
+reports:
+- id: r1
+  label: hlb-CIFAR10 (25 runs)
+  session: 9ab9d2e8-4adc-4dda-b006-fd4cf41d4f9d
+  data_hash: d56329f8bb8a9415d4351f62343050154749361a15e83760f1f4c87f561086f6
+  sealed_at: '2026-10-07T03:21:56.101268983Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00005/v1/reports/r1.pdf
+      sha256: 218750b2e435899face808ae995d08e39e39733b5b6a697d011eab517959258f
+      size: 6858575
+    bundle:
+      path: bundles/2610.00005v1/r1.kvbundle.zip
+      sha256: 25e4fdd3df47d58c3328c744f9006bf3e78dbbca1c6f63220909851d2da934fe
+      size: 16102
+files:
+  record:
+    path: records/2610/2610.00005/v1/record.pdf
+    sha256: 06bdd335a9840d8ab9c5d6b73366a499bf923235bb6792ca8221314554e1653c
+    size: 9593
