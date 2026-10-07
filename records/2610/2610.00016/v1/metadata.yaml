@@ -1,0 +1,54 @@
+id: kv:2610.00016v1
+version: 1
+title: 'Reproduction of Lightning-AI/litgpt: Pythia-410M LoRA fine-tuning and ARC-Easy evaluation'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the README fine-tuning example at the pinned commit: LoRA fine-tuning of EleutherAI Pythia-410M
+  on the Alpaca2k dataset for 2 epochs with litgpt''s default LoRA settings, followed by a zero-shot ARC-Easy
+  evaluation of the merged model with litgpt evaluate (lm-evaluation-harness). One NVIDIA RTX 5060 Ti.'
+tags:
+- lora
+- fine-tuning
+- pythia
+- llm
+- arc-easy
+license: Apache-2.0
+purpose: Independent reproduction
+type: Other
+field: Natural language processing
+original_code: https://github.com/Lightning-AI/litgpt/tree/18c931c15c2398621d35371a12d2b1785e855bb6
+published: '2026-10-07'
+status: published
+issue: 17
+results:
+- metric: final_val_loss
+  value: 1.43
+- metric: final_val_ppl
+  value: 4.18
+- metric: arc_easy_acc
+  value: 0.510522
+- metric: arc_easy_acc_norm
+  value: 0.455808
+reports:
+- id: r1
+  label: Pythia-410M LoRA + ARC-Easy
+  session: 0e89213f-8afc-4f08-91f6-42ce63894838
+  data_hash: ee7e477d5d952aada1405b27d8779bf17729398735990b7e7175b181abe00a94
+  sealed_at: '2026-10-07T17:20:15.969476137Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00016/v1/reports/r1.pdf
+      sha256: d368cd50c552212e0e6fc3bf0bf4538b5cfa6d7a38db5c43faf4f9d360000fbc
+      size: 5141356
+    bundle:
+      path: bundles/2610.00016v1/r1.kvbundle.zip
+      sha256: 8edae1dc8e3d360285c6f32fed9e4ff8068778eb38f9cb9cf7d49979a36a1356
+      size: 512368
+files:
+  record:
+    path: records/2610/2610.00016/v1/record.pdf
+    sha256: 76235e4fb6b6c1551d6f213aa381a46d295eca2bc76cc36d7f1c4a1bdc216739
+    size: 10019

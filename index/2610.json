@@ -208,5 +208,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Systems and performance",
     "path": "records/2610/2610.00015/v1"
+  },
+  {
+    "id": "kv:2610.00016v1",
+    "title": "Reproduction of Lightning-AI/litgpt: Pythia-410M LoRA fine-tuning and ARC-Easy evaluation",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Other",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00016/v1"
   }
 ]
