@@ -93,5 +93,5 @@ reports:
 files:
   record:
     path: records/2610/2610.00001/v1/record.pdf
-    sha256: bb0ec7ddc501e28d20588d4c23275c733f5deaac9a633daa06c1e3eba42f0ad4
-    size: 62010
+    sha256: 6a96a7923ec434a0e4b20e77e0c0a7ea84ee68bd66eb4867781f1f3c0352858c
+    size: 62072
