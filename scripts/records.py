@@ -27,7 +27,11 @@ OUT = Path(os.environ.get("OUT", "/tmp/records-out")).resolve()
 KV = Path(os.environ.get("KVERITAS_BIN", "kveritas")).resolve()
 REPO = os.environ.get("GITHUB_REPOSITORY", "KVERITAS-SCIENCE/records")
 BEGIN, END = b"%%KVERITAS_SEAL_BEGIN%%", b"%%KVERITAS_SEAL_END%%"
-ATTACHMENT = re.compile(r"\[([^\]\n]+)\]\((https://github\.com/user-attachments/(?:files|assets)/[A-Za-z0-9._%/-]+)\)")
+# Issue attachments, or assets on this repo's "submissions" pre-release, which only maintainers can upload.
+ATTACHMENT = re.compile(
+    r"\[([^\]\n]+)\]\((https://github\.com/(?:user-attachments/(?:files|assets)/[A-Za-z0-9._%/-]+"
+    r"|KVERITAS-SCIENCE/records/releases/download/submissions/[A-Za-z0-9._%-]+))\)"
+)
 RECORD_ID = re.compile(r"(?:kv:)?(\d{4}\.\d{5})(?:v\d+)?")
 MAX_FILE = 60 * 1024 * 1024
 MAX_REPORTS = 50
