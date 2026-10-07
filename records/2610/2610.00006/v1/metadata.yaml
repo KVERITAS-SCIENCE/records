@@ -1,0 +1,55 @@
+id: kv:2610.00006v1
+version: 1
+title: 'Reproduction of karpathy/llm.c: GPT-2 124M fine-tuning on tinyshakespeare in CUDA'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the llm.c quick start from the pinned commit: downloaded the starter pack (GPT-2 124M bf16
+  weights, GPT-2 tokenizer, tokenized tinyshakespeare) with dev/download_starter_pack.sh, built train_gpt2cu
+  with make (bf16, no cuDNN, single GPU, compute capability 12.0, CUDA 12.8 toolkit from conda-forge),
+  and ran ./train_gpt2cu with its default settings: one epoch (74 steps) of fine-tuning at B=4, T=1024,
+  AdamW lr 3e-4, with validation loss every 20 steps and sample generations. Training loss per step, validation
+  loss, average iteration time and throughput are parsed from the program output. Single NVIDIA RTX 5060
+  Ti 16 GB.'
+tags:
+- gpt-2
+- cuda
+- language-model
+- tinyshakespeare
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/karpathy/llm.c/tree/f1e2ace651495b74ae22d45d1723443fd00ecd3a
+published: '2026-10-07'
+status: published
+issue: 13
+results:
+- metric: final_val_loss
+  value: 3.508062
+- metric: avg_iteration_ms
+  value: 125.667879
+- metric: tokens_per_second
+  value: 32597
+reports:
+- id: r1
+  label: GPT-2 124M tinyshakespeare
+  session: 683d4169-a783-4e0b-9c0b-dc982c1feeac
+  data_hash: 6d545071c552a8e5b2e6933585f65c1f436d8da78794d22c84622af96b5165b0
+  sealed_at: '2026-10-07T09:06:31.331575592Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00006/v1/reports/r1.pdf
+      sha256: ddf25bf583ca9045fc92295a1ed380db41ca8658a98947d44eb73fe58e21d7d0
+      size: 245886
+    bundle:
+      path: bundles/2610.00006v1/r1.kvbundle.zip
+      sha256: 0b86756dddea1a345fcf61819d5fa17e41710704876aa7589f7462d266e23700
+      size: 141883
+files:
+  record:
+    path: records/2610/2610.00006/v1/record.pdf
+    sha256: 385bb582a4551c58e102d3a0b41b5c021c051ef2c7350835cb62eb3dbd74a8c9
+    size: 9935
