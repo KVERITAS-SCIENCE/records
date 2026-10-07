@@ -5,6 +5,7 @@ authors:
 - name: Sebastien Diarra
 submitted_by:
   name: Sebastien Diarra
+  github: s7d11
 abstract: 'Three post-training arms of Sebeni, a morphotactic generation toolkit for extremely low-resource
   Manding languages, on the MULTI13 scope (13 languages). Each arm distils the grammar and dictionary,
   fine-tunes SmolLM2-135M with 4-bit LoRA for 500 steps on the packaged 300-sample dataset with a 10%
