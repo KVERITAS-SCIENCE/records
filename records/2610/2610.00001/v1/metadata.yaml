@@ -98,8 +98,8 @@ reports:
 files:
   record:
     path: records/2610/2610.00001/v1/record.pdf
-    sha256: 6a96a7923ec434a0e4b20e77e0c0a7ea84ee68bd66eb4867781f1f3c0352858c
-    size: 62072
+    sha256: 8560d43ed802e7cf3001fd66669b1836d3fcab3b6f8a2c2f8eb65aa0b8a257fc
+    size: 62683
 corrections:
 - date: '2026-10-07'
   fields:
