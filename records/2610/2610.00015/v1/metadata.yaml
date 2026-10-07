@@ -1,0 +1,53 @@
+id: kv:2610.00015v1
+version: 1
+title: 'Reproduction of ggml-org/llama.cpp: Qwen2.5-7B Q4_K_M throughput and WikiText-2 perplexity'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Built llama.cpp at the pinned commit with CUDA for the RTX 5060 Ti (sm_120) and ran the repository''s
+  own tools on the official Qwen2.5-7B-Instruct Q4_K_M GGUF: llama-bench with its default tests (512-token
+  prompt processing and 128-token generation, 5 repetitions, all layers on the GPU), then llama-perplexity
+  on the WikiText-2 raw test set with default settings. One NVIDIA RTX 5060 Ti.'
+tags:
+- llama.cpp
+- inference
+- quantization
+- perplexity
+- benchmark
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Systems and performance
+original_code: https://github.com/ggml-org/llama.cpp/tree/448147d42a71d0147c6dc844f99f9ffe7419183a
+published: '2026-10-07'
+status: published
+issue: 18
+results:
+- metric: pp512_tokens_per_second
+  value: 3769.77
+- metric: tg128_tokens_per_second
+  value: 78.0879
+- metric: wikitext2_ppl
+  value: 8.3197
+reports:
+- id: r1
+  label: Qwen2.5-7B Q4_K_M bench and perplexity
+  session: fe2c7bce-cce4-4f0f-8611-33249efcb327
+  data_hash: b984556d40a3984d6689ad4afa528098bf4626b887cada3a059b5bfa54876972
+  sealed_at: '2026-10-07T17:37:18.159563503Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00015/v1/reports/r1.pdf
+      sha256: 9a22d438c733523568ac8acf0a9cddcad85c2be7d796aa83ed2517e356bdb8e6
+      size: 2841211
+    bundle:
+      path: bundles/2610.00015v1/r1.kvbundle.zip
+      sha256: d44e81d34d7ff1761a08a4ed7a7e39928e6dc88af32b46abc4b4d3e3c6c639f8
+      size: 8327362
+files:
+  record:
+    path: records/2610/2610.00015/v1/record.pdf
+    sha256: 37305be673ebb40ce9a70da683a75d989ee426a1415ee5cd53c75b9132f53c8c
+    size: 10569
