@@ -1,0 +1,55 @@
+id: kv:2610.00003v1
+version: 1
+title: 'Reproduction of huggingface/pytorch-image-models: resnet26d on Imagenette'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Trained timm resnet26d from scratch on Imagenette (10-class ImageNet subset, 160 px release)
+  with train.py: 40 epochs, image size 160, batch 128, native AMP, timm default SGD with cosine schedule
+  and 5 warmup epochs, seed 42, 10-class head. The listed hfds/frgfm/imagenette dataset is a script-based
+  Hugging Face dataset that current datasets releases cannot load, so the same Imagenette data was taken
+  from the official fast.ai archive (imagenette2-160.tgz) as an image folder. Validation top-1/top-5 every
+  epoch. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- timm
+- imagenette
+- resnet
+- image-classification
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2110.00476
+original_code: https://github.com/huggingface/pytorch-image-models/tree/83e6eb59b1cf2e0df321a4df4131baa16d745247
+published: '2026-10-07'
+status: published
+issue: 4
+results:
+- metric: final_eval_top1
+  value: 85.171974522293
+- metric: final_eval_top5
+  value: 98.47133757961784
+- metric: best_eval_top1
+  value: 85.171974522293
+reports:
+- id: r1
+  label: timm resnet26d Imagenette
+  session: 4b4d0e1e-5a4b-416e-a9f0-bf474d5ceb83
+  data_hash: 2c9d84b25114a9395d161dbcbfc97ab093453b391d05e322ed9c1100427b4336
+  sealed_at: '2026-10-07T03:49:12.1249678Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00003/v1/reports/r1.pdf
+      sha256: 7dcc0fba5ef3748c873b5441fc696606c1a8aa2e084c4831f44cde6d222aadc6
+      size: 4234527
+    bundle:
+      path: bundles/2610.00003v1/r1.kvbundle.zip
+      sha256: 2538924837e02cc686e6169a6bd54c0d8f077e34c0303e56e6682191ccebef59
+      size: 1449666
+files:
+  record:
+    path: records/2610/2610.00003/v1/record.pdf
+    sha256: 8ca020968a66ce4ee0cab4d8f075cc5c718886753d253a0e2799eee6cff7d11b
+    size: 10299
