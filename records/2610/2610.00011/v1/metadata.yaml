@@ -1,0 +1,52 @@
+id: kv:2610.00011v1
+version: 1
+title: 'Reproduction of KellerJordan/cifar10-airbench: airbench94_muon CIFAR-10 speedrun'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran airbench94_muon.py unmodified at the pinned commit: one compile warmup run followed by
+  the script''s default 200 independent CIFAR-10 training runs (8 epochs each, Muon optimizer, torch.compile
+  max-autotune), each evaluated with test-time augmentation; the script reports the mean and standard
+  deviation of test accuracy over the 200 runs. CIFAR-10 downloaded by torchvision. Single NVIDIA RTX
+  5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- cifar-10
+- speedrun
+- muon
+- image-classification
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2404.00498
+original_code: https://github.com/KellerJordan/cifar10-airbench/tree/4c1b6d1e3889b037efadcfd5c0ea65b246592362
+published: '2026-10-07'
+status: published
+issue: 10
+results:
+- metric: mean_tta_val_acc
+  value: 0.94
+- metric: std_tta_val_acc
+  value: 0.0013
+reports:
+- id: r1
+  label: CIFAR-10 airbench94 (200 runs)
+  session: 9a33ec46-3ff8-4aa8-a364-b9da90ddd8a4
+  data_hash: 8ac04041ba4715ba478a7ae129b69d13a010bf7bc1053910fed09081f2454932
+  sealed_at: '2026-10-07T08:34:57.877858318Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00011/v1/reports/r1.pdf
+      sha256: ab1e6d396ccb7f83f2286108042f0edad15c2a7dfe266efe50fc8e05e1d434f9
+      size: 7300976
+    bundle:
+      path: bundles/2610.00011v1/r1.kvbundle.zip
+      sha256: 838ea0df39f795e3f42966c506a0e4186094e169a537719c970060d92245fadf
+      size: 64262
+files:
+  record:
+    path: records/2610/2610.00011/v1/record.pdf
+    sha256: a8f76de0fd79524f393b78cd8198eb4d7eb5f1c0421ae136529a7b89093a8acf
+    size: 9587
