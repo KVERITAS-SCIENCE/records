@@ -40,5 +40,19 @@
     "type": "Artifact evaluation",
     "field": "Computer vision",
     "path": "records/2610/2610.00003/v1"
+  },
+  {
+    "id": "kv:2610.00004v1",
+    "title": "Reproduction of kuangliu/pytorch-cifar: ResNet18 on CIFAR-10",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00004/v1"
   }
 ]
