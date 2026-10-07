@@ -1,0 +1,64 @@
+id: kv:2610.00014v1
+version: 1
+title: 'Reproduction of LAION-AI/CLIP_benchmark: zero-shot classification of OpenCLIP ViT-B-32 (LAION-2B)
+  on CIFAR-10, CIFAR-100 and STL-10'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Ran the clip_benchmark CLI from the pinned commit (installed editable) to evaluate the OpenCLIP
+  ViT-B-32 model with the laion2b_s34b_b79k weights in zero-shot classification on the CIFAR-10, CIFAR-100
+  and STL-10 test sets, with the default English class names and prompt templates, batch size and AMP
+  settings. Top-1, top-5 and mean per-class recall are read from the result JSON files the tool wrote
+  during the sealed run. Datasets downloaded by torchvision and weights fetched from Hugging Face before
+  the sealed run. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.
+tags:
+- clip
+- zero-shot
+- openclip
+- cifar-10
+- cifar-100
+- stl-10
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2212.07143
+original_code: https://github.com/LAION-AI/CLIP_benchmark/tree/ee14a9a8a9bcde09d51f4a4b1dff5a75182a3596
+published: '2026-10-07'
+status: published
+issue: 7
+results:
+- metric: cifar10_acc1
+  value: 0.9358
+- metric: cifar10_acc5
+  value: 0.9981
+- metric: cifar100_acc1
+  value: 0.7555
+- metric: cifar100_acc5
+  value: 0.9386
+- metric: stl10_acc1
+  value: 0.965625
+- metric: stl10_acc5
+  value: 0.999375
+reports:
+- id: r1
+  label: OpenCLIP ViT-B-32 zero-shot
+  session: acbd8d36-3aa7-4733-a4cf-e442f162767f
+  data_hash: cc70399aa96216cc54eafde7a82fa4a7b98ee14b581fa7ae5559bd639928281c
+  sealed_at: '2026-10-07T07:11:02.424563008Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00014/v1/reports/r1.pdf
+      sha256: f1772a35351677bae12ec8889312a056e253f363f56fb52bc41c816578d37285
+      size: 492414
+    bundle:
+      path: bundles/2610.00014v1/r1.kvbundle.zip
+      sha256: 5d1e9b98d65e4e03f6ecbe6f288746a27db085ef7e7ea942a730e95b36157e9f
+      size: 1999891
+files:
+  record:
+    path: records/2610/2610.00014/v1/record.pdf
+    sha256: 01a307ff346207f6a346daac1af7f9c038ebc5740ae46ba24a01143239d5df12
+    size: 11791

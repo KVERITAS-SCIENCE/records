@@ -180,5 +180,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Machine learning",
     "path": "records/2610/2610.00013/v1"
+  },
+  {
+    "id": "kv:2610.00014v1",
+    "title": "Reproduction of LAION-AI/CLIP_benchmark: zero-shot classification of OpenCLIP ViT-B-32 (LAION-2B) on CIFAR-10, CIFAR-100 and STL-10",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00014/v1"
   }
 ]

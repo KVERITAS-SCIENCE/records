@@ -1,0 +1,252 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5326 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 85.27 692.00 Td (Reproduction of LAION-AI/CLIP_benchmark: zero-shot) Tj ET
+BT /Tb 18.0 Tf 100.75 666.80 Td (classification of OpenCLIP ViT-B-32 \(LAION-2B\) on) Tj ET
+BT /Tb 18.0 Tf 168.00 641.60 Td (CIFAR-10, CIFAR-100 and STL-10) Tj ET
+BT /T 12.0 Tf 267.18 614.40 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 597.60 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 579.60 Td (kv:2610.00014v1 \267 Published 2026-10-07) Tj ET
+BT /T 10.0 Tf 173.38 565.60 Td (Independent reproduction \267 Artifact evaluation \267 Computer vision) Tj ET
+BT /Tb 10.5 Tf 286.46 535.10 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 518.90 Td (Ran the clip_benchmark CLI from the pinned commit \(installed editable\) to evaluate the OpenCLIP) Tj ET
+BT /T 10.0 Tf 88.00 504.90 Td (ViT-B-32 model with the laion2b_s34b_b79k weights in zero-shot classification on the CIFAR-10,) Tj ET
+BT /T 10.0 Tf 88.00 490.90 Td (CIFAR-100 and STL-10 test sets, with the default English class names and prompt templates, batch size and) Tj ET
+BT /T 10.0 Tf 88.00 476.90 Td (AMP settings. Top-1, top-5 and mean per-class recall are read from the result JSON files the tool wrote) Tj ET
+BT /T 10.0 Tf 88.00 462.90 Td (during the sealed run. Datasets downloaded by torchvision and weights fetched from Hugging Face before) Tj ET
+BT /T 10.0 Tf 88.00 448.90 Td (the sealed run. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.) Tj ET
+q 0.6 w 60.00 349.70 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 415.90 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 402.40 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 389.10 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 375.80 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00014v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 362.50 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 314.70 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 296.50 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 292.50 m 552.00 292.50 l S Q
+BT /Tb 9.0 Tf 62.00 280.50 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 280.50 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 280.50 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 280.50 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 280.50 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 280.50 Td (Signer) Tj ET
+q 0.40 w 60.00 278.50 m 552.00 278.50 l S Q
+BT /T 9.0 Tf 62.00 266.50 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 266.50 Td (OpenCLIP ViT-B-32 zero-shot) Tj ET
+BT /T 9.0 Tf 242.17 266.50 Td (2026-10-07) Tj ET
+BT /T 9.0 Tf 311.46 266.50 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 266.50 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 266.50 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 262.50 m 552.00 262.50 l S Q
+BT /Tb 13.0 Tf 60.00 229.50 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 205.30 Td (r1: OpenCLIP ViT-B-32 zero-shot) Tj ET
+q 0.80 w 60.00 200.30 m 552.00 200.30 l S Q
+BT /Tb 9.0 Tf 62.00 188.30 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 188.30 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 188.30 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 188.30 Td (Step) Tj ET
+q 0.40 w 60.00 186.30 m 552.00 186.30 l S Q
+BT /T 9.0 Tf 62.00 174.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 174.30 Td (cifar10_acc1) Tj ET
+BT /T 9.0 Tf 303.18 174.30 Td (0.9358) Tj ET
+BT /T 9.0 Tf 418.94 174.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 161.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 161.30 Td (cifar10_acc5) Tj ET
+BT /T 9.0 Tf 303.18 161.30 Td (0.9981) Tj ET
+BT /T 9.0 Tf 418.94 161.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 148.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 148.30 Td (cifar10_mean_per_class_recall) Tj ET
+BT /T 9.0 Tf 303.18 148.30 Td (0.9358) Tj ET
+BT /T 9.0 Tf 418.94 148.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 135.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 135.30 Td (cifar100_acc1) Tj ET
+BT /T 9.0 Tf 303.18 135.30 Td (0.7555) Tj ET
+BT /T 9.0 Tf 418.94 135.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 122.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 122.30 Td (cifar100_acc5) Tj ET
+BT /T 9.0 Tf 303.18 122.30 Td (0.9386) Tj ET
+BT /T 9.0 Tf 418.94 122.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 109.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 109.30 Td (cifar100_mean_per_class_recall) Tj ET
+BT /T 9.0 Tf 303.18 109.30 Td (0.7551) Tj ET
+BT /T 9.0 Tf 418.94 109.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 96.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 96.30 Td (stl10_acc1) Tj ET
+BT /T 9.0 Tf 303.18 96.30 Td (0.965625) Tj ET
+BT /T 9.0 Tf 418.94 96.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 83.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 83.30 Td (stl10_acc5) Tj ET
+BT /T 9.0 Tf 303.18 83.30 Td (0.999375) Tj ET
+BT /T 9.0 Tf 418.94 83.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 70.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 70.30 Td (stl10_mean_per_class_recall) Tj ET
+BT /T 9.0 Tf 303.18 70.30 Td (0.965875) Tj ET
+BT /T 9.0 Tf 418.94 70.30 Td () Tj ET
+q 0.80 w 60.00 66.30 m 552.00 66.30 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00014v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 4864 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Phase) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (cifar10_acc1) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.9358) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (cifar10_acc5) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.9981) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (cifar100_acc1) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.7555) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (cifar100_acc5) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.9386) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (stl10_acc1) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.965625) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (stl10_acc5) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.999375) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td () Tj ET
+q 0.80 w 60.00 637.00 m 552.00 637.00 l S Q
+BT /Tb 13.0 Tf 60.00 604.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 595.80 m 552.00 595.80 l S Q
+BT /Tb 9.0 Tf 62.00 583.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 583.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 583.80 Td (Value) Tj ET
+q 0.40 w 60.00 581.80 m 552.00 581.80 l S Q
+BT /T 9.0 Tf 62.00 569.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 569.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 569.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 556.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 556.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 556.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 543.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 543.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 543.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 530.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 530.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 530.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 517.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 517.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 517.80 Td (45.2 s) Tj ET
+q 0.80 w 60.00 513.80 m 552.00 513.80 l S Q
+BT /Tb 13.0 Tf 60.00 480.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 462.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 458.60 m 552.00 458.60 l S Q
+BT /Tb 9.0 Tf 62.00 446.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 446.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 446.60 Td (Size) Tj ET
+q 0.40 w 60.00 444.60 m 552.00 444.60 l S Q
+BT /T 9.0 Tf 62.00 432.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 433.60 Td (f1772a35351677bae12ec8889312a056e253f363f56fb52bc41c816578d37285) Tj ET
+BT /T 9.0 Tf 502.21 432.60 Td (481 KB) Tj ET
+BT /T 9.0 Tf 62.00 419.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 420.60 Td (5d1e9b98d65e4e03f6ecbe6f288746a27db085ef7e7ea942a730e95b36157e9f) Tj ET
+BT /T 9.0 Tf 502.21 419.60 Td (1.9 MB) Tj ET
+q 0.80 w 60.00 415.60 m 552.00 415.60 l S Q
+BT /Tb 13.0 Tf 60.00 382.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 364.40 Td (Paper: https://arxiv.org/abs/2212.07143) Tj ET
+BT /T 10.0 Tf 60.00 350.40 Td (Reproduction of: https://github.com/LAION-AI/CLIP_benchmark/tree/ee14a9a8a9bcde09d51f4a4b1dff5a75182a3596) Tj ET
+BT /T 10.0 Tf 60.00 336.40 Td (Record: CC-BY 4.0. Code: MIT, as declared by the authors. Tags: clip, zero-shot, openclip, cifar-10, cifar-100, stl-10.) Tj ET
+BT /T 10.0 Tf 60.00 322.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 308.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 277.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 259.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 245.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 229.20 Td ([2] Sealed experiment report r1 \(OpenCLIP ViT-B-32 zero-shot\), kv:2610.00014v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 215.20 Td (cc70399aa96216cc54eafde7a82fa4a7b98ee14b581fa7ae5559bd639928281c.) Tj ET
+BT /T 10.0 Tf 60.00 201.20 Td (https://kveritas.org/records/2610.00014v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00014v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000005984 00000 n 
+0000006075 00000 n 
+0000006184 00000 n 
+0000011101 00000 n 
+0000011193 00000 n 
+0000011305 00000 n 
+0000011371 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+11423
+%%EOF
