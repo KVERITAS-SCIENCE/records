@@ -1,0 +1,51 @@
+id: kv:2610.00017v1
+version: 1
+title: 'Reproduction of meta-pytorch/torchtune: Qwen2.5-0.5B LoRA fine-tuning recipe'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the lora_finetune_single_device recipe with the shipped config qwen2_5/0.5B_lora_single_device
+  at the pinned commit: LoRA (rank 32) fine-tuning of Qwen2.5-0.5B-Instruct on alpaca-cleaned for one
+  epoch, bf16, batch 2 with 8 accumulation steps, seed 42; only the model and output paths were overridden.
+  With the config''s default learning rate (2e-3, no gradient clipping) the loss falls until the end of
+  warmup at step 100, then diverges and does not recover. One NVIDIA RTX 5060 Ti.'
+tags:
+- lora
+- fine-tuning
+- qwen2.5
+- llm
+license: BSD-3-Clause
+purpose: Independent reproduction
+type: Other
+field: Natural language processing
+original_code: https://github.com/meta-pytorch/torchtune/tree/bd2a0fc7c31430972728494fa01aaeeb0ebf1ba1
+published: '2026-10-07'
+status: published
+issue: 16
+results:
+- metric: first_step_loss
+  value: 1.89042
+- metric: final_loss_mean_last100
+  value: 7.22038
+reports:
+- id: r1
+  label: Qwen2.5-0.5B LoRA, default recipe
+  session: e7e8ae95-7078-4cd7-95da-d1c32ed31ed3
+  data_hash: 83e379ad2c69e034a106600a4146911d1837488067750279186839bc636e7a3b
+  sealed_at: '2026-10-07T16:55:27.1618162Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00017/v1/reports/r1.pdf
+      sha256: ec1d407ccace9678ff591fb0cf31d60555516588063d57ad98646753982a1f2b
+      size: 7595071
+    bundle:
+      path: bundles/2610.00017v1/r1.kvbundle.zip
+      sha256: cf2c2c93a72bd28c8f756591cfc27cae1df2addacd52a2e4d13c8669c4680ec4
+      size: 2048970
+files:
+  record:
+    path: records/2610/2610.00017/v1/record.pdf
+    sha256: 471acea084679585996d727bfcf0d28c548f5efec719fe927b1c353cff30312e
+    size: 9903

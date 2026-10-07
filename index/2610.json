@@ -222,5 +222,19 @@
     "type": "Other",
     "field": "Natural language processing",
     "path": "records/2610/2610.00016/v1"
+  },
+  {
+    "id": "kv:2610.00017v1",
+    "title": "Reproduction of meta-pytorch/torchtune: Qwen2.5-0.5B LoRA fine-tuning recipe",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Other",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00017/v1"
   }
 ]
