@@ -96,5 +96,19 @@
     "type": "Artifact evaluation",
     "field": "Computer vision",
     "path": "records/2610/2610.00007/v1"
+  },
+  {
+    "id": "kv:2610.00008v1",
+    "title": "Reproduction of ultralytics/ultralytics: YOLO11n fine-tuning on COCO128",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00008/v1"
   }
 ]

@@ -1,0 +1,54 @@
+id: kv:2610.00008v1
+version: 1
+title: 'Reproduction of ultralytics/ultralytics: YOLO11n fine-tuning on COCO128'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Fine-tuned the pretrained YOLO11n detector on COCO128 with the yolo CLI from the pinned commit
+  (installed editable): 100 epochs, image size 640, default hyperparameters, seed 0, plots disabled; then
+  validated the best checkpoint with yolo detect val. Per-epoch box loss and mAP from results.csv; final
+  precision, recall, mAP50 and mAP50-95 from the validation run. COCO128 and yolo11n.pt fetched by Ultralytics
+  before the sealed run. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- yolo
+- object-detection
+- coco128
+license: AGPL-3.0
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Computer vision
+original_code: https://github.com/ultralytics/ultralytics/tree/ce1399439b93c490b648b55dedd0a6334f0199da
+published: '2026-10-07'
+status: published
+issue: 11
+results:
+- metric: val_precision
+  value: 0.916
+- metric: val_recall
+  value: 0.821
+- metric: val_mAP50
+  value: 0.896
+- metric: val_mAP50_95
+  value: 0.746
+reports:
+- id: r1
+  label: YOLO11n COCO128
+  session: 96191365-dd6a-4226-ae20-9f208c35bb2f
+  data_hash: 65d73c52426217eb78e207d2e9ac92248ce112fe912cc8edf6e75030ee2edc13
+  sealed_at: '2026-10-07T08:39:42.8224892Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00008/v1/reports/r1.pdf
+      sha256: 6962f66e63387bb94c038fd38145780824a9b37d8ef03b86c056d36dba8d0736
+      size: 2402518
+    bundle:
+      path: bundles/2610.00008v1/r1.kvbundle.zip
+      sha256: bdd0afbaa4d1aa71a9873dfe1774952f50e90b3ca466684e4ed98807d2eb7e5c
+      size: 1368379
+files:
+  record:
+    path: records/2610/2610.00008/v1/record.pdf
+    sha256: d24cf05f044d0ed44744d65ec44bbca82b19d57ad186a54a7223c8e1d4d52034
+    size: 10005
