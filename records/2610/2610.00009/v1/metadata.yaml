@@ -1,0 +1,52 @@
+id: kv:2610.00009v1
+version: 1
+title: 'Reproduction of pytorch/examples: Transformer word-level language model on WikiText-2'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Trained the word_language_model example from the pinned commit unmodified: a Transformer language
+  model (default size: 200-dim embeddings, 2 layers, 2 heads, dropout 0.2) on the WikiText-2 copy shipped
+  in the repo, 20 epochs, initial learning rate 5 with the script annealing schedule, seed 1111, on the
+  GPU (--accel, which replaces the older --cuda flag). Validation loss and perplexity per epoch and the
+  final test loss and perplexity are parsed from the script output. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch
+  2.11 cu128, Python 3.12.'
+tags:
+- language-model
+- transformer
+- wikitext-2
+- pytorch
+license: BSD-3-Clause
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/pytorch/examples/tree/acc295dc7b90714f1bf47f06004fc19a7fe235c4
+published: '2026-10-07'
+status: published
+issue: 8
+results:
+- metric: test_loss
+  value: 5
+- metric: test_ppl
+  value: 148.78
+reports:
+- id: r1
+  label: Transformer LM WikiText-2
+  session: 0b5be785-ba14-4542-9378-46738e8a1d1d
+  data_hash: 349ed2af849a2c67dbe68b1d153cedcb4523a1c5ebdd45cc3f17dd7d64e7737e
+  sealed_at: '2026-10-07T07:27:22.355769266Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00009/v1/reports/r1.pdf
+      sha256: 5d1c96253b982df87e352be3841a7870905e887991d904db0d1f1556d4d207aa
+      size: 7028258
+    bundle:
+      path: bundles/2610.00009v1/r1.kvbundle.zip
+      sha256: a213f90f61722cf9b42ceda507608b90af82eb65cf5332f439b53f385eae1b2a
+      size: 217319
+files:
+  record:
+    path: records/2610/2610.00009/v1/record.pdf
+    sha256: dbf94100db8ffeab05e5030d99441c05abbec618caea3a082ae7bb9635696a92
+    size: 9660

@@ -110,5 +110,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Computer vision",
     "path": "records/2610/2610.00008/v1"
+  },
+  {
+    "id": "kv:2610.00009v1",
+    "title": "Reproduction of pytorch/examples: Transformer word-level language model on WikiText-2",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00009/v1"
   }
 ]
