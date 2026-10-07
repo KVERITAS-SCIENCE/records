@@ -1,0 +1,212 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5059 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 106.49 692.00 Td (Reproduction of tinygrad/tinygrad: hlb_cifar10 and) Tj ET
+BT /Tb 18.0 Tf 207.75 666.80 Td (beautiful_mnist examples) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00013v1 \267 Published 2026-10-07) Tj ET
+BT /T 10.0 Tf 144.51 590.80 Td (Independent reproduction \267 Benchmark or leaderboard entry \267 Machine learning) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran two training examples from tinygrad at the pinned commit, unmodified and with their default settings,) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (on the NV backend: examples/hlb_cifar10.py \(the hlb-CIFAR10 speedrun port, 1000 steps at batch size 512,) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (fixed seed 201 from the script hyperparameters, test accuracy evaluated by the script\) and then) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (examples/beautiful_mnist.py \(small convolutional network, Adam, 70 steps at batch size 512, test accuracy) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (at the end\). Training loss every 50 steps, CIFAR-10 test accuracy and the final MNIST loss and test) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (accuracy are parsed from the script output. CIFAR-10 and MNIST fetched by tinygrad before the sealed run;) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (CUDA NVRTC 12.8 from conda-forge as the kernel compiler. Single NVIDIA RTX 5060 Ti 16 GB, Python) Tj ET
+BT /T 10.0 Tf 88.00 446.10 Td (3.12.) Tj ET
+q 0.6 w 60.00 346.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 413.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 399.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 386.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 373.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00013v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 359.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 311.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 293.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 289.70 m 552.00 289.70 l S Q
+BT /Tb 9.0 Tf 62.00 277.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 277.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 277.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 277.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 277.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 277.70 Td (Signer) Tj ET
+q 0.40 w 60.00 275.70 m 552.00 275.70 l S Q
+BT /T 9.0 Tf 62.00 263.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 263.70 Td (tinygrad hlb_cifar10 + MNIST) Tj ET
+BT /T 9.0 Tf 242.17 263.70 Td (2026-10-07) Tj ET
+BT /T 9.0 Tf 311.46 263.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 263.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 263.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 259.70 m 552.00 259.70 l S Q
+BT /Tb 13.0 Tf 60.00 226.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 202.50 Td (r1: tinygrad hlb_cifar10 + MNIST) Tj ET
+q 0.80 w 60.00 197.50 m 552.00 197.50 l S Q
+BT /Tb 9.0 Tf 62.00 185.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 185.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 185.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 185.50 Td (Step) Tj ET
+q 0.40 w 60.00 183.50 m 552.00 183.50 l S Q
+BT /T 9.0 Tf 62.00 171.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 171.50 Td (cifar_train_loss) Tj ET
+BT /T 9.0 Tf 303.18 171.50 Td (508.86) Tj ET
+BT /T 9.0 Tf 418.94 171.50 Td (950) Tj ET
+BT /T 9.0 Tf 62.00 158.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 158.50 Td (cifar_eval_acc_pct) Tj ET
+BT /T 9.0 Tf 303.18 158.50 Td (93.75) Tj ET
+BT /T 9.0 Tf 418.94 158.50 Td (1000) Tj ET
+BT /T 9.0 Tf 62.00 145.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 145.50 Td (mnist_final_loss) Tj ET
+BT /T 9.0 Tf 303.18 145.50 Td (0.08) Tj ET
+BT /T 9.0 Tf 418.94 145.50 Td () Tj ET
+q 0.80 w 60.00 141.50 m 552.00 141.50 l S Q
+q 0.80 w 60.00 135.50 m 552.00 135.50 l S Q
+BT /Tb 9.0 Tf 62.00 123.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 123.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 123.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 123.50 Td (Phase) Tj ET
+q 0.40 w 60.00 121.50 m 552.00 121.50 l S Q
+BT /T 9.0 Tf 62.00 109.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 109.50 Td (cifar_eval_acc_pct) Tj ET
+BT /T 9.0 Tf 303.18 109.50 Td (93.75) Tj ET
+BT /T 9.0 Tf 418.94 109.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 96.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 96.50 Td (mnist_test_acc_pct) Tj ET
+BT /T 9.0 Tf 303.18 96.50 Td (98.31) Tj ET
+BT /T 9.0 Tf 418.94 96.50 Td () Tj ET
+q 0.80 w 60.00 92.50 m 552.00 92.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00013v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 3416 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 684.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 670.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 670.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 657.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 657.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 644.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 644.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 631.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 631.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 618.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 618.80 Td (358.5 s) Tj ET
+q 0.80 w 60.00 614.80 m 552.00 614.80 l S Q
+BT /Tb 13.0 Tf 60.00 581.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 563.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 559.60 m 552.00 559.60 l S Q
+BT /Tb 9.0 Tf 62.00 547.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 547.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 547.60 Td (Size) Tj ET
+q 0.40 w 60.00 545.60 m 552.00 545.60 l S Q
+BT /T 9.0 Tf 62.00 533.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 534.60 Td (0f92772130f630c2633852c8e562be54c72249b9bccc100ce4b5fcf6e016069c) Tj ET
+BT /T 9.0 Tf 502.21 533.60 Td (4.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 520.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 521.60 Td (bae3e78018887e89e095c6f54251e33fe7e98e443178b2ea040bb18be22af6a1) Tj ET
+BT /T 9.0 Tf 502.21 520.60 Td (4.5 MB) Tj ET
+q 0.80 w 60.00 516.60 m 552.00 516.60 l S Q
+BT /Tb 13.0 Tf 60.00 483.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 465.40 Td (Reproduction of: https://github.com/tinygrad/tinygrad/tree/dfbdb75228cdb2ce7a7aacac803ebdd6e3db8951) Tj ET
+BT /T 10.0 Tf 60.00 451.40 Td (Record: CC-BY 4.0. Code: MIT, as declared by the authors. Tags: tinygrad, cifar-10, mnist, deep-learning-framework.) Tj ET
+BT /T 10.0 Tf 60.00 437.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 423.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 392.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 374.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 360.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 344.20 Td ([2] Sealed experiment report r1 \(tinygrad hlb_cifar10 + MNIST\), kv:2610.00013v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 330.20 Td (7a4a9afa73e75c11dd8814c9f98bd317f848d771a8272d361e229ef70aa583e7.) Tj ET
+BT /T 10.0 Tf 60.00 316.20 Td (https://kveritas.org/records/2610.00013v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00013v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000005717 00000 n 
+0000005808 00000 n 
+0000005917 00000 n 
+0000009386 00000 n 
+0000009478 00000 n 
+0000009590 00000 n 
+0000009656 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+9708
+%%EOF

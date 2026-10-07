@@ -1,0 +1,54 @@
+id: kv:2610.00013v1
+version: 1
+title: 'Reproduction of tinygrad/tinygrad: hlb_cifar10 and beautiful_mnist examples'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran two training examples from tinygrad at the pinned commit, unmodified and with their default
+  settings, on the NV backend: examples/hlb_cifar10.py (the hlb-CIFAR10 speedrun port, 1000 steps at batch
+  size 512, fixed seed 201 from the script hyperparameters, test accuracy evaluated by the script) and
+  then examples/beautiful_mnist.py (small convolutional network, Adam, 70 steps at batch size 512, test
+  accuracy at the end). Training loss every 50 steps, CIFAR-10 test accuracy and the final MNIST loss
+  and test accuracy are parsed from the script output. CIFAR-10 and MNIST fetched by tinygrad before the
+  sealed run; CUDA NVRTC 12.8 from conda-forge as the kernel compiler. Single NVIDIA RTX 5060 Ti 16 GB,
+  Python 3.12.'
+tags:
+- tinygrad
+- cifar-10
+- mnist
+- deep-learning-framework
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Machine learning
+original_code: https://github.com/tinygrad/tinygrad/tree/dfbdb75228cdb2ce7a7aacac803ebdd6e3db8951
+published: '2026-10-07'
+status: published
+issue: 9
+results:
+- metric: cifar_eval_acc_pct
+  value: 93.75
+- metric: mnist_test_acc_pct
+  value: 98.31
+reports:
+- id: r1
+  label: tinygrad hlb_cifar10 + MNIST
+  session: 144b2aed-1eae-4b7e-8638-e52ee65e5910
+  data_hash: 7a4a9afa73e75c11dd8814c9f98bd317f848d771a8272d361e229ef70aa583e7
+  sealed_at: '2026-10-07T07:43:17.528427541Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00013/v1/reports/r1.pdf
+      sha256: 0f92772130f630c2633852c8e562be54c72249b9bccc100ce4b5fcf6e016069c
+      size: 4643387
+    bundle:
+      path: bundles/2610.00013v1/r1.kvbundle.zip
+      sha256: bae3e78018887e89e095c6f54251e33fe7e98e443178b2ea040bb18be22af6a1
+      size: 4758210
+files:
+  record:
+    path: records/2610/2610.00013/v1/record.pdf
+    sha256: b233784b14826a77dd6ca3bc02eaad0cc1a5aacd6a7ca7d089a85e5af315eedc
+    size: 10075
