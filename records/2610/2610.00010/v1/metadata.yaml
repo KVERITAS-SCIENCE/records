@@ -1,0 +1,53 @@
+id: kv:2610.00010v1
+version: 1
+title: 'Reproduction of karpathy/minbpe: BPE tokenizer training and tests'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran train.py unmodified at the pinned commit: trains the Basic and Regex byte-pair-encoding
+  tokenizers to a 512-token vocabulary on the repository''s sample text. The run then loads both saved
+  tokenizers, checks that encoding round-trips the text, measures the compression ratio (bytes per token),
+  and runs the repository''s test suite, which compares against tiktoken. CPU only, one machine.'
+tags:
+- tokenization
+- bpe
+- minbpe
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/karpathy/minbpe/tree/1acefe89412b20245db5a22d2a02001e547dc602
+published: '2026-10-07'
+status: published
+issue: 14
+results:
+- metric: training_seconds
+  value: 15.66
+- metric: compression_basic
+  value: 2.359079
+- metric: compression_regex
+  value: 2.126976
+- metric: tests_passed
+  value: 21
+reports:
+- id: r1
+  label: BPE training, compression and tests
+  session: 501cbbb0-1213-4c15-b180-254a42166ab6
+  data_hash: 7955540c833ac615d223dba88b38b2a56fdab743ca0f614c9d6a92ec5a5dff80
+  sealed_at: '2026-10-07T15:49:53.749713517Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00010/v1/reports/r1.pdf
+      sha256: 423654c35fb8b5defd69c3e99b9c16bb8f2fd8fc21e68a973368636889dbae78
+      size: 287572
+    bundle:
+      path: bundles/2610.00010v1/r1.kvbundle.zip
+      sha256: c99f4be5dff693676a71fd28906bf6b185e89d896fe034894227db3a6aa4a964
+      size: 17249
+files:
+  record:
+    path: records/2610/2610.00010/v1/record.pdf
+    sha256: 0f4d153831d0e13c48b0ef987fd271f5d74d5680dc2f9158fcbbbd7fd1f50b93
+    size: 10437

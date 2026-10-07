@@ -124,5 +124,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Natural language processing",
     "path": "records/2610/2610.00009/v1"
+  },
+  {
+    "id": "kv:2610.00010v1",
+    "title": "Reproduction of karpathy/minbpe: BPE tokenizer training and tests",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00010/v1"
   }
 ]
