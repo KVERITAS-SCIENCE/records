@@ -1,0 +1,54 @@
+id: kv:2610.00007v1
+version: 1
+title: 'Reproduction of sthalles/SimCLR: SimCLR ResNet-18 on CIFAR-10 with linear evaluation'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Pretrained a ResNet-18 SimCLR model on CIFAR-10 with run.py (50 epochs, batch 256, Adam lr
+  3e-4, temperature 0.07, fp16 mixed precision, the script''s fixed seed 0), then ran the repo''s linear
+  evaluation from feature_eval/mini_batch_logistic_regression_evaluator.ipynb as a script: frozen backbone,
+  logistic-regression head trained with Adam for 100 epochs on CIFAR-10, top-1/top-5 test accuracy each
+  epoch. The notebook code is unchanged except that it loads the checkpoint just trained instead of downloading
+  a published one; run.py gained one print per epoch of the values it already logs. CIFAR-10 downloaded
+  by torchvision. Single NVIDIA RTX 5060 Ti 16 GB, PyTorch 2.11 cu128, Python 3.12.'
+tags:
+- simclr
+- self-supervised
+- contrastive-learning
+- cifar-10
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2002.05709
+original_code: https://github.com/sthalles/SimCLR/tree/1848fc934ad844ae630e6c452300433fe99acfd9
+published: '2026-10-07'
+status: published
+issue: 12
+results:
+- metric: linear_eval_test_top1
+  value: 63.031368255615234
+- metric: linear_eval_test_top5
+  value: 96.39705657958984
+reports:
+- id: r1
+  label: SimCLR CIFAR-10 linear eval
+  session: 2ac306cc-aeea-4362-bf2d-7f4ff05f4beb
+  data_hash: f549474966292babd57d12e269d8acc3b6077e6c111df2ade35d5815ede9597e
+  sealed_at: '2026-10-07T09:01:56.786884397Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00007/v1/reports/r1.pdf
+      sha256: cb855eaa0be488f58ae2c4502d26287676e6578a31464823179db0888716d22e
+      size: 8192021
+    bundle:
+      path: bundles/2610.00007v1/r1.kvbundle.zip
+      sha256: 719c811c6120a0fcdda61c9028456c513c84eb9ce99ffc9e87022e095d0d52c1
+      size: 20845
+files:
+  record:
+    path: records/2610/2610.00007/v1/record.pdf
+    sha256: 65d4e4cf34d7daa25b4aaae00fc578f6c51e94806feef543b71ce05826283747
+    size: 10271

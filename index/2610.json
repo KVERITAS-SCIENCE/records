@@ -82,5 +82,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Natural language processing",
     "path": "records/2610/2610.00006/v1"
+  },
+  {
+    "id": "kv:2610.00007v1",
+    "title": "Reproduction of sthalles/SimCLR: SimCLR ResNet-18 on CIFAR-10 with linear evaluation",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-07",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00007/v1"
   }
 ]
