@@ -8,6 +8,9 @@
     "published": "2026-10-06",
     "reports": 3,
     "path": "records/2610/2610.00001/v1",
-    "submitted_by": "Sebastien Diarra"
+    "submitted_by": "Sebastien Diarra",
+    "purpose": "Official implementation",
+    "type": "Research paper",
+    "field": "Natural language processing"
   }
 ]

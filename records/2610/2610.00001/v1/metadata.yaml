@@ -20,6 +20,10 @@ tags:
 license: MIT
 published: '2026-10-06'
 status: published
+purpose: Official implementation
+type: Research paper
+field: Natural language processing
+code: https://github.com/mlsftwrs/sebeni
 results:
 - metric: phi
   value: 0.849638
@@ -96,3 +100,13 @@ files:
     path: records/2610/2610.00001/v1/record.pdf
     sha256: 6a96a7923ec434a0e4b20e77e0c0a7ea84ee68bd66eb4867781f1f3c0352858c
     size: 62072
+corrections:
+- date: '2026-10-07'
+  fields:
+  - purpose
+  - type
+  - field
+  - code
+  text: Added purpose, type of work, field and code repository.
+  by: Mamadou2727
+  issue: null
