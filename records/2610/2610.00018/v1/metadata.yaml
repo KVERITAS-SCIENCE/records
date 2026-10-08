@@ -1,0 +1,51 @@
+id: kv:2610.00018v1
+version: 1
+title: 'Reproduction of atong01/conditional-flow-matching: OT-CFM CIFAR-10 FID'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Evaluated the authors'' released OT-CFM CIFAR-10 weights (400,000 training steps, release 1.0.4)
+  with the repository''s compute_fid.py and the README settings at the pinned commit: 50,000 samples generated
+  with the adaptive dopri5 solver (tolerance 1e-5) and FID computed against the CIFAR-10 training set
+  with clean-fid. Training was not repeated (400,000 steps exceeds the time budget); the weights file
+  is attested by hash in the report. SciPy was pinned below 1.16 for clean-fid compatibility. One NVIDIA
+  RTX 5060 Ti.'
+tags:
+- flow-matching
+- generative-models
+- cifar-10
+- fid
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2302.00482
+original_code: https://github.com/atong01/conditional-flow-matching/tree/7c653857de4c25b979a740ef8b6a5d5ddb09b6c1
+published: '2026-10-08'
+status: published
+issue: 19
+results:
+- metric: fid_50k
+  value: 3.6460690793845174
+reports:
+- id: r1
+  label: OT-CFM CIFAR-10 FID (50k)
+  session: 192b2a6a-8cdd-470c-84b2-07d5e0fc198a
+  data_hash: 45245b62b22d14bef244aff320dcb53ce6466f333abdaa5ae41a55bd7e184562
+  sealed_at: '2026-10-07T19:55:47.612657794Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00018/v1/reports/r1.pdf
+      sha256: 42a4d34dc81b7cd72051c5a169cb6a432e1067860a7ee276d2d33edb9650e662
+      size: 7180476
+    bundle:
+      path: bundles/2610.00018v1/r1.kvbundle.zip
+      sha256: 8d2399cb0fe250bae6ec09526af5f450e2875a02ce648669f0657b371dbe60f1
+      size: 19885681
+files:
+  record:
+    path: records/2610/2610.00018/v1/record.pdf
+    sha256: db8864dcf2cf96e7c4ddf2520638f0c6888d22bfbced0cf4c2e14fa11a58543f
+    size: 9320
