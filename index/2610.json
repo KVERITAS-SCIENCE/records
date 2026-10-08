@@ -404,5 +404,19 @@
     "type": "Artifact evaluation",
     "field": "Natural language processing",
     "path": "records/2610/2610.00029/v1"
+  },
+  {
+    "id": "kv:2610.00030v1",
+    "title": "Reproduction of vllm-project/vllm: offline throughput of Qwen2.5-1.5B-Instruct",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Systems and performance",
+    "path": "records/2610/2610.00030/v1"
   }
 ]

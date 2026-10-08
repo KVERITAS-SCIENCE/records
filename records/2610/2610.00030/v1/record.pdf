@@ -1,0 +1,206 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 4531 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 88.26 692.00 Td (Reproduction of vllm-project/vllm: offline throughput of) Tj ET
+BT /Tb 18.0 Tf 218.01 666.80 Td (Qwen2.5-1.5B-Instruct) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00030v1 \267 Published 2026-10-08) Tj ET
+BT /T 10.0 Tf 155.20 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Systems and performance) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran vLLM's offline throughput benchmark with the released vLLM 0.31.0 package \(PyTorch 2.13 for) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (CUDA 13.0, FlashInfer kernels compiled for sm_120 at startup\): Qwen2.5-1.5B-Instruct on 2,000 random) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (prompts of 512 input and 256 output tokens, default engine settings. The bundle holds the v0.31.0 tag's) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (benchmark code and project files; the rest of the source tree was set aside because the installed package,) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (recorded in the signed environment, is what ran. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 388.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 455.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 441.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 428.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 415.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00030v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 401.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 353.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 335.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 331.70 m 552.00 331.70 l S Q
+BT /Tb 9.0 Tf 62.00 319.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 319.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 319.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 319.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 319.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 319.70 Td (Signer) Tj ET
+q 0.40 w 60.00 317.70 m 552.00 317.70 l S Q
+BT /T 9.0 Tf 62.00 305.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 305.70 Td (Qwen2.5-1.5B throughput, 20...) Tj ET
+BT /T 9.0 Tf 242.17 305.70 Td (2026-10-08) Tj ET
+BT /T 9.0 Tf 311.46 305.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 305.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 305.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 301.70 m 552.00 301.70 l S Q
+BT /Tb 13.0 Tf 60.00 268.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 244.50 Td (r1: Qwen2.5-1.5B throughput, 2000 prompts) Tj ET
+q 0.80 w 60.00 239.50 m 552.00 239.50 l S Q
+BT /Tb 9.0 Tf 62.00 227.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 227.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 227.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 227.50 Td (Step) Tj ET
+q 0.40 w 60.00 225.50 m 552.00 225.50 l S Q
+BT /T 9.0 Tf 62.00 213.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 213.50 Td (elapsed_seconds) Tj ET
+BT /T 9.0 Tf 303.18 213.50 Td (193.688) Tj ET
+BT /T 9.0 Tf 418.94 213.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 200.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 200.50 Td (num_requests) Tj ET
+BT /T 9.0 Tf 303.18 200.50 Td (2000) Tj ET
+BT /T 9.0 Tf 418.94 200.50 Td () Tj ET
+q 0.80 w 60.00 196.50 m 552.00 196.50 l S Q
+q 0.80 w 60.00 190.50 m 552.00 190.50 l S Q
+BT /Tb 9.0 Tf 62.00 178.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 178.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 178.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 178.50 Td (Phase) Tj ET
+q 0.40 w 60.00 176.50 m 552.00 176.50 l S Q
+BT /T 9.0 Tf 62.00 164.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 164.50 Td (requests_per_second) Tj ET
+BT /T 9.0 Tf 303.18 164.50 Td (10.3259) Tj ET
+BT /T 9.0 Tf 418.94 164.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 151.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 151.50 Td (tokens_per_second) Tj ET
+BT /T 9.0 Tf 303.18 151.50 Td (11895.4) Tj ET
+BT /T 9.0 Tf 418.94 151.50 Td () Tj ET
+q 0.80 w 60.00 147.50 m 552.00 147.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00030v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 3508 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 684.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 670.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 670.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 657.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 657.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 644.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 644.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 631.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 631.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 618.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 618.80 Td (247.0 s) Tj ET
+q 0.80 w 60.00 614.80 m 552.00 614.80 l S Q
+BT /Tb 13.0 Tf 60.00 581.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 563.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 559.60 m 552.00 559.60 l S Q
+BT /Tb 9.0 Tf 62.00 547.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 547.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 547.60 Td (Size) Tj ET
+q 0.40 w 60.00 545.60 m 552.00 545.60 l S Q
+BT /T 9.0 Tf 62.00 533.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 534.60 Td (83441ef3015e5de579d5b393051b13058ed45c12eabc010854860584657e2cb8) Tj ET
+BT /T 9.0 Tf 502.21 533.60 Td (2.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 520.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 521.60 Td (dd5a8c661b389af8c024db7f4467231a74a33139ded7905516ebd032890aba8d) Tj ET
+BT /T 9.0 Tf 502.21 520.60 Td (647 KB) Tj ET
+q 0.80 w 60.00 516.60 m 552.00 516.60 l S Q
+BT /Tb 13.0 Tf 60.00 483.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 465.40 Td (Paper: https://arxiv.org/abs/2309.06180) Tj ET
+BT /T 10.0 Tf 60.00 451.40 Td (Reproduction of: https://github.com/vllm-project/vllm/tree/db9527a46873454610df6dbedf79a36d6bf1a7f6) Tj ET
+BT /T 10.0 Tf 60.00 437.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: llm-inference, vllm, throughput, paged-attention.) Tj ET
+BT /T 10.0 Tf 60.00 423.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 409.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 378.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 360.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 346.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 330.20 Td ([2] Sealed experiment report r1 \(Qwen2.5-1.5B throughput, 2000 prompts\), kv:2610.00030v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 316.20 Td (bc31cd8c61d010a64596faef5b0e1343ad41bb2c43fb04c836c027879dd8b50f.) Tj ET
+BT /T 10.0 Tf 60.00 302.20 Td (https://kveritas.org/records/2610.00030v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00030v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000005189 00000 n 
+0000005280 00000 n 
+0000005389 00000 n 
+0000008950 00000 n 
+0000009042 00000 n 
+0000009154 00000 n 
+0000009220 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+9272
+%%EOF

@@ -1,0 +1,52 @@
+id: kv:2610.00030v1
+version: 1
+title: 'Reproduction of vllm-project/vllm: offline throughput of Qwen2.5-1.5B-Instruct'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran vLLM''s offline throughput benchmark with the released vLLM 0.31.0 package (PyTorch 2.13
+  for CUDA 13.0, FlashInfer kernels compiled for sm_120 at startup): Qwen2.5-1.5B-Instruct on 2,000 random
+  prompts of 512 input and 256 output tokens, default engine settings. The bundle holds the v0.31.0 tag''s
+  benchmark code and project files; the rest of the source tree was set aside because the installed package,
+  recorded in the signed environment, is what ran. One NVIDIA RTX 5060 Ti.'
+tags:
+- llm-inference
+- vllm
+- throughput
+- paged-attention
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Systems and performance
+paper: https://arxiv.org/abs/2309.06180
+original_code: https://github.com/vllm-project/vllm/tree/db9527a46873454610df6dbedf79a36d6bf1a7f6
+published: '2026-10-08'
+status: published
+issue: 29
+results:
+- metric: requests_per_second
+  value: 10.3259
+- metric: tokens_per_second
+  value: 11895.4
+reports:
+- id: r1
+  label: Qwen2.5-1.5B throughput, 2000 prompts
+  session: 3fa8bad2-84a3-4290-8d5b-660dcdd9649f
+  data_hash: bc31cd8c61d010a64596faef5b0e1343ad41bb2c43fb04c836c027879dd8b50f
+  sealed_at: '2026-10-08T09:07:03.677817184Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00030/v1/reports/r1.pdf
+      sha256: 83441ef3015e5de579d5b393051b13058ed45c12eabc010854860584657e2cb8
+      size: 2531441
+    bundle:
+      path: bundles/2610.00030v1/r1.kvbundle.zip
+      sha256: dd5a8c661b389af8c024db7f4467231a74a33139ded7905516ebd032890aba8d
+      size: 661628
+files:
+  record:
+    path: records/2610/2610.00030/v1/record.pdf
+    sha256: 020d56cb2d5ddc4b777f0e54fa856e5bfb0f178afb1a9bfb00a21d6c428021bc
+    size: 9639
