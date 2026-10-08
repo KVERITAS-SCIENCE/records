@@ -1,0 +1,50 @@
+id: kv:2610.00026v1
+version: 1
+title: 'Reproduction of hiyouga/LlamaFactory: Qwen3-4B LoRA supervised fine-tuning example'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the shipped example examples/train_lora/qwen3_lora_sft.yaml at the pinned commit unchanged
+  except for the local model path and output directory: LoRA (rank 8, all linear layers) supervised fine-tuning
+  of Qwen3-4B-Instruct-2507 on the bundled identity and alpaca_en_demo datasets (up to 1,000 samples each),
+  3 epochs, batch 1 with 8 accumulation steps, learning rate 1e-4 cosine, bf16. torchaudio was replaced
+  with the CUDA 12.8 build matching PyTorch. One NVIDIA RTX 5060 Ti.'
+tags:
+- lora
+- sft
+- qwen3
+- fine-tuning
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2403.13372
+original_code: https://github.com/hiyouga/LlamaFactory/tree/ce9dc9e072f80fa3abe0989d4ab90da25f083438
+published: '2026-10-08'
+status: published
+issue: 30
+results:
+- metric: train_loss
+  value: 0.999387
+reports:
+- id: r1
+  label: Qwen3-4B LoRA SFT, 3 epochs
+  session: b69c95c9-99dc-4171-a23e-ad6a2d85d581
+  data_hash: f8c48c4d67d199557674230f0069a6339f880f9716e54532e583e14e3bbfd2a5
+  sealed_at: '2026-10-08T09:32:38.183126818Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00026/v1/reports/r1.pdf
+      sha256: 5141f45aee02eb7c77ff91f7ac9372011689fbe25d0605221ead4a17ced170d8
+      size: 7439316
+    bundle:
+      path: bundles/2610.00026v1/r1.kvbundle.zip
+      sha256: 0a680f8869eee4c0bcad32ae50d68487a9b387ee0a0bd47537b0f6c8a9da5586
+      size: 2890928
+files:
+  record:
+    path: records/2610/2610.00026/v1/record.pdf
+    sha256: 7431e2fd9b6ddb99205f83df86b3b0cce5a7f69b1c556daa923d699894093691
+    size: 9609
