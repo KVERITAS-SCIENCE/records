@@ -55,6 +55,12 @@ submitter or a maintainer can update. Same checks and review.
   or code link. Applied to the current version in place, logged under `corrections` in
   `metadata.yaml`, no new version.
 
+## Request a change
+
+Not the submitter? [Open a change request](https://github.com/KVERITAS-SCIENCE/records/issues/new?template=request.yml):
+correction, attribution, a problem with the reproduction, retraction or takedown. A maintainer reviews
+it and applies it as a correction or a new version, or answers on the issue. No automatic checks.
+
 ## Records
 
 - ID `kv:YYMM.NNNNNvV`: month published, sequence, version. Never reused.

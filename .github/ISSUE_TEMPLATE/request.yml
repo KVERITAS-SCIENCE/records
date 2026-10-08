@@ -1,0 +1,60 @@
+name: Request a change
+description: Ask the maintainers to correct, retract or take down a record you did not submit.
+title: "[Request] kv:"
+labels: ["change-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For original authors, readers and anyone else. If you submitted the record, use *Update a record* instead.
+        A maintainer reviews every request. Reports are never edited: a change to them is a new version, everything else is a logged correction.
+  - type: input
+    id: record
+    attributes:
+      label: Record ID
+      placeholder: 2610.00001
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request
+      options:
+        - Correct a field (title, authors, abstract, links, field, purpose, type)
+        - Credit or attribution
+        - Problem with the reproduction (wrong command, setting or result description)
+        - Retraction
+        - Takedown (legal problem or leaked secret)
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: Your relation to the work
+      options:
+        - Original author or maintainer of the code
+        - Author of the paper
+        - Reader
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should change and why. For a correction, give the exact new value.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links that support the request (paper, repository, commit, issue).
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: The request is accurate to the best of my knowledge.
+          required: true
