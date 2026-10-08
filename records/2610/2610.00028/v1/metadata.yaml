@@ -1,0 +1,52 @@
+id: kv:2610.00028v1
+version: 1
+title: 'Reproduction of karpathy/llama2.c: 15M-parameter Llama 2 trained on TinyStories'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Trained the README's smallest Llama 2 configuration (dim 288, 6 layers, 6 heads, about 15M parameters,
+  Llama 2 tokenizer) on the pretokenized TinyStories dataset at the pinned commit with train.py defaults
+  (batch 128, 4 gradient accumulation steps, bf16, torch.compile, seed 1337) for 15,000 iterations instead
+  of the README's 20,000 to fit the time budget; the learning-rate schedule follows the shorter run. The
+  exported model was then sampled with the C inference program run.c (256 tokens, temperature 0.8, seed
+  42). One NVIDIA RTX 5060 Ti.
+tags:
+- llama2
+- tinystories
+- language-model
+- inference
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/karpathy/llama2.c/tree/350e04fe35433e6d2941dce5a1f53308f87058eb
+published: '2026-10-08'
+status: published
+issue: 27
+results:
+- metric: final_val_loss
+  value: 1.1907
+- metric: c_inference_tokens_per_second
+  value: 69.493522
+reports:
+- id: r1
+  label: Llama 2 15M on TinyStories
+  session: 76a53d82-f82f-457a-affd-094ac40d4683
+  data_hash: d74a38cd96e3053227f568c286dcfa5f7a8d639d64e95e1b7cf8b32a2b5f00ab
+  sealed_at: '2026-10-08T08:42:07.387086314Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00028/v1/reports/r1.pdf
+      sha256: 3dae219d9b292dd6af4174257c8ae16003eac2321b6f7344f02167d72b196109
+      size: 7189864
+    bundle:
+      path: bundles/2610.00028v1/r1.kvbundle.zip
+      sha256: ea76c39ccd4d04686ac8a8d77aa09a8083de9812b35d1d3af6ca7b97d6db8cd3
+      size: 61670
+files:
+  record:
+    path: records/2610/2610.00028/v1/record.pdf
+    sha256: 879bffdbf46cdfdbee83c778db7c7ecec1b9da87555dda91c5c096c6e40c01ab
+    size: 9849
