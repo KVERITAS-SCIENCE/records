@@ -362,5 +362,19 @@
     "type": "Artifact evaluation",
     "field": "Natural language processing",
     "path": "records/2610/2610.00026/v1"
+  },
+  {
+    "id": "kv:2610.00027v1",
+    "title": "Reproduction of Broadcom/csg-htsim: NDP sequential all-to-all on a 1024-node fat tree",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Networking",
+    "path": "records/2610/2610.00027/v1"
   }
 ]

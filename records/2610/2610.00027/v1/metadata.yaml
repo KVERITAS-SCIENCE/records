@@ -1,0 +1,53 @@
+id: kv:2610.00027v1
+version: 1
+title: 'Reproduction of Broadcom/csg-htsim: NDP sequential all-to-all on a 1024-node fat tree'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Built htsim at the pinned commit and ran the shipped experiment experiments/fattree-all-to-all/sequential_512conns:
+  a 512-host sequential (shift) all-to-all with NDP and per-packet spraying on a 1024-node three-tier
+  fat tree, 1 MB flows, seed 13, using the repository''s own run.sh and post-processing scripts. The result
+  of interest is the self-synchronization described in the experiment''s README: how many senders converge
+  on a single receiver. The final gnuplot step was skipped (gnuplot not installed); the older example
+  programs under sim/datacenter/old_tests do not compile at this commit and were not used. Single-threaded
+  simulation on an Intel Xeon W-2145.'
+tags:
+- network-simulation
+- ndp
+- datacenter
+- congestion-control
+license: BSD-2-Clause
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Networking
+original_code: https://github.com/Broadcom/csg-htsim/tree/841d9e7be46bb968eece766aa4b6c044c7799f67
+published: '2026-10-08'
+status: published
+issue: 26
+results:
+- metric: max_senders_per_receiver
+  value: 57
+- metric: last_flow_finish_us
+  value: 135067
+reports:
+- id: r1
+  label: Sequential all-to-all, 512 hosts
+  session: 24aa1d59-b447-4308-a510-d747dafb5670
+  data_hash: 02accad8d67271c8c02c4dc3231ac875bc0f56a60f58cbd1b85ef7db7b1f5a9e
+  sealed_at: '2026-10-08T06:13:13.817844821Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00027/v1/reports/r1.pdf
+      sha256: 56631af52f0b1734aafd115cfd94655bd54b7f90114a0f805372cd94b23d358d
+      size: 5892846
+    bundle:
+      path: bundles/2610.00027v1/r1.kvbundle.zip
+      sha256: 44585e956d55b8e27b5baeae8fd83f2a07f33683c3c295fa17b2125dd2371c12
+      size: 668711
+files:
+  record:
+    path: records/2610/2610.00027/v1/record.pdf
+    sha256: b3b057142351c27a8101567906c3b0dbbb49ca09f236ba97cf226b6d932f8dbd
+    size: 10051
