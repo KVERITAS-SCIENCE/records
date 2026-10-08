@@ -1,0 +1,54 @@
+id: kv:2610.00020v1
+version: 1
+title: 'Reproduction of yandex-research/tabular-dl-tabr: TabR on California housing, 15 seeds'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Re-ran TabR on the California housing dataset at the pinned commit with the paper''s 15 tuned
+  evaluation configs (exp/tabr/california/0-evaluation, seeds 0 to 14), and compared each test RMSE with
+  the report stored in the repository for the same seed. Environment: PyTorch 2.11 with CUDA 12.8 in place
+  of the pinned 1.13 (the GPU needs it), conda-forge faiss-gpu 1.14, TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
+  for the checkpoint format. Datasets and stored results for other experiments were moved out of the working
+  copy; Python''s hostname lookup returns localhost so it does not appear in log file names. One NVIDIA
+  RTX 5060 Ti.'
+tags:
+- tabular
+- retrieval
+- tabr
+- california-housing
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2307.14338
+original_code: https://github.com/yandex-research/tabular-dl-tabr/tree/17baa9082506f8e7a0f8d11bb1e08212926a1507
+published: '2026-10-08'
+status: published
+issue: 21
+results:
+- metric: test_rmse_mean
+  value: 0.40378
+- metric: paper_test_rmse_mean
+  value: 0.403006
+reports:
+- id: r1
+  label: TabR California, 15 seeds
+  session: e34d7fc4-c4e3-4b97-9b94-87badf99b360
+  data_hash: 95249099ed8bf72d7729dcbb158829162356c4f56f707b1e26bc4a1bdb7f159d
+  sealed_at: '2026-10-07T22:26:20.903492162Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00020/v1/reports/r1.pdf
+      sha256: 5c5d447807a3163fbd86849350f737cc5a96aaa87ed5af26838dc8dd326024a0
+      size: 7119410
+    bundle:
+      path: bundles/2610.00020v1/r1.kvbundle.zip
+      sha256: 6c2a1eef7d58a50bbddbb425442af0cc65865e72746dd0ce065b05affcc6745e
+      size: 204622
+files:
+  record:
+    path: records/2610/2610.00020/v1/record.pdf
+    sha256: 863339b545f4e8f730acc559afba0576f0d9fae67716166fddf295ce32e69355
+    size: 10018

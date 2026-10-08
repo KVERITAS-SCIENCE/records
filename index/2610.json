@@ -264,5 +264,19 @@
     "type": "Artifact evaluation",
     "field": "Robotics",
     "path": "records/2610/2610.00019/v1"
+  },
+  {
+    "id": "kv:2610.00020v1",
+    "title": "Reproduction of yandex-research/tabular-dl-tabr: TabR on California housing, 15 seeds",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Machine learning",
+    "path": "records/2610/2610.00020/v1"
   }
 ]
