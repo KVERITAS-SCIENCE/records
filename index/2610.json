@@ -334,5 +334,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Programming languages and compilers",
     "path": "records/2610/2610.00024/v1"
+  },
+  {
+    "id": "kv:2610.00025v1",
+    "title": "Reproduction of huggingface/lighteval: SmolLM2-1.7B-Instruct on ARC-Challenge and HellaSwag",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00025/v1"
   }
 ]

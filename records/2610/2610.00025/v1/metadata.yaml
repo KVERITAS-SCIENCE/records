@@ -1,0 +1,51 @@
+id: kv:2610.00025v1
+version: 1
+title: 'Reproduction of huggingface/lighteval: SmolLM2-1.7B-Instruct on ARC-Challenge and HellaSwag'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the README evaluation with lighteval at the pinned commit (accelerate backend): SmolLM2-1.7B-Instruct
+  on the full ARC-Challenge test set with 25-shot prompts and the full HellaSwag validation set with 10-shot
+  prompts, batch size 8. At this commit HellaSwag is scored generatively (exact match) rather than by
+  log-likelihood accuracy. A fresh cache directory was used so every sample was computed in the sealed
+  run. One NVIDIA RTX 5060 Ti.'
+tags:
+- llm-evaluation
+- arc
+- hellaswag
+- smollm2
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/huggingface/lighteval/tree/7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7
+published: '2026-10-08'
+status: published
+issue: 31
+results:
+- metric: hellaswag_em
+  value: 0.409679
+- metric: arc_challenge_acc
+  value: 0.508532
+reports:
+- id: r1
+  label: SmolLM2-1.7B ARC-C and HellaSwag
+  session: b2c1b1e0-7f6e-462e-b6c1-66241a090bc0
+  data_hash: 89ce7eee4602d9d203d3f3986b0360b2646900cf6a05df02b9b18608839cc520
+  sealed_at: '2026-10-08T10:50:47.245480709Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00025/v1/reports/r1.pdf
+      sha256: f67c1daa6e72d2157c461f19858ffdf82a40d62056e09d475555bdf70ed2e29d
+      size: 7299676
+    bundle:
+      path: bundles/2610.00025v1/r1.kvbundle.zip
+      sha256: 16bb5e71f3a93b8a24e69d162d2bb61b90615373edd473bae11f476c9de2f8d6
+      size: 22593199
+files:
+  record:
+    path: records/2610/2610.00025/v1/record.pdf
+    sha256: a095665f4d5e7feffcbab337260e7b281e7b43c191c1cffc589f9c1778677b9e
+    size: 9573

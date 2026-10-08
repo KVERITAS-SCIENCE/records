@@ -1,0 +1,206 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 4558 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 156.00 692.00 Td (Reproduction of huggingface/lighteval:) Tj ET
+BT /Tb 18.0 Tf 121.50 666.80 Td (SmolLM2-1.7B-Instruct on ARC-Challenge and) Tj ET
+BT /Tb 18.0 Tf 265.00 641.60 Td (HellaSwag) Tj ET
+BT /T 12.0 Tf 267.18 614.40 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 597.60 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 579.60 Td (kv:2610.00025v1 \267 Published 2026-10-08) Tj ET
+BT /T 10.0 Tf 122.72 565.60 Td (Independent reproduction \267 Benchmark or leaderboard entry \267 Natural language processing) Tj ET
+BT /Tb 10.5 Tf 286.46 535.10 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 518.90 Td (Ran the README evaluation with lighteval at the pinned commit \(accelerate backend\):) Tj ET
+BT /T 10.0 Tf 88.00 504.90 Td (SmolLM2-1.7B-Instruct on the full ARC-Challenge test set with 25-shot prompts and the full HellaSwag) Tj ET
+BT /T 10.0 Tf 88.00 490.90 Td (validation set with 10-shot prompts, batch size 8. At this commit HellaSwag is scored generatively \(exact) Tj ET
+BT /T 10.0 Tf 88.00 476.90 Td (match\) rather than by log-likelihood accuracy. A fresh cache directory was used so every sample was) Tj ET
+BT /T 10.0 Tf 88.00 462.90 Td (computed in the sealed run. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 363.70 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 429.90 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 416.40 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 403.10 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 389.80 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00025v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 376.50 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 328.70 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 310.50 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 306.50 m 552.00 306.50 l S Q
+BT /Tb 9.0 Tf 62.00 294.50 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 294.50 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 294.50 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 294.50 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 294.50 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 294.50 Td (Signer) Tj ET
+q 0.40 w 60.00 292.50 m 552.00 292.50 l S Q
+BT /T 9.0 Tf 62.00 280.50 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 280.50 Td (SmolLM2-1.7B ARC-C and H...) Tj ET
+BT /T 9.0 Tf 242.17 280.50 Td (2026-10-08) Tj ET
+BT /T 9.0 Tf 311.46 280.50 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 280.50 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 280.50 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 276.50 m 552.00 276.50 l S Q
+BT /Tb 13.0 Tf 60.00 243.50 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 219.30 Td (r1: SmolLM2-1.7B ARC-C and HellaSwag) Tj ET
+q 0.80 w 60.00 214.30 m 552.00 214.30 l S Q
+BT /Tb 9.0 Tf 62.00 202.30 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 202.30 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 202.30 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 202.30 Td (Step) Tj ET
+q 0.40 w 60.00 200.30 m 552.00 200.30 l S Q
+BT /T 9.0 Tf 62.00 188.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 188.30 Td (hellaswag_em) Tj ET
+BT /T 9.0 Tf 303.18 188.30 Td (0.409679) Tj ET
+BT /T 9.0 Tf 418.94 188.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 175.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 175.30 Td (arc_challenge_acc) Tj ET
+BT /T 9.0 Tf 303.18 175.30 Td (0.508532) Tj ET
+BT /T 9.0 Tf 418.94 175.30 Td () Tj ET
+q 0.80 w 60.00 171.30 m 552.00 171.30 l S Q
+q 0.80 w 60.00 165.30 m 552.00 165.30 l S Q
+BT /Tb 9.0 Tf 62.00 153.30 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 153.30 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 153.30 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 153.30 Td (Phase) Tj ET
+q 0.40 w 60.00 151.30 m 552.00 151.30 l S Q
+BT /T 9.0 Tf 62.00 139.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 139.30 Td (hellaswag_em) Tj ET
+BT /T 9.0 Tf 303.18 139.30 Td (0.409679) Tj ET
+BT /T 9.0 Tf 418.94 139.30 Td () Tj ET
+BT /T 9.0 Tf 62.00 126.30 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 126.30 Td (arc_challenge_acc) Tj ET
+BT /T 9.0 Tf 303.18 126.30 Td (0.508532) Tj ET
+BT /T 9.0 Tf 418.94 126.30 Td () Tj ET
+q 0.80 w 60.00 122.30 m 552.00 122.30 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00025v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 3415 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 684.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 670.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 670.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 657.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 657.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 644.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 644.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 631.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 631.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 618.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 618.80 Td (4204.9 s) Tj ET
+q 0.80 w 60.00 614.80 m 552.00 614.80 l S Q
+BT /Tb 13.0 Tf 60.00 581.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 563.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 559.60 m 552.00 559.60 l S Q
+BT /Tb 9.0 Tf 62.00 547.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 547.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 547.60 Td (Size) Tj ET
+q 0.40 w 60.00 545.60 m 552.00 545.60 l S Q
+BT /T 9.0 Tf 62.00 533.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 534.60 Td (f67c1daa6e72d2157c461f19858ffdf82a40d62056e09d475555bdf70ed2e29d) Tj ET
+BT /T 9.0 Tf 502.21 533.60 Td (7.0 MB) Tj ET
+BT /T 9.0 Tf 62.00 520.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 521.60 Td (16bb5e71f3a93b8a24e69d162d2bb61b90615373edd473bae11f476c9de2f8d6) Tj ET
+BT /T 9.0 Tf 502.21 520.60 Td (21.5 MB) Tj ET
+q 0.80 w 60.00 516.60 m 552.00 516.60 l S Q
+BT /Tb 13.0 Tf 60.00 483.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 465.40 Td (Reproduction of: https://github.com/huggingface/lighteval/tree/7fa19dc6f53a713ba8bb6541e7ed66dad2e24fd7) Tj ET
+BT /T 10.0 Tf 60.00 451.40 Td (Record: CC-BY 4.0. Code: MIT, as declared by the authors. Tags: llm-evaluation, arc, hellaswag, smollm2.) Tj ET
+BT /T 10.0 Tf 60.00 437.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 423.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 392.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 374.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 360.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 344.20 Td ([2] Sealed experiment report r1 \(SmolLM2-1.7B ARC-C and HellaSwag\), kv:2610.00025v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 330.20 Td (89ce7eee4602d9d203d3f3986b0360b2646900cf6a05df02b9b18608839cc520.) Tj ET
+BT /T 10.0 Tf 60.00 316.20 Td (https://kveritas.org/records/2610.00025v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00025v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000005216 00000 n 
+0000005307 00000 n 
+0000005416 00000 n 
+0000008884 00000 n 
+0000008976 00000 n 
+0000009088 00000 n 
+0000009154 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+9206
+%%EOF
