@@ -306,5 +306,19 @@
     "type": "Artifact evaluation",
     "field": "Computer vision",
     "path": "records/2610/2610.00022/v1"
+  },
+  {
+    "id": "kv:2610.00023v1",
+    "title": "Reproduction of valkey-io/valkey: valkey-benchmark throughput",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Databases",
+    "path": "records/2610/2610.00023/v1"
   }
 ]

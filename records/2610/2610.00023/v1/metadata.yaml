@@ -1,0 +1,54 @@
+id: kv:2610.00023v1
+version: 1
+title: 'Reproduction of valkey-io/valkey: valkey-benchmark throughput'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Built Valkey from source at the pinned commit (make, default settings, jemalloc) and ran the
+  bundled valkey-benchmark against a local server with persistence disabled: 2,000,000 requests, 50 parallel
+  clients, pipeline depth 16, for SET, GET, LPUSH and LPOP, reporting requests per second and latency
+  percentiles. Server and benchmark ran on the same machine (Intel Xeon W-2145, 16 threads).'
+tags:
+- key-value-store
+- valkey
+- benchmark
+- throughput
+license: BSD-3-Clause
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Databases
+original_code: https://github.com/valkey-io/valkey/tree/ea4d4e7d561895f64a86238bc587063c79c23da7
+published: '2026-10-08'
+status: published
+issue: 24
+results:
+- metric: set_rps
+  value: 826788
+- metric: get_rps
+  value: 1007050
+- metric: lpush_rps
+  value: 928505
+- metric: lpop_rps
+  value: 870322
+reports:
+- id: r1
+  label: valkey-benchmark SET/GET/LPUSH/LPOP
+  session: 255c437f-8a1f-4b17-9efa-5b48dd01c99a
+  data_hash: 736e1b97ce7768fcc5c3e14f4ead842280fcd30b6880f202c5804568d9bce3d2
+  sealed_at: '2026-10-08T01:13:42.254990209Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00023/v1/reports/r1.pdf
+      sha256: d1488025e31ef7123382d9fb0ed02f96379ff61a34eac204fd663e57818c3102
+      size: 1611715
+    bundle:
+      path: bundles/2610.00023v1/r1.kvbundle.zip
+      sha256: e0376bad0b10051f8f11be543456db792e21942d5d133c9046d6df57e30fcd19
+      size: 3236643
+files:
+  record:
+    path: records/2610/2610.00023/v1/record.pdf
+    sha256: 4596aea325f51ec7c2a076dbcaad50bc0eb1a574ec11dd18fcf51ec40fb776e0
+    size: 11466
