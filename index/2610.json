@@ -292,5 +292,19 @@
     "type": "Artifact evaluation",
     "field": "Machine learning",
     "path": "records/2610/2610.00021/v1"
+  },
+  {
+    "id": "kv:2610.00022v1",
+    "title": "Reproduction of nerfstudio-project/gsplat: 3D Gaussian Splatting on Mip-NeRF 360 garden",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00022/v1"
   }
 ]

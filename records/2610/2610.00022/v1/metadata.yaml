@@ -1,0 +1,53 @@
+id: kv:2610.00022v1
+version: 1
+title: 'Reproduction of nerfstudio-project/gsplat: 3D Gaussian Splatting on Mip-NeRF 360 garden'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Trained 3D Gaussian Splatting with gsplat's simple_trainer.py default strategy at the pinned
+  commit on the Mip-NeRF 360 garden scene at quarter resolution, 30,000 steps, with the built-in held-out
+  evaluation (PSNR, SSIM, LPIPS) at 7,000 and 30,000 steps. gsplat and its CUDA dependencies were compiled
+  for sm_120 with CUDA 12.8 and PyTorch 2.9.1 as pinned. One NVIDIA RTX 5060 Ti.
+tags:
+- gaussian-splatting
+- novel-view-synthesis
+- 3d-vision
+- mip-nerf-360
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2409.06765
+original_code: https://github.com/nerfstudio-project/gsplat/tree/512d366b67073d77ca099ede742683c165dfc23b
+published: '2026-10-08'
+status: published
+issue: 23
+results:
+- metric: psnr
+  value: 26.6525
+- metric: ssim
+  value: 0.838914
+- metric: lpips
+  value: 0.117377
+reports:
+- id: r1
+  label: Mip-NeRF 360 garden, 30k steps
+  session: 193f4f61-bc0f-453d-b625-3db61d450fb3
+  data_hash: 672f2745529beaea73a6011458121c12a7b04be31c78bd252618517f19f68aa1
+  sealed_at: '2026-10-08T01:11:42.909140505Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00022/v1/reports/r1.pdf
+      sha256: 541d85b49f8a9efd59cbc8d1f40f5d4796e98259acb4370940b19352caa28811
+      size: 7953456
+    bundle:
+      path: bundles/2610.00022v1/r1.kvbundle.zip
+      sha256: 1d3c2150d038e0cfd3a89afb1e02174ebcc02418e9132d4de95841a7d5a86fe7
+      size: 2577394
+files:
+  record:
+    path: records/2610/2610.00022/v1/record.pdf
+    sha256: 8063da3a7f99696b8d6706bb16f381f122337ce61cee9167920b1359a60ba647
+    size: 10037
