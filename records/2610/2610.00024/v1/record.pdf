@@ -1,0 +1,341 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5677 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 120.52 692.00 Td (Reproduction of attractivechaos/plb2: four CPU) Tj ET
+BT /Tb 18.0 Tf 185.24 666.80 Td (benchmarks in seven languages) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00024v1 \267 Published 2026-10-08) Tj ET
+BT /T 10.0 Tf 101.46 590.80 Td (Independent reproduction \267 Benchmark or leaderboard entry \267 Programming languages and compilers) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran the plb2 programming-language benchmark at the pinned commit: the nqueen, matmul, sudoku and) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (bedcov tasks in C \(gcc 13, -O3 -flto\), Rust, Go, Java, JavaScript \(Node.js\), Python \(CPython 3.12\) and Julia,) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (compiled with each language's Makefile where one exists, one timed run per program on an Intel Xeon) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (W-2145. Each program's last output line is kept in the log. At this commit the JavaScript sudoku exits with) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (an error, and the Rust bedcov reports a different overlap count from the other languages.) Tj ET
+q 0.6 w 60.00 388.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 455.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 441.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 428.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 415.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00024v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 401.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 353.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 335.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 331.70 m 552.00 331.70 l S Q
+BT /Tb 9.0 Tf 62.00 319.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 319.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 319.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 319.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 319.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 319.70 Td (Signer) Tj ET
+q 0.40 w 60.00 317.70 m 552.00 317.70 l S Q
+BT /T 9.0 Tf 62.00 305.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 305.70 Td (plb2, 7 languages x 4 tasks) Tj ET
+BT /T 9.0 Tf 242.17 305.70 Td (2026-10-08) Tj ET
+BT /T 9.0 Tf 311.46 305.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 305.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 305.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 301.70 m 552.00 301.70 l S Q
+BT /Tb 13.0 Tf 60.00 268.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 244.50 Td (r1: plb2, 7 languages x 4 tasks) Tj ET
+q 0.80 w 60.00 239.50 m 552.00 239.50 l S Q
+BT /Tb 9.0 Tf 62.00 227.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 227.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 227.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 227.50 Td (Step) Tj ET
+q 0.40 w 60.00 225.50 m 552.00 225.50 l S Q
+BT /T 9.0 Tf 62.00 213.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 213.50 Td (c_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 213.50 Td (2.8733) Tj ET
+BT /T 9.0 Tf 418.94 213.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 200.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 200.50 Td (c_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 200.50 Td (1.8112) Tj ET
+BT /T 9.0 Tf 418.94 200.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 187.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 187.50 Td (c_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 187.50 Td (2.104) Tj ET
+BT /T 9.0 Tf 418.94 187.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 174.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 174.50 Td (c_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 174.50 Td (1.1856) Tj ET
+BT /T 9.0 Tf 418.94 174.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 161.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 161.50 Td (rust_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 161.50 Td (3.0356) Tj ET
+BT /T 9.0 Tf 418.94 161.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 148.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 148.50 Td (rust_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 148.50 Td (1.7426) Tj ET
+BT /T 9.0 Tf 418.94 148.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 135.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 135.50 Td (rust_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 135.50 Td (2.2547) Tj ET
+BT /T 9.0 Tf 418.94 135.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 122.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 122.50 Td (rust_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 122.50 Td (1.3404) Tj ET
+BT /T 9.0 Tf 418.94 122.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 109.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 109.50 Td (go_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 109.50 Td (3.2979) Tj ET
+BT /T 9.0 Tf 418.94 109.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 96.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 96.50 Td (go_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 96.50 Td (2.2567) Tj ET
+BT /T 9.0 Tf 418.94 96.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 83.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 83.50 Td (go_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 83.50 Td (2.4864) Tj ET
+BT /T 9.0 Tf 418.94 83.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 70.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 70.50 Td (go_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 70.50 Td (1.5523) Tj ET
+BT /T 9.0 Tf 418.94 70.50 Td () Tj ET
+q 0.80 w 60.00 66.50 m 552.00 66.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00024v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 6890 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (java_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (4.3004) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (java_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (1.8862) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (java_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (3.225) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (java_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (4.5043) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (javascript_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (6.575) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (javascript_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (6.626) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 628.00 Td (javascript_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 628.00 Td (4.9239) Tj ET
+BT /T 9.0 Tf 418.94 628.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 615.00 Td (python_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 615.00 Td (132.682) Tj ET
+BT /T 9.0 Tf 418.94 615.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 602.00 Td (python_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 602.00 Td (146.742) Tj ET
+BT /T 9.0 Tf 418.94 602.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 589.00 Td (python_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 589.00 Td (64.173) Tj ET
+BT /T 9.0 Tf 418.94 589.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 576.00 Td (python_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 576.00 Td (69.4029) Tj ET
+BT /T 9.0 Tf 418.94 576.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 563.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 563.00 Td (julia_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 563.00 Td (3.1641) Tj ET
+BT /T 9.0 Tf 418.94 563.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 550.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 550.00 Td (julia_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 550.00 Td (1.8062) Tj ET
+BT /T 9.0 Tf 418.94 550.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 537.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 537.00 Td (julia_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 537.00 Td (2.8236) Tj ET
+BT /T 9.0 Tf 418.94 537.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 524.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 524.00 Td (julia_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 524.00 Td (2.2923) Tj ET
+BT /T 9.0 Tf 418.94 524.00 Td () Tj ET
+q 0.80 w 60.00 520.00 m 552.00 520.00 l S Q
+q 0.80 w 60.00 514.00 m 552.00 514.00 l S Q
+BT /Tb 9.0 Tf 62.00 502.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 502.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 502.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 502.00 Td (Phase) Tj ET
+q 0.40 w 60.00 500.00 m 552.00 500.00 l S Q
+BT /T 9.0 Tf 62.00 488.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 488.00 Td (c_nqueen_seconds) Tj ET
+BT /T 9.0 Tf 303.18 488.00 Td (2.8733) Tj ET
+BT /T 9.0 Tf 418.94 488.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 475.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 475.00 Td (c_matmul_seconds) Tj ET
+BT /T 9.0 Tf 303.18 475.00 Td (1.8112) Tj ET
+BT /T 9.0 Tf 418.94 475.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 462.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 462.00 Td (c_sudoku_seconds) Tj ET
+BT /T 9.0 Tf 303.18 462.00 Td (2.104) Tj ET
+BT /T 9.0 Tf 418.94 462.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 449.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 449.00 Td (c_bedcov_seconds) Tj ET
+BT /T 9.0 Tf 303.18 449.00 Td (1.1856) Tj ET
+BT /T 9.0 Tf 418.94 449.00 Td () Tj ET
+q 0.80 w 60.00 445.00 m 552.00 445.00 l S Q
+BT /Tb 13.0 Tf 60.00 412.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 403.80 m 552.00 403.80 l S Q
+BT /Tb 9.0 Tf 62.00 391.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 391.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 391.80 Td (Value) Tj ET
+q 0.40 w 60.00 389.80 m 552.00 389.80 l S Q
+BT /T 9.0 Tf 62.00 377.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 377.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 377.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 364.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 364.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 364.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 351.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 351.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 351.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 338.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 338.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 338.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 325.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 325.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 325.80 Td (481.8 s) Tj ET
+q 0.80 w 60.00 321.80 m 552.00 321.80 l S Q
+BT /Tb 13.0 Tf 60.00 288.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 270.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 266.60 m 552.00 266.60 l S Q
+BT /Tb 9.0 Tf 62.00 254.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 254.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 254.60 Td (Size) Tj ET
+q 0.40 w 60.00 252.60 m 552.00 252.60 l S Q
+BT /T 9.0 Tf 62.00 240.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 241.60 Td (8969c6e5874897d1a2b4ad478f169c27421e800c4f1b0f272541adb20dbe733c) Tj ET
+BT /T 9.0 Tf 502.21 240.60 Td (3.3 MB) Tj ET
+BT /T 9.0 Tf 62.00 227.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 228.60 Td (29785ffc1967bbff75368401180ea7bc04ad8790a92a3e29cdf6f13e921a9ec5) Tj ET
+BT /T 9.0 Tf 502.21 227.60 Td (60 KB) Tj ET
+q 0.80 w 60.00 223.60 m 552.00 223.60 l S Q
+BT /Tb 13.0 Tf 60.00 190.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 172.40 Td (Reproduction of: https://github.com/attractivechaos/plb2/tree/1181b3b83fea52ee85a66548845f8bf92e33fb67) Tj ET
+BT /T 10.0 Tf 60.00 158.40 Td (Record: CC-BY 4.0. Code: CC0-1.0, as declared by the authors. Tags: programming-languages, benchmark, performance.) Tj ET
+BT /T 10.0 Tf 60.00 144.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 130.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00024v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Length 845 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 686.80 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 672.80 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 656.80 Td ([2] Sealed experiment report r1 \(plb2, 7 languages x 4 tasks\), kv:2610.00024v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 642.80 Td (55b93fb1f5dcea0f3f0e504fc005c1d06d93a4637461dc1f16b38f537f7bcf62.) Tj ET
+BT /T 10.0 Tf 60.00 628.80 Td (https://kveritas.org/records/2610.00024v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00024v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 3 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+14 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 13 0 R /Resources 14 0 R >>
+endobj
+
+16 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R 15 0 R] /Count 3 >>
+endobj
+
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006335 00000 n 
+0000006426 00000 n 
+0000006535 00000 n 
+0000013478 00000 n 
+0000013570 00000 n 
+0000013682 00000 n 
+0000014579 00000 n 
+0000014671 00000 n 
+0000014783 00000 n 
+0000014856 00000 n 
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+14908
+%%EOF

@@ -1,0 +1,54 @@
+id: kv:2610.00024v1
+version: 1
+title: 'Reproduction of attractivechaos/plb2: four CPU benchmarks in seven languages'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the plb2 programming-language benchmark at the pinned commit: the nqueen, matmul, sudoku
+  and bedcov tasks in C (gcc 13, -O3 -flto), Rust, Go, Java, JavaScript (Node.js), Python (CPython 3.12)
+  and Julia, compiled with each language''s Makefile where one exists, one timed run per program on an
+  Intel Xeon W-2145. Each program''s last output line is kept in the log. At this commit the JavaScript
+  sudoku exits with an error, and the Rust bedcov reports a different overlap count from the other languages.'
+tags:
+- programming-languages
+- benchmark
+- performance
+license: CC0-1.0
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Programming languages and compilers
+original_code: https://github.com/attractivechaos/plb2/tree/1181b3b83fea52ee85a66548845f8bf92e33fb67
+published: '2026-10-08'
+status: published
+issue: 25
+results:
+- metric: c_nqueen_seconds
+  value: 2.8733
+- metric: c_matmul_seconds
+  value: 1.8112
+- metric: c_sudoku_seconds
+  value: 2.104
+- metric: c_bedcov_seconds
+  value: 1.1856
+reports:
+- id: r1
+  label: plb2, 7 languages x 4 tasks
+  session: 0b94e254-17e3-4815-8e3f-15890e6cbe6d
+  data_hash: 55b93fb1f5dcea0f3f0e504fc005c1d06d93a4637461dc1f16b38f537f7bcf62
+  sealed_at: '2026-10-08T01:24:03.907264344Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00024/v1/reports/r1.pdf
+      sha256: 8969c6e5874897d1a2b4ad478f169c27421e800c4f1b0f272541adb20dbe733c
+      size: 3475452
+    bundle:
+      path: bundles/2610.00024v1/r1.kvbundle.zip
+      sha256: 29785ffc1967bbff75368401180ea7bc04ad8790a92a3e29cdf6f13e921a9ec5
+      size: 60907
+files:
+  record:
+    path: records/2610/2610.00024/v1/record.pdf
+    sha256: 23870de792e46dbac8594ece7c35852015a91498df54a04b266f526ac9846a2d
+    size: 15336
