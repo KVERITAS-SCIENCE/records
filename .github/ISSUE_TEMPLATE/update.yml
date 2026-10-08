@@ -12,7 +12,7 @@ body:
     id: record
     attributes:
       label: Record ID
-      placeholder: 2610.00001
+      placeholder: "2610.00001"
     validations:
       required: true
   - type: textarea
