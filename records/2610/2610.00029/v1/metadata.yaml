@@ -1,0 +1,52 @@
+id: kv:2610.00029v1
+version: 1
+title: 'Reproduction of pytorch/torchtitan: Llama 3 debug-model pretraining on one GPU'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the README quick start at the pinned commit on a single GPU: run_train.sh with NGPU=1 and
+  the shipped llama3_debugmodel recipe (small Llama 3 architecture, the c4_test sample data bundled in
+  the repository, AdamW lr 8e-4 with linear decay), extended from 10 to 2,000 steps through a two-line
+  recipe wrapper (kv_recipes.py) because recipe settings are no longer command-line options. PyTorch nightly
+  2.16.0.dev20261007 for CUDA 13.0, as the README requires a nightly build. One NVIDIA RTX 5060 Ti.'
+tags:
+- llm-pretraining
+- torchtitan
+- llama3
+- distributed-training
+license: BSD-3-Clause
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2410.06511
+original_code: https://github.com/pytorch/torchtitan/tree/f4ce10595537576d62513dacc382e6684dadf6f2
+published: '2026-10-08'
+status: published
+issue: 28
+results:
+- metric: first_loss
+  value: 7.98317
+- metric: final_loss_mean_last100
+  value: 1.7264
+reports:
+- id: r1
+  label: Llama 3 debug model, 2000 steps
+  session: 4c96ebf6-5a3c-47ab-8cfb-6e08fd8770b7
+  data_hash: 902ef28d56b69e5748e88bcc531d53db9a87875582631ae2eb9a8a81aae3c091
+  sealed_at: '2026-10-08T08:51:05.256251726Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00029/v1/reports/r1.pdf
+      sha256: 5db71f0f719da80f2b94d1d424f79fba656ebc0242e358b79161adc7643a3294
+      size: 2493862
+    bundle:
+      path: bundles/2610.00029v1/r1.kvbundle.zip
+      sha256: 9f8a20e45d71db5db150c421d2d32eccf42183e902e66d000b0e76348ec457a7
+      size: 4275350
+files:
+  record:
+    path: records/2610/2610.00029/v1/record.pdf
+    sha256: 035cbe6ed26ed9f3d2752d100106131af85c09fbadea280049fb8c0dafc3c9b7
+    size: 10206

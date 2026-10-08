@@ -390,5 +390,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Natural language processing",
     "path": "records/2610/2610.00028/v1"
+  },
+  {
+    "id": "kv:2610.00029v1",
+    "title": "Reproduction of pytorch/torchtitan: Llama 3 debug-model pretraining on one GPU",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00029/v1"
   }
 ]
