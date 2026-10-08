@@ -1,0 +1,54 @@
+id: kv:2610.00021v1
+version: 1
+title: 'Reproduction of yandex-research/tabm: TabM on California housing, 15 seeds'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Re-ran TabM on the California housing dataset at the pinned commit with the paper''s 15 tuned
+  evaluation configs (paper/exp/tabm/california/0-evaluation, seeds 0 to 14), and compared each test RMSE
+  with the report stored in the repository for the same seed. Environment: PyTorch 2.11 with CUDA 12.8
+  in place of the pinned 2.0.1 (the GPU needs it), other packages at the versions in pixi.toml, TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
+  for the checkpoint format. Datasets and stored results for other experiments were moved out of the working
+  copy; Python''s hostname lookup returns localhost so it does not appear in log file names. One NVIDIA
+  RTX 5060 Ti.'
+tags:
+- tabular
+- ensembles
+- tabm
+- california-housing
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2410.24210
+original_code: https://github.com/yandex-research/tabm/tree/28e47ae301c92ec37787dde1ce923a0793f405b4
+published: '2026-10-08'
+status: published
+issue: 22
+results:
+- metric: test_rmse_mean
+  value: 0.441733
+- metric: paper_test_rmse_mean
+  value: 0.441392
+reports:
+- id: r1
+  label: TabM California, 15 seeds
+  session: 98d5acc3-0dad-4424-97ee-52143d7d4ad1
+  data_hash: d1c525f2d120c4578b84e3f423dcc756e3d53f5a359fbecef3f573cb066a7edf
+  sealed_at: '2026-10-07T22:55:40.861328213Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00021/v1/reports/r1.pdf
+      sha256: ba56df73ac77d5ddcc0f2725815cccb180f65040647023f1ab208366e98f30f9
+      size: 7237073
+    bundle:
+      path: bundles/2610.00021v1/r1.kvbundle.zip
+      sha256: 84a715982fed380fe7bb24beef460e16d65c94a270263a1019a3c8deba654621
+      size: 196457
+files:
+  record:
+    path: records/2610/2610.00021/v1/record.pdf
+    sha256: e75589c96870410130f759931ba1ae4401e5254c5e32601acb3ff6f0e1cf5432
+    size: 10029
