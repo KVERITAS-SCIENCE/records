@@ -250,5 +250,19 @@
     "type": "Artifact evaluation",
     "field": "Computer vision",
     "path": "records/2610/2610.00018/v1"
+  },
+  {
+    "id": "kv:2610.00019v1",
+    "title": "Reproduction of huggingface/lerobot: Diffusion Policy on PushT",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-08",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Robotics",
+    "path": "records/2610/2610.00019/v1"
   }
 ]

@@ -1,0 +1,52 @@
+id: kv:2610.00019v1
+version: 1
+title: 'Reproduction of huggingface/lerobot: Diffusion Policy on PushT'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Trained LeRobot's Diffusion Policy on the lerobot/pusht dataset at the pinned commit for 20,000
+  steps (batch 64, seed 1000, default diffusion settings), a tenth of the 200,000-step budget used for
+  the published checkpoint, and evaluated it in the gym-pusht simulator on 50 episodes at 10,000 and 20,000
+  steps (success rate and maximum coverage reward). Evaluation ran in-process (use_async_envs=false) because
+  the asynchronous evaluation workers could not load the simulator. One NVIDIA RTX 5060 Ti.
+tags:
+- diffusion-policy
+- imitation-learning
+- pusht
+- robotics
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Robotics
+paper: https://arxiv.org/abs/2303.04137
+original_code: https://github.com/huggingface/lerobot/tree/ca69a2068462a37f7cdcb74180927a2f863d2bf7
+published: '2026-10-08'
+status: published
+issue: 20
+results:
+- metric: pc_success
+  value: 36
+- metric: avg_max_reward
+  value: 0.883922
+reports:
+- id: r1
+  label: Diffusion Policy PushT (20k steps)
+  session: 36a5d830-d6b8-40bf-b8da-ee82ecc39f96
+  data_hash: 2bb6af12eec1fe3f8f3105ad97a4b514f4f339a90bd714cd0b017e830c077af8
+  sealed_at: '2026-10-07T21:18:06.791456711Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00019/v1/reports/r1.pdf
+      sha256: fa0a8f23ab3b9c32431901c7071efcfaac528842891dace8b1ab802263a28f53
+      size: 8011588
+    bundle:
+      path: bundles/2610.00019v1/r1.kvbundle.zip
+      sha256: 1fe7875e920c8fab4889ba1e2876a8a4882c3c46e47e384f87a078b78d9211e6
+      size: 3501980
+files:
+  record:
+    path: records/2610/2610.00019/v1/record.pdf
+    sha256: 2a6a42caef268929d588408e1853cc9c420bd9c7b975073d543a24af1ab658ff
+    size: 9844
