@@ -418,5 +418,19 @@
     "type": "Artifact evaluation",
     "field": "Systems and performance",
     "path": "records/2610/2610.00030/v1"
+  },
+  {
+    "id": "kv:2610.00001v2",
+    "title": "Sebeni morphotactic post-training on MULTI13: SFT, DPO, APO and GRPO arms with SmolLM2-135M",
+    "authors": [
+      "Sebastien Diarra"
+    ],
+    "submitted_by": "Sebastien Diarra",
+    "published": "2026-10-10",
+    "reports": 4,
+    "purpose": "Official implementation",
+    "type": "Research paper",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00001/v2"
   }
 ]
