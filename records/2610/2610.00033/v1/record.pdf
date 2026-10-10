@@ -1,0 +1,332 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5481 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 103.78 692.00 Td (Reproduction of state-spaces/mamba: Mamba-370M) Tj ET
+BT /Tb 18.0 Tf 228.26 666.80 Td (zero-shot evaluation) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00033v1 \267 Published 2026-10-10) Tj ET
+BT /T 10.0 Tf 149.93 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Natural language processing) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran the README zero-shot evaluation for the released state-spaces/mamba-370m checkpoint with) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (lm-evaluation-harness and the mamba_ssm backend, on the full LAMBADA, HellaSwag, PIQA,) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (ARC-Easy, ARC-Challenge and WinoGrande sets, batch size 64. mamba_ssm and causal-conv1d were) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (compiled at the pinned commits for sm_120 with CUDA 12.8 \(MAMBA_KEEP_CUDA_BUILD=TRUE) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (for the Mamba-1 kernels\); apache-tvm-ffi was pinned to 0.1.9 so the bundled tilelang imports. One NVIDIA) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 374.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 441.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 427.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 414.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 401.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00033v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 387.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 339.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 321.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 317.70 m 552.00 317.70 l S Q
+BT /Tb 9.0 Tf 62.00 305.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 305.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 305.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 305.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 305.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 305.70 Td (Signer) Tj ET
+q 0.40 w 60.00 303.70 m 552.00 303.70 l S Q
+BT /T 9.0 Tf 62.00 291.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 291.70 Td (Mamba-370M zero-shot, 6 tasks) Tj ET
+BT /T 9.0 Tf 242.17 291.70 Td (2026-10-10) Tj ET
+BT /T 9.0 Tf 311.46 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 291.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 287.70 m 552.00 287.70 l S Q
+BT /Tb 13.0 Tf 60.00 254.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 230.50 Td (r1: Mamba-370M zero-shot, 6 tasks) Tj ET
+q 0.80 w 60.00 225.50 m 552.00 225.50 l S Q
+BT /Tb 9.0 Tf 62.00 213.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 213.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 213.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 213.50 Td (Step) Tj ET
+q 0.40 w 60.00 211.50 m 552.00 211.50 l S Q
+BT /T 9.0 Tf 62.00 199.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 199.50 Td (lambada_openai_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 199.50 Td (5153) Tj ET
+BT /T 9.0 Tf 418.94 199.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 186.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 186.50 Td (lambada_openai_perplexity) Tj ET
+BT /T 9.0 Tf 303.18 186.50 Td (8.13741) Tj ET
+BT /T 9.0 Tf 418.94 186.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 173.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 173.50 Td (lambada_openai_acc) Tj ET
+BT /T 9.0 Tf 303.18 173.50 Td (0.556375) Tj ET
+BT /T 9.0 Tf 418.94 173.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 160.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 160.50 Td (hellaswag_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 160.50 Td (10042) Tj ET
+BT /T 9.0 Tf 418.94 160.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 147.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 147.50 Td (hellaswag_acc) Tj ET
+BT /T 9.0 Tf 303.18 147.50 Td (0.372037) Tj ET
+BT /T 9.0 Tf 418.94 147.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 134.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 134.50 Td (hellaswag_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 134.50 Td (0.464848) Tj ET
+BT /T 9.0 Tf 418.94 134.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 121.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 121.50 Td (piqa_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 121.50 Td (1838) Tj ET
+BT /T 9.0 Tf 418.94 121.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 108.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 108.50 Td (piqa_acc) Tj ET
+BT /T 9.0 Tf 303.18 108.50 Td (0.695321) Tj ET
+BT /T 9.0 Tf 418.94 108.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 95.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 95.50 Td (piqa_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 95.50 Td (0.683351) Tj ET
+BT /T 9.0 Tf 418.94 95.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 82.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 82.50 Td (arc_easy_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 82.50 Td (2376) Tj ET
+BT /T 9.0 Tf 418.94 82.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 69.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 69.50 Td (arc_easy_acc) Tj ET
+BT /T 9.0 Tf 303.18 69.50 Td (0.549242) Tj ET
+BT /T 9.0 Tf 418.94 69.50 Td () Tj ET
+q 0.80 w 60.00 65.50 m 552.00 65.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00033v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 6629 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (arc_easy_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.481902) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (arc_challenge_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (1172) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (arc_challenge_acc) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.25) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (arc_challenge_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.277304) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (winogrande_sample_len) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (1267) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (winogrande_acc) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.555643) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td () Tj ET
+q 0.80 w 60.00 637.00 m 552.00 637.00 l S Q
+q 0.80 w 60.00 631.00 m 552.00 631.00 l S Q
+BT /Tb 9.0 Tf 62.00 619.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 619.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 619.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 619.00 Td (Phase) Tj ET
+q 0.40 w 60.00 617.00 m 552.00 617.00 l S Q
+BT /T 9.0 Tf 62.00 605.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 605.00 Td (lambada_openai_perplexity) Tj ET
+BT /T 9.0 Tf 303.18 605.00 Td (8.13741) Tj ET
+BT /T 9.0 Tf 418.94 605.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 592.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 592.00 Td (lambada_openai_acc) Tj ET
+BT /T 9.0 Tf 303.18 592.00 Td (0.556375) Tj ET
+BT /T 9.0 Tf 418.94 592.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 579.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 579.00 Td (hellaswag_acc) Tj ET
+BT /T 9.0 Tf 303.18 579.00 Td (0.372037) Tj ET
+BT /T 9.0 Tf 418.94 579.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 566.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 566.00 Td (hellaswag_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 566.00 Td (0.464848) Tj ET
+BT /T 9.0 Tf 418.94 566.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 553.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 553.00 Td (piqa_acc) Tj ET
+BT /T 9.0 Tf 303.18 553.00 Td (0.695321) Tj ET
+BT /T 9.0 Tf 418.94 553.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 540.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 540.00 Td (piqa_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 540.00 Td (0.683351) Tj ET
+BT /T 9.0 Tf 418.94 540.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 527.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 527.00 Td (arc_easy_acc) Tj ET
+BT /T 9.0 Tf 303.18 527.00 Td (0.549242) Tj ET
+BT /T 9.0 Tf 418.94 527.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 514.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 514.00 Td (arc_easy_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 514.00 Td (0.481902) Tj ET
+BT /T 9.0 Tf 418.94 514.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 501.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 501.00 Td (arc_challenge_acc) Tj ET
+BT /T 9.0 Tf 303.18 501.00 Td (0.25) Tj ET
+BT /T 9.0 Tf 418.94 501.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 488.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 488.00 Td (arc_challenge_acc_norm) Tj ET
+BT /T 9.0 Tf 303.18 488.00 Td (0.277304) Tj ET
+BT /T 9.0 Tf 418.94 488.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 475.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 475.00 Td (winogrande_acc) Tj ET
+BT /T 9.0 Tf 303.18 475.00 Td (0.555643) Tj ET
+BT /T 9.0 Tf 418.94 475.00 Td () Tj ET
+q 0.80 w 60.00 471.00 m 552.00 471.00 l S Q
+BT /Tb 13.0 Tf 60.00 438.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 429.80 m 552.00 429.80 l S Q
+BT /Tb 9.0 Tf 62.00 417.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 417.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 417.80 Td (Value) Tj ET
+q 0.40 w 60.00 415.80 m 552.00 415.80 l S Q
+BT /T 9.0 Tf 62.00 403.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 403.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 403.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 390.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 390.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 390.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 377.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 377.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 377.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 364.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 364.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 364.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 351.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 351.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 351.80 Td (316.0 s) Tj ET
+q 0.80 w 60.00 347.80 m 552.00 347.80 l S Q
+BT /Tb 13.0 Tf 60.00 314.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 296.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 292.60 m 552.00 292.60 l S Q
+BT /Tb 9.0 Tf 62.00 280.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 280.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 280.60 Td (Size) Tj ET
+q 0.40 w 60.00 278.60 m 552.00 278.60 l S Q
+BT /T 9.0 Tf 62.00 266.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 267.60 Td (7c7e8faf5459ef60b4e88562d423721f85fa44a22c9ede7b9a239d924cc5f0cb) Tj ET
+BT /T 9.0 Tf 502.21 266.60 Td (2.9 MB) Tj ET
+BT /T 9.0 Tf 62.00 253.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 254.60 Td (7b483483fd2b5bfb57293081c8076c98b1aa147020fc7bae55c1a1be7f43cfc6) Tj ET
+BT /T 9.0 Tf 502.21 253.60 Td (279 KB) Tj ET
+q 0.80 w 60.00 249.60 m 552.00 249.60 l S Q
+BT /Tb 13.0 Tf 60.00 216.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 198.40 Td (Paper: https://arxiv.org/abs/2312.00752) Tj ET
+BT /T 10.0 Tf 60.00 184.40 Td (Reproduction of: https://github.com/state-spaces/mamba/tree/e9594ce1c732d97440f0332fdc43170a2294dbfa) Tj ET
+BT /T 10.0 Tf 60.00 170.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: mamba, state-space-models, zero-shot,) Tj ET
+BT /T 10.0 Tf 60.00 156.40 Td (lm-evaluation-harness.) Tj ET
+BT /T 10.0 Tf 60.00 142.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 128.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00033v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Length 847 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 686.80 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 672.80 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 656.80 Td ([2] Sealed experiment report r1 \(Mamba-370M zero-shot, 6 tasks\), kv:2610.00033v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 642.80 Td (1ca0f6d826b86b3262aedbf1866626edd8c23b0e04c825c7febf92fd61ead5e2.) Tj ET
+BT /T 10.0 Tf 60.00 628.80 Td (https://kveritas.org/records/2610.00033v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00033v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 3 of 3) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+14 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 13 0 R /Resources 14 0 R >>
+endobj
+
+16 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R 15 0 R] /Count 3 >>
+endobj
+
+17 0 obj
+<< /Type /Catalog /Pages 16 0 R >>
+endobj
+
+xref
+0 18
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006139 00000 n 
+0000006230 00000 n 
+0000006339 00000 n 
+0000013021 00000 n 
+0000013113 00000 n 
+0000013225 00000 n 
+0000014124 00000 n 
+0000014216 00000 n 
+0000014328 00000 n 
+0000014401 00000 n 
+trailer
+<< /Size 18 /Root 17 0 R >>
+startxref
+14453
+%%EOF

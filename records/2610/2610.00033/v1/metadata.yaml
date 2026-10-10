@@ -1,0 +1,70 @@
+id: kv:2610.00033v1
+version: 1
+title: 'Reproduction of state-spaces/mamba: Mamba-370M zero-shot evaluation'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Ran the README zero-shot evaluation for the released state-spaces/mamba-370m checkpoint with
+  lm-evaluation-harness and the mamba_ssm backend, on the full LAMBADA, HellaSwag, PIQA, ARC-Easy, ARC-Challenge
+  and WinoGrande sets, batch size 64. mamba_ssm and causal-conv1d were compiled at the pinned commits
+  for sm_120 with CUDA 12.8 (MAMBA_KEEP_CUDA_BUILD=TRUE for the Mamba-1 kernels); apache-tvm-ffi was pinned
+  to 0.1.9 so the bundled tilelang imports. One NVIDIA RTX 5060 Ti.
+tags:
+- mamba
+- state-space-models
+- zero-shot
+- lm-evaluation-harness
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2312.00752
+original_code: https://github.com/state-spaces/mamba/tree/e9594ce1c732d97440f0332fdc43170a2294dbfa
+published: '2026-10-10'
+status: published
+issue: 35
+results:
+- metric: lambada_openai_perplexity
+  value: 8.13741
+- metric: lambada_openai_acc
+  value: 0.556375
+- metric: hellaswag_acc
+  value: 0.372037
+- metric: hellaswag_acc_norm
+  value: 0.464848
+- metric: piqa_acc
+  value: 0.695321
+- metric: piqa_acc_norm
+  value: 0.683351
+- metric: arc_easy_acc
+  value: 0.549242
+- metric: arc_easy_acc_norm
+  value: 0.481902
+- metric: arc_challenge_acc
+  value: 0.25
+- metric: arc_challenge_acc_norm
+  value: 0.277304
+- metric: winogrande_acc
+  value: 0.555643
+reports:
+- id: r1
+  label: Mamba-370M zero-shot, 6 tasks
+  session: 1cb621b5-c52c-46ab-b837-9da028960e3b
+  data_hash: 1ca0f6d826b86b3262aedbf1866626edd8c23b0e04c825c7febf92fd61ead5e2
+  sealed_at: '2026-10-10T19:29:14.715176357Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00033/v1/reports/r1.pdf
+      sha256: 7c7e8faf5459ef60b4e88562d423721f85fa44a22c9ede7b9a239d924cc5f0cb
+      size: 3036367
+    bundle:
+      path: bundles/2610.00033v1/r1.kvbundle.zip
+      sha256: 7b483483fd2b5bfb57293081c8076c98b1aa147020fc7bae55c1a1be7f43cfc6
+      size: 284980
+files:
+  record:
+    path: records/2610/2610.00033/v1/record.pdf
+    sha256: fd29466783badb07b6a2b934161262ecceaa64c4b8f6bb0c559dd53480f8c8aa
+    size: 14881
