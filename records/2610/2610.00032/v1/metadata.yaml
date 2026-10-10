@@ -1,0 +1,50 @@
+id: kv:2610.00032v1
+version: 1
+title: 'Reproduction of facebookresearch/schedule_free: Schedule-Free AdamW on MNIST'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the repository''s MNIST example examples/mnist/main.py unmodified at the pinned commit:
+  a small convolutional network trained with Schedule-Free AdamW for 14 epochs (batch 64, lr 0.0025, seed
+  1), reporting test loss and accuracy after each epoch. One NVIDIA RTX 5060 Ti.'
+tags:
+- optimization
+- schedule-free
+- adamw
+- mnist
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2405.15682
+original_code: https://github.com/facebookresearch/schedule_free/tree/70785b53e778d0e872c0bbb75ff4ee54ee10c291
+published: '2026-10-10'
+status: published
+issue: 34
+results:
+- metric: final_test_accuracy
+  value: 99.35
+- metric: final_test_loss
+  value: 0.0281
+reports:
+- id: r1
+  label: Schedule-Free AdamW, MNIST 14 epochs
+  session: 03e494aa-7420-43d8-b526-8f7b4f14501c
+  data_hash: 224d6b79199f01e618e7a65ba5597a782d5839827c182ceb2dcc35880e0fbc96
+  sealed_at: '2026-10-10T19:11:26.63542714Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00032/v1/reports/r1.pdf
+      sha256: 9884f66623d6852083f65f7012c03d36e928182a4b4805520c6f3658a0cff625
+      size: 1580882
+    bundle:
+      path: bundles/2610.00032v1/r1.kvbundle.zip
+      sha256: 1a8c1c9f0a0f386f33986fbc6bfbe2c2d6d8fdc2fbd7b3dfb565a81a36aed77c
+      size: 56878
+files:
+  record:
+    path: records/2610/2610.00032/v1/record.pdf
+    sha256: 47b8dea92cd28d466751cedeecb80b5bdb6660b00e49f35b04d8c976754c6e0c
+    size: 9343
