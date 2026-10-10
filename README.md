@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.svg">
+    <img src="assets/logo-black.svg" alt="K-Veritas" width="120">
+  </picture>
+</p>
+
 # K-Veritas Records
 
 Published experiments, each sealed to the code, hardware and time that produced it. Pages:
