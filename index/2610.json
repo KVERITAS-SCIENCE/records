@@ -432,5 +432,19 @@
     "type": "Research paper",
     "field": "Natural language processing",
     "path": "records/2610/2610.00001/v2"
+  },
+  {
+    "id": "kv:2610.00031v1",
+    "title": "Reproduction of microsoft/BitNet: BitNet b1.58 2B CPU inference throughput",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-10",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00031/v1"
   }
 ]

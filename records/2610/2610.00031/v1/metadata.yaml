@@ -1,0 +1,51 @@
+id: kv:2610.00031v1
+version: 1
+title: 'Reproduction of microsoft/BitNet: BitNet b1.58 2B CPU inference throughput'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Built bitnet.cpp at the pinned commit with setup_env.py (clang 18, i2_s kernels) and ran the
+  README benchmark utils/e2e_benchmark.py on the official BitNet-b1.58-2B-4T GGUF: 512-token prompt processing
+  and 128-token generation, batch 1, 8 threads, CPU only, 5 repetitions. At this commit e2e_benchmark.py
+  exits with status 1 even on success, so success was judged by its result table. Intel Xeon W-2145.'
+tags:
+- 1-bit-llm
+- bitnet
+- cpu-inference
+- quantization
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2410.16144
+original_code: https://github.com/microsoft/BitNet/tree/0b341e582afbf9e1011f24744b554c96a3477eb5
+published: '2026-10-10'
+status: published
+issue: 33
+results:
+- metric: pp512_tokens_per_second
+  value: 23.65
+- metric: tg128_tokens_per_second
+  value: 24.7
+reports:
+- id: r1
+  label: BitNet b1.58 2B CPU throughput
+  session: 71a97ccf-c724-4052-93b7-8dab2509fe2c
+  data_hash: 926858f527e7224ce853e274f57f1916031cf2946e10b05df723ba82d0f5d13d
+  sealed_at: '2026-10-10T18:56:57.685636529Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00031/v1/reports/r1.pdf
+      sha256: fe98743f8055023f804a73da8ca5feb34c0362996d48eab351c34b7cdfd3d8fa
+      size: 3499053
+    bundle:
+      path: bundles/2610.00031v1/r1.kvbundle.zip
+      sha256: baac73e619227272be84dac4fe36b591485d452c157195d3ab63b6d16abeb3b6
+      size: 189563
+files:
+  record:
+    path: records/2610/2610.00031/v1/record.pdf
+    sha256: 849b369e2fa6cf10b52a6cd56ea58f46ed3fea0e2cba50d8277eae9077fc197a
+    size: 9904
