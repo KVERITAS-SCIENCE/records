@@ -1,0 +1,256 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5568 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 106.02 692.00 Td (Reproduction of jwkirchenbauer/lm-watermarking:) Tj ET
+BT /Tb 18.0 Tf 165.52 666.80 Td (watermark detection with OPT-1.3B) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00039v1 \267 Published 2026-10-11) Tj ET
+BT /T 10.0 Tf 153.81 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Security and cryptography) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran the repository's demo_watermark.py at the pinned commit with facebook/opt-1.3b and the default) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (watermark settings \(gamma 0.25, delta 2.0, simple_1 seeding, multinomial sampling at temperature 0.7, 200) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (new tokens, z-score threshold 4.0\), once for each of five generation seeds \(123, the default, then 1 to 4\).) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (Each run continues the script's built-in prompt with and without the watermark and runs the detector on both) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (outputs, reporting the z-score and greenlist fraction. The experiments/, watermark_reliability_release/ and) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (hf_hub_space_demo/ folders are withheld as hash-only entries since this run does not use them. PyTorch) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (2.11 \(CUDA 12.8\), transformers 5.19. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 360.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 427.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 413.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 400.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 387.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00039v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 373.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 325.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 307.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 303.70 m 552.00 303.70 l S Q
+BT /Tb 9.0 Tf 62.00 291.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 291.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 291.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 291.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 291.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 291.70 Td (Signer) Tj ET
+q 0.40 w 60.00 289.70 m 552.00 289.70 l S Q
+BT /T 9.0 Tf 62.00 277.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 277.70 Td (OPT-1.3B watermark demo, 5 ...) Tj ET
+BT /T 9.0 Tf 242.17 277.70 Td (2026-10-10) Tj ET
+BT /T 9.0 Tf 311.46 277.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 277.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 277.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 273.70 m 552.00 273.70 l S Q
+BT /Tb 13.0 Tf 60.00 240.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 216.50 Td (r1: OPT-1.3B watermark demo, 5 seeds) Tj ET
+q 0.80 w 60.00 211.50 m 552.00 211.50 l S Q
+BT /Tb 9.0 Tf 62.00 199.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 199.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 199.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 199.50 Td (Step) Tj ET
+q 0.40 w 60.00 197.50 m 552.00 197.50 l S Q
+BT /T 9.0 Tf 62.00 185.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 185.50 Td (plain_z_score) Tj ET
+BT /T 9.0 Tf 303.18 185.50 Td (0.707) Tj ET
+BT /T 9.0 Tf 418.94 185.50 Td (4) Tj ET
+BT /T 9.0 Tf 62.00 172.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 172.50 Td (plain_green_fraction_pct) Tj ET
+BT /T 9.0 Tf 303.18 172.50 Td (28.1) Tj ET
+BT /T 9.0 Tf 418.94 172.50 Td (4) Tj ET
+BT /T 9.0 Tf 62.00 159.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 159.50 Td (watermarked_z_score) Tj ET
+BT /T 9.0 Tf 303.18 159.50 Td (10.8) Tj ET
+BT /T 9.0 Tf 418.94 159.50 Td (4) Tj ET
+BT /T 9.0 Tf 62.00 146.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 146.50 Td (watermarked_green_fraction_pct) Tj ET
+BT /T 9.0 Tf 303.18 146.50 Td (58.3) Tj ET
+BT /T 9.0 Tf 418.94 146.50 Td (4) Tj ET
+q 0.80 w 60.00 142.50 m 552.00 142.50 l S Q
+q 0.80 w 60.00 136.50 m 552.00 136.50 l S Q
+BT /Tb 9.0 Tf 62.00 124.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 124.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 124.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 124.50 Td (Phase) Tj ET
+q 0.40 w 60.00 122.50 m 552.00 122.50 l S Q
+BT /T 9.0 Tf 62.00 110.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 110.50 Td (plain_z_score_seed_123) Tj ET
+BT /T 9.0 Tf 303.18 110.50 Td (0.205) Tj ET
+BT /T 9.0 Tf 418.94 110.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 97.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 97.50 Td (watermarked_z_score_seed_123) Tj ET
+BT /T 9.0 Tf 303.18 97.50 Td (11.3) Tj ET
+BT /T 9.0 Tf 418.94 97.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 84.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 84.50 Td (plain_z_score_seed_1) Tj ET
+BT /T 9.0 Tf 303.18 84.50 Td (-2.25) Tj ET
+BT /T 9.0 Tf 418.94 84.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 71.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 71.50 Td (watermarked_z_score_seed_1) Tj ET
+BT /T 9.0 Tf 303.18 71.50 Td (8.55) Tj ET
+BT /T 9.0 Tf 418.94 71.50 Td () Tj ET
+q 0.80 w 60.00 67.50 m 552.00 67.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00039v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 4956 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Phase) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (plain_z_score_seed_2) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.532) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (watermarked_z_score_seed_2) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (9.37) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (plain_z_score_seed_3) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (-0.123) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (watermarked_z_score_seed_3) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (9.04) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (plain_z_score_seed_4) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.707) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (watermarked_z_score_seed_4) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (10.8) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td () Tj ET
+q 0.80 w 60.00 637.00 m 552.00 637.00 l S Q
+BT /Tb 13.0 Tf 60.00 604.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 595.80 m 552.00 595.80 l S Q
+BT /Tb 9.0 Tf 62.00 583.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 583.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 583.80 Td (Value) Tj ET
+q 0.40 w 60.00 581.80 m 552.00 581.80 l S Q
+BT /T 9.0 Tf 62.00 569.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 569.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 569.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 556.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 556.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 556.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 543.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 543.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 543.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 530.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 530.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 530.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 517.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 517.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 517.80 Td (64.1 s) Tj ET
+q 0.80 w 60.00 513.80 m 552.00 513.80 l S Q
+BT /Tb 13.0 Tf 60.00 480.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 462.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 458.60 m 552.00 458.60 l S Q
+BT /Tb 9.0 Tf 62.00 446.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 446.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 446.60 Td (Size) Tj ET
+q 0.40 w 60.00 444.60 m 552.00 444.60 l S Q
+BT /T 9.0 Tf 62.00 432.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 433.60 Td (8320420999fc0b4c2b31f32206cc02750fe21a6036f12d80510952892e564f7c) Tj ET
+BT /T 9.0 Tf 502.21 432.60 Td (755 KB) Tj ET
+BT /T 9.0 Tf 62.00 419.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 420.60 Td (0f22f086a877ed4650cba6fdadc3830c36a48fd30fb7e09394c9f140e497d765) Tj ET
+BT /T 9.0 Tf 502.21 419.60 Td (121 KB) Tj ET
+q 0.80 w 60.00 415.60 m 552.00 415.60 l S Q
+BT /Tb 13.0 Tf 60.00 382.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 364.40 Td (Paper: https://arxiv.org/abs/2301.10226) Tj ET
+BT /T 10.0 Tf 60.00 350.40 Td (Reproduction of:) Tj ET
+BT /T 10.0 Tf 60.00 336.40 Td (https://github.com/jwkirchenbauer/lm-watermarking/tree/82922516930c02f8aa322765defdb5863d07a00e) Tj ET
+BT /T 10.0 Tf 60.00 322.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: watermarking, llm, detection, opt.) Tj ET
+BT /T 10.0 Tf 60.00 308.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 294.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 263.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 245.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 231.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 215.20 Td ([2] Sealed experiment report r1 \(OPT-1.3B watermark demo, 5 seeds\), kv:2610.00039v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 201.20 Td (ac03b8e5033482f06efa21de3c8e0ceb7f32d4968df7a3a05837d1e49e879464.) Tj ET
+BT /T 10.0 Tf 60.00 187.20 Td (https://kveritas.org/records/2610.00039v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00039v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006226 00000 n 
+0000006317 00000 n 
+0000006426 00000 n 
+0000011435 00000 n 
+0000011527 00000 n 
+0000011639 00000 n 
+0000011705 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+11757
+%%EOF

@@ -1,0 +1,70 @@
+id: kv:2610.00039v1
+version: 1
+title: 'Reproduction of jwkirchenbauer/lm-watermarking: watermark detection with OPT-1.3B'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Ran the repository's demo_watermark.py at the pinned commit with facebook/opt-1.3b and the default
+  watermark settings (gamma 0.25, delta 2.0, simple_1 seeding, multinomial sampling at temperature 0.7,
+  200 new tokens, z-score threshold 4.0), once for each of five generation seeds (123, the default, then
+  1 to 4). Each run continues the script's built-in prompt with and without the watermark and runs the
+  detector on both outputs, reporting the z-score and greenlist fraction. The experiments/, watermark_reliability_release/
+  and hf_hub_space_demo/ folders are withheld as hash-only entries since this run does not use them. PyTorch
+  2.11 (CUDA 12.8), transformers 5.19. One NVIDIA RTX 5060 Ti.
+tags:
+- watermarking
+- llm
+- detection
+- opt
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Security and cryptography
+paper: https://arxiv.org/abs/2301.10226
+original_code: https://github.com/jwkirchenbauer/lm-watermarking/tree/82922516930c02f8aa322765defdb5863d07a00e
+published: '2026-10-11'
+status: published
+issue: 41
+results:
+- metric: plain_z_score_seed_123
+  value: 0.205
+- metric: watermarked_z_score_seed_123
+  value: 11.3
+- metric: plain_z_score_seed_1
+  value: -2.25
+- metric: watermarked_z_score_seed_1
+  value: 8.55
+- metric: plain_z_score_seed_2
+  value: 0.532
+- metric: watermarked_z_score_seed_2
+  value: 9.37
+- metric: plain_z_score_seed_3
+  value: -0.123
+- metric: watermarked_z_score_seed_3
+  value: 9.04
+- metric: plain_z_score_seed_4
+  value: 0.707
+- metric: watermarked_z_score_seed_4
+  value: 10.8
+reports:
+- id: r1
+  label: OPT-1.3B watermark demo, 5 seeds
+  session: 18085593-06c6-4b1a-90df-15aa74ddd08e
+  data_hash: ac03b8e5033482f06efa21de3c8e0ceb7f32d4968df7a3a05837d1e49e879464
+  sealed_at: '2026-10-10T21:36:51.276383659Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00039/v1/reports/r1.pdf
+      sha256: 8320420999fc0b4c2b31f32206cc02750fe21a6036f12d80510952892e564f7c
+      size: 772179
+    bundle:
+      path: bundles/2610.00039v1/r1.kvbundle.zip
+      sha256: 0f22f086a877ed4650cba6fdadc3830c36a48fd30fb7e09394c9f140e497d765
+      size: 123581
+files:
+  record:
+    path: records/2610/2610.00039/v1/record.pdf
+    sha256: a2c18a14be9fda0f8afadfa2b7f3750ba4b2b08a50bb38271a22c2e366a2386e
+    size: 12125
