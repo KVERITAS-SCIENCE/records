@@ -1,0 +1,51 @@
+id: kv:2610.00036v1
+version: 1
+title: 'Reproduction of Lightning-AI/lightning-thunder: Hugging Face LLM generation, eager vs Thunder'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the quickstart examples/quickstart/hf_llm.py at the pinned commit: greedy generation of
+  100 tokens with a static cache, timed with Thunder''s benchmark_n over two runs, once in PyTorch eager
+  mode and once compiled with Thunder''s hf-transformers recipe. The script''s default model, meta-llama/Llama-3.2-1B,
+  is gated, so the first public model from its own list was used instead (deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B,
+  bf16). PyTorch 2.8 with CUDA 12.8 to match the pinned nvFuser build. One NVIDIA RTX 5060 Ti.'
+tags:
+- compiler
+- pytorch
+- llm-inference
+- thunder
+license: Apache-2.0
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Programming languages and compilers
+original_code: https://github.com/Lightning-AI/lightning-thunder/tree/62dfb0b8daeb240fd3a5615966ff0b9bb7efd710
+published: '2026-10-11'
+status: published
+issue: 38
+results:
+- metric: eager_generate_ms
+  value: 1221.03
+- metric: thunder_generate_ms
+  value: 2554.79
+reports:
+- id: r1
+  label: Eager vs Thunder generation
+  session: bc75a73a-85ba-4c14-82c2-fb6f81287bd8
+  data_hash: d5f0b916cca0952bbef89c86fb15264e33d54a4fbc9b0a4b3e48186de56ffeff
+  sealed_at: '2026-10-10T21:11:41.328376672Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00036/v1/reports/r1.pdf
+      sha256: cf2dddc7b738d11c1f9c7530b54fb9fbe163bde11ccddbe3275d5acf0bd1e8e7
+      size: 3837848
+    bundle:
+      path: bundles/2610.00036v1/r1.kvbundle.zip
+      sha256: bd016a21116e9c54890828a70a7014367d9cb7cee9e4f75c498541741a8816b8
+      size: 2331586
+files:
+  record:
+    path: records/2610/2610.00036/v1/record.pdf
+    sha256: 2be08f641bfe17ccd0ef90c768730c711e88a8b82e1f4e9ee1b96711246630e2
+    size: 9668
