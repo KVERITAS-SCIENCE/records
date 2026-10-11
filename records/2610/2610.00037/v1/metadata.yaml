@@ -1,0 +1,54 @@
+id: kv:2610.00037v1
+version: 1
+title: 'Reproduction of locuslab/wanda: pruning OPT-1.3B with Wanda and magnitude'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Pruned OPT-1.3B with the repository''s main_opt.py at the pinned commit and measured WikiText-2
+  perplexity for three settings: Wanda at 50% unstructured sparsity, Wanda with 2:4 semi-structured sparsity,
+  and the magnitude-pruning baseline at 50% unstructured, each with 128 C4 calibration samples. Changes:
+  transformers 4.40 and PyTorch 2.11 instead of the pinned 4.28 and 1.10, and lib/data.py loads C4 without
+  the retired ''allenai--c4'' config name (same data files). One NVIDIA RTX 5060 Ti.'
+tags:
+- pruning
+- sparsity
+- llm-compression
+- opt
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2306.11695
+original_code: https://github.com/locuslab/wanda/tree/8e8fc87b4a2f9955baa7e76e64d5fce7fa8724a6
+published: '2026-10-11'
+status: published
+issue: 39
+results:
+- metric: wanda_unstructured_50_wikitext2_ppl
+  value: 18.4108
+- metric: wanda_2of4_wikitext2_ppl
+  value: 28.2521
+- metric: magnitude_unstructured_50_wikitext2_ppl
+  value: 1713.5883
+reports:
+- id: r1
+  label: 'OPT-1.3B: Wanda 50%, Wanda 2:4, magnitude 50%'
+  session: 20484b65-c227-4014-b037-a05b2a356584
+  data_hash: ebe63d9fbaa8d39c38ecb640cf95a443f663d88873ca18a3c8c1902a8850f49f
+  sealed_at: '2026-10-10T21:25:54.828291809Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00037/v1/reports/r1.pdf
+      sha256: cc04c3467266f10122da40eaf79193cc58a7305b4bcaad23b482bbb0ca299f6c
+      size: 4300161
+    bundle:
+      path: bundles/2610.00037v1/r1.kvbundle.zip
+      sha256: 7945ac5100d3fc6c4caef643c5992d0b2c233d2c3ce468af4eab55a77aa23858
+      size: 27106
+files:
+  record:
+    path: records/2610/2610.00037/v1/record.pdf
+    sha256: ef6ef1dba25394f4c64a2a8014ce019cacddce7fdc222ac795d0d774c57d3d41
+    size: 10668

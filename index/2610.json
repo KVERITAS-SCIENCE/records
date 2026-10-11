@@ -516,5 +516,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Programming languages and compilers",
     "path": "records/2610/2610.00036/v1"
+  },
+  {
+    "id": "kv:2610.00037v1",
+    "title": "Reproduction of locuslab/wanda: pruning OPT-1.3B with Wanda and magnitude",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-11",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Machine learning",
+    "path": "records/2610/2610.00037/v1"
   }
 ]
