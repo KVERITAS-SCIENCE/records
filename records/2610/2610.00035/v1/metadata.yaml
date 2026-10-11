@@ -1,0 +1,61 @@
+id: kv:2610.00035v1
+version: 1
+title: 'Reproduction of linkedin/Liger-Kernel: fused linear cross entropy, RMSNorm and SwiGLU benchmarks'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: Ran three of the repository's kernel benchmarks at the pinned commit (fused linear cross entropy,
+  RMSNorm, SwiGLU) on Triton 3.6 with PyTorch 2.11, comparing Liger's kernels with the baseline each script
+  uses (Hugging Face modules, or plain PyTorch for fused linear cross entropy) in speed and peak memory,
+  forward, backward and full passes. The report holds the geometric-mean ratio of baseline to Liger over
+  each script's sweep; values above 1 favour Liger. On this GPU the fused linear cross entropy kernel
+  uses less memory but is slower than the PyTorch baseline. One NVIDIA RTX 5060 Ti (Blackwell, sm_120).
+tags:
+- triton
+- gpu-kernels
+- llm-training
+- benchmark
+license: BSD-2-Clause
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Systems and performance
+paper: https://arxiv.org/abs/2410.10989
+original_code: https://github.com/linkedin/Liger-Kernel/tree/d5f281789aeb5d8d13ffb6825d8e74486af7442c
+published: '2026-10-11'
+status: published
+issue: 37
+results:
+- metric: fused_linear_cross_entropy_full_memory_baseline_over_liger
+  value: 1.23818
+- metric: fused_linear_cross_entropy_full_speed_baseline_over_liger
+  value: 0.275131
+- metric: rms_norm_full_memory_baseline_over_liger
+  value: 4.70807
+- metric: rms_norm_full_speed_baseline_over_liger
+  value: 8.96247
+- metric: swiglu_full_memory_baseline_over_liger
+  value: 1.12276
+- metric: swiglu_full_speed_baseline_over_liger
+  value: 1.01778
+reports:
+- id: r1
+  label: FLCE, RMSNorm, SwiGLU vs baseline
+  session: 55047e28-75c3-43a0-90e9-37a9ba957c40
+  data_hash: 8e2bf2961fc0da8e721b6f9c0eec4508e92617114d33f4893e7cd6d64efeeadc
+  sealed_at: '2026-10-10T20:52:07.694285902Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00035/v1/reports/r1.pdf
+      sha256: 0257a92ed6b937f09c916367069b7740742b1c07065101486610a24a1e24a235
+      size: 2282351
+    bundle:
+      path: bundles/2610.00035v1/r1.kvbundle.zip
+      sha256: 6ab2beb6c789f698104452416e4907dda8c32e277b63a7fea484b3285a475c33
+      size: 1718204
+files:
+  record:
+    path: records/2610/2610.00035/v1/record.pdf
+    sha256: d5c8108a041ff74b945bfa7bbf8fcfacc2ed065e8d37979bc4c5dc0007d494ff
+    size: 13692

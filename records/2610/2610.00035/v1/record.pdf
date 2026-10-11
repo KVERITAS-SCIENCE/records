@@ -1,0 +1,282 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5948 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 84.25 692.00 Td (Reproduction of linkedin/Liger-Kernel: fused linear cross) Tj ET
+BT /Tb 18.0 Tf 126.75 666.80 Td (entropy, RMSNorm and SwiGLU benchmarks) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00035v1 \267 Published 2026-10-11) Tj ET
+BT /T 10.0 Tf 155.20 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Systems and performance) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran three of the repository's kernel benchmarks at the pinned commit \(fused linear cross entropy,) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (RMSNorm, SwiGLU\) on Triton 3.6 with PyTorch 2.11, comparing Liger's kernels with the baseline each) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (script uses \(Hugging Face modules, or plain PyTorch for fused linear cross entropy\) in speed and peak) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (memory, forward, backward and full passes. The report holds the geometric-mean ratio of baseline to Liger) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (over each script's sweep; values above 1 favour Liger. On this GPU the fused linear cross entropy kernel) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (uses less memory but is slower than the PyTorch baseline. One NVIDIA RTX 5060 Ti \(Blackwell, sm_120\).) Tj ET
+q 0.6 w 60.00 374.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 441.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 427.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 414.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 401.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00035v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 387.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 339.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 321.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 317.70 m 552.00 317.70 l S Q
+BT /Tb 9.0 Tf 62.00 305.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 305.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 305.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 305.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 305.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 305.70 Td (Signer) Tj ET
+q 0.40 w 60.00 303.70 m 552.00 303.70 l S Q
+BT /T 9.0 Tf 62.00 291.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 291.70 Td (FLCE, RMSNorm, SwiGLU v...) Tj ET
+BT /T 9.0 Tf 242.17 291.70 Td (2026-10-10) Tj ET
+BT /T 9.0 Tf 311.46 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 291.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 287.70 m 552.00 287.70 l S Q
+BT /Tb 13.0 Tf 60.00 254.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 230.50 Td (r1: FLCE, RMSNorm, SwiGLU vs baseline) Tj ET
+q 0.80 w 60.00 225.50 m 552.00 225.50 l S Q
+BT /Tb 9.0 Tf 62.00 213.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 213.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 213.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 213.50 Td (Step) Tj ET
+q 0.40 w 60.00 211.50 m 552.00 211.50 l S Q
+BT /T 9.0 Tf 62.00 199.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 199.50 Td (fused_linear_cross_entropy_backward_speed_ba...) Tj ET
+BT /T 9.0 Tf 303.18 199.50 Td (5.34787) Tj ET
+BT /T 9.0 Tf 418.94 199.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 186.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 186.50 Td (fused_linear_cross_entropy_forward_speed_base...) Tj ET
+BT /T 9.0 Tf 303.18 186.50 Td (0.0909073) Tj ET
+BT /T 9.0 Tf 418.94 186.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 173.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 173.50 Td (fused_linear_cross_entropy_full_memory_baseli...) Tj ET
+BT /T 9.0 Tf 303.18 173.50 Td (1.23818) Tj ET
+BT /T 9.0 Tf 418.94 173.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 160.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 160.50 Td (fused_linear_cross_entropy_full_speed_baseline_...) Tj ET
+BT /T 9.0 Tf 303.18 160.50 Td (0.275131) Tj ET
+BT /T 9.0 Tf 418.94 160.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 147.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 147.50 Td (rms_norm_backward_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 147.50 Td (15.0434) Tj ET
+BT /T 9.0 Tf 418.94 147.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 134.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 134.50 Td (rms_norm_forward_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 134.50 Td (7.91171) Tj ET
+BT /T 9.0 Tf 418.94 134.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 121.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 121.50 Td (rms_norm_full_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 121.50 Td (4.70807) Tj ET
+BT /T 9.0 Tf 418.94 121.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 108.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 108.50 Td (rms_norm_full_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 108.50 Td (8.96247) Tj ET
+BT /T 9.0 Tf 418.94 108.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 95.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 95.50 Td (swiglu_backward_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 95.50 Td (1.12276) Tj ET
+BT /T 9.0 Tf 418.94 95.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 82.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 82.50 Td (swiglu_backward_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 82.50 Td (1.01894) Tj ET
+BT /T 9.0 Tf 418.94 82.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 69.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 69.50 Td (swiglu_forward_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 69.50 Td (1.1035) Tj ET
+BT /T 9.0 Tf 418.94 69.50 Td () Tj ET
+q 0.80 w 60.00 65.50 m 552.00 65.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00035v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 6143 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (swiglu_forward_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (1.01625) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (swiglu_full_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (1.12276) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (swiglu_full_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (1.01778) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (rows_measured) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (92) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+q 0.80 w 60.00 663.00 m 552.00 663.00 l S Q
+q 0.80 w 60.00 657.00 m 552.00 657.00 l S Q
+BT /Tb 9.0 Tf 62.00 645.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 645.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 645.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 645.00 Td (Phase) Tj ET
+q 0.40 w 60.00 643.00 m 552.00 643.00 l S Q
+BT /T 9.0 Tf 62.00 631.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 631.00 Td (fused_linear_cross_entropy_full_memory_baseli...) Tj ET
+BT /T 9.0 Tf 303.18 631.00 Td (1.23818) Tj ET
+BT /T 9.0 Tf 418.94 631.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 618.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 618.00 Td (fused_linear_cross_entropy_full_speed_baseline_...) Tj ET
+BT /T 9.0 Tf 303.18 618.00 Td (0.275131) Tj ET
+BT /T 9.0 Tf 418.94 618.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 605.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 605.00 Td (rms_norm_full_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 605.00 Td (4.70807) Tj ET
+BT /T 9.0 Tf 418.94 605.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 592.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 592.00 Td (rms_norm_full_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 592.00 Td (8.96247) Tj ET
+BT /T 9.0 Tf 418.94 592.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 579.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 579.00 Td (swiglu_full_memory_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 579.00 Td (1.12276) Tj ET
+BT /T 9.0 Tf 418.94 579.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 566.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 566.00 Td (swiglu_full_speed_baseline_over_liger) Tj ET
+BT /T 9.0 Tf 303.18 566.00 Td (1.01778) Tj ET
+BT /T 9.0 Tf 418.94 566.00 Td () Tj ET
+q 0.80 w 60.00 562.00 m 552.00 562.00 l S Q
+BT /Tb 13.0 Tf 60.00 529.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 520.80 m 552.00 520.80 l S Q
+BT /Tb 9.0 Tf 62.00 508.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 508.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 508.80 Td (Value) Tj ET
+q 0.40 w 60.00 506.80 m 552.00 506.80 l S Q
+BT /T 9.0 Tf 62.00 494.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 494.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 494.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 481.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 481.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 481.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 468.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 468.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 468.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 455.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 455.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 455.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 442.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 442.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 442.80 Td (202.0 s) Tj ET
+q 0.80 w 60.00 438.80 m 552.00 438.80 l S Q
+BT /Tb 13.0 Tf 60.00 405.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 387.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 383.60 m 552.00 383.60 l S Q
+BT /Tb 9.0 Tf 62.00 371.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 371.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 371.60 Td (Size) Tj ET
+q 0.40 w 60.00 369.60 m 552.00 369.60 l S Q
+BT /T 9.0 Tf 62.00 357.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 358.60 Td (0257a92ed6b937f09c916367069b7740742b1c07065101486610a24a1e24a235) Tj ET
+BT /T 9.0 Tf 502.21 357.60 Td (2.2 MB) Tj ET
+BT /T 9.0 Tf 62.00 344.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 345.60 Td (6ab2beb6c789f698104452416e4907dda8c32e277b63a7fea484b3285a475c33) Tj ET
+BT /T 9.0 Tf 502.21 344.60 Td (1.6 MB) Tj ET
+q 0.80 w 60.00 340.60 m 552.00 340.60 l S Q
+BT /Tb 13.0 Tf 60.00 307.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 289.40 Td (Paper: https://arxiv.org/abs/2410.10989) Tj ET
+BT /T 10.0 Tf 60.00 275.40 Td (Reproduction of: https://github.com/linkedin/Liger-Kernel/tree/d5f281789aeb5d8d13ffb6825d8e74486af7442c) Tj ET
+BT /T 10.0 Tf 60.00 261.40 Td (Record: CC-BY 4.0. Code: BSD-2-Clause, as declared by the authors. Tags: triton, gpu-kernels, llm-training, benchmark.) Tj ET
+BT /T 10.0 Tf 60.00 247.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 233.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 202.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 184.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 170.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 154.20 Td ([2] Sealed experiment report r1 \(FLCE, RMSNorm, SwiGLU vs baseline\), kv:2610.00035v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 140.20 Td (8e2bf2961fc0da8e721b6f9c0eec4508e92617114d33f4893e7cd6d64efeeadc.) Tj ET
+BT /T 10.0 Tf 60.00 126.20 Td (https://kveritas.org/records/2610.00035v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00035v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006606 00000 n 
+0000006697 00000 n 
+0000006806 00000 n 
+0000013002 00000 n 
+0000013094 00000 n 
+0000013206 00000 n 
+0000013272 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+13324
+%%EOF
