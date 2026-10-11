@@ -474,5 +474,19 @@
     "type": "Artifact evaluation",
     "field": "Natural language processing",
     "path": "records/2610/2610.00033/v1"
+  },
+  {
+    "id": "kv:2610.00034v1",
+    "title": "Reproduction of jiaweizzhao/GaLore: LLaMA-60M pre-training on C4 with GaLore",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-11",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Machine learning",
+    "path": "records/2610/2610.00034/v1"
   }
 ]

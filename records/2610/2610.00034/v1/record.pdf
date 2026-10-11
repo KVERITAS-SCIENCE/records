@@ -1,0 +1,220 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5130 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 106.27 692.00 Td (Reproduction of jiaweizzhao/GaLore: LLaMA-60M) Tj ET
+BT /Tb 18.0 Tf 182.50 666.80 Td (pre-training on C4 with GaLore) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00034v1 \267 Published 2026-10-11) Tj ET
+BT /T 10.0 Tf 171.72 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Machine learning) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Pre-trained LLaMA-60M on streamed C4 with the GaLore AdamW optimizer using the README) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (command at the pinned commit \(rank 128, scale 0.25, projection update every 200 steps, lr 0.01, bf16\), for) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (2,000 steps instead of 10,000 to fit the time budget, with evaluation every 500 steps. Changes needed on this) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (machine: micro-batch 64 with the same total batch of 512 \(256 does not fit 16 GB\), transformers 4.40.2) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (instead of the pinned 4.31 \(no Python 3.12 build\), and the validation set loaded as allenai/c4 instead of the) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (retired c4 name. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 374.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 441.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 427.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 414.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 401.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00034v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 387.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 339.90 Td (1  Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 321.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 317.70 m 552.00 317.70 l S Q
+BT /Tb 9.0 Tf 62.00 305.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 305.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 305.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 305.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 305.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 305.70 Td (Signer) Tj ET
+q 0.40 w 60.00 303.70 m 552.00 303.70 l S Q
+BT /T 9.0 Tf 62.00 291.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 291.70 Td (LLaMA-60M GaLore, 2000 st...) Tj ET
+BT /T 9.0 Tf 242.17 291.70 Td (2026-10-10) Tj ET
+BT /T 9.0 Tf 311.46 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 291.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 291.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 287.70 m 552.00 287.70 l S Q
+BT /Tb 13.0 Tf 60.00 254.70 Td (2  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 230.50 Td (r1: LLaMA-60M GaLore, 2000 steps) Tj ET
+q 0.80 w 60.00 225.50 m 552.00 225.50 l S Q
+BT /Tb 9.0 Tf 62.00 213.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 213.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 213.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 213.50 Td (Step) Tj ET
+q 0.40 w 60.00 211.50 m 552.00 211.50 l S Q
+BT /T 9.0 Tf 62.00 199.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 199.50 Td (params) Tj ET
+BT /T 9.0 Tf 303.18 199.50 Td (58.07) Tj ET
+BT /T 9.0 Tf 418.94 199.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 186.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 186.50 Td (enabled) Tj ET
+BT /T 9.0 Tf 303.18 186.50 Td (25.3) Tj ET
+BT /T 9.0 Tf 418.94 186.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 173.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 173.50 Td (loss) Tj ET
+BT /T 9.0 Tf 303.18 173.50 Td (3.8481) Tj ET
+BT /T 9.0 Tf 418.94 173.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 160.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 160.50 Td (eval_loss) Tj ET
+BT /T 9.0 Tf 303.18 160.50 Td (3.8481) Tj ET
+BT /T 9.0 Tf 418.94 160.50 Td (2000) Tj ET
+BT /T 9.0 Tf 62.00 147.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 147.50 Td (eval_perplexity) Tj ET
+BT /T 9.0 Tf 303.18 147.50 Td (46.9039) Tj ET
+BT /T 9.0 Tf 418.94 147.50 Td (2000) Tj ET
+q 0.80 w 60.00 143.50 m 552.00 143.50 l S Q
+q 0.80 w 60.00 137.50 m 552.00 137.50 l S Q
+BT /Tb 9.0 Tf 62.00 125.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 125.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 125.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 125.50 Td (Phase) Tj ET
+q 0.40 w 60.00 123.50 m 552.00 123.50 l S Q
+BT /T 9.0 Tf 62.00 111.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 111.50 Td (final_eval_loss) Tj ET
+BT /T 9.0 Tf 303.18 111.50 Td (3.8481) Tj ET
+BT /T 9.0 Tf 418.94 111.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 98.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 98.50 Td (final_eval_perplexity) Tj ET
+BT /T 9.0 Tf 303.18 98.50 Td (46.9039) Tj ET
+BT /T 9.0 Tf 418.94 98.50 Td () Tj ET
+q 0.80 w 60.00 94.50 m 552.00 94.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00034v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 3547 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (3  Setup) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 684.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 670.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 670.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 657.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 657.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 644.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 644.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 631.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 631.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 618.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 618.80 Td (4000.3 s) Tj ET
+q 0.80 w 60.00 614.80 m 552.00 614.80 l S Q
+BT /Tb 13.0 Tf 60.00 581.80 Td (4  Files) Tj ET
+BT /T 10.0 Tf 60.00 563.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 559.60 m 552.00 559.60 l S Q
+BT /Tb 9.0 Tf 62.00 547.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 547.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 547.60 Td (Size) Tj ET
+q 0.40 w 60.00 545.60 m 552.00 545.60 l S Q
+BT /T 9.0 Tf 62.00 533.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 534.60 Td (0407c1dc5cb0ada57f34084dbe1ec5f9f88d2e25f01629853224fa373ac3e01d) Tj ET
+BT /T 9.0 Tf 502.21 533.60 Td (6.8 MB) Tj ET
+BT /T 9.0 Tf 62.00 520.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 521.60 Td (8fff306ee6827640b6a7389baa870efaea748ec278598d61b62383cecd2114f6) Tj ET
+BT /T 9.0 Tf 502.21 520.60 Td (57 KB) Tj ET
+q 0.80 w 60.00 516.60 m 552.00 516.60 l S Q
+BT /Tb 13.0 Tf 60.00 483.60 Td (5  Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 465.40 Td (Paper: https://arxiv.org/abs/2403.03507) Tj ET
+BT /T 10.0 Tf 60.00 451.40 Td (Reproduction of: https://github.com/jiaweizzhao/GaLore/tree/2cc66f88cce189e505affbb91042a8e77f5bf4e9) Tj ET
+BT /T 10.0 Tf 60.00 437.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: galore, memory-efficient-training, llama, c4,) Tj ET
+BT /T 10.0 Tf 60.00 423.40 Td (pretraining.) Tj ET
+BT /T 10.0 Tf 60.00 409.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 395.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 364.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 346.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 332.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 316.20 Td ([2] Sealed experiment report r1 \(LLaMA-60M GaLore, 2000 steps\), kv:2610.00034v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 302.20 Td (3ea1024baf8c7e0c27e846061055683df0b20293833dcb6e85c6acd0ddb29262.) Tj ET
+BT /T 10.0 Tf 60.00 288.20 Td (https://kveritas.org/records/2610.00034v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00034v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000005788 00000 n 
+0000005879 00000 n 
+0000005988 00000 n 
+0000009588 00000 n 
+0000009680 00000 n 
+0000009792 00000 n 
+0000009858 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+9910
+%%EOF

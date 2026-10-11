@@ -1,0 +1,54 @@
+id: kv:2610.00034v1
+version: 1
+title: 'Reproduction of jiaweizzhao/GaLore: LLaMA-60M pre-training on C4 with GaLore'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Pre-trained LLaMA-60M on streamed C4 with the GaLore AdamW optimizer using the README command
+  at the pinned commit (rank 128, scale 0.25, projection update every 200 steps, lr 0.01, bf16), for 2,000
+  steps instead of 10,000 to fit the time budget, with evaluation every 500 steps. Changes needed on this
+  machine: micro-batch 64 with the same total batch of 512 (256 does not fit 16 GB), transformers 4.40.2
+  instead of the pinned 4.31 (no Python 3.12 build), and the validation set loaded as allenai/c4 instead
+  of the retired c4 name. One NVIDIA RTX 5060 Ti.'
+tags:
+- galore
+- memory-efficient-training
+- llama
+- c4
+- pretraining
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Machine learning
+paper: https://arxiv.org/abs/2403.03507
+original_code: https://github.com/jiaweizzhao/GaLore/tree/2cc66f88cce189e505affbb91042a8e77f5bf4e9
+published: '2026-10-11'
+status: published
+issue: 36
+results:
+- metric: final_eval_loss
+  value: 3.8481
+- metric: final_eval_perplexity
+  value: 46.9039
+reports:
+- id: r1
+  label: LLaMA-60M GaLore, 2000 steps
+  session: aa5c386e-0266-41c8-9fa7-255bcbd67948
+  data_hash: 3ea1024baf8c7e0c27e846061055683df0b20293833dcb6e85c6acd0ddb29262
+  sealed_at: '2026-10-10T20:38:35.415785832Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00034/v1/reports/r1.pdf
+      sha256: 0407c1dc5cb0ada57f34084dbe1ec5f9f88d2e25f01629853224fa373ac3e01d
+      size: 7151313
+    bundle:
+      path: bundles/2610.00034v1/r1.kvbundle.zip
+      sha256: 8fff306ee6827640b6a7389baa870efaea748ec278598d61b62383cecd2114f6
+      size: 57988
+files:
+  record:
+    path: records/2610/2610.00034/v1/record.pdf
+    sha256: b90f03c20090b4ed1c867fc4d8f581e704e6cf0bd7a70152526beac22c7d786b
+    size: 10277
