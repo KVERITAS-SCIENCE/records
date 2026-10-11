@@ -1,0 +1,64 @@
+id: kv:2610.00038v1
+version: 1
+title: 'Reproduction of FlagOpen/FlagEmbedding: BGE-base-en-v1.5 on BEIR SciFact, NFCorpus and FiQA'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Evaluated the BAAI/bge-base-en-v1.5 embedding model with the repository''s BEIR evaluation
+  module (FlagEmbedding.evaluation.beir) at the pinned commit: dense retrieval without a reranker on the
+  test splits of SciFact, NFCorpus and FiQA, top 1000 retrieved, reporting nDCG@10 and Recall@100. Corpus
+  embeddings were computed during the run. The research/ and examples/finetune/ folders are withheld as
+  hash-only entries since this run does not use them. PyTorch 2.11 (CUDA 12.8). One NVIDIA RTX 5060 Ti.'
+tags:
+- embeddings
+- retrieval
+- beir
+- bge
+license: MIT
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2309.07597
+original_code: https://github.com/FlagOpen/FlagEmbedding/tree/fd1a2bdf69488ffebe0327999d4400d8c8058a0b
+published: '2026-10-11'
+status: published
+issue: 40
+results:
+- metric: average_ndcg_at_10
+  value: 49.903
+- metric: fiqa_ndcg_at_10
+  value: 39.117
+- metric: nfcorpus_ndcg_at_10
+  value: 36.799
+- metric: scifact_ndcg_at_10
+  value: 73.794
+- metric: average_recall_at_100
+  value: 67.768
+- metric: fiqa_recall_at_100
+  value: 73.119
+- metric: nfcorpus_recall_at_100
+  value: 33.184
+- metric: scifact_recall_at_100
+  value: 97
+reports:
+- id: r1
+  label: 'BGE-base-en-v1.5: BEIR SciFact, NFCorpus, FiQA'
+  session: aa1b7131-406b-44f8-8583-f282a6a352d5
+  data_hash: 6cdf0f4b58cd2acc903e460539b4470551fcb4015ee4c949577760b25e083eeb
+  sealed_at: '2026-10-10T21:34:06.924427617Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00038/v1/reports/r1.pdf
+      sha256: 1f2f105102ad5c5ed9d7fa0e8f730959b616625723360907c725a809f85ab4ce
+      size: 2229741
+    bundle:
+      path: bundles/2610.00038v1/r1.kvbundle.zip
+      sha256: 5042560c5889f38755b55d7c6cfe7b4689a2f3fe71b969abf58ab0cd5f56c167
+      size: 664473
+files:
+  record:
+    path: records/2610/2610.00038/v1/record.pdf
+    sha256: 76507820ca42fc8e9410fd1723e0f5efb0d3963c751bb69c651a1f2e82b92f74
+    size: 12159
