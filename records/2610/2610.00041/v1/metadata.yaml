@@ -1,0 +1,994 @@
+id: kv:2610.00041v1
+version: 1
+title: 'Seben: Morphotactic-Guided Preference Alignment for Extremely Low-Resource Language'
+authors:
+- name: Sebastien Diarra
+- name: Mamadou K. Keita
+- name: Sokona Coulibaly
+submitted_by:
+  name: s7d11
+  github: s7d11
+  affiliation: RobotsMali
+abstract: Preference-based post-training improves language models, but the standard methods use surface
+  tokens as the training signal and target high-resource languages. We present Sɛbɛn, a post-training
+  framework that adds morphotactic verification to the alignment loop for small language models in extremely
+  low-resource languages. A rule-based morphological analyzer checks each generated analysis against a
+  per-language grammar and dictionary, and a morpheme-level reward turns the check into a training signal
+  for supervised fine-tuning, DPO, APO, and GRPO. The framework also gates automatic grammar and dictionary
+  updates behind an integrity threshold. We run Sɛbɛn on the 13 national languages of Mali with five small
+  models from 135M to 2B parameters and report morphological integrity, morpheme error rate, consistency,
+  and an uncertainty-weighted cost on a seed-fixed held-out split. GRPO gives the lowest morpheme error
+  rate for SmolLM2-135M, Gemma-4-E2B, and TinyLlama-1.1B, while the four arms tie for LFM2.5-230M. We
+  record and seal every run with K-Veritas, so each reported score is bound to the computation that produced
+  it and can be verified publicly. We report the full configuration and evaluation records so that others
+  can reproduce the matrix.
+tags:
+- ML
+- NLP
+- GRPO
+- APO
+- DPO
+- SFT
+- Alignment
+- ELRL
+- LR
+license: MIT
+purpose: Official implementation
+type: Research paper
+field: Machine learning
+published: '2026-10-13'
+status: published
+issue: 48
+results:
+- metric: phi
+  value: 0.500696
+- metric: phi_bam
+  value: 0.542398
+- metric: phi_bmq
+  value: 0.722896
+- metric: phi_boz
+  value: 0.367929
+- metric: phi_dtm
+  value: 0.576727
+- metric: phi_ful
+  value: 0.476789
+- metric: phi_mey
+  value: 0.256
+- metric: phi_mku
+  value: 0.428211
+- metric: phi_kao
+  value: 0.807126
+- metric: phi_myk
+  value: 0.403434
+- metric: phi_ses
+  value: 0.364965
+- metric: phi_spp
+  value: 0.364618
+- metric: phi_snk
+  value: 0.468311
+- metric: phi_taq
+  value: 0.72964
+- metric: phi
+  value: 0.490894
+- metric: phi_bam
+  value: 0.531287
+- metric: phi_bmq
+  value: 0.716173
+- metric: phi_boz
+  value: 0.366731
+- metric: phi_dtm
+  value: 0.580731
+- metric: phi_ful
+  value: 0.469334
+- metric: phi_mey
+  value: 0.25935
+- metric: phi_mku
+  value: 0.459184
+- metric: phi_kao
+  value: 0.777122
+- metric: phi_myk
+  value: 0.359593
+- metric: phi_ses
+  value: 0.380133
+- metric: phi_spp
+  value: 0.365613
+- metric: phi_snk
+  value: 0.42287
+- metric: phi_taq
+  value: 0.693508
+- metric: phi
+  value: 0.50172
+- metric: phi_bam
+  value: 0.561899
+- metric: phi_bmq
+  value: 0.693351
+- metric: phi_boz
+  value: 0.438394
+- metric: phi_dtm
+  value: 0.511633
+- metric: phi_ful
+  value: 0.410578
+- metric: phi_mey
+  value: 0.30068
+- metric: phi_mku
+  value: 0.409287
+- metric: phi_kao
+  value: 0.802235
+- metric: phi_myk
+  value: 0.359868
+- metric: phi_ses
+  value: 0.440817
+- metric: phi_spp
+  value: 0.391609
+- metric: phi_snk
+  value: 0.486494
+- metric: phi_taq
+  value: 0.715518
+- metric: phi
+  value: 0.514043
+- metric: phi_bam
+  value: 0.571181
+- metric: phi_bmq
+  value: 0.76255
+- metric: phi_boz
+  value: 0.411667
+- metric: phi_dtm
+  value: 0.699308
+- metric: phi_ful
+  value: 0.380613
+- metric: phi_mey
+  value: 0.274569
+- metric: phi_mku
+  value: 0.414502
+- metric: phi_kao
+  value: 0.852257
+- metric: phi_myk
+  value: 0.380295
+- metric: phi_ses
+  value: 0.364299
+- metric: phi_spp
+  value: 0.425676
+- metric: phi_snk
+  value: 0.386128
+- metric: phi_taq
+  value: 0.759513
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.48328
+- metric: phi_bam
+  value: 0.515217
+- metric: phi_bmq
+  value: 0.689472
+- metric: phi_boz
+  value: 0.325034
+- metric: phi_dtm
+  value: 0.566503
+- metric: phi_ful
+  value: 0.324842
+- metric: phi_mey
+  value: 0.214444
+- metric: phi_mku
+  value: 0.649702
+- metric: phi_kao
+  value: 0.870567
+- metric: phi_myk
+  value: 0.342347
+- metric: phi_ses
+  value: 0.368177
+- metric: phi_spp
+  value: 0.328663
+- metric: phi_snk
+  value: 0.346684
+- metric: phi_taq
+  value: 0.740981
+- metric: phi
+  value: 0.644057
+- metric: phi_bam
+  value: 0.586164
+- metric: phi_bmq
+  value: 0.889136
+- metric: phi_boz
+  value: 0.80303
+- metric: phi_dtm
+  value: 0.723584
+- metric: phi_ful
+  value: 0.78921
+- metric: phi_mey
+  value: 0.428105
+- metric: phi_mku
+  value: 0.63627
+- metric: phi_kao
+  value: 0.872754
+- metric: phi_myk
+  value: 0.498514
+- metric: phi_ses
+  value: 0.457255
+- metric: phi_spp
+  value: 0.371716
+- metric: phi_snk
+  value: 0.543597
+- metric: phi_taq
+  value: 0.773411
+- metric: phi
+  value: 0.51067
+- metric: phi_bam
+  value: 0.574067
+- metric: phi_bmq
+  value: 0.715822
+- metric: phi_boz
+  value: 0.360562
+- metric: phi_dtm
+  value: 0.594784
+- metric: phi_ful
+  value: 0.551
+- metric: phi_mey
+  value: 0.299815
+- metric: phi_mku
+  value: 0.433409
+- metric: phi_kao
+  value: 0.865789
+- metric: phi_myk
+  value: 0.313592
+- metric: phi_ses
+  value: 0.384177
+- metric: phi_spp
+  value: 0.417665
+- metric: phi_snk
+  value: 0.450497
+- metric: phi_taq
+  value: 0.67753
+- metric: phi
+  value: 0.508411
+- metric: phi_bam
+  value: 0.531762
+- metric: phi_bmq
+  value: 0.71156
+- metric: phi_boz
+  value: 0.395144
+- metric: phi_dtm
+  value: 0.560063
+- metric: phi_ful
+  value: 0.536991
+- metric: phi_mey
+  value: 0.314502
+- metric: phi_mku
+  value: 0.448062
+- metric: phi_kao
+  value: 0.877949
+- metric: phi_myk
+  value: 0.309261
+- metric: phi_ses
+  value: 0.380018
+- metric: phi_spp
+  value: 0.378648
+- metric: phi_snk
+  value: 0.46078
+- metric: phi_taq
+  value: 0.704609
+- metric: phi
+  value: 0.504376
+- metric: phi_bam
+  value: 0.550204
+- metric: phi_bmq
+  value: 0.705471
+- metric: phi_boz
+  value: 0.368103
+- metric: phi_dtm
+  value: 0.588395
+- metric: phi_ful
+  value: 0.496525
+- metric: phi_mey
+  value: 0.379906
+- metric: phi_mku
+  value: 0.394684
+- metric: phi_kao
+  value: 0.841474
+- metric: phi_myk
+  value: 0.333167
+- metric: phi_ses
+  value: 0.381402
+- metric: phi_spp
+  value: 0.401826
+- metric: phi_snk
+  value: 0.446357
+- metric: phi_taq
+  value: 0.669377
+- metric: phi
+  value: 0.5256
+- metric: phi_bam
+  value: 0.579857
+- metric: phi_bmq
+  value: 0.743126
+- metric: phi_boz
+  value: 0.40078
+- metric: phi_dtm
+  value: 0.60896
+- metric: phi_ful
+  value: 0.56789
+- metric: phi_mey
+  value: 0.332941
+- metric: phi_mku
+  value: 0.427132
+- metric: phi_kao
+  value: 0.854803
+- metric: phi_myk
+  value: 0.331227
+- metric: phi_ses
+  value: 0.415598
+- metric: phi_spp
+  value: 0.412775
+- metric: phi_snk
+  value: 0.436358
+- metric: phi_taq
+  value: 0.72136
+- metric: phi
+  value: 0.524288
+- metric: phi_bam
+  value: 0.580331
+- metric: phi_bmq
+  value: 0.785655
+- metric: phi_boz
+  value: 0.380148
+- metric: phi_dtm
+  value: 0.606802
+- metric: phi_ful
+  value: 0.515136
+- metric: phi_mey
+  value: 0.334913
+- metric: phi_mku
+  value: 0.416787
+- metric: phi_kao
+  value: 0.875303
+- metric: phi_myk
+  value: 0.317416
+- metric: phi_ses
+  value: 0.441342
+- metric: phi_spp
+  value: 0.408253
+- metric: phi_snk
+  value: 0.466966
+- metric: phi_taq
+  value: 0.686685
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.804974
+- metric: phi_bam
+  value: 0.823658
+- metric: phi_bmq
+  value: 0.695688
+- metric: phi_boz
+  value: 0.892011
+- metric: phi_dtm
+  value: 0.758926
+- metric: phi_ful
+  value: 0.974206
+- metric: phi_mey
+  value: 0.768726
+- metric: phi_mku
+  value: 0.884478
+- metric: phi_kao
+  value: 0.970238
+- metric: phi_myk
+  value: 0.763677
+- metric: phi_ses
+  value: 0.806021
+- metric: phi_spp
+  value: 0.496919
+- metric: phi_snk
+  value: 0.781673
+- metric: phi_taq
+  value: 0.84844
+- metric: phi
+  value: 0.449859
+- metric: phi_bam
+  value: 0.459196
+- metric: phi_bmq
+  value: 0.737672
+- metric: phi_boz
+  value: 0.383668
+- metric: phi_dtm
+  value: 0.629466
+- metric: phi_ful
+  value: 0.369023
+- metric: phi_mey
+  value: 0.241557
+- metric: phi_mku
+  value: 0.213298
+- metric: phi_kao
+  value: 0.811908
+- metric: phi_myk
+  value: 0.320214
+- metric: phi_ses
+  value: 0.242411
+- metric: phi_spp
+  value: 0.395844
+- metric: phi_snk
+  value: 0.385623
+- metric: phi_taq
+  value: 0.658282
+- metric: phi
+  value: 0.439655
+- metric: phi_bam
+  value: 0.460386
+- metric: phi_bmq
+  value: 0.737672
+- metric: phi_boz
+  value: 0.439545
+- metric: phi_dtm
+  value: 0.517174
+- metric: phi_ful
+  value: 0.372382
+- metric: phi_mey
+  value: 0.23003
+- metric: phi_mku
+  value: 0.212097
+- metric: phi_kao
+  value: 0.842144
+- metric: phi_myk
+  value: 0.304299
+- metric: phi_ses
+  value: 0.232788
+- metric: phi_spp
+  value: 0.384497
+- metric: phi_snk
+  value: 0.315231
+- metric: phi_taq
+  value: 0.667272
+- metric: phi
+  value: 0.49631
+- metric: phi_bam
+  value: 0.515023
+- metric: phi_bmq
+  value: 0.644887
+- metric: phi_boz
+  value: 0.426366
+- metric: phi_dtm
+  value: 0.572217
+- metric: phi_ful
+  value: 0.34976
+- metric: phi_mey
+  value: 0.205956
+- metric: phi_mku
+  value: 0.49062
+- metric: phi_kao
+  value: 0.763131
+- metric: phi_myk
+  value: 0.354474
+- metric: phi_ses
+  value: 0.440974
+- metric: phi_spp
+  value: 0.432305
+- metric: phi_snk
+  value: 0.408532
+- metric: phi_taq
+  value: 0.847779
+- metric: phi
+  value: 0.499372
+- metric: phi_bam
+  value: 0.565924
+- metric: phi_bmq
+  value: 0.709444
+- metric: phi_boz
+  value: 0.390159
+- metric: phi_dtm
+  value: 0.569545
+- metric: phi_ful
+  value: 0.423977
+- metric: phi_mey
+  value: 0.336661
+- metric: phi_mku
+  value: 0.351723
+- metric: phi_kao
+  value: 0.783419
+- metric: phi_myk
+  value: 0.329046
+- metric: phi_ses
+  value: 0.348706
+- metric: phi_spp
+  value: 0.490032
+- metric: phi_snk
+  value: 0.380257
+- metric: phi_taq
+  value: 0.812938
+reports:
+- id: r1
+  label: sebeni-gemma-4-e2b-apo-50
+  session: fc040d92-d12b-4b1c-aa77-e8bfd18869f5
+  data_hash: 04966a415717e46f20dfd9742613c7f1a73a81fed2196af672409a2c554a1f54
+  sealed_at: '2026-10-12T23:33:17.450237145Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r1.pdf
+      sha256: 86cacd14970cdea9c30d9142bd90b0db4effb7ea5fc147429b7073c5cffe411f
+      size: 71987
+    bundle:
+      path: bundles/2610.00041v1/r1.kvbundle.zip
+      sha256: 54bfccd0bcc3b2c671c45dd223d7793bc649d6fd3b25937616f74fbd0e1c309e
+      size: 5640081
+- id: r2
+  label: sebeni-gemma-4-e2b-dpo-50
+  session: 3dd7d283-31a7-4a54-b71c-f79b0c74e72b
+  data_hash: 13ccb04c72f4dd55b2c3da9c9cef6a29a86c36df53449d5298a80701d3cd52d1
+  sealed_at: '2026-10-12T22:41:33.925329991Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r2.pdf
+      sha256: b5753492f3fb0b015dace3955ff37831602c3aa46229d411d16d57eed8181ea9
+      size: 71980
+    bundle:
+      path: bundles/2610.00041v1/r2.kvbundle.zip
+      sha256: 4f29186b5eaf7337f3ada815ac99e3b68143bdba070d3c0201df1873ac0817ad
+      size: 5640025
+- id: r3
+  label: sebeni-gemma-4-e2b-grpo-50
+  session: 37fc56c4-d42d-4e16-9597-b1b876f60392
+  data_hash: d00670226ba6aceff75b860e724a719cc5d5e2185c658fafbe9755c448af0773
+  sealed_at: '2026-10-13T02:32:29.48829538Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r3.pdf
+      sha256: 5b51b64a9366c0dcca6ffcebec7d447173e9be471e2e4d68afffdf7195a515a3
+      size: 71441
+    bundle:
+      path: bundles/2610.00041v1/r3.kvbundle.zip
+      sha256: e5346341e95937da495125d82d4e19d780111ea0cce86a8f2049d7e49890f54d
+      size: 5635878
+- id: r4
+  label: sebeni-gemma-4-e2b-sft-50
+  session: 4ef5d23f-1fd4-4c33-aba8-977c35bc6cc6
+  data_hash: 3f61ddff5e1e1b9cd38e7a5e915b261a69f60f0bf9a63bde6dd54144a1314682
+  sealed_at: '2026-10-12T17:22:15.48257211Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r4.pdf
+      sha256: 8e2fd349b6e460747043777dbc5f608247476ff77fee660821caa6d45c93fb8d
+      size: 75025
+    bundle:
+      path: bundles/2610.00041v1/r4.kvbundle.zip
+      sha256: 31327cd5c82af61685ad4727e37474d5c03ea6c6e7c0c795838d1e5c22ea39d9
+      size: 5640948
+- id: r5
+  label: sebeni-lfm2.5-230-apo-100
+  session: 6f53e0e1-c028-4b88-a050-19fe1eee918d
+  data_hash: c3c1591a3c896b5a7c709d829e420b93c2d6a32d85a2459a174922e771be7434
+  sealed_at: '2026-10-11T13:11:47.173422512Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r5.pdf
+      sha256: 1b106fc1f6376a9477659f4417edfb7b984ee5139dfd7d2eaaf4c88146ab10d5
+      size: 70962
+    bundle:
+      path: bundles/2610.00041v1/r5.kvbundle.zip
+      sha256: e412a902153d43eedde941b3922070553e6a64fde95ed9ade7ceb40eaf624280
+      size: 960972
+- id: r6
+  label: sebeni-lfm2.5-230-dpo-100
+  session: 6d23f425-2bb9-407e-a25b-5f92f2c6a90b
+  data_hash: a8eca3de408a2638a22650827693ba3c3b6ca01ec0dd1d738779e820f63ae7cd
+  sealed_at: '2026-10-11T12:36:40.927360157Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r6.pdf
+      sha256: c9abf7c54d6cb8fb3ca64859a0c45ab102f592697adb2f28fd24de041f1ac8be
+      size: 70961
+    bundle:
+      path: bundles/2610.00041v1/r6.kvbundle.zip
+      sha256: fd5b959e02ea446698070bef091cb03a573845b5a0ecf5fbd9f8315ea3a2e88f
+      size: 960960
+- id: r7
+  label: sebeni-lfm2.5-230-grpo-100
+  session: d725107b-9819-4dad-ad7b-2f896ee106a4
+  data_hash: 85200b789a38dfece128b1bb07c2818ef5a150d5b5055be0ce997da0ee5d8ba8
+  sealed_at: '2026-10-11T13:31:53.279329822Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r7.pdf
+      sha256: 78dfd64bdb40ad3b50da8adf76820e8f95fee75d8416e48695417e7c02175d05
+      size: 70958
+    bundle:
+      path: bundles/2610.00041v1/r7.kvbundle.zip
+      sha256: cfd5f67fdbf543bf64309b639de927831d1c4f97e4e01f21bb3dcfd1ebaac092
+      size: 964068
+- id: r8
+  label: sebeni-lfm2.5-230-sft-100
+  session: e2b6de58-7cfb-4981-9c24-e27274c87063
+  data_hash: 73105e4d2253c922bec34d48e64fe1f5df26520f6e822912ba8045a5ad17d070
+  sealed_at: '2026-10-11T18:33:56.622092236Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r8.pdf
+      sha256: 9effc847bab906e500bc2236c39ccc0bdd2a1832cab37d6fe98202d126b0c789
+      size: 72000
+    bundle:
+      path: bundles/2610.00041v1/r8.kvbundle.zip
+      sha256: c0a8da50811d44193cb82d21a00bc816bcb92049ee13ce9c1e347b1ebab141ea
+      size: 948326
+- id: r9
+  label: sebeni-qwen2.5-0.5b-sft-100
+  session: beea38a2-f4e9-4500-b5e3-c5bd80e58a91
+  data_hash: 89235c39bf714afadfe8ec2a1eae879b68ed3b5476c72204fc63fcf781288af6
+  sealed_at: '2026-10-11T19:50:30.695089641Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r9.pdf
+      sha256: 7afb4460784ac71468dacbe7ea87668a1739bbb797b4d8f63a79e36e9d55d4e5
+      size: 72519
+    bundle:
+      path: bundles/2610.00041v1/r9.kvbundle.zip
+      sha256: 1b82d8b9baf7bf8657dd0b5326556ed23856203f4a7d21f6b6e6a05a14158422
+      size: 2188160
+- id: r10
+  label: sebeni-qwen3-0.6b-apo-50
+  session: ada4c64c-74f0-446e-ab4d-f387b0beb6d5
+  data_hash: bc797885a7ffd31fee42961eeb2393e204aab725e676299a40204f76b384afd6
+  sealed_at: '2026-10-12T19:44:19.674333138Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r10.pdf
+      sha256: 4e3927e43c3521c17142b753fc1272dbb335fea23e24290c4630b32720a64496
+      size: 74129
+    bundle:
+      path: bundles/2610.00041v1/r10.kvbundle.zip
+      sha256: 224375ae8bc00d344039fd054786a2fa92178a00eb0a03e450cebeda3b64dbe1
+      size: 2186314
+- id: r11
+  label: sebeni-qwen3-0.6b-dpo-50
+  session: 9581c869-9fad-405b-8406-8f1d83df1a4f
+  data_hash: d614230166a544a2dca4b6f2b2116bfebe4d4d3c4cad21012e2d029627c5926e
+  sealed_at: '2026-10-12T19:06:00.480225569Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r11.pdf
+      sha256: a6f5bb1d9384c0969467a27bf4c586e82801907e81510e555ad0a468344d0eb2
+      size: 70989
+    bundle:
+      path: bundles/2610.00041v1/r11.kvbundle.zip
+      sha256: 120837266c2eb4685c5f92c7b86225d66025a9a9ffd19ae834ec6daad9f487f1
+      size: 2185109
+- id: r12
+  label: sebeni-qwen3-0.6b-grpo-50
+  session: aac8e9a5-2003-4e12-b819-94d1a6969aa1
+  data_hash: c4a8a550ff62b34391812a4dab80c7b5a04870b5deab8cfa40aecc3f26a5f32f
+  sealed_at: '2026-10-12T14:55:50.547384766Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r12.pdf
+      sha256: 4f7b1fe996e92d4c6b7912601fdddfd7e84584df1cb641a5342077fd8abbb054
+      size: 73622
+    bundle:
+      path: bundles/2610.00041v1/r12.kvbundle.zip
+      sha256: a08efbd5da2593f93db9bd700e8ff0b0145f60f9104e3916d57b61a61491792c
+      size: 2186386
+- id: r13
+  label: sebeni-qwen3-0.6b-sft-100
+  session: d2f8c618-a1a5-4326-911b-9fc5cddfed22
+  data_hash: b24282941316fec2cd171e99e22a5b5868dc4205550e6ed78bf02310fd7d20fe
+  sealed_at: '2026-10-12T14:39:00.188364997Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r13.pdf
+      sha256: 4a41c34807884f25ac440214e6a0462e31ea8dd78d40a5f68f319a4fab101226
+      size: 72691
+    bundle:
+      path: bundles/2610.00041v1/r13.kvbundle.zip
+      sha256: 6130ae6f6358397b16e6a048c23e38f94f38a6dfc2abcb9f71c4649125b6ad38
+      size: 2183083
+- id: r14
+  label: sebeni-qwen3-0.6b-sft-50
+  session: 8e79c5ee-57ba-4051-943d-966b09155bae
+  data_hash: e15452906712e25f123d564364ce8308adeef09a3eaa242cb94fc3016042e61b
+  sealed_at: '2026-10-12T03:03:38.694133203Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r14.pdf
+      sha256: ef840347dd35c582e61aa4416ce09c0eb5944cd15dd96dfd29534d5b34fe7886
+      size: 72592
+    bundle:
+      path: bundles/2610.00041v1/r14.kvbundle.zip
+      sha256: 72fa046766e9d7f9d5970b4fdf32ee6cba76bb236290735637375e5d2198db33
+      size: 2186898
+- id: r15
+  label: sebeni-smollm2-135-apo-100
+  session: adb80477-fbfc-44cd-ad1e-91bf14f31995
+  data_hash: a7fab9cc3ac4fd339aa2655d6e02e7ef1c28bc6505679bfdc335118adfcbe270
+  sealed_at: '2026-10-11T05:30:21.245044986Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r15.pdf
+      sha256: 5dcd2963714e84f545f72cb11bdff19b69523afe95c9dafbe0d2c89ced4faf16
+      size: 70395
+    bundle:
+      path: bundles/2610.00041v1/r15.kvbundle.zip
+      sha256: a285f1833819f25cd74d23ff6a888105e6e7781c0c5d3c8f9629d5ec11eae074
+      size: 707023
+- id: r16
+  label: sebeni-smollm2-135-dpo-100
+  session: 3373ae31-9c77-4ac2-8f7d-e3abb5cbf179
+  data_hash: f63156e409a6b4efd4eb75204f6278276d8184d53e244f0bcfd4dfb4136bddc0
+  sealed_at: '2026-10-11T04:28:46.352331677Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r16.pdf
+      sha256: 3f46f56089327bf840d24d8b14c84ed24b0c7e61aec1569beee57bfceafcb6ab
+      size: 70395
+    bundle:
+      path: bundles/2610.00041v1/r16.kvbundle.zip
+      sha256: 2ce9e21b046b05de06eb9ca9c5251b38045a1cac188df4a5a7120b9c504c3d16
+      size: 707015
+- id: r17
+  label: sebeni-smollm2-135-grpo-100
+  session: 9813b77b-bcc4-4fd9-ae23-fb5fe9814389
+  data_hash: 206dd6d83034ce30e08fae242162d9028312d5d3fb0c2f433aad3df7e9b9e1b9
+  sealed_at: '2026-10-11T12:01:33.394878513Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r17.pdf
+      sha256: 7f2469771737d0ca53e7a53d509b183244012993f7592367ae98754eea3f62db
+      size: 70394
+    bundle:
+      path: bundles/2610.00041v1/r17.kvbundle.zip
+      sha256: 4f6357f8ba3534b71c9a365f3cfa0a02a83b37b48ec7d5f2286a7c9dffe229ed
+      size: 679573
+- id: r18
+  label: sebeni-smollm2-135-sft-100
+  session: f28a2959-78fa-4acc-982d-3c0d152f01cf
+  data_hash: 568d840347201178166f981a0733fbdcf644551cae66705728148f8892748ee6
+  sealed_at: '2026-10-11T03:27:21.777987708Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r18.pdf
+      sha256: 4a4f656985732cb00c1951d5c6000ac388a2d5f9be343264e4c132ffb0901a51
+      size: 68774
+    bundle:
+      path: bundles/2610.00041v1/r18.kvbundle.zip
+      sha256: d24548a35bc6e48a86d0fd63431f401491c3b5471ca650c786747e36a3eb3db0
+      size: 685520
+- id: r19
+  label: sebeni-tinyllama-1.1b-apo-50
+  session: ebc3f6ee-7f2e-4491-8025-d857a9df74bc
+  data_hash: dae92f7046d21d8eba122bfebc2cac0b0c6f54d39ce5135f1d9835fe1e2f2231
+  sealed_at: '2026-10-12T16:45:48.19942174Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r19.pdf
+      sha256: 1051b69d0cfc0af8407a89058d83cc17af286da2457870493f33fd53a276e842
+      size: 73047
+    bundle:
+      path: bundles/2610.00041v1/r19.kvbundle.zip
+      sha256: 320a8c9cb3f873b9870dcb9dd0115f9a6df93fe4fbcbb41646a0d0a565583090
+      size: 581480
+- id: r20
+  label: sebeni-tinyllama-1.1b-dpo-50
+  session: 9fd690f4-302e-46dd-9f50-4e985d4521a6
+  data_hash: fc816fad926bc175c5e36204931fdc87c2569dc6c97e48ba97eeb2fd32ceae79
+  sealed_at: '2026-10-12T16:10:54.704267092Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r20.pdf
+      sha256: 0b9f5750c49fb0fb1e235780d8ac89fe3e09d0f092a0201f6596f2001eaf7b7a
+      size: 73035
+    bundle:
+      path: bundles/2610.00041v1/r20.kvbundle.zip
+      sha256: 9b85cb69d6db2bfd1f64156054eda14d34c3a664360fdb5dc3b02b6355c85b98
+      size: 581473
+- id: r21
+  label: sebeni-tinyllama-1.1b-grpo-50
+  session: 34476d77-f82c-4007-9abd-b5ace643eaf3
+  data_hash: f8ab933aaf6092f14eab8b4a8ca77a55314b7f8afc95df541f524c5997dd1804
+  sealed_at: '2026-10-12T20:10:33.459595449Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r21.pdf
+      sha256: cc6c72fe3e4c8af72033fe8a161a7dbebbc785d4675342fa66c12ccee4f0d4d6
+      size: 69165
+    bundle:
+      path: bundles/2610.00041v1/r21.kvbundle.zip
+      sha256: 6eeadb91f8931cb0541628154092b687bd754911c29316718007b9cf5380790c
+      size: 577760
+- id: r22
+  label: sebeni-tinyllama-1.1b-sft-50
+  session: 56490df4-2514-4a03-b851-bbd23f3a5767
+  data_hash: 22537d944a5cf42522146bc324dc63c2befdd841bea0d46cb229859c324d9aef
+  sealed_at: '2026-10-12T15:31:14.377506488Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00041/v1/reports/r22.pdf
+      sha256: 5d80d6171cd60ab2205dacb14bd36f4e1b776f5109f81b30f579e65bf85a86fb
+      size: 72076
+    bundle:
+      path: bundles/2610.00041v1/r22.kvbundle.zip
+      sha256: d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3
+      size: 578216
+files:
+  record:
+    path: records/2610/2610.00041/v1/record.pdf
+    sha256: 479fc3ed15e03fa8121fc164a893646424258f8388c1305234194281193d3644
+    size: 116984

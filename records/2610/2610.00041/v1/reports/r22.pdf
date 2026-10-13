@@ -1,0 +1,1221 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 3915 >>
+stream
+0.3 w
+BT /Tb 20.0 Tf 191.57 686.00 Td (Sealed Experiment Record) Tj ET
+BT /T 10.5 Tf 195.92 661.50 Td (Sealed 2026-10-12 \267 Signed by the K-Veritas server) Tj ET
+BT /C 8.5 Tf 209.10 648.80 Td (Session 56490df4 \267 Data hash 2253\2059aef) Tj ET
+BT /Tb 10.5 Tf 286.46 620.90 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 604.70 Td (This record seals 1 run \(echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo) Tj ET
+BT /T 10.0 Tf 88.00 590.70 Td ('KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC) Tj ET
+BT /T 10.0 Tf 88.00 576.70 Td (name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159) Tj ET
+BT /T 10.0 Tf 88.00 562.70 Td (step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC) Tj ET
+BT /T 10.0 Tf 88.00 548.70 Td (name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661) Tj ET
+BT /T 10.0 Tf 88.00 534.70 Td (step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC) Tj ET
+BT /T 10.0 Tf 88.00 520.70 Td (name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046) Tj ET
+BT /T 10.0 Tf 88.00 506.70 Td (step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC) Tj ET
+BT /T 10.0 Tf 88.00 492.70 Td (name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257) Tj ET
+BT /T 10.0 Tf 88.00 478.70 Td (step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0'\) executed on Intel\(R\) Xeon\(R\)) Tj ET
+BT /T 10.0 Tf 88.00 464.70 Td (CPU @ 2.20GHz between 2026-10-12 15:31 and 15:31 UTC. Reported results: phi 0.499372, phi_bam) Tj ET
+BT /T 10.0 Tf 88.00 450.70 Td (0.565924, phi_bmq 0.709444, phi_boz 0.390159. 1 invocation in total, 0 failed. Produced with K-Veritas) Tj ET
+BT /T 10.0 Tf 88.00 436.70 Td ([1].) Tj ET
+q 0.6 w 60.00 350.80 492.00 71.90 re S Q
+BT /Tb 10.0 Tf 69.00 403.70 Td (What this record proves) Tj ET
+BT /T 9.5 Tf 69.00 390.20 Td (These numbers came from the sealed code at this time, unchanged since. Whether the experiment is sound is for the reader) Tj ET
+BT /T 9.5 Tf 69.00 376.90 Td (to judge.) Tj ET
+BT /T 9.5 Tf 69.00 363.60 Td (Verify: kveritas verify <this file> or kveritas.org/verify) Tj ET
+BT /Tb 13.0 Tf 60.00 315.80 Td (1  Setup) Tj ET
+q 0.80 w 60.00 307.60 m 552.00 307.60 l S Q
+BT /Tb 9.0 Tf 62.00 295.60 Td (Item) Tj ET
+BT /Tb 9.0 Tf 198.67 295.60 Td (Value) Tj ET
+q 0.40 w 60.00 293.60 m 552.00 293.60 l S Q
+BT /T 9.0 Tf 62.00 281.60 Td (Session) Tj ET
+BT /C 8.0 Tf 198.67 282.60 Td (56490df4-2514-4a03-b851-bbd23f3a5767) Tj ET
+BT /T 9.0 Tf 62.00 268.60 Td (Initialized) Tj ET
+BT /T 9.0 Tf 198.67 268.60 Td (2026-10-12T15:11:19Z) Tj ET
+BT /T 9.0 Tf 62.00 255.60 Td (Machine) Tj ET
+BT /C 8.0 Tf 198.67 256.60 Td (debd2e227b0a68ef) Tj ET
+BT /T 9.0 Tf 62.00 242.60 Td (Operating system) Tj ET
+BT /T 9.0 Tf 198.67 242.60 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 229.60 Td (CPU) Tj ET
+BT /T 9.0 Tf 198.67 229.60 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 216.60 Td (Memory) Tj ET
+BT /T 9.0 Tf 198.67 216.60 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 203.60 Td (GPU) Tj ET
+BT /T 9.0 Tf 198.67 203.60 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 190.60 Td (Environment, run 1) Tj ET
+BT /C 8.0 Tf 198.67 191.60 Td (83fee8e8e2fa635d1d6d7af919d4309658cd91d218119f339503f588cad729dc) Tj ET
+BT /T 9.0 Tf 62.00 177.60 Td (Disclosure) Tj ET
+BT /T 9.0 Tf 198.67 177.60 Td (open) Tj ET
+BT /T 9.0 Tf 62.00 164.60 Td (Source code, run 1) Tj ET
+BT /C 8.0 Tf 198.67 165.60 Td (6a4f0d079bfc1eb3a00484bdccfc4cbc86d441717de8d94e8750238f47b9134b) Tj ET
+q 0.80 w 60.00 160.60 m 552.00 160.60 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 7696 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (2  Runs) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (#) Tj ET
+BT /Tb 9.0 Tf 83.71 684.80 Td (Command) Tj ET
+BT /Tb 9.0 Tf 315.24 684.80 Td (Duration) Tj ET
+BT /Tb 9.0 Tf 402.06 684.80 Td (Exit) Tj ET
+BT /Tb 9.0 Tf 438.24 684.80 Td (Anchored) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (1) Tj ET
+BT /C 8.0 Tf 83.71 671.80 Td (sh -c echo 'KVERITAS_METRIC name=phi value=...) Tj ET
+BT /T 9.0 Tf 315.24 670.80 Td (0.5 seconds) Tj ET
+BT /T 9.0 Tf 402.06 670.80 Td (0) Tj ET
+BT /T 9.0 Tf 438.24 670.80 Td (at run end) Tj ET
+q 0.80 w 60.00 666.80 m 552.00 666.80 l S Q
+BT /T 10.0 Tf 60.00 650.80 Td (1 invocation in total: 1 kept in this record, 0 failed, 0 interrupted. Every invocation is recorded by the server, including the) Tj ET
+BT /T 10.0 Tf 60.00 636.80 Td (ones not kept.) Tj ET
+BT /Tb 13.0 Tf 60.00 605.80 Td (3  Results) Tj ET
+BT /Tb 10.0 Tf 60.00 581.60 Td (Run 1: echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0') Tj ET
+q 0.80 w 60.00 576.60 m 552.00 576.60 l S Q
+BT /Tb 9.0 Tf 62.00 564.60 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 231.66 564.60 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 333.45 564.60 Td (Step) Tj ET
+BT /Tb 9.0 Tf 469.17 564.60 Td (Source) Tj ET
+q 0.40 w 60.00 562.60 m 552.00 562.60 l S Q
+BT /T 9.0 Tf 62.00 550.60 Td (phi) Tj ET
+BT /T 9.0 Tf 231.66 550.60 Td (0.499372) Tj ET
+BT /T 9.0 Tf 333.45 550.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 550.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 537.60 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 231.66 537.60 Td (0.565924) Tj ET
+BT /T 9.0 Tf 333.45 537.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 537.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 524.60 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 231.66 524.60 Td (0.709444) Tj ET
+BT /T 9.0 Tf 333.45 524.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 524.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 511.60 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 231.66 511.60 Td (0.390159) Tj ET
+BT /T 9.0 Tf 333.45 511.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 511.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 498.60 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 231.66 498.60 Td (0.569545) Tj ET
+BT /T 9.0 Tf 333.45 498.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 498.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 485.60 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 231.66 485.60 Td (0.423977) Tj ET
+BT /T 9.0 Tf 333.45 485.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 485.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 472.60 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 231.66 472.60 Td (0.336661) Tj ET
+BT /T 9.0 Tf 333.45 472.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 472.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 459.60 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 231.66 459.60 Td (0.351723) Tj ET
+BT /T 9.0 Tf 333.45 459.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 459.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 446.60 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 231.66 446.60 Td (0.783419) Tj ET
+BT /T 9.0 Tf 333.45 446.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 446.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 433.60 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 231.66 433.60 Td (0.329046) Tj ET
+BT /T 9.0 Tf 333.45 433.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 433.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 420.60 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 231.66 420.60 Td (0.348706) Tj ET
+BT /T 9.0 Tf 333.45 420.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 420.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 407.60 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 231.66 407.60 Td (0.490032) Tj ET
+BT /T 9.0 Tf 333.45 407.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 407.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 394.60 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 231.66 394.60 Td (0.380257) Tj ET
+BT /T 9.0 Tf 333.45 394.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 394.60 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 381.60 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 231.66 381.60 Td (0.812938) Tj ET
+BT /T 9.0 Tf 333.45 381.60 Td (0) Tj ET
+BT /T 9.0 Tf 469.17 381.60 Td (explicit) Tj ET
+q 0.80 w 60.00 377.60 m 552.00 377.60 l S Q
+BT /Tb 13.0 Tf 60.00 344.60 Td (4  Execution evidence) Tj ET
+BT /Tb 10.0 Tf 60.00 320.40 Td (Coherence) Tj ET
+BT /T 10.0 Tf 60.00 305.40 Td (Not enough telemetry to judge. This says nothing against the run; the seal and anchors still hold.) Tj ET
+BT /Tb 10.0 Tf 60.00 285.40 Td (Telemetry) Tj ET
+q 0.80 w 60.00 280.40 m 552.00 280.40 l S Q
+BT /Tb 9.0 Tf 62.00 268.40 Td (Run) Tj ET
+BT /Tb 9.0 Tf 116.67 268.40 Td (Samples) Tj ET
+BT /Tb 9.0 Tf 226.00 268.40 Td (CPU time) Tj ET
+BT /Tb 9.0 Tf 335.33 268.40 Td (Peak memory) Tj ET
+BT /Tb 9.0 Tf 444.67 268.40 Td (Peak GPU) Tj ET
+q 0.40 w 60.00 266.40 m 552.00 266.40 l S Q
+BT /T 9.0 Tf 62.00 254.40 Td (1) Tj ET
+BT /T 9.0 Tf 116.67 254.40 Td (4) Tj ET
+BT /T 9.0 Tf 226.00 254.40 Td (0.0 s) Tj ET
+BT /T 9.0 Tf 335.33 254.40 Td (0.00 GB) Tj ET
+BT /T 9.0 Tf 444.67 254.40 Td (0%) Tj ET
+q 0.80 w 60.00 250.40 m 552.00 250.40 l S Q
+BT /Tb 13.0 Tf 60.00 217.40 Td (5  Provenance) Tj ET
+BT /Tb 10.0 Tf 60.00 193.20 Td (Run 1: echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0') Tj ET
+BT /T 10.0 Tf 60.00 178.20 Td (Disclosure open. 31 tracked files, 2 snapshots. Every snapshot is bound into the signature.) Tj ET
+q 0.80 w 60.00 174.20 m 552.00 174.20 l S Q
+BT /Tb 9.0 Tf 62.00 162.20 Td (#) Tj ET
+BT /Tb 9.0 Tf 95.93 162.20 Td (Snapshot) Tj ET
+BT /Tb 9.0 Tf 248.62 162.20 Td (Time) Tj ET
+BT /Tb 9.0 Tf 333.45 162.20 Td (Root) Tj ET
+BT /Tb 9.0 Tf 486.14 162.20 Td (Changed) Tj ET
+q 0.40 w 60.00 160.20 m 552.00 160.20 l S Q
+BT /T 9.0 Tf 62.00 148.20 Td (0) Tj ET
+BT /T 9.0 Tf 95.93 148.20 Td (run_start) Tj ET
+BT /T 9.0 Tf 248.62 148.20 Td (15:31:09) Tj ET
+BT /C 8.0 Tf 333.45 149.20 Td (adae1c048cbb8a3a) Tj ET
+BT /T 9.0 Tf 486.14 148.20 Td (31) Tj ET
+BT /T 9.0 Tf 62.00 135.20 Td (1) Tj ET
+BT /T 9.0 Tf 95.93 135.20 Td (run_end) Tj ET
+BT /T 9.0 Tf 248.62 135.20 Td (15:31:09) Tj ET
+BT /C 8.0 Tf 333.45 136.20 Td (adae1c048cbb8a3a) Tj ET
+BT /T 9.0 Tf 486.14 135.20 Td (0) Tj ET
+q 0.80 w 60.00 131.20 m 552.00 131.20 l S Q
+BT /T 10.0 Tf 60.00 115.20 Td (Activity: 31 files read, 0 files written, 0 subprocesses. Full list in Appendix B.) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Length 2343 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (6  Verification) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Field) Tj ET
+BT /Tb 9.0 Tf 179.14 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (Signer) Tj ET
+BT /T 9.0 Tf 179.14 670.80 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (Signed at) Tj ET
+BT /T 9.0 Tf 179.14 657.80 Td (2026-10-12T15:31:14.331659+00:00) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (Algorithm) Tj ET
+BT /T 9.0 Tf 179.14 644.80 Td (RSA-PSS-SHA256, 4096-bit key) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (Key fingerprint) Tj ET
+BT /C 8.0 Tf 179.14 632.80 Td (eeac81653cf44ac029c4069cf2a06d9f) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (Data hash) Tj ET
+BT /C 8.0 Tf 179.14 619.80 Td (22537d944a5cf42522146bc324dc63c2befdd841bea0d46cb229859c324d9aef) Tj ET
+BT /T 9.0 Tf 62.00 605.80 Td (Code bundle hash) Tj ET
+BT /C 8.0 Tf 179.14 606.80 Td (d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3) Tj ET
+q 0.80 w 60.00 601.80 m 552.00 601.80 l S Q
+BT /T 10.0 Tf 60.00 585.80 Td (Run anchors: 1 invocations were anchored at the server when they ended.) Tj ET
+BT /Tb 10.0 Tf 60.00 565.80 Td (Checks a verifier runs) Tj ET
+BT /T 10.0 Tf 60.00 550.80 Td (1. The stored canonical data hashes to the data hash above, and the signature verifies over data_hash:nonce:signed_at.) Tj ET
+BT /T 10.0 Tf 60.00 536.80 Td (2. The signing key is the K-Veritas server key, not one supplied by the author.) Tj ET
+BT /T 10.0 Tf 60.00 522.80 Td (3. Nothing was appended after the seal, and these pages hash to the value bound in the seal.) Tj ET
+BT /T 10.0 Tf 60.00 508.80 Td (4. Each run matches the digest the server received when it ended.) Tj ET
+BT /T 10.0 Tf 60.00 494.80 Td (5. A supplied code bundle hashes to the code bundle hash above.) Tj ET
+BT /Tb 13.0 Tf 60.00 463.80 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 445.60 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 431.60 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 3 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+14 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 13 0 R /Resources 14 0 R >>
+endobj
+
+16 0 obj
+<< /Length 9569 >>
+stream
+0.3 w
+BT /Tb 15.0 Tf 60.00 717.00 Td (Appendix) Tj ET
+BT /Tb 13.0 Tf 60.00 680.00 Td (A  Full metric series) Tj ET
+BT /Tb 10.0 Tf 60.00 655.80 Td (Run 1: echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0') Tj ET
+q 0.80 w 60.00 650.80 m 552.00 650.80 l S Q
+BT /Tb 9.0 Tf 62.00 638.80 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 231.66 638.80 Td (Value) Tj ET
+BT /Tb 9.0 Tf 333.45 638.80 Td (Step) Tj ET
+BT /Tb 9.0 Tf 418.28 638.80 Td (Line) Tj ET
+BT /Tb 9.0 Tf 469.17 638.80 Td (Source) Tj ET
+q 0.40 w 60.00 636.80 m 552.00 636.80 l S Q
+BT /T 9.0 Tf 62.00 624.80 Td (phi) Tj ET
+BT /T 9.0 Tf 231.66 624.80 Td (0.499372) Tj ET
+BT /T 9.0 Tf 333.45 624.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 624.80 Td (1) Tj ET
+BT /T 9.0 Tf 469.17 624.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 611.80 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 231.66 611.80 Td (0.565924) Tj ET
+BT /T 9.0 Tf 333.45 611.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 611.80 Td (2) Tj ET
+BT /T 9.0 Tf 469.17 611.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 598.80 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 231.66 598.80 Td (0.709444) Tj ET
+BT /T 9.0 Tf 333.45 598.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 598.80 Td (3) Tj ET
+BT /T 9.0 Tf 469.17 598.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 585.80 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 231.66 585.80 Td (0.390159) Tj ET
+BT /T 9.0 Tf 333.45 585.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 585.80 Td (4) Tj ET
+BT /T 9.0 Tf 469.17 585.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 572.80 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 231.66 572.80 Td (0.569545) Tj ET
+BT /T 9.0 Tf 333.45 572.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 572.80 Td (5) Tj ET
+BT /T 9.0 Tf 469.17 572.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 559.80 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 231.66 559.80 Td (0.423977) Tj ET
+BT /T 9.0 Tf 333.45 559.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 559.80 Td (6) Tj ET
+BT /T 9.0 Tf 469.17 559.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 546.80 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 231.66 546.80 Td (0.336661) Tj ET
+BT /T 9.0 Tf 333.45 546.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 546.80 Td (7) Tj ET
+BT /T 9.0 Tf 469.17 546.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 533.80 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 231.66 533.80 Td (0.351723) Tj ET
+BT /T 9.0 Tf 333.45 533.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 533.80 Td (8) Tj ET
+BT /T 9.0 Tf 469.17 533.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 520.80 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 231.66 520.80 Td (0.783419) Tj ET
+BT /T 9.0 Tf 333.45 520.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 520.80 Td (9) Tj ET
+BT /T 9.0 Tf 469.17 520.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 507.80 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 231.66 507.80 Td (0.329046) Tj ET
+BT /T 9.0 Tf 333.45 507.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 507.80 Td (10) Tj ET
+BT /T 9.0 Tf 469.17 507.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 494.80 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 231.66 494.80 Td (0.348706) Tj ET
+BT /T 9.0 Tf 333.45 494.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 494.80 Td (11) Tj ET
+BT /T 9.0 Tf 469.17 494.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 481.80 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 231.66 481.80 Td (0.490032) Tj ET
+BT /T 9.0 Tf 333.45 481.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 481.80 Td (12) Tj ET
+BT /T 9.0 Tf 469.17 481.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 468.80 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 231.66 468.80 Td (0.380257) Tj ET
+BT /T 9.0 Tf 333.45 468.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 468.80 Td (13) Tj ET
+BT /T 9.0 Tf 469.17 468.80 Td (explicit) Tj ET
+BT /T 9.0 Tf 62.00 455.80 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 231.66 455.80 Td (0.812938) Tj ET
+BT /T 9.0 Tf 333.45 455.80 Td (0) Tj ET
+BT /T 9.0 Tf 418.28 455.80 Td (14) Tj ET
+BT /T 9.0 Tf 469.17 455.80 Td (explicit) Tj ET
+q 0.80 w 60.00 451.80 m 552.00 451.80 l S Q
+BT /Tb 13.0 Tf 60.00 418.80 Td (B  Provenance timeline and activity map) Tj ET
+BT /Tb 10.0 Tf 60.00 394.60 Td (Run 1: echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0') Tj ET
+q 0.80 w 60.00 389.60 m 552.00 389.60 l S Q
+BT /Tb 9.0 Tf 62.00 377.60 Td (#) Tj ET
+BT /Tb 9.0 Tf 95.93 377.60 Td (Snapshot) Tj ET
+BT /Tb 9.0 Tf 248.62 377.60 Td (Time) Tj ET
+BT /Tb 9.0 Tf 333.45 377.60 Td (Root) Tj ET
+BT /Tb 9.0 Tf 486.14 377.60 Td (Changed) Tj ET
+q 0.40 w 60.00 375.60 m 552.00 375.60 l S Q
+BT /T 9.0 Tf 62.00 363.60 Td (0) Tj ET
+BT /T 9.0 Tf 95.93 363.60 Td (run_start) Tj ET
+BT /T 9.0 Tf 248.62 363.60 Td (15:31:09) Tj ET
+BT /C 8.0 Tf 333.45 364.60 Td (adae1c048cbb8a3a) Tj ET
+BT /T 9.0 Tf 486.14 363.60 Td (31) Tj ET
+BT /T 9.0 Tf 62.00 350.60 Td (1) Tj ET
+BT /T 9.0 Tf 95.93 350.60 Td (run_end) Tj ET
+BT /T 9.0 Tf 248.62 350.60 Td (15:31:09) Tj ET
+BT /C 8.0 Tf 333.45 351.60 Td (adae1c048cbb8a3a) Tj ET
+BT /T 9.0 Tf 486.14 350.60 Td (0) Tj ET
+q 0.80 w 60.00 346.60 m 552.00 346.60 l S Q
+q 0.80 w 60.00 340.60 m 552.00 340.60 l S Q
+BT /Tb 9.0 Tf 62.00 328.60 Td (Event) Tj ET
+BT /Tb 9.0 Tf 130.88 328.60 Td (Path or command) Tj ET
+BT /Tb 9.0 Tf 426.08 328.60 Td (Hash) Tj ET
+q 0.40 w 60.00 326.60 m 552.00 326.60 l S Q
+BT /T 9.0 Tf 62.00 314.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 314.60 Td (adapter_config.json) Tj ET
+BT /C 8.0 Tf 426.08 315.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 301.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 301.60 Td (config.yaml) Tj ET
+BT /C 8.0 Tf 426.08 302.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 288.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 288.60 Td (data/resources/bam/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 289.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 275.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 275.60 Td (data/resources/bmq/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 276.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 262.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 262.60 Td (data/resources/boz/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 263.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 249.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 249.60 Td (data/resources/dtm/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 250.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 236.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 236.60 Td (data/resources/frozen.json) Tj ET
+BT /C 8.0 Tf 426.08 237.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 223.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 223.60 Td (data/resources/ful/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 224.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 210.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 210.60 Td (data/resources/kao/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 211.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 197.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 197.60 Td (data/resources/mey/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 198.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 184.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 184.60 Td (data/resources/mku/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 185.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 171.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 171.60 Td (data/resources/myk/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 172.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 158.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 158.60 Td (data/resources/ses/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 159.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 145.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 145.60 Td (data/resources/snk/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 146.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 132.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 132.60 Td (data/resources/spp/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 133.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 119.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 119.60 Td (data/resources/taq/hashes.json) Tj ET
+BT /C 8.0 Tf 426.08 120.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 106.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 106.60 Td (exp/eval.json) Tj ET
+BT /C 8.0 Tf 426.08 107.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 93.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 93.60 Td (exp/manifest.json) Tj ET
+BT /C 8.0 Tf 426.08 94.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 80.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 80.60 Td (exp/sft_label_report.json) Tj ET
+BT /C 8.0 Tf 426.08 81.60 Td () Tj ET
+BT /T 9.0 Tf 62.00 67.60 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 67.60 Td (kveritas_report.pdf.provkey.json) Tj ET
+BT /C 8.0 Tf 426.08 68.60 Td () Tj ET
+q 0.80 w 60.00 63.60 m 552.00 63.60 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 4 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+17 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 16 0 R /Resources 17 0 R >>
+endobj
+
+19 0 obj
+<< /Length 5744 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Event) Tj ET
+BT /Tb 9.0 Tf 130.88 720.00 Td (Path or command) Tj ET
+BT /Tb 9.0 Tf 426.08 720.00 Td (Hash) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 706.00 Td (models/adapter_config.json) Tj ET
+BT /C 8.0 Tf 426.08 707.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 693.00 Td (models/checkpoint-50/adapter_config.json) Tj ET
+BT /C 8.0 Tf 426.08 694.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 680.00 Td (models/checkpoint-50/tokenizer.json) Tj ET
+BT /C 8.0 Tf 426.08 681.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 667.00 Td (models/checkpoint-50/tokenizer_config.json) Tj ET
+BT /C 8.0 Tf 426.08 668.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 654.00 Td (models/checkpoint-50/trainer_state.json) Tj ET
+BT /C 8.0 Tf 426.08 655.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 641.00 Td (models/safety_snapshot.json) Tj ET
+BT /C 8.0 Tf 426.08 642.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 628.00 Td (models/tokenizer.json) Tj ET
+BT /C 8.0 Tf 426.08 629.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 615.00 Td (models/tokenizer_config.json) Tj ET
+BT /C 8.0 Tf 426.08 616.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 602.00 Td (safety_snapshot.json) Tj ET
+BT /C 8.0 Tf 426.08 603.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 589.00 Td (tokenizer.json) Tj ET
+BT /C 8.0 Tf 426.08 590.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (read) Tj ET
+BT /T 9.0 Tf 130.88 576.00 Td (tokenizer_config.json) Tj ET
+BT /C 8.0 Tf 426.08 577.00 Td () Tj ET
+q 0.80 w 60.00 572.00 m 552.00 572.00 l S Q
+BT /Tb 13.0 Tf 60.00 539.00 Td (C  Run history) Tj ET
+BT /Tb 10.0 Tf 60.00 514.80 Td (Invocation 1, OK, 0.5 seconds, 14 output lines, started 2026-10-12T15:31:09) Tj ET
+BT /C 7.5 Tf 60.00 502.30 Td (metric_hash 6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9) Tj ET
+BT /C 7.5 Tf 60.00 491.80 Td (run_digest  2f57a95b9e0edebb55a6abda2789767b3063b799b58e3dc643aba9842556f756) Tj ET
+BT /C 7.5 Tf 60.00 481.30 Td (anchored    at run end) Tj ET
+BT /Tb 13.0 Tf 60.00 451.30 Td (D  Raw seal fields and hashes) Tj ET
+BT /Tb 10.0 Tf 60.00 427.10 Td (Seal) Tj ET
+BT /C 7.5 Tf 60.00 414.60 Td (data_hash           22537d944a5cf42522146bc324dc63c2befdd841bea0d46cb229859c324d9aef) Tj ET
+BT /C 7.5 Tf 60.00 404.10 Td (signed_message_hash c2a3cbb9300cd76c0537165eb1659b0e213c052e59c367ae942ab26c3e637ab3) Tj ET
+BT /C 7.5 Tf 60.00 393.60 Td (nonce               0e74ee4e7437f04d2e482e963a0f14aa) Tj ET
+BT /C 7.5 Tf 60.00 383.10 Td (signed_at           2026-10-12T15:31:14.331659+00:00) Tj ET
+BT /C 7.5 Tf 60.00 372.60 Td (sealed_at           2026-10-12T15:31:14.377506488Z) Tj ET
+BT /C 7.5 Tf 60.00 362.10 Td (checkout_bundle     d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3) Tj ET
+BT /Tb 10.0 Tf 60.00 343.10 Td (Signature \(base64\)) Tj ET
+BT /C 7.5 Tf 60.00 330.60 Td (vXBDatOUKU9B06vaIVUN0/7NXRwDNqxeICSnqKBpM7PoZE9hrfBkM0df44Wil13gNcDUmWY1P9tIecwe1JN+mC9Y) Tj ET
+BT /C 7.5 Tf 60.00 320.10 Td (2oiVFMxRkg4sj9+olSQGRNRbDJiXj3DBUnnzcvrvD03VAQHkecdVG79yZlEYavoDo1A2pt2UeEypklKT9FtbjOrq) Tj ET
+BT /C 7.5 Tf 60.00 309.60 Td (i4QoOYj6XCFpUx0q59ktcC/wK5WWTNJ/pQKoc8CeZ8YjJAvhEn9IplOr0QFasjfXNKCHgzp+jOBDctKvnwq/6oaG) Tj ET
+BT /C 7.5 Tf 60.00 299.10 Td (nnYfa9Vx72eM2xOSNBdRttmK/Ce9wrSMxZ/CHufBIv9X+P5Iu0rHCyDqp3uK+VR4EO6SZkDGommWXrQELdJaC/E3) Tj ET
+BT /C 7.5 Tf 60.00 288.60 Td (Fk5b2RaA96ril532sYX0hlcggBnXH7ThqSPmO85oCXDZz3BSsWyzGgU9ORXT5B1UotulQQdEIuvjhT6tNcacri6N) Tj ET
+BT /C 7.5 Tf 60.00 278.10 Td (WkbmBCRkFtf2FmWZ2vOYHSgb0/G5jAXuLZGkY+i6RiscfQma4zCRGmqOHXeZFYlrKp9+j8ssRLxIXTkj8XVRYpKe) Tj ET
+BT /C 7.5 Tf 60.00 267.60 Td (QE5ivAgMPKZdEIYB7+YKR8AFGtVKaCsL2AAFHNIaP0hD8AQuSuNVLAyMcotowyDLw+SGUTEtA4QAXzGKJYAkLA7w) Tj ET
+BT /C 7.5 Tf 60.00 257.10 Td (PtU1vyslRqNgk2mGJeZqhQtVWVCsLIKOkNwE4DFOPNUzXxZgTN+bEdo1iJGz2TdsDwY=) Tj ET
+BT /Tb 10.0 Tf 60.00 238.10 Td (Public key) Tj ET
+BT /C 7.5 Tf 60.00 225.60 Td (-----BEGIN PUBLIC KEY-----) Tj ET
+BT /C 7.5 Tf 60.00 215.10 Td (MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1QL3YyMgeShx8IhTC7jb) Tj ET
+BT /C 7.5 Tf 60.00 204.60 Td (sM0w2BnRXgsBn3+SMXKjtwHATqdekm1PlcjayJxD5fcPrOPPCqp/LoUFz5CUZzRi) Tj ET
+BT /C 7.5 Tf 60.00 194.10 Td (6+8FTv70dHuIz5A4LAt4vcgwP+iWscPc3HzpmjpsKbTmOemqgp6RB6GNnPpxYa5X) Tj ET
+BT /C 7.5 Tf 60.00 183.60 Td (7qU95EfEisX/GfoS9ToXtqPBwCcVWSPBX8efeC4TC58m96Fsp4mC8KIcEadbIbHN) Tj ET
+BT /C 7.5 Tf 60.00 173.10 Td (av0JjdTJ//CMOWZSIbdzE6qvEbNFcqDB5tNU7oHfYvBeNLrvPU9TAqdbtozdhQ+D) Tj ET
+BT /C 7.5 Tf 60.00 162.60 Td (AhfTRuJNgWEkjWD5lbOVhi4qlkweSOEMTKT3ye9Il5xEaJn4bku4eKqeS7VSZt3o) Tj ET
+BT /C 7.5 Tf 60.00 152.10 Td (XbUcmr2H5mKcKSvt6bXmX6ajAmgi900Cm9QJlaQkJM6z2iITnyvDMgueJtFxQpC9) Tj ET
+BT /C 7.5 Tf 60.00 141.60 Td (HNBPgPZ242NH8JgE6CNF7ToL9syanS67u7UMgIcNgeNHNcy9blGpU5annzP9gN2l) Tj ET
+BT /C 7.5 Tf 60.00 131.10 Td (6HEMldkXNdKQRb1rDWyEJf3N/50YHnXXPmuf5sb8R/pxWNqtfO4R5UGVV92qd2Mi) Tj ET
+BT /C 7.5 Tf 60.00 120.60 Td (1GN7lE3mbQRbPsLL/JApDXMNzNikaFfBsQK7iKxr7vIaTeZckFZWfThcYNT7Hasg) Tj ET
+BT /C 7.5 Tf 60.00 110.10 Td (+eE4bf/olCHBCf1VIDCkDxohehdZ0WRRcgM9iK3I/0zZdaBsgdc8WuJRmb8LPP9v) Tj ET
+BT /C 7.5 Tf 60.00 99.60 Td (8Jap/1PWjNcNku5cdW3gHLcCAwEAAQ==) Tj ET
+BT /C 7.5 Tf 60.00 89.10 Td (-----END PUBLIC KEY-----) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 5 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+20 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 19 0 R /Resources 20 0 R >>
+endobj
+
+22 0 obj
+<< /Length 1423 >>
+stream
+0.3 w
+BT /Tb 10.0 Tf 60.00 716.00 Td (Run 1 outputs) Tj ET
+BT /C 7.5 Tf 60.00 703.50 Td (stdout  6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9) Tj ET
+BT /C 7.5 Tf 60.00 693.00 Td (stderr  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855) Tj ET
+BT /C 7.5 Tf 60.00 682.50 Td (metrics 6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9) Tj ET
+BT /C 7.5 Tf 60.00 672.00 Td (digest  2f57a95b9e0edebb55a6abda2789767b3063b799b58e3dc643aba9842556f756) Tj ET
+BT /Tb 13.0 Tf 60.00 642.00 Td (E  BibTeX for [1]) Tj ET
+BT /C 7.5 Tf 60.00 626.30 Td (@misc{keita2026computerscienceconferencesrequire,) Tj ET
+BT /C 7.5 Tf 60.00 615.80 Td (  title={Computer Science Conferences Should Require Nonrepudiable Experimental Results},) Tj ET
+BT /C 7.5 Tf 60.00 605.30 Td (  author={Mamadou K. Keita and Christopher Homan},) Tj ET
+BT /C 7.5 Tf 60.00 594.80 Td (  year={2026},) Tj ET
+BT /C 7.5 Tf 60.00 584.30 Td (  eprint={2605.08586},) Tj ET
+BT /C 7.5 Tf 60.00 573.80 Td (  archivePrefix={arXiv},) Tj ET
+BT /C 7.5 Tf 60.00 563.30 Td (  primaryClass={cs.CR},) Tj ET
+BT /C 7.5 Tf 60.00 552.80 Td (  url={https://arxiv.org/abs/2605.08586},) Tj ET
+BT /C 7.5 Tf 60.00 542.30 Td (}) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (Sealed Experiment Record) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 6 of 6) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+23 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 22 0 R /Resources 23 0 R >>
+endobj
+
+25 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R 15 0 R 18 0 R 21 0 R 24 0 R] /Count 6 >>
+endobj
+
+26 0 obj
+<< /Type /Catalog /Pages 25 0 R >>
+endobj
+
+xref
+0 27
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000004573 00000 n 
+0000004664 00000 n 
+0000004773 00000 n 
+0000012522 00000 n 
+0000012614 00000 n 
+0000012726 00000 n 
+0000015122 00000 n 
+0000015214 00000 n 
+0000015326 00000 n 
+0000024948 00000 n 
+0000025040 00000 n 
+0000025152 00000 n 
+0000030949 00000 n 
+0000031041 00000 n 
+0000031153 00000 n 
+0000032629 00000 n 
+0000032721 00000 n 
+0000032833 00000 n 
+0000032927 00000 n 
+trailer
+<< /Size 27 /Root 26 0 R >>
+startxref
+32979
+%%EOF
+
+%%KVERITAS_SEAL_BEGIN%%
+{
+  "version": "1.0",
+  "session": {
+    "id": "56490df4-2514-4a03-b851-bbd23f3a5767",
+    "init_at": "2026-10-12T15:11:19.703094354Z",
+    "project_dir": "/home/seb/sebenx/sebeni/experiments/matrix/tinyllama-1.1b_sft",
+    "machine_id": "debd2e227b0a68ef",
+    "token": "",
+    "server_url": "https://kveritas-api-production.up.railway.app",
+    "runs": [
+      "52e33be5"
+    ],
+    "sealed": false,
+    "source_hashes": {
+      "adapter_config.json": "f36f88b959e49d7f27471791139dbe822e19c3058c096ff085733b28e1cd6d8f",
+      "config.yaml": "d8f0e5b8f8edad12db7af2d7360c3e74a1757037320d21a75a9bb0a1e7a946ae",
+      "data/resources/bam/hashes.json": "4c3a20c8b1a399a181f4c8885102c0aa2b6f415084321e87bfd696c22b1da8bb",
+      "data/resources/bmq/hashes.json": "36c21709cfd510961031a44b53339a1090f6ca66e44a55a74429dc9ab7d2fcfd",
+      "data/resources/boz/hashes.json": "4383686cb3aeca183fde4cff1059998c498a2085ff87d2d08b6cf08a77b5aec1",
+      "data/resources/dtm/hashes.json": "b8ebc416318749573933d39689435551244157546a1e700d1f22472f9ddcfb50",
+      "data/resources/frozen.json": "a06cfe5a029aa36b94aab8725a719a61c57568139b48689004a8d783bcae50be",
+      "data/resources/ful/hashes.json": "ea50fea482fc776f5493a28c51b67be750e13758f352e51fb8925c5c85a0f175",
+      "data/resources/kao/hashes.json": "23e0d379f547209373653e4d6350423a575416c72b20e49714f2179440854a61",
+      "data/resources/mey/hashes.json": "885bf8b715f192758d63ac0a9968415e78c6122f250dd72c51134a5831bbde54",
+      "data/resources/mku/hashes.json": "e52cbd9669ea39eb70205da1b66ecbcddbe448f284b3d8e777f73c2aea108be1",
+      "data/resources/myk/hashes.json": "322ce03a585912c95315be9e1683c82939d804e12895d9f9c503aeb463a33206",
+      "data/resources/ses/hashes.json": "6c9084baec0fd9c1822be55b47b2fa802f72189ad4bcaa656decaa1c23ecc5e3",
+      "data/resources/snk/hashes.json": "6c97c2642927a38f67a321bc36fe2af0275609204f3cfccd6bf2dc3a0becd941",
+      "data/resources/spp/hashes.json": "a1e3d80549dd873affe93e525239a4d68d5cb61383f8396c9815898b2de846fb",
+      "data/resources/taq/hashes.json": "94eab33fd9b88f96def5e2c2eb3415241e42639ac18b2bb30eb06f95784a8893",
+      "exp/eval.json": "4adfd98674ecedb4c98f1029b90b329cbc86f22b1b80f42f51280ac2b8f8a3c4",
+      "exp/manifest.json": "e5f4e16b2956486d2fd00848c12863b00b7e0723a953ee4a4bf435c78d95bbad",
+      "exp/sft_label_report.json": "edd5dbc82884ede699af8cabea310b14a345fb05be2716682f23d3302167c22c",
+      "kveritas_report.pdf.provkey.json": "6d5777e1d18175bc2e569e7ccc73983267201d9a297c7c952abd2fda3048d954",
+      "models/adapter_config.json": "caed7d886645ec9fdbf319eeab5515a2738a71474140afd771f7851a46fa7ae8",
+      "models/checkpoint-50/adapter_config.json": "caed7d886645ec9fdbf319eeab5515a2738a71474140afd771f7851a46fa7ae8",
+      "models/checkpoint-50/tokenizer.json": "81bb383c6138159665cd350a59fbcb5aa1fe65712cf5ed9b6481bc802cdbd8e5",
+      "models/checkpoint-50/tokenizer_config.json": "9529c716c37195c285e8ae06abf6a53f5206263b710878b853ef71aa438e78e6",
+      "models/checkpoint-50/trainer_state.json": "d7a093fa0e686c009b02d879940c6707eac407e68a3cde2c36d152880fcea0f9",
+      "models/safety_snapshot.json": "246c258ccf8a9206cc8889c08ee132aeec78a72a57e2de45fe238e3bdac514e6",
+      "models/tokenizer.json": "81bb383c6138159665cd350a59fbcb5aa1fe65712cf5ed9b6481bc802cdbd8e5",
+      "models/tokenizer_config.json": "9529c716c37195c285e8ae06abf6a53f5206263b710878b853ef71aa438e78e6",
+      "safety_snapshot.json": "a47cf2f2fd4a7a37bc752c2ef828c0cd61ca8236c5c1a2768b97f7d2c0d14f02",
+      "tokenizer.json": "81bb383c6138159665cd350a59fbcb5aa1fe65712cf5ed9b6481bc802cdbd8e5",
+      "tokenizer_config.json": "9529c716c37195c285e8ae06abf6a53f5206263b710878b853ef71aa438e78e6"
+    },
+    "disclosure": "open",
+    "invocations": 1,
+    "chain_head": "b276bd30d7d67277ce299f84f04a6bf8d50d420b77696697828a0149d3500eea"
+  },
+  "runs": [
+    {
+      "id": "52e33be5",
+      "session_id": "56490df4-2514-4a03-b851-bbd23f3a5767",
+      "index": 0,
+      "command": [
+        "sh",
+        "-c",
+        "echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0'"
+      ],
+      "start_at": "2026-10-12T15:31:09.436354481Z",
+      "end_at": "2026-10-12T15:31:09.909978711Z",
+      "duration_sec": 0.47362423,
+      "duration_fmt": "0.5 seconds",
+      "exit_code": 0,
+      "pre_hashes": {},
+      "post_hashes": {},
+      "modified_files": [],
+      "stdout_hash": "6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9",
+      "stderr_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 14,
+      "metrics": [
+        {
+          "name": "phi",
+          "value": 0.499372,
+          "step": "0",
+          "line": 1,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_bam",
+          "value": 0.565924,
+          "step": "0",
+          "line": 2,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_bmq",
+          "value": 0.709444,
+          "step": "0",
+          "line": 3,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_boz",
+          "value": 0.390159,
+          "step": "0",
+          "line": 4,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_dtm",
+          "value": 0.569545,
+          "step": "0",
+          "line": 5,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_ful",
+          "value": 0.423977,
+          "step": "0",
+          "line": 6,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_mey",
+          "value": 0.336661,
+          "step": "0",
+          "line": 7,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_mku",
+          "value": 0.351723,
+          "step": "0",
+          "line": 8,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_kao",
+          "value": 0.783419,
+          "step": "0",
+          "line": 9,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_myk",
+          "value": 0.329046,
+          "step": "0",
+          "line": 10,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_ses",
+          "value": 0.348706,
+          "step": "0",
+          "line": 11,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_spp",
+          "value": 0.490032,
+          "step": "0",
+          "line": 12,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_snk",
+          "value": 0.380257,
+          "step": "0",
+          "line": 13,
+          "source": "explicit"
+        },
+        {
+          "name": "phi_taq",
+          "value": 0.812938,
+          "step": "0",
+          "line": 14,
+          "source": "explicit"
+        }
+      ],
+      "hardware": {
+        "os": "linux",
+        "arch": "amd64",
+        "cpu_cores": 8,
+        "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+        "mem_gb": 31.340831756591797,
+        "gpu_info": "NVIDIA L4, 23034 MiB",
+        "gpu_count": 1,
+        "gpu_names": [
+          "NVIDIA L4"
+        ]
+      },
+      "env_digest": "83fee8e8e2fa635d1d6d7af919d4309658cd91d218119f339503f588cad729dc",
+      "env_packages": "accelerate==1.15.0\nagent-detector==2.0.0\naiohappyeyeballs==2.7.1\naiohttp==3.14.4\naiosignal==1.4.0\nannotated-doc==0.0.5\nannotated-types==0.8.0\nanthropic==1.13.0\nanyio==4.15.1\napache-tvm-ffi==0.1.11\nastor==0.8.1\nasync-timeout==5.0.1\nattrdict3==2.0.2\nattrs==26.1.0\nbackports.strenum==1.3.1\nbitsandbytes==0.50.2\nblake3==1.0.10\nbrotli==1.2.0\ncachetools==7.2.1\ncbor2==6.1.5\ncertifi==2026.7.22\ncffi==2.1.1\ncharset-normalizer==3.5.2\nclick==8.5.0\ncloudpickle==3.1.2\ncompressed-tensors==0.17.0\ncryptography==50.0.2\ncuda-bindings==13.4.3\ncuda-core==1.2.1\ncuda-pathfinder==1.8.3\ncuda-python==13.4.1\ncuda-tile==1.6.0\ncuda-toolkit==13.0.3.0\ncyclopts==4.25.3\ndaba==0.9.5\ndatasets==5.1.0\ndepyf==0.20.0\ndetect-installer==0.2.1\ndetect_agent==0.6.0\ndill==0.4.1\ndistro==1.9.0\ndnspython==2.8.0\ndocstring_parser==0.18.0\neinops==0.8.2\nemail-validator==2.3.0\nexceptiongroup==1.3.1\nfastapi==0.136.3\nfastapi-cli==0.0.32\nfastapi-cloud-cli==0.26.0\nfastar==0.12.0\nfastsafetensors==0.4.0\nfilelock==3.32.7\nflashinfer-python==0.7.0.post1\nfrozenlist==1.8.0\nfsspec==2026.7.0\nfuncparserlib==1.0.1\ngoogle-auth==2.61.0\ngoogle-genai==2.29.0\ngoogleapis-common-protos==1.75.5\ngradio_client==2.7.2\ngroq==1.7.0\ngrpcio==1.84.0\nh11==0.16.0\nhf-xet==1.7.0\nhttpcore==1.0.9\nhttpcore2==2.13.1\nhttptools==0.9.0\nhttpx==0.28.1\nhttpx2==2.13.1\nhuggingface_hub==1.33.0\nhumming-kernels==0.1.16\nidna==3.20\nijson==3.5.1\niniconfig==2.3.1\ninstanttensor==0.2.1\ninteregular==0.3.3\nintervaltree==3.2.1\nJinja2==3.1.6\njiter==0.17.0\njmespath==1.1.0\njsonschema==4.26.0\njsonschema-specifications==2025.9.1\nlark==1.2.2\nllguidance==1.7.6\nllvmlite==0.47.0\nlm-format-enforcer==0.11.3\nloguru==0.7.3\nmarkdown-it-py==4.2.0\nMarkupSafe==3.0.4\nmcp==2.3.0\nmcp-types==2.3.0\nmdurl==0.1.2\nmistral_common==1.12.0\nml_dtypes==0.6.0\nmodel-hosting-container-standards==0.1.16\nmpmath==1.3.0\nmsgspec==0.22.0\nmultidict==6.9.1\nmultiprocess==0.70.19\nnccl-extensions==0.1.0\nnccl4py==0.6.0\nnetworkx==3.4.2\nninja==1.13.2\nnumba==0.65.0\nnumpy==2.2.6\nnvidia-cublas==13.1.1.3\nnvidia-cuda-cccl==13.3.4.3.1\nnvidia-cuda-crt==13.4.92\nnvidia-cuda-cupti==13.0.85\nnvidia-cuda-nvcc==13.4.92\nnvidia-cuda-nvdisasm==13.4.92\nnvidia-cuda-nvrtc==13.0.88\nnvidia-cuda-runtime==13.0.96\nnvidia-cudnn-cu13==9.20.0.48\nnvidia-cudnn-frontend==1.31.0\nnvidia-cufft==12.0.0.61\nnvidia-cufile==1.15.1.6\nnvidia-curand==10.4.0.35\nnvidia-cusolver==12.0.4.66\nnvidia-cusparse==12.6.3.3\nnvidia-cusparselt-cu13==0.8.1\nnvidia-cutlass-dsl==4.7.1\nnvidia-cutlass-dsl-libs-base==4.7.1\nnvidia-cutlass-dsl-libs-core==4.7.1\nnvidia-cutlass-dsl-libs-cu12==4.7.1\nnvidia-cutlass-dsl-libs-cu13==4.7.1\nnvidia-ml-py==13.615.71\nnvidia-nccl-cu13==2.29.7\nnvidia-nvjitlink==13.4.92\nnvidia-nvshmem-cu13==3.4.5\nnvidia-nvtx==13.0.85\nnvidia-nvvm==13.4.92\nnvtx==0.2.15\nopenai==3.28.0\nopencv-python-headless==5.0.0.93\nopentelemetry-api==1.45.1\nopentelemetry-exporter-http-transport==0.66b1\nopentelemetry-exporter-otlp==1.45.1\nopentelemetry-exporter-otlp-common==0.66b1\nopentelemetry-exporter-otlp-proto-common==1.45.1\nopentelemetry-exporter-otlp-proto-grpc==1.45.1\nopentelemetry-exporter-otlp-proto-http==1.45.1\nopentelemetry-proto==1.45.1\nopentelemetry-sdk==1.45.1\nopentelemetry-semantic-conventions==0.66b1\nopentelemetry-semantic-conventions-ai==0.5.1\norjson==3.13.0\noss-harmony==0.0.11\noutlines_core==0.2.14\npackaging==26.3\npandas==2.3.3\npartial-json-parser==0.2.1.1.post7\npeft==0.21.2\npillow==12.3.0\npluggy==1.6.0\nprometheus-fastapi-instrumentator==8.1.0\nprometheus_client==0.26.0\npropcache==0.5.4\nprotobuf==7.36.2\npsutil==7.2.2\npy-cpuinfo==9.0.0\npyarrow==25.0.1\npyasn1==0.6.4\npyasn1_modules==0.4.2\npybase64==1.5.1\npycountry==26.2.16\npycparser==3.11\npydantic==2.14.0\npydantic-extra-types==2.11.1\npydantic-settings==2.15.0\npydantic_core==2.50.0\nPygments==2.21.0\nPyJWT==2.15.1\npynvvideocodec==2.0.4\npytest==9.1.1\npytest-mock==3.16.0\npython-dateutil==2.9.0.post0\npython-dotenv==1.2.4\npython-json-logger==4.2.0\npython-multipart==0.0.32\nPyTrie==0.4.0\npytz==2026.5\nPyYAML==6.0.3\npyzmq==27.2.0\nquack-kernels==0.6.5\nreferencing==0.37.0\nregex==2026.9.29\nrequests==2.34.2\nrich==14.3.4\nrich-rst==2.2.0\nrich-toolkit==0.20.6\nrignore==0.8.1\nrpds-py==0.30.0\nruff==0.17.0\nsafetensors==0.8.0\n-e git+https://github.com/mlsftwrs/sebeni.git@8f18e953ad8cabb476cc509a0bdaf4131ccf5a14#egg=sebeni\nsentencepiece==0.2.2\nsentry-sdk==2.71.0\nsetproctitle==1.3.8\nshellingham==1.5.4\nsix==1.17.0\nsniffio==1.3.1\nsortedcontainers==2.4.0\nsse-starlette==3.5.0\nstarlette==1.7.0\nsupervisor==4.3.0\nsympy==1.14.0\ntabulate==0.10.0\ntenacity==9.1.4\ntiktoken==0.14.0\ntilelang==0.1.12\ntogether==2.40.0\ntokenizers==0.23.3\ntokenspeed-mla==0.1.8\ntokenspeed-triton==3.8.10.post20260920\ntomli==2.5.0\ntorch==2.13.0\ntorch_c_dlpack_ext==0.1.5\ntorchao==0.18.0\ntorchaudio==2.11.0\ntorchcodec==0.17.0\ntorchvision==0.28.0\ntqdm==4.70.1\ntrackio==0.42.0\ntransformers==5.17.0\ntriton==3.7.1\ntrl==1.14.2\ntruststore==0.10.4\ntyper==0.27.3\ntypes-PyYAML==6.0.12.20260906\ntyping-inspection==0.4.4\ntyping_extensions==4.16.0\ntzdata==2026.5\nurllib3==2.8.0\nuvicorn==0.54.0\nuvloop==0.23.0\nvllm==0.31.0\nwatchfiles==1.3.0\nwebsockets==16.1.1\nxgrammar==0.2.7\nxxhash==4.0.1\nyarl==1.25.1\nz3-solver==4.15.4.0\n",
+      "metric_hash": "6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9",
+      "hardware_samples": [
+        {
+          "timestamp": "2026-10-12T15:31:09.646210086Z",
+          "counters": {
+            "cpu_time_sec": 0,
+            "mem_used_gb": 0,
+            "gpu_temp_c": 73,
+            "disk_read_mb": 0,
+            "disk_write_mb": 0,
+            "ctx_switches": 2,
+            "minor_faults": 68,
+            "threads": 1
+          }
+        },
+        {
+          "timestamp": "2026-10-12T15:31:09.650304836Z",
+          "counters": {
+            "cpu_time_sec": 0,
+            "mem_used_gb": 0,
+            "gpu_temp_c": 73,
+            "disk_read_mb": 0,
+            "disk_write_mb": 0,
+            "ctx_switches": 2,
+            "minor_faults": 68,
+            "threads": 1
+          }
+        },
+        {
+          "timestamp": "2026-10-12T15:31:09.661860181Z",
+          "counters": {
+            "cpu_time_sec": 0,
+            "mem_used_gb": 0,
+            "gpu_temp_c": 73,
+            "disk_read_mb": 0,
+            "disk_write_mb": 0,
+            "ctx_switches": 2,
+            "minor_faults": 68,
+            "threads": 1
+          }
+        },
+        {
+          "timestamp": "2026-10-12T15:31:09.74025446Z",
+          "counters": {
+            "cpu_time_sec": 0,
+            "mem_used_gb": 0,
+            "gpu_temp_c": 73,
+            "disk_read_mb": 0,
+            "disk_write_mb": 0
+          }
+        }
+      ],
+      "source_code_hash": "6a4f0d079bfc1eb3a00484bdccfc4cbc86d441717de8d94e8750238f47b9134b",
+      "trace": {
+        "files": [
+          {
+            "op": "read",
+            "path": "adapter_config.json",
+            "timestamp": "2026-10-12T15:31:09.68322559Z"
+          },
+          {
+            "op": "read",
+            "path": "config.yaml",
+            "timestamp": "2026-10-12T15:31:09.683228439Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/bam/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683229481Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/bmq/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683230134Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/boz/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683231196Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/dtm/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683231934Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/frozen.json",
+            "timestamp": "2026-10-12T15:31:09.683232613Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/ful/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683233168Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/kao/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683233742Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/mey/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683236473Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/mku/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683237055Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/myk/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683237566Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/ses/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683238357Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/snk/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.68323903Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/spp/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683257444Z"
+          },
+          {
+            "op": "read",
+            "path": "data/resources/taq/hashes.json",
+            "timestamp": "2026-10-12T15:31:09.683257988Z"
+          },
+          {
+            "op": "read",
+            "path": "exp/eval.json",
+            "timestamp": "2026-10-12T15:31:09.6832585Z"
+          },
+          {
+            "op": "read",
+            "path": "exp/manifest.json",
+            "timestamp": "2026-10-12T15:31:09.683259055Z"
+          },
+          {
+            "op": "read",
+            "path": "exp/sft_label_report.json",
+            "timestamp": "2026-10-12T15:31:09.683259786Z"
+          },
+          {
+            "op": "read",
+            "path": "kveritas_report.pdf.provkey.json",
+            "timestamp": "2026-10-12T15:31:09.683261647Z"
+          },
+          {
+            "op": "read",
+            "path": "models/adapter_config.json",
+            "timestamp": "2026-10-12T15:31:09.683262257Z"
+          },
+          {
+            "op": "read",
+            "path": "models/checkpoint-50/adapter_config.json",
+            "timestamp": "2026-10-12T15:31:09.683264138Z"
+          },
+          {
+            "op": "read",
+            "path": "models/checkpoint-50/tokenizer.json",
+            "timestamp": "2026-10-12T15:31:09.68326473Z"
+          },
+          {
+            "op": "read",
+            "path": "models/checkpoint-50/tokenizer_config.json",
+            "timestamp": "2026-10-12T15:31:09.703468853Z"
+          },
+          {
+            "op": "read",
+            "path": "models/checkpoint-50/trainer_state.json",
+            "timestamp": "2026-10-12T15:31:09.703472253Z"
+          },
+          {
+            "op": "read",
+            "path": "models/safety_snapshot.json",
+            "timestamp": "2026-10-12T15:31:09.703473829Z"
+          },
+          {
+            "op": "read",
+            "path": "models/tokenizer.json",
+            "timestamp": "2026-10-12T15:31:09.703475493Z"
+          },
+          {
+            "op": "read",
+            "path": "models/tokenizer_config.json",
+            "timestamp": "2026-10-12T15:31:09.7237908Z"
+          },
+          {
+            "op": "read",
+            "path": "safety_snapshot.json",
+            "timestamp": "2026-10-12T15:31:09.723793219Z"
+          },
+          {
+            "op": "read",
+            "path": "tokenizer.json",
+            "timestamp": "2026-10-12T15:31:09.72379586Z"
+          },
+          {
+            "op": "read",
+            "path": "tokenizer_config.json",
+            "timestamp": "2026-10-12T15:31:09.744175345Z"
+          }
+        ]
+      },
+      "provenance": {
+        "disclosure": "open",
+        "root": "adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64",
+        "head": "bdb1950d6a02c3b1a8ee207a8be16a9665888ac93a607e57f70cb9c88680a5cf",
+        "file_count": 31,
+        "commits": [
+          {
+            "index": 0,
+            "timestamp": "2026-10-12T15:31:09.738328904Z",
+            "prev_root": "",
+            "root": "adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64",
+            "event": {
+              "kind": "run_start"
+            },
+            "changed": [
+              {
+                "op": "add",
+                "path": "adapter_config.json"
+              },
+              {
+                "op": "add",
+                "path": "config.yaml"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/bam/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/bmq/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/boz/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/dtm/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/frozen.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/ful/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/kao/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/mey/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/mku/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/myk/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/ses/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/snk/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/spp/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "data/resources/taq/hashes.json"
+              },
+              {
+                "op": "add",
+                "path": "exp/eval.json"
+              },
+              {
+                "op": "add",
+                "path": "exp/manifest.json"
+              },
+              {
+                "op": "add",
+                "path": "exp/sft_label_report.json"
+              },
+              {
+                "op": "add",
+                "path": "kveritas_report.pdf.provkey.json"
+              },
+              {
+                "op": "add",
+                "path": "models/adapter_config.json"
+              },
+              {
+                "op": "add",
+                "path": "models/checkpoint-50/adapter_config.json"
+              },
+              {
+                "op": "add",
+                "path": "models/checkpoint-50/tokenizer.json"
+              },
+              {
+                "op": "add",
+                "path": "models/checkpoint-50/tokenizer_config.json"
+              },
+              {
+                "op": "add",
+                "path": "models/checkpoint-50/trainer_state.json"
+              },
+              {
+                "op": "add",
+                "path": "models/safety_snapshot.json"
+              },
+              {
+                "op": "add",
+                "path": "models/tokenizer.json"
+              },
+              {
+                "op": "add",
+                "path": "models/tokenizer_config.json"
+              },
+              {
+                "op": "add",
+                "path": "safety_snapshot.json"
+              },
+              {
+                "op": "add",
+                "path": "tokenizer.json"
+              },
+              {
+                "op": "add",
+                "path": "tokenizer_config.json"
+              }
+            ],
+            "prev_link": "",
+            "link": "b784af3950c92e4e65a5ae6efa0f5ba85086650be2768c87de9cbc3e40ae21a8"
+          },
+          {
+            "index": 1,
+            "timestamp": "2026-10-12T15:31:09.814481651Z",
+            "prev_root": "adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64",
+            "root": "adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64",
+            "event": {
+              "kind": "run_end"
+            },
+            "prev_link": "b784af3950c92e4e65a5ae6efa0f5ba85086650be2768c87de9cbc3e40ae21a8",
+            "link": "bdb1950d6a02c3b1a8ee207a8be16a9665888ac93a607e57f70cb9c88680a5cf"
+          }
+        ]
+      },
+      "prov_bundle_hash": "8120a847f382dbcfd024e982453003b6c1a63668b85e88f970fb7058c12e7071",
+      "run_digest": "2f57a95b9e0edebb55a6abda2789767b3063b799b58e3dc643aba9842556f756"
+    }
+  ],
+  "seal": {
+    "session_id": "56490df4-2514-4a03-b851-bbd23f3a5767",
+    "sealed_at": "2026-10-12T15:31:14.377506488Z",
+    "data_hash": "22537d944a5cf42522146bc324dc63c2befdd841bea0d46cb229859c324d9aef",
+    "nonce": "0e74ee4e7437f04d2e482e963a0f14aa",
+    "signed_at": "2026-10-12T15:31:14.331659+00:00",
+    "signature": "vXBDatOUKU9B06vaIVUN0/7NXRwDNqxeICSnqKBpM7PoZE9hrfBkM0df44Wil13gNcDUmWY1P9tIecwe1JN+mC9Y2oiVFMxRkg4sj9+olSQGRNRbDJiXj3DBUnnzcvrvD03VAQHkecdVG79yZlEYavoDo1A2pt2UeEypklKT9FtbjOrqi4QoOYj6XCFpUx0q59ktcC/wK5WWTNJ/pQKoc8CeZ8YjJAvhEn9IplOr0QFasjfXNKCHgzp+jOBDctKvnwq/6oaGnnYfa9Vx72eM2xOSNBdRttmK/Ce9wrSMxZ/CHufBIv9X+P5Iu0rHCyDqp3uK+VR4EO6SZkDGommWXrQELdJaC/E3Fk5b2RaA96ril532sYX0hlcggBnXH7ThqSPmO85oCXDZz3BSsWyzGgU9ORXT5B1UotulQQdEIuvjhT6tNcacri6NWkbmBCRkFtf2FmWZ2vOYHSgb0/G5jAXuLZGkY+i6RiscfQma4zCRGmqOHXeZFYlrKp9+j8ssRLxIXTkj8XVRYpKeQE5ivAgMPKZdEIYB7+YKR8AFGtVKaCsL2AAFHNIaP0hD8AQuSuNVLAyMcotowyDLw+SGUTEtA4QAXzGKJYAkLA7wPtU1vyslRqNgk2mGJeZqhQtVWVCsLIKOkNwE4DFOPNUzXxZgTN+bEdo1iJGz2TdsDwY=",
+    "signed_message_hash": "c2a3cbb9300cd76c0537165eb1659b0e213c052e59c367ae942ab26c3e637ab3",
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1QL3YyMgeShx8IhTC7jb\nsM0w2BnRXgsBn3+SMXKjtwHATqdekm1PlcjayJxD5fcPrOPPCqp/LoUFz5CUZzRi\n6+8FTv70dHuIz5A4LAt4vcgwP+iWscPc3HzpmjpsKbTmOemqgp6RB6GNnPpxYa5X\n7qU95EfEisX/GfoS9ToXtqPBwCcVWSPBX8efeC4TC58m96Fsp4mC8KIcEadbIbHN\nav0JjdTJ//CMOWZSIbdzE6qvEbNFcqDB5tNU7oHfYvBeNLrvPU9TAqdbtozdhQ+D\nAhfTRuJNgWEkjWD5lbOVhi4qlkweSOEMTKT3ye9Il5xEaJn4bku4eKqeS7VSZt3o\nXbUcmr2H5mKcKSvt6bXmX6ajAmgi900Cm9QJlaQkJM6z2iITnyvDMgueJtFxQpC9\nHNBPgPZ242NH8JgE6CNF7ToL9syanS67u7UMgIcNgeNHNcy9blGpU5annzP9gN2l\n6HEMldkXNdKQRb1rDWyEJf3N/50YHnXXPmuf5sb8R/pxWNqtfO4R5UGVV92qd2Mi\n1GN7lE3mbQRbPsLL/JApDXMNzNikaFfBsQK7iKxr7vIaTeZckFZWfThcYNT7Hasg\n+eE4bf/olCHBCf1VIDCkDxohehdZ0WRRcgM9iK3I/0zZdaBsgdc8WuJRmb8LPP9v\n8Jap/1PWjNcNku5cdW3gHLcCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "server_url": "https://kveritas-api-production.up.railway.app",
+    "canonical_json": "{\"checkout_bundle_hash\":\"d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3\",\"hmca\":{\"hmca_score\":0,\"hmca_verdict\":\"N/A\"},\"init_at\":\"2026-10-12T15:11:19.703094354Z\",\"machine_id\":\"debd2e227b0a68ef\",\"run_anchors\":[{\"invocation\":0,\"run\":0,\"run_digest\":\"2f57a95b9e0edebb55a6abda2789767b3063b799b58e3dc643aba9842556f756\"}],\"runs\":[{\"command\":[\"sh\",\"-c\",\"echo 'KVERITAS_METRIC name=phi value=0.499372 step=0'; echo 'KVERITAS_METRIC name=phi_bam value=0.565924 step=0'; echo 'KVERITAS_METRIC name=phi_bmq value=0.709444 step=0'; echo 'KVERITAS_METRIC name=phi_boz value=0.390159 step=0'; echo 'KVERITAS_METRIC name=phi_dtm value=0.569545 step=0'; echo 'KVERITAS_METRIC name=phi_ful value=0.423977 step=0'; echo 'KVERITAS_METRIC name=phi_mey value=0.336661 step=0'; echo 'KVERITAS_METRIC name=phi_mku value=0.351723 step=0'; echo 'KVERITAS_METRIC name=phi_kao value=0.783419 step=0'; echo 'KVERITAS_METRIC name=phi_myk value=0.329046 step=0'; echo 'KVERITAS_METRIC name=phi_ses value=0.348706 step=0'; echo 'KVERITAS_METRIC name=phi_spp value=0.490032 step=0'; echo 'KVERITAS_METRIC name=phi_snk value=0.380257 step=0'; echo 'KVERITAS_METRIC name=phi_taq value=0.812938 step=0'\"],\"duration_fmt\":\"0.5 seconds\",\"duration_sec\":0.47362423,\"end_at\":\"2026-10-12T15:31:09.909978711Z\",\"env_digest\":\"83fee8e8e2fa635d1d6d7af919d4309658cd91d218119f339503f588cad729dc\",\"exit_code\":0,\"hardware\":{\"arch\":\"amd64\",\"cpu_cores\":8,\"cpu_model\":\"Intel(R) Xeon(R) CPU @ 2.20GHz\",\"gpu_count\":1,\"gpu_info\":\"NVIDIA L4, 23034 MiB\",\"gpu_names\":[\"NVIDIA L4\"],\"mem_gb\":31.340831756591797,\"os\":\"linux\"},\"hardware_samples\":[{\"counters\":{\"cpu_time_sec\":0,\"ctx_switches\":2,\"disk_read_mb\":0,\"disk_write_mb\":0,\"gpu_temp_c\":73,\"mem_used_gb\":0,\"minor_faults\":68,\"threads\":1},\"timestamp\":\"2026-10-12T15:31:09.646210086Z\"},{\"counters\":{\"cpu_time_sec\":0,\"ctx_switches\":2,\"disk_read_mb\":0,\"disk_write_mb\":0,\"gpu_temp_c\":73,\"mem_used_gb\":0,\"minor_faults\":68,\"threads\":1},\"timestamp\":\"2026-10-12T15:31:09.650304836Z\"},{\"counters\":{\"cpu_time_sec\":0,\"ctx_switches\":2,\"disk_read_mb\":0,\"disk_write_mb\":0,\"gpu_temp_c\":73,\"mem_used_gb\":0,\"minor_faults\":68,\"threads\":1},\"timestamp\":\"2026-10-12T15:31:09.661860181Z\"},{\"counters\":{\"cpu_time_sec\":0,\"disk_read_mb\":0,\"disk_write_mb\":0,\"gpu_temp_c\":73,\"mem_used_gb\":0},\"timestamp\":\"2026-10-12T15:31:09.74025446Z\"}],\"id\":\"52e33be5\",\"index\":0,\"metric_hash\":\"6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9\",\"metrics\":[{\"line\":1,\"name\":\"phi\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.499372},{\"line\":2,\"name\":\"phi_bam\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.565924},{\"line\":3,\"name\":\"phi_bmq\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.709444},{\"line\":4,\"name\":\"phi_boz\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.390159},{\"line\":5,\"name\":\"phi_dtm\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.569545},{\"line\":6,\"name\":\"phi_ful\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.423977},{\"line\":7,\"name\":\"phi_mey\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.336661},{\"line\":8,\"name\":\"phi_mku\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.351723},{\"line\":9,\"name\":\"phi_kao\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.783419},{\"line\":10,\"name\":\"phi_myk\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.329046},{\"line\":11,\"name\":\"phi_ses\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.348706},{\"line\":12,\"name\":\"phi_spp\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.490032},{\"line\":13,\"name\":\"phi_snk\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.380257},{\"line\":14,\"name\":\"phi_taq\",\"source\":\"explicit\",\"step\":\"0\",\"value\":0.812938}],\"modified_files\":[],\"post_hashes\":{},\"pre_hashes\":{},\"prov_bundle_hash\":\"8120a847f382dbcfd024e982453003b6c1a63668b85e88f970fb7058c12e7071\",\"provenance\":{\"commits\":[{\"changed\":[{\"op\":\"add\",\"path\":\"adapter_config.json\"},{\"op\":\"add\",\"path\":\"config.yaml\"},{\"op\":\"add\",\"path\":\"data/resources/bam/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/bmq/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/boz/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/dtm/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/frozen.json\"},{\"op\":\"add\",\"path\":\"data/resources/ful/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/kao/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/mey/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/mku/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/myk/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/ses/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/snk/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/spp/hashes.json\"},{\"op\":\"add\",\"path\":\"data/resources/taq/hashes.json\"},{\"op\":\"add\",\"path\":\"exp/eval.json\"},{\"op\":\"add\",\"path\":\"exp/manifest.json\"},{\"op\":\"add\",\"path\":\"exp/sft_label_report.json\"},{\"op\":\"add\",\"path\":\"kveritas_report.pdf.provkey.json\"},{\"op\":\"add\",\"path\":\"models/adapter_config.json\"},{\"op\":\"add\",\"path\":\"models/checkpoint-50/adapter_config.json\"},{\"op\":\"add\",\"path\":\"models/checkpoint-50/tokenizer.json\"},{\"op\":\"add\",\"path\":\"models/checkpoint-50/tokenizer_config.json\"},{\"op\":\"add\",\"path\":\"models/checkpoint-50/trainer_state.json\"},{\"op\":\"add\",\"path\":\"models/safety_snapshot.json\"},{\"op\":\"add\",\"path\":\"models/tokenizer.json\"},{\"op\":\"add\",\"path\":\"models/tokenizer_config.json\"},{\"op\":\"add\",\"path\":\"safety_snapshot.json\"},{\"op\":\"add\",\"path\":\"tokenizer.json\"},{\"op\":\"add\",\"path\":\"tokenizer_config.json\"}],\"event\":{\"kind\":\"run_start\"},\"index\":0,\"link\":\"b784af3950c92e4e65a5ae6efa0f5ba85086650be2768c87de9cbc3e40ae21a8\",\"prev_link\":\"\",\"prev_root\":\"\",\"root\":\"adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64\",\"timestamp\":\"2026-10-12T15:31:09.738328904Z\"},{\"event\":{\"kind\":\"run_end\"},\"index\":1,\"link\":\"bdb1950d6a02c3b1a8ee207a8be16a9665888ac93a607e57f70cb9c88680a5cf\",\"prev_link\":\"b784af3950c92e4e65a5ae6efa0f5ba85086650be2768c87de9cbc3e40ae21a8\",\"prev_root\":\"adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64\",\"root\":\"adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64\",\"timestamp\":\"2026-10-12T15:31:09.814481651Z\"}],\"disclosure\":\"open\",\"file_count\":31,\"head\":\"bdb1950d6a02c3b1a8ee207a8be16a9665888ac93a607e57f70cb9c88680a5cf\",\"root\":\"adae1c048cbb8a3a4d8a0a5d2d7dd78bbf7be741a333e12e8bbb364bfda26e64\"},\"source_code_hash\":\"6a4f0d079bfc1eb3a00484bdccfc4cbc86d441717de8d94e8750238f47b9134b\",\"start_at\":\"2026-10-12T15:31:09.436354481Z\",\"stderr_hash\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"stdout_hash\":\"6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9\",\"stdout_lines\":14,\"trace\":{\"files\":[{\"op\":\"read\",\"path\":\"adapter_config.json\",\"timestamp\":\"2026-10-12T15:31:09.68322559Z\"},{\"op\":\"read\",\"path\":\"config.yaml\",\"timestamp\":\"2026-10-12T15:31:09.683228439Z\"},{\"op\":\"read\",\"path\":\"data/resources/bam/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683229481Z\"},{\"op\":\"read\",\"path\":\"data/resources/bmq/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683230134Z\"},{\"op\":\"read\",\"path\":\"data/resources/boz/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683231196Z\"},{\"op\":\"read\",\"path\":\"data/resources/dtm/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683231934Z\"},{\"op\":\"read\",\"path\":\"data/resources/frozen.json\",\"timestamp\":\"2026-10-12T15:31:09.683232613Z\"},{\"op\":\"read\",\"path\":\"data/resources/ful/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683233168Z\"},{\"op\":\"read\",\"path\":\"data/resources/kao/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683233742Z\"},{\"op\":\"read\",\"path\":\"data/resources/mey/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683236473Z\"},{\"op\":\"read\",\"path\":\"data/resources/mku/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683237055Z\"},{\"op\":\"read\",\"path\":\"data/resources/myk/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683237566Z\"},{\"op\":\"read\",\"path\":\"data/resources/ses/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683238357Z\"},{\"op\":\"read\",\"path\":\"data/resources/snk/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.68323903Z\"},{\"op\":\"read\",\"path\":\"data/resources/spp/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683257444Z\"},{\"op\":\"read\",\"path\":\"data/resources/taq/hashes.json\",\"timestamp\":\"2026-10-12T15:31:09.683257988Z\"},{\"op\":\"read\",\"path\":\"exp/eval.json\",\"timestamp\":\"2026-10-12T15:31:09.6832585Z\"},{\"op\":\"read\",\"path\":\"exp/manifest.json\",\"timestamp\":\"2026-10-12T15:31:09.683259055Z\"},{\"op\":\"read\",\"path\":\"exp/sft_label_report.json\",\"timestamp\":\"2026-10-12T15:31:09.683259786Z\"},{\"op\":\"read\",\"path\":\"kveritas_report.pdf.provkey.json\",\"timestamp\":\"2026-10-12T15:31:09.683261647Z\"},{\"op\":\"read\",\"path\":\"models/adapter_config.json\",\"timestamp\":\"2026-10-12T15:31:09.683262257Z\"},{\"op\":\"read\",\"path\":\"models/checkpoint-50/adapter_config.json\",\"timestamp\":\"2026-10-12T15:31:09.683264138Z\"},{\"op\":\"read\",\"path\":\"models/checkpoint-50/tokenizer.json\",\"timestamp\":\"2026-10-12T15:31:09.68326473Z\"},{\"op\":\"read\",\"path\":\"models/checkpoint-50/tokenizer_config.json\",\"timestamp\":\"2026-10-12T15:31:09.703468853Z\"},{\"op\":\"read\",\"path\":\"models/checkpoint-50/trainer_state.json\",\"timestamp\":\"2026-10-12T15:31:09.703472253Z\"},{\"op\":\"read\",\"path\":\"models/safety_snapshot.json\",\"timestamp\":\"2026-10-12T15:31:09.703473829Z\"},{\"op\":\"read\",\"path\":\"models/tokenizer.json\",\"timestamp\":\"2026-10-12T15:31:09.703475493Z\"},{\"op\":\"read\",\"path\":\"models/tokenizer_config.json\",\"timestamp\":\"2026-10-12T15:31:09.7237908Z\"},{\"op\":\"read\",\"path\":\"safety_snapshot.json\",\"timestamp\":\"2026-10-12T15:31:09.723793219Z\"},{\"op\":\"read\",\"path\":\"tokenizer.json\",\"timestamp\":\"2026-10-12T15:31:09.72379586Z\"},{\"op\":\"read\",\"path\":\"tokenizer_config.json\",\"timestamp\":\"2026-10-12T15:31:09.744175345Z\"}]}}],\"server_url\":\"https://kveritas-api-production.up.railway.app\",\"session_id\":\"56490df4-2514-4a03-b851-bbd23f3a5767\"}",
+    "visual_pdf_hash": "a7f8d6223f24ce1db6be799b5070bc685e8b7eff89af431044f22843ec6ea8f4",
+    "seal_block_hash": "b95a2a8519278473fd89b2a982b9750d9ea61a33c39553851aa468def12f81d4",
+    "checkout_bundle_hash": "d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3",
+    "run_history": [
+      {
+        "run_index": 0,
+        "started_at": "2026-10-12T15:31:09.436354481Z",
+        "duration_sec": 0.47362423,
+        "duration_fmt": "0.5 seconds",
+        "exit_code": 0,
+        "metric_hash": "6c717d25eaec0091ecc0f8b862226f8b1c826978aac4705840131987571ddfb9",
+        "stdout_lines": 14,
+        "invocation": 0,
+        "run_digest": "2f57a95b9e0edebb55a6abda2789767b3063b799b58e3dc643aba9842556f756",
+        "ended_at": "2026-10-12T15:31:09.909978711Z",
+        "received_at": "2026-10-12T15:31:13.813392Z"
+      }
+    ],
+    "total_run_count": 1
+  }
+}
+%%KVERITAS_SEAL_END%%

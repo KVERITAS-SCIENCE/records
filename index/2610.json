@@ -572,5 +572,21 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Security and cryptography",
     "path": "records/2610/2610.00040/v1"
+  },
+  {
+    "id": "kv:2610.00041v1",
+    "title": "Seben: Morphotactic-Guided Preference Alignment for Extremely Low-Resource Language",
+    "authors": [
+      "Sebastien Diarra",
+      "Mamadou K. Keita",
+      "Sokona Coulibaly"
+    ],
+    "submitted_by": "s7d11",
+    "published": "2026-10-13",
+    "reports": 22,
+    "purpose": "Official implementation",
+    "type": "Research paper",
+    "field": "Machine learning",
+    "path": "records/2610/2610.00041/v1"
   }
 ]

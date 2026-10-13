@@ -1,0 +1,2542 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 6764 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 93.54 692.00 Td (Seben: Morphotactic-Guided Preference Alignment for) Tj ET
+BT /Tb 18.0 Tf 168.02 666.80 Td (Extremely Low-Resource Language) Tj ET
+BT /T 12.0 Tf 170.85 639.60 Td (Sebastien Diarra, Mamadou K. Keita, Sokona Coulibaly) Tj ET
+BT /Ti 10.0 Tf 237.80 622.80 Td (Submitted by s7d11 \(RobotsMali\)) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00041v1 \267 Published 2026-10-13) Tj ET
+BT /T 10.0 Tf 182.00 590.80 Td (Official implementation \267 Research paper \267 Machine learning) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Preference-based post-training improves language models, but the standard methods use surface tokens as) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (the training signal and target high-resource languages. We present S?b?n, a post-training framework that) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (adds morphotactic verification to the alignment loop for small language models in extremely low-resource) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (languages. A rule-based morphological analyzer checks each generated analysis against a per-language) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (grammar and dictionary, and a morpheme-level reward turns the check into a training signal for supervised) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (fine-tuning, DPO, APO, and GRPO. The framework also gates automatic grammar and dictionary updates) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (behind an integrity threshold. We run S?b?n on the 13 national languages of Mali with five small models) Tj ET
+BT /T 10.0 Tf 88.00 446.10 Td (from 135M to 2B parameters and report morphological integrity, morpheme error rate, consistency, and an) Tj ET
+BT /T 10.0 Tf 88.00 432.10 Td (uncertainty-weighted cost on a seed-fixed held-out split. GRPO gives the lowest morpheme error rate for) Tj ET
+BT /T 10.0 Tf 88.00 418.10 Td (SmolLM2-135M, Gemma-4-E2B, and TinyLlama-1.1B, while the four arms tie for LFM2.5-230M. We) Tj ET
+BT /T 10.0 Tf 88.00 404.10 Td (record and seal every run with K-Veritas, so each reported score is bound to the computation that produced) Tj ET
+BT /T 10.0 Tf 88.00 390.10 Td (it and can be verified publicly. We report the full configuration and evaluation records so that others can) Tj ET
+BT /T 10.0 Tf 88.00 376.10 Td (reproduce the matrix.) Tj ET
+q 0.6 w 60.00 263.60 492.00 98.50 re S Q
+BT /Tb 10.0 Tf 69.00 343.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 329.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 316.30 Td (number in this record is copied from the signed data of the sealed reports [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12],) Tj ET
+BT /T 9.5 Tf 69.00 303.00 Td ([13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 289.70 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00041v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 276.40 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 228.60 Td (1 Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 210.40 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 206.40 m 552.00 206.40 l S Q
+BT /Tb 9.0 Tf 62.00 194.40 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 194.40 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 194.40 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 194.40 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 194.40 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 194.40 Td (Signer) Tj ET
+q 0.40 w 60.00 192.40 m 552.00 192.40 l S Q
+BT /T 9.0 Tf 62.00 180.40 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 180.40 Td (sebeni-gemma-4-e2b-apo-50) Tj ET
+BT /T 9.0 Tf 242.17 180.40 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 180.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 180.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 180.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 167.40 Td (r2 [3]) Tj ET
+BT /T 9.0 Tf 117.44 167.40 Td (sebeni-gemma-4-e2b-dpo-50) Tj ET
+BT /T 9.0 Tf 242.17 167.40 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 167.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 167.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 167.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 154.40 Td (r3 [4]) Tj ET
+BT /T 9.0 Tf 117.44 154.40 Td (sebeni-gemma-4-e2b-grpo-50) Tj ET
+BT /T 9.0 Tf 242.17 154.40 Td (2026-10-13) Tj ET
+BT /T 9.0 Tf 311.46 154.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 154.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 154.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 141.40 Td (r4 [5]) Tj ET
+BT /T 9.0 Tf 117.44 141.40 Td (sebeni-gemma-4-e2b-sft-50) Tj ET
+BT /T 9.0 Tf 242.17 141.40 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 141.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 141.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 141.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 128.40 Td (r5 [6]) Tj ET
+BT /T 9.0 Tf 117.44 128.40 Td (sebeni-lfm2.5-230-apo-100) Tj ET
+BT /T 9.0 Tf 242.17 128.40 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 128.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 128.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 128.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 115.40 Td (r6 [7]) Tj ET
+BT /T 9.0 Tf 117.44 115.40 Td (sebeni-lfm2.5-230-dpo-100) Tj ET
+BT /T 9.0 Tf 242.17 115.40 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 115.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 115.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 115.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 102.40 Td (r7 [8]) Tj ET
+BT /T 9.0 Tf 117.44 102.40 Td (sebeni-lfm2.5-230-grpo-100) Tj ET
+BT /T 9.0 Tf 242.17 102.40 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 102.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 102.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 102.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 89.40 Td (r8 [9]) Tj ET
+BT /T 9.0 Tf 117.44 89.40 Td (sebeni-lfm2.5-230-sft-100) Tj ET
+BT /T 9.0 Tf 242.17 89.40 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 89.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 89.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 89.40 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 76.40 Td (r9 [10]) Tj ET
+BT /T 9.0 Tf 117.44 76.40 Td (sebeni-qwen2.5-0.5b-sft-100) Tj ET
+BT /T 9.0 Tf 242.17 76.40 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 76.40 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 76.40 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 76.40 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 72.40 m 552.00 72.40 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 1 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 10098 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 720.00 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 720.00 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 720.00 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 720.00 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 720.00 Td (Signer) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (r10 [11]) Tj ET
+BT /T 9.0 Tf 117.44 706.00 Td (sebeni-qwen3-0.6b-apo-50) Tj ET
+BT /T 9.0 Tf 242.17 706.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 706.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (r11 [12]) Tj ET
+BT /T 9.0 Tf 117.44 693.00 Td (sebeni-qwen3-0.6b-dpo-50) Tj ET
+BT /T 9.0 Tf 242.17 693.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 693.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (r12 [13]) Tj ET
+BT /T 9.0 Tf 117.44 680.00 Td (sebeni-qwen3-0.6b-grpo-50) Tj ET
+BT /T 9.0 Tf 242.17 680.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 680.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (r13 [14]) Tj ET
+BT /T 9.0 Tf 117.44 667.00 Td (sebeni-qwen3-0.6b-sft-100) Tj ET
+BT /T 9.0 Tf 242.17 667.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 667.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (r14 [15]) Tj ET
+BT /T 9.0 Tf 117.44 654.00 Td (sebeni-qwen3-0.6b-sft-50) Tj ET
+BT /T 9.0 Tf 242.17 654.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 654.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (r15 [16]) Tj ET
+BT /T 9.0 Tf 117.44 641.00 Td (sebeni-smollm2-135-apo-100) Tj ET
+BT /T 9.0 Tf 242.17 641.00 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 641.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (r16 [17]) Tj ET
+BT /T 9.0 Tf 117.44 628.00 Td (sebeni-smollm2-135-dpo-100) Tj ET
+BT /T 9.0 Tf 242.17 628.00 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 628.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (r17 [18]) Tj ET
+BT /T 9.0 Tf 117.44 615.00 Td (sebeni-smollm2-135-grpo-100) Tj ET
+BT /T 9.0 Tf 242.17 615.00 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 615.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 615.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 615.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (r18 [19]) Tj ET
+BT /T 9.0 Tf 117.44 602.00 Td (sebeni-smollm2-135-sft-100) Tj ET
+BT /T 9.0 Tf 242.17 602.00 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 602.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 602.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 602.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (r19 [20]) Tj ET
+BT /T 9.0 Tf 117.44 589.00 Td (sebeni-tinyllama-1.1b-apo-50) Tj ET
+BT /T 9.0 Tf 242.17 589.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 589.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 589.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 589.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (r20 [21]) Tj ET
+BT /T 9.0 Tf 117.44 576.00 Td (sebeni-tinyllama-1.1b-dpo-50) Tj ET
+BT /T 9.0 Tf 242.17 576.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 576.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 576.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 576.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 563.00 Td (r21 [22]) Tj ET
+BT /T 9.0 Tf 117.44 563.00 Td (sebeni-tinyllama-1.1b-grpo-50) Tj ET
+BT /T 9.0 Tf 242.17 563.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 563.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 563.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 563.00 Td (Signed by the K-Veritas server) Tj ET
+BT /T 9.0 Tf 62.00 550.00 Td (r22 [23]) Tj ET
+BT /T 9.0 Tf 117.44 550.00 Td (sebeni-tinyllama-1.1b-sft-50) Tj ET
+BT /T 9.0 Tf 242.17 550.00 Td (2026-10-12) Tj ET
+BT /T 9.0 Tf 311.46 550.00 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 550.00 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 550.00 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 546.00 m 552.00 546.00 l S Q
+BT /Tb 13.0 Tf 60.00 513.00 Td (2 Results) Tj ET
+BT /Tb 10.0 Tf 60.00 488.80 Td (r1: sebeni-gemma-4-e2b-apo-50) Tj ET
+q 0.80 w 60.00 483.80 m 552.00 483.80 l S Q
+BT /Tb 9.0 Tf 62.00 471.80 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 471.80 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 471.80 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 471.80 Td (Step) Tj ET
+q 0.40 w 60.00 469.80 m 552.00 469.80 l S Q
+BT /T 9.0 Tf 62.00 457.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 457.80 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 457.80 Td (0.500696) Tj ET
+BT /T 9.0 Tf 418.94 457.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 444.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 444.80 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 444.80 Td (0.542398) Tj ET
+BT /T 9.0 Tf 418.94 444.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 431.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 431.80 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 431.80 Td (0.722896) Tj ET
+BT /T 9.0 Tf 418.94 431.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 418.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 418.80 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 418.80 Td (0.367929) Tj ET
+BT /T 9.0 Tf 418.94 418.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 405.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 405.80 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 405.80 Td (0.576727) Tj ET
+BT /T 9.0 Tf 418.94 405.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 392.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 392.80 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 392.80 Td (0.476789) Tj ET
+BT /T 9.0 Tf 418.94 392.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 379.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 379.80 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 379.80 Td (0.256) Tj ET
+BT /T 9.0 Tf 418.94 379.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 366.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 366.80 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 366.80 Td (0.428211) Tj ET
+BT /T 9.0 Tf 418.94 366.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 353.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 353.80 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 353.80 Td (0.807126) Tj ET
+BT /T 9.0 Tf 418.94 353.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 340.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 340.80 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 340.80 Td (0.403434) Tj ET
+BT /T 9.0 Tf 418.94 340.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 327.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 327.80 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 327.80 Td (0.364965) Tj ET
+BT /T 9.0 Tf 418.94 327.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 314.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 314.80 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 314.80 Td (0.364618) Tj ET
+BT /T 9.0 Tf 418.94 314.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 301.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 301.80 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 301.80 Td (0.468311) Tj ET
+BT /T 9.0 Tf 418.94 301.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 288.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 288.80 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 288.80 Td (0.72964) Tj ET
+BT /T 9.0 Tf 418.94 288.80 Td (0) Tj ET
+q 0.80 w 60.00 284.80 m 552.00 284.80 l S Q
+BT /Tb 10.0 Tf 60.00 262.80 Td (r2: sebeni-gemma-4-e2b-dpo-50) Tj ET
+q 0.80 w 60.00 257.80 m 552.00 257.80 l S Q
+BT /Tb 9.0 Tf 62.00 245.80 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 245.80 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 245.80 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 245.80 Td (Step) Tj ET
+q 0.40 w 60.00 243.80 m 552.00 243.80 l S Q
+BT /T 9.0 Tf 62.00 231.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 231.80 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 231.80 Td (0.490894) Tj ET
+BT /T 9.0 Tf 418.94 231.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 218.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 218.80 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 218.80 Td (0.531287) Tj ET
+BT /T 9.0 Tf 418.94 218.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 205.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 205.80 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 205.80 Td (0.716173) Tj ET
+BT /T 9.0 Tf 418.94 205.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 192.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 192.80 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 192.80 Td (0.366731) Tj ET
+BT /T 9.0 Tf 418.94 192.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 179.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 179.80 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 179.80 Td (0.580731) Tj ET
+BT /T 9.0 Tf 418.94 179.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 166.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 166.80 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 166.80 Td (0.469334) Tj ET
+BT /T 9.0 Tf 418.94 166.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 153.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 153.80 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 153.80 Td (0.25935) Tj ET
+BT /T 9.0 Tf 418.94 153.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 140.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 140.80 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 140.80 Td (0.459184) Tj ET
+BT /T 9.0 Tf 418.94 140.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 127.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 127.80 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 127.80 Td (0.777122) Tj ET
+BT /T 9.0 Tf 418.94 127.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 114.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 114.80 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 114.80 Td (0.359593) Tj ET
+BT /T 9.0 Tf 418.94 114.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 101.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 101.80 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 101.80 Td (0.380133) Tj ET
+BT /T 9.0 Tf 418.94 101.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 88.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 88.80 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 88.80 Td (0.365613) Tj ET
+BT /T 9.0 Tf 418.94 88.80 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 75.80 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 75.80 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 75.80 Td (0.42287) Tj ET
+BT /T 9.0 Tf 418.94 75.80 Td (0) Tj ET
+q 0.80 w 60.00 71.80 m 552.00 71.80 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 2 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Length 8552 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.693508) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+q 0.80 w 60.00 702.00 m 552.00 702.00 l S Q
+BT /Tb 10.0 Tf 60.00 680.00 Td (r3: sebeni-gemma-4-e2b-grpo-50) Tj ET
+q 0.80 w 60.00 675.00 m 552.00 675.00 l S Q
+BT /Tb 9.0 Tf 62.00 663.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 663.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 663.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 663.00 Td (Step) Tj ET
+q 0.40 w 60.00 661.00 m 552.00 661.00 l S Q
+BT /T 9.0 Tf 62.00 649.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 649.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 649.00 Td (0.50172) Tj ET
+BT /T 9.0 Tf 418.94 649.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 636.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 636.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 636.00 Td (0.561899) Tj ET
+BT /T 9.0 Tf 418.94 636.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 623.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 623.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 623.00 Td (0.693351) Tj ET
+BT /T 9.0 Tf 418.94 623.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 610.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 610.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 610.00 Td (0.438394) Tj ET
+BT /T 9.0 Tf 418.94 610.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 597.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 597.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 597.00 Td (0.511633) Tj ET
+BT /T 9.0 Tf 418.94 597.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 584.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 584.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 584.00 Td (0.410578) Tj ET
+BT /T 9.0 Tf 418.94 584.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 571.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 571.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 571.00 Td (0.30068) Tj ET
+BT /T 9.0 Tf 418.94 571.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 558.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 558.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 558.00 Td (0.409287) Tj ET
+BT /T 9.0 Tf 418.94 558.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 545.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 545.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 545.00 Td (0.802235) Tj ET
+BT /T 9.0 Tf 418.94 545.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 532.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 532.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 532.00 Td (0.359868) Tj ET
+BT /T 9.0 Tf 418.94 532.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.440817) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.391609) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.486494) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.715518) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+q 0.80 w 60.00 476.00 m 552.00 476.00 l S Q
+BT /Tb 10.0 Tf 60.00 454.00 Td (r4: sebeni-gemma-4-e2b-sft-50) Tj ET
+q 0.80 w 60.00 449.00 m 552.00 449.00 l S Q
+BT /Tb 9.0 Tf 62.00 437.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 437.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 437.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 437.00 Td (Step) Tj ET
+q 0.40 w 60.00 435.00 m 552.00 435.00 l S Q
+BT /T 9.0 Tf 62.00 423.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 423.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 423.00 Td (0.514043) Tj ET
+BT /T 9.0 Tf 418.94 423.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 410.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 410.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 410.00 Td (0.571181) Tj ET
+BT /T 9.0 Tf 418.94 410.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 397.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 397.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 397.00 Td (0.76255) Tj ET
+BT /T 9.0 Tf 418.94 397.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 384.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 384.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 384.00 Td (0.411667) Tj ET
+BT /T 9.0 Tf 418.94 384.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 371.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 371.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 371.00 Td (0.699308) Tj ET
+BT /T 9.0 Tf 418.94 371.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 358.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 358.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 358.00 Td (0.380613) Tj ET
+BT /T 9.0 Tf 418.94 358.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 345.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 345.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 345.00 Td (0.274569) Tj ET
+BT /T 9.0 Tf 418.94 345.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 332.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 332.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 332.00 Td (0.414502) Tj ET
+BT /T 9.0 Tf 418.94 332.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 319.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 319.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 319.00 Td (0.852257) Tj ET
+BT /T 9.0 Tf 418.94 319.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 306.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 306.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 306.00 Td (0.380295) Tj ET
+BT /T 9.0 Tf 418.94 306.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.364299) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.425676) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.386128) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.759513) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+q 0.80 w 60.00 250.00 m 552.00 250.00 l S Q
+BT /Tb 10.0 Tf 60.00 228.00 Td (r5: sebeni-lfm2.5-230-apo-100) Tj ET
+q 0.80 w 60.00 223.00 m 552.00 223.00 l S Q
+BT /Tb 9.0 Tf 62.00 211.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 211.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 211.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 211.00 Td (Step) Tj ET
+q 0.40 w 60.00 209.00 m 552.00 209.00 l S Q
+BT /T 9.0 Tf 62.00 197.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 197.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 197.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 197.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 184.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 184.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 184.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 184.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 171.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 171.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 171.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 171.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 158.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 158.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 158.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 158.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 145.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 145.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 145.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 145.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 132.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 132.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 132.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 132.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 119.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 119.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 119.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 119.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 106.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 106.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 106.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 106.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 93.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 93.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 93.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 93.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 80.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 80.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 80.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 80.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 67.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 67.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 67.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 67.00 Td (0) Tj ET
+q 0.80 w 60.00 63.00 m 552.00 63.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 3 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+14 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 13 0 R /Resources 14 0 R >>
+endobj
+
+16 0 obj
+<< /Length 8551 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td (0) Tj ET
+q 0.80 w 60.00 676.00 m 552.00 676.00 l S Q
+BT /Tb 10.0 Tf 60.00 654.00 Td (r6: sebeni-lfm2.5-230-dpo-100) Tj ET
+q 0.80 w 60.00 649.00 m 552.00 649.00 l S Q
+BT /Tb 9.0 Tf 62.00 637.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 637.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 637.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 637.00 Td (Step) Tj ET
+q 0.40 w 60.00 635.00 m 552.00 635.00 l S Q
+BT /T 9.0 Tf 62.00 623.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 623.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 623.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 623.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 610.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 610.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 610.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 610.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 597.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 597.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 597.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 597.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 584.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 584.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 584.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 584.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 571.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 571.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 571.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 571.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 558.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 558.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 558.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 558.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 545.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 545.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 545.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 545.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 532.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 532.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 532.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 532.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 467.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 467.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 467.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 467.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 454.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 454.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 454.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 454.00 Td (0) Tj ET
+q 0.80 w 60.00 450.00 m 552.00 450.00 l S Q
+BT /Tb 10.0 Tf 60.00 428.00 Td (r7: sebeni-lfm2.5-230-grpo-100) Tj ET
+q 0.80 w 60.00 423.00 m 552.00 423.00 l S Q
+BT /Tb 9.0 Tf 62.00 411.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 411.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 411.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 411.00 Td (Step) Tj ET
+q 0.40 w 60.00 409.00 m 552.00 409.00 l S Q
+BT /T 9.0 Tf 62.00 397.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 397.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 397.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 397.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 384.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 384.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 384.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 384.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 371.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 371.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 371.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 371.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 358.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 358.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 358.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 358.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 345.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 345.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 345.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 345.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 332.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 332.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 332.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 332.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 319.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 319.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 319.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 319.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 306.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 306.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 306.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 306.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 241.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 241.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 241.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 241.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 228.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 228.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 228.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 228.00 Td (0) Tj ET
+q 0.80 w 60.00 224.00 m 552.00 224.00 l S Q
+BT /Tb 10.0 Tf 60.00 202.00 Td (r8: sebeni-lfm2.5-230-sft-100) Tj ET
+q 0.80 w 60.00 197.00 m 552.00 197.00 l S Q
+BT /Tb 9.0 Tf 62.00 185.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 185.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 185.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 185.00 Td (Step) Tj ET
+q 0.40 w 60.00 183.00 m 552.00 183.00 l S Q
+BT /T 9.0 Tf 62.00 171.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 171.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 171.00 Td (0.48328) Tj ET
+BT /T 9.0 Tf 418.94 171.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 158.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 158.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 158.00 Td (0.515217) Tj ET
+BT /T 9.0 Tf 418.94 158.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 145.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 145.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 145.00 Td (0.689472) Tj ET
+BT /T 9.0 Tf 418.94 145.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 132.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 132.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 132.00 Td (0.325034) Tj ET
+BT /T 9.0 Tf 418.94 132.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 119.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 119.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 119.00 Td (0.566503) Tj ET
+BT /T 9.0 Tf 418.94 119.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 106.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 106.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 106.00 Td (0.324842) Tj ET
+BT /T 9.0 Tf 418.94 106.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 93.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 93.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 93.00 Td (0.214444) Tj ET
+BT /T 9.0 Tf 418.94 93.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 80.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 80.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 80.00 Td (0.649702) Tj ET
+BT /T 9.0 Tf 418.94 80.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 67.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 67.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 67.00 Td (0.870567) Tj ET
+BT /T 9.0 Tf 418.94 67.00 Td (0) Tj ET
+q 0.80 w 60.00 63.00 m 552.00 63.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 4 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+17 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 16 0 R /Resources 17 0 R >>
+endobj
+
+19 0 obj
+<< /Length 8547 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.342347) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.368177) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.328663) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.346684) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.740981) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td (0) Tj ET
+q 0.80 w 60.00 650.00 m 552.00 650.00 l S Q
+BT /Tb 10.0 Tf 60.00 628.00 Td (r9: sebeni-qwen2.5-0.5b-sft-100) Tj ET
+q 0.80 w 60.00 623.00 m 552.00 623.00 l S Q
+BT /Tb 9.0 Tf 62.00 611.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 611.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 611.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 611.00 Td (Step) Tj ET
+q 0.40 w 60.00 609.00 m 552.00 609.00 l S Q
+BT /T 9.0 Tf 62.00 597.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 597.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 597.00 Td (0.644057) Tj ET
+BT /T 9.0 Tf 418.94 597.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 584.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 584.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 584.00 Td (0.586164) Tj ET
+BT /T 9.0 Tf 418.94 584.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 571.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 571.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 571.00 Td (0.889136) Tj ET
+BT /T 9.0 Tf 418.94 571.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 558.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 558.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 558.00 Td (0.80303) Tj ET
+BT /T 9.0 Tf 418.94 558.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 545.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 545.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 545.00 Td (0.723584) Tj ET
+BT /T 9.0 Tf 418.94 545.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 532.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 532.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 532.00 Td (0.78921) Tj ET
+BT /T 9.0 Tf 418.94 532.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.428105) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.63627) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.872754) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.498514) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 467.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 467.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 467.00 Td (0.457255) Tj ET
+BT /T 9.0 Tf 418.94 467.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 454.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 454.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 454.00 Td (0.371716) Tj ET
+BT /T 9.0 Tf 418.94 454.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 441.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 441.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 441.00 Td (0.543597) Tj ET
+BT /T 9.0 Tf 418.94 441.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 428.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 428.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 428.00 Td (0.773411) Tj ET
+BT /T 9.0 Tf 418.94 428.00 Td (0) Tj ET
+q 0.80 w 60.00 424.00 m 552.00 424.00 l S Q
+BT /Tb 10.0 Tf 60.00 402.00 Td (r10: sebeni-qwen3-0.6b-apo-50) Tj ET
+q 0.80 w 60.00 397.00 m 552.00 397.00 l S Q
+BT /Tb 9.0 Tf 62.00 385.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 385.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 385.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 385.00 Td (Step) Tj ET
+q 0.40 w 60.00 383.00 m 552.00 383.00 l S Q
+BT /T 9.0 Tf 62.00 371.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 371.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 371.00 Td (0.51067) Tj ET
+BT /T 9.0 Tf 418.94 371.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 358.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 358.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 358.00 Td (0.574067) Tj ET
+BT /T 9.0 Tf 418.94 358.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 345.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 345.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 345.00 Td (0.715822) Tj ET
+BT /T 9.0 Tf 418.94 345.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 332.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 332.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 332.00 Td (0.360562) Tj ET
+BT /T 9.0 Tf 418.94 332.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 319.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 319.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 319.00 Td (0.594784) Tj ET
+BT /T 9.0 Tf 418.94 319.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 306.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 306.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 306.00 Td (0.551) Tj ET
+BT /T 9.0 Tf 418.94 306.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.299815) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.433409) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.865789) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.313592) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 241.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 241.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 241.00 Td (0.384177) Tj ET
+BT /T 9.0 Tf 418.94 241.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 228.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 228.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 228.00 Td (0.417665) Tj ET
+BT /T 9.0 Tf 418.94 228.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 215.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 215.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 215.00 Td (0.450497) Tj ET
+BT /T 9.0 Tf 418.94 215.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 202.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 202.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 202.00 Td (0.67753) Tj ET
+BT /T 9.0 Tf 418.94 202.00 Td (0) Tj ET
+q 0.80 w 60.00 198.00 m 552.00 198.00 l S Q
+BT /Tb 10.0 Tf 60.00 176.00 Td (r11: sebeni-qwen3-0.6b-dpo-50) Tj ET
+q 0.80 w 60.00 171.00 m 552.00 171.00 l S Q
+BT /Tb 9.0 Tf 62.00 159.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 159.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 159.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 159.00 Td (Step) Tj ET
+q 0.40 w 60.00 157.00 m 552.00 157.00 l S Q
+BT /T 9.0 Tf 62.00 145.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 145.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 145.00 Td (0.508411) Tj ET
+BT /T 9.0 Tf 418.94 145.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 132.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 132.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 132.00 Td (0.531762) Tj ET
+BT /T 9.0 Tf 418.94 132.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 119.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 119.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 119.00 Td (0.71156) Tj ET
+BT /T 9.0 Tf 418.94 119.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 106.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 106.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 106.00 Td (0.395144) Tj ET
+BT /T 9.0 Tf 418.94 106.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 93.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 93.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 93.00 Td (0.560063) Tj ET
+BT /T 9.0 Tf 418.94 93.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 80.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 80.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 80.00 Td (0.536991) Tj ET
+BT /T 9.0 Tf 418.94 80.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 67.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 67.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 67.00 Td (0.314502) Tj ET
+BT /T 9.0 Tf 418.94 67.00 Td (0) Tj ET
+q 0.80 w 60.00 63.00 m 552.00 63.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 5 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+20 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 19 0 R /Resources 20 0 R >>
+endobj
+
+22 0 obj
+<< /Length 8549 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.448062) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.877949) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.309261) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.380018) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.378648) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.46078) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 628.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 628.00 Td (0.704609) Tj ET
+BT /T 9.0 Tf 418.94 628.00 Td (0) Tj ET
+q 0.80 w 60.00 624.00 m 552.00 624.00 l S Q
+BT /Tb 10.0 Tf 60.00 602.00 Td (r12: sebeni-qwen3-0.6b-grpo-50) Tj ET
+q 0.80 w 60.00 597.00 m 552.00 597.00 l S Q
+BT /Tb 9.0 Tf 62.00 585.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 585.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 585.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 585.00 Td (Step) Tj ET
+q 0.40 w 60.00 583.00 m 552.00 583.00 l S Q
+BT /T 9.0 Tf 62.00 571.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 571.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 571.00 Td (0.504376) Tj ET
+BT /T 9.0 Tf 418.94 571.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 558.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 558.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 558.00 Td (0.550204) Tj ET
+BT /T 9.0 Tf 418.94 558.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 545.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 545.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 545.00 Td (0.705471) Tj ET
+BT /T 9.0 Tf 418.94 545.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 532.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 532.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 532.00 Td (0.368103) Tj ET
+BT /T 9.0 Tf 418.94 532.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.588395) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.496525) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.379906) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.394684) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 467.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 467.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 467.00 Td (0.841474) Tj ET
+BT /T 9.0 Tf 418.94 467.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 454.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 454.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 454.00 Td (0.333167) Tj ET
+BT /T 9.0 Tf 418.94 454.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 441.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 441.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 441.00 Td (0.381402) Tj ET
+BT /T 9.0 Tf 418.94 441.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 428.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 428.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 428.00 Td (0.401826) Tj ET
+BT /T 9.0 Tf 418.94 428.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 415.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 415.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 415.00 Td (0.446357) Tj ET
+BT /T 9.0 Tf 418.94 415.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 402.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 402.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 402.00 Td (0.669377) Tj ET
+BT /T 9.0 Tf 418.94 402.00 Td (0) Tj ET
+q 0.80 w 60.00 398.00 m 552.00 398.00 l S Q
+BT /Tb 10.0 Tf 60.00 376.00 Td (r13: sebeni-qwen3-0.6b-sft-100) Tj ET
+q 0.80 w 60.00 371.00 m 552.00 371.00 l S Q
+BT /Tb 9.0 Tf 62.00 359.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 359.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 359.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 359.00 Td (Step) Tj ET
+q 0.40 w 60.00 357.00 m 552.00 357.00 l S Q
+BT /T 9.0 Tf 62.00 345.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 345.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 345.00 Td (0.5256) Tj ET
+BT /T 9.0 Tf 418.94 345.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 332.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 332.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 332.00 Td (0.579857) Tj ET
+BT /T 9.0 Tf 418.94 332.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 319.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 319.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 319.00 Td (0.743126) Tj ET
+BT /T 9.0 Tf 418.94 319.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 306.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 306.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 306.00 Td (0.40078) Tj ET
+BT /T 9.0 Tf 418.94 306.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.60896) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.56789) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.332941) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.427132) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 241.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 241.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 241.00 Td (0.854803) Tj ET
+BT /T 9.0 Tf 418.94 241.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 228.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 228.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 228.00 Td (0.331227) Tj ET
+BT /T 9.0 Tf 418.94 228.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 215.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 215.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 215.00 Td (0.415598) Tj ET
+BT /T 9.0 Tf 418.94 215.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 202.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 202.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 202.00 Td (0.412775) Tj ET
+BT /T 9.0 Tf 418.94 202.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 189.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 189.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 189.00 Td (0.436358) Tj ET
+BT /T 9.0 Tf 418.94 189.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 176.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 176.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 176.00 Td (0.72136) Tj ET
+BT /T 9.0 Tf 418.94 176.00 Td (0) Tj ET
+q 0.80 w 60.00 172.00 m 552.00 172.00 l S Q
+BT /Tb 10.0 Tf 60.00 150.00 Td (r14: sebeni-qwen3-0.6b-sft-50) Tj ET
+q 0.80 w 60.00 145.00 m 552.00 145.00 l S Q
+BT /Tb 9.0 Tf 62.00 133.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 133.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 133.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 133.00 Td (Step) Tj ET
+q 0.40 w 60.00 131.00 m 552.00 131.00 l S Q
+BT /T 9.0 Tf 62.00 119.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 119.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 119.00 Td (0.524288) Tj ET
+BT /T 9.0 Tf 418.94 119.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 106.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 106.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 106.00 Td (0.580331) Tj ET
+BT /T 9.0 Tf 418.94 106.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 93.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 93.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 93.00 Td (0.785655) Tj ET
+BT /T 9.0 Tf 418.94 93.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 80.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 80.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 80.00 Td (0.380148) Tj ET
+BT /T 9.0 Tf 418.94 80.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 67.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 67.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 67.00 Td (0.606802) Tj ET
+BT /T 9.0 Tf 418.94 67.00 Td (0) Tj ET
+q 0.80 w 60.00 63.00 m 552.00 63.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 6 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+23 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 22 0 R /Resources 23 0 R >>
+endobj
+
+25 0 obj
+<< /Length 8559 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.515136) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.334913) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.416787) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.875303) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.317416) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.441342) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 628.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 628.00 Td (0.408253) Tj ET
+BT /T 9.0 Tf 418.94 628.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 615.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 615.00 Td (0.466966) Tj ET
+BT /T 9.0 Tf 418.94 615.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 602.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 602.00 Td (0.686685) Tj ET
+BT /T 9.0 Tf 418.94 602.00 Td (0) Tj ET
+q 0.80 w 60.00 598.00 m 552.00 598.00 l S Q
+BT /Tb 10.0 Tf 60.00 576.00 Td (r15: sebeni-smollm2-135-apo-100) Tj ET
+q 0.80 w 60.00 571.00 m 552.00 571.00 l S Q
+BT /Tb 9.0 Tf 62.00 559.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 559.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 559.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 559.00 Td (Step) Tj ET
+q 0.40 w 60.00 557.00 m 552.00 557.00 l S Q
+BT /T 9.0 Tf 62.00 545.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 545.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 545.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 545.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 532.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 532.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 532.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 532.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 467.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 467.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 467.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 467.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 454.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 454.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 454.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 454.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 441.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 441.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 441.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 441.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 428.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 428.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 428.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 428.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 415.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 415.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 415.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 415.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 402.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 402.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 402.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 402.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 389.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 389.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 389.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 389.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 376.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 376.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 376.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 376.00 Td (0) Tj ET
+q 0.80 w 60.00 372.00 m 552.00 372.00 l S Q
+BT /Tb 10.0 Tf 60.00 350.00 Td (r16: sebeni-smollm2-135-dpo-100) Tj ET
+q 0.80 w 60.00 345.00 m 552.00 345.00 l S Q
+BT /Tb 9.0 Tf 62.00 333.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 333.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 333.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 333.00 Td (Step) Tj ET
+q 0.40 w 60.00 331.00 m 552.00 331.00 l S Q
+BT /T 9.0 Tf 62.00 319.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 319.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 319.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 319.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 306.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 306.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 306.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 306.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 241.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 241.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 241.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 241.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 228.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 228.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 228.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 228.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 215.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 215.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 215.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 215.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 202.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 202.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 202.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 202.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 189.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 189.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 189.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 189.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 176.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 176.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 176.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 176.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 163.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 163.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 163.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 163.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 150.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 150.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 150.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 150.00 Td (0) Tj ET
+q 0.80 w 60.00 146.00 m 552.00 146.00 l S Q
+BT /Tb 10.0 Tf 60.00 124.00 Td (r17: sebeni-smollm2-135-grpo-100) Tj ET
+q 0.80 w 60.00 119.00 m 552.00 119.00 l S Q
+BT /Tb 9.0 Tf 62.00 107.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 107.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 107.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 107.00 Td (Step) Tj ET
+q 0.40 w 60.00 105.00 m 552.00 105.00 l S Q
+BT /T 9.0 Tf 62.00 93.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 93.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 93.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 93.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 80.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 80.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 80.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 80.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 67.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 67.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 67.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 67.00 Td (0) Tj ET
+q 0.80 w 60.00 63.00 m 552.00 63.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 7 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+26 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+27 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 25 0 R /Resources 26 0 R >>
+endobj
+
+28 0 obj
+<< /Length 8020 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 628.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 628.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 628.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 615.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 615.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 615.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 602.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 602.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 602.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 589.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 589.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 589.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 576.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 576.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 576.00 Td (0) Tj ET
+q 0.80 w 60.00 572.00 m 552.00 572.00 l S Q
+BT /Tb 10.0 Tf 60.00 550.00 Td (r18: sebeni-smollm2-135-sft-100) Tj ET
+q 0.80 w 60.00 545.00 m 552.00 545.00 l S Q
+BT /Tb 9.0 Tf 62.00 533.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 533.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 533.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 533.00 Td (Step) Tj ET
+q 0.40 w 60.00 531.00 m 552.00 531.00 l S Q
+BT /T 9.0 Tf 62.00 519.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 519.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 519.00 Td (0.804974) Tj ET
+BT /T 9.0 Tf 418.94 519.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 506.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 506.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 506.00 Td (0.823658) Tj ET
+BT /T 9.0 Tf 418.94 506.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 493.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 493.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 493.00 Td (0.695688) Tj ET
+BT /T 9.0 Tf 418.94 493.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 480.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 480.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 480.00 Td (0.892011) Tj ET
+BT /T 9.0 Tf 418.94 480.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 467.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 467.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 467.00 Td (0.758926) Tj ET
+BT /T 9.0 Tf 418.94 467.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 454.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 454.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 454.00 Td (0.974206) Tj ET
+BT /T 9.0 Tf 418.94 454.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 441.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 441.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 441.00 Td (0.768726) Tj ET
+BT /T 9.0 Tf 418.94 441.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 428.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 428.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 428.00 Td (0.884478) Tj ET
+BT /T 9.0 Tf 418.94 428.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 415.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 415.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 415.00 Td (0.970238) Tj ET
+BT /T 9.0 Tf 418.94 415.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 402.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 402.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 402.00 Td (0.763677) Tj ET
+BT /T 9.0 Tf 418.94 402.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 389.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 389.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 389.00 Td (0.806021) Tj ET
+BT /T 9.0 Tf 418.94 389.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 376.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 376.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 376.00 Td (0.496919) Tj ET
+BT /T 9.0 Tf 418.94 376.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 363.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 363.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 363.00 Td (0.781673) Tj ET
+BT /T 9.0 Tf 418.94 363.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 350.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 350.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 350.00 Td (0.84844) Tj ET
+BT /T 9.0 Tf 418.94 350.00 Td (0) Tj ET
+q 0.80 w 60.00 346.00 m 552.00 346.00 l S Q
+BT /Tb 10.0 Tf 60.00 324.00 Td (r19: sebeni-tinyllama-1.1b-apo-50) Tj ET
+q 0.80 w 60.00 319.00 m 552.00 319.00 l S Q
+BT /Tb 9.0 Tf 62.00 307.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 307.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 307.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 307.00 Td (Step) Tj ET
+q 0.40 w 60.00 305.00 m 552.00 305.00 l S Q
+BT /T 9.0 Tf 62.00 293.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 293.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 293.00 Td (0.449859) Tj ET
+BT /T 9.0 Tf 418.94 293.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 280.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 280.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 280.00 Td (0.459196) Tj ET
+BT /T 9.0 Tf 418.94 280.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 267.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 267.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 267.00 Td (0.737672) Tj ET
+BT /T 9.0 Tf 418.94 267.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 254.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 254.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 254.00 Td (0.383668) Tj ET
+BT /T 9.0 Tf 418.94 254.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 241.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 241.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 241.00 Td (0.629466) Tj ET
+BT /T 9.0 Tf 418.94 241.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 228.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 228.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 228.00 Td (0.369023) Tj ET
+BT /T 9.0 Tf 418.94 228.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 215.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 215.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 215.00 Td (0.241557) Tj ET
+BT /T 9.0 Tf 418.94 215.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 202.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 202.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 202.00 Td (0.213298) Tj ET
+BT /T 9.0 Tf 418.94 202.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 189.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 189.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 189.00 Td (0.811908) Tj ET
+BT /T 9.0 Tf 418.94 189.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 176.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 176.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 176.00 Td (0.320214) Tj ET
+BT /T 9.0 Tf 418.94 176.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 163.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 163.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 163.00 Td (0.242411) Tj ET
+BT /T 9.0 Tf 418.94 163.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 150.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 150.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 150.00 Td (0.395844) Tj ET
+BT /T 9.0 Tf 418.94 150.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 137.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 137.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 137.00 Td (0.385623) Tj ET
+BT /T 9.0 Tf 418.94 137.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 124.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 124.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 124.00 Td (0.658282) Tj ET
+BT /T 9.0 Tf 418.94 124.00 Td (0) Tj ET
+q 0.80 w 60.00 120.00 m 552.00 120.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 8 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+29 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 28 0 R /Resources 29 0 R >>
+endobj
+
+31 0 obj
+<< /Length 8592 >>
+stream
+0.3 w
+BT /Tb 10.0 Tf 60.00 716.00 Td (r20: sebeni-tinyllama-1.1b-dpo-50) Tj ET
+q 0.80 w 60.00 711.00 m 552.00 711.00 l S Q
+BT /Tb 9.0 Tf 62.00 699.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 699.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 699.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 699.00 Td (Step) Tj ET
+q 0.40 w 60.00 697.00 m 552.00 697.00 l S Q
+BT /T 9.0 Tf 62.00 685.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 685.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 685.00 Td (0.439655) Tj ET
+BT /T 9.0 Tf 418.94 685.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 672.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 672.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 672.00 Td (0.460386) Tj ET
+BT /T 9.0 Tf 418.94 672.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 659.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 659.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 659.00 Td (0.737672) Tj ET
+BT /T 9.0 Tf 418.94 659.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 646.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 646.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 646.00 Td (0.439545) Tj ET
+BT /T 9.0 Tf 418.94 646.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 633.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 633.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 633.00 Td (0.517174) Tj ET
+BT /T 9.0 Tf 418.94 633.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 620.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 620.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 620.00 Td (0.372382) Tj ET
+BT /T 9.0 Tf 418.94 620.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 607.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 607.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 607.00 Td (0.23003) Tj ET
+BT /T 9.0 Tf 418.94 607.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 594.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 594.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 594.00 Td (0.212097) Tj ET
+BT /T 9.0 Tf 418.94 594.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 581.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 581.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 581.00 Td (0.842144) Tj ET
+BT /T 9.0 Tf 418.94 581.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 568.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 568.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 568.00 Td (0.304299) Tj ET
+BT /T 9.0 Tf 418.94 568.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 555.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 555.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 555.00 Td (0.232788) Tj ET
+BT /T 9.0 Tf 418.94 555.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 542.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 542.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 542.00 Td (0.384497) Tj ET
+BT /T 9.0 Tf 418.94 542.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 529.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 529.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 529.00 Td (0.315231) Tj ET
+BT /T 9.0 Tf 418.94 529.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 516.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 516.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 516.00 Td (0.667272) Tj ET
+BT /T 9.0 Tf 418.94 516.00 Td (0) Tj ET
+q 0.80 w 60.00 512.00 m 552.00 512.00 l S Q
+BT /Tb 10.0 Tf 60.00 490.00 Td (r21: sebeni-tinyllama-1.1b-grpo-50) Tj ET
+q 0.80 w 60.00 485.00 m 552.00 485.00 l S Q
+BT /Tb 9.0 Tf 62.00 473.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 473.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 473.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 473.00 Td (Step) Tj ET
+q 0.40 w 60.00 471.00 m 552.00 471.00 l S Q
+BT /T 9.0 Tf 62.00 459.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 459.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 459.00 Td (0.49631) Tj ET
+BT /T 9.0 Tf 418.94 459.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 446.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 446.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 446.00 Td (0.515023) Tj ET
+BT /T 9.0 Tf 418.94 446.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 433.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 433.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 433.00 Td (0.644887) Tj ET
+BT /T 9.0 Tf 418.94 433.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 420.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 420.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 420.00 Td (0.426366) Tj ET
+BT /T 9.0 Tf 418.94 420.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 407.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 407.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 407.00 Td (0.572217) Tj ET
+BT /T 9.0 Tf 418.94 407.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 394.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 394.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 394.00 Td (0.34976) Tj ET
+BT /T 9.0 Tf 418.94 394.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 381.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 381.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 381.00 Td (0.205956) Tj ET
+BT /T 9.0 Tf 418.94 381.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 368.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 368.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 368.00 Td (0.49062) Tj ET
+BT /T 9.0 Tf 418.94 368.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 355.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 355.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 355.00 Td (0.763131) Tj ET
+BT /T 9.0 Tf 418.94 355.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 342.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 342.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 342.00 Td (0.354474) Tj ET
+BT /T 9.0 Tf 418.94 342.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 329.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 329.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 329.00 Td (0.440974) Tj ET
+BT /T 9.0 Tf 418.94 329.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 316.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 316.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 316.00 Td (0.432305) Tj ET
+BT /T 9.0 Tf 418.94 316.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 303.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 303.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 303.00 Td (0.408532) Tj ET
+BT /T 9.0 Tf 418.94 303.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 290.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 290.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 290.00 Td (0.847779) Tj ET
+BT /T 9.0 Tf 418.94 290.00 Td (0) Tj ET
+q 0.80 w 60.00 286.00 m 552.00 286.00 l S Q
+BT /Tb 10.0 Tf 60.00 264.00 Td (r22: sebeni-tinyllama-1.1b-sft-50) Tj ET
+q 0.80 w 60.00 259.00 m 552.00 259.00 l S Q
+BT /Tb 9.0 Tf 62.00 247.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 247.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 247.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 247.00 Td (Step) Tj ET
+q 0.40 w 60.00 245.00 m 552.00 245.00 l S Q
+BT /T 9.0 Tf 62.00 233.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 233.00 Td (phi) Tj ET
+BT /T 9.0 Tf 303.18 233.00 Td (0.499372) Tj ET
+BT /T 9.0 Tf 418.94 233.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 220.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 220.00 Td (phi_bam) Tj ET
+BT /T 9.0 Tf 303.18 220.00 Td (0.565924) Tj ET
+BT /T 9.0 Tf 418.94 220.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 207.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 207.00 Td (phi_bmq) Tj ET
+BT /T 9.0 Tf 303.18 207.00 Td (0.709444) Tj ET
+BT /T 9.0 Tf 418.94 207.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 194.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 194.00 Td (phi_boz) Tj ET
+BT /T 9.0 Tf 303.18 194.00 Td (0.390159) Tj ET
+BT /T 9.0 Tf 418.94 194.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 181.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 181.00 Td (phi_dtm) Tj ET
+BT /T 9.0 Tf 303.18 181.00 Td (0.569545) Tj ET
+BT /T 9.0 Tf 418.94 181.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 168.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 168.00 Td (phi_ful) Tj ET
+BT /T 9.0 Tf 303.18 168.00 Td (0.423977) Tj ET
+BT /T 9.0 Tf 418.94 168.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 155.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 155.00 Td (phi_mey) Tj ET
+BT /T 9.0 Tf 303.18 155.00 Td (0.336661) Tj ET
+BT /T 9.0 Tf 418.94 155.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 142.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 142.00 Td (phi_mku) Tj ET
+BT /T 9.0 Tf 303.18 142.00 Td (0.351723) Tj ET
+BT /T 9.0 Tf 418.94 142.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 129.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 129.00 Td (phi_kao) Tj ET
+BT /T 9.0 Tf 303.18 129.00 Td (0.783419) Tj ET
+BT /T 9.0 Tf 418.94 129.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 116.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 116.00 Td (phi_myk) Tj ET
+BT /T 9.0 Tf 303.18 116.00 Td (0.329046) Tj ET
+BT /T 9.0 Tf 418.94 116.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 103.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 103.00 Td (phi_ses) Tj ET
+BT /T 9.0 Tf 303.18 103.00 Td (0.348706) Tj ET
+BT /T 9.0 Tf 418.94 103.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 90.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 90.00 Td (phi_spp) Tj ET
+BT /T 9.0 Tf 303.18 90.00 Td (0.490032) Tj ET
+BT /T 9.0 Tf 418.94 90.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 77.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 77.00 Td (phi_snk) Tj ET
+BT /T 9.0 Tf 303.18 77.00 Td (0.380257) Tj ET
+BT /T 9.0 Tf 418.94 77.00 Td (0) Tj ET
+BT /T 9.0 Tf 62.00 64.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 64.00 Td (phi_taq) Tj ET
+BT /T 9.0 Tf 303.18 64.00 Td (0.812938) Tj ET
+BT /T 9.0 Tf 418.94 64.00 Td (0) Tj ET
+q 0.80 w 60.00 60.00 m 552.00 60.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 509.75 752.00 Td (page 9 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+32 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+33 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 31 0 R /Resources 32 0 R >>
+endobj
+
+34 0 obj
+<< /Length 7329 >>
+stream
+0.3 w
+BT /Tb 13.0 Tf 60.00 705.00 Td (3 Setup) Tj ET
+q 0.80 w 60.00 696.80 m 552.00 696.80 l S Q
+BT /Tb 9.0 Tf 62.00 684.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 684.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 684.80 Td (Value) Tj ET
+q 0.40 w 60.00 682.80 m 552.00 682.80 l S Q
+BT /T 9.0 Tf 62.00 670.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 670.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 670.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 657.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 657.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 657.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 644.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 644.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 644.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 631.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 631.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 631.80 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 618.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 618.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 618.80 Td (1.8 s) Tj ET
+BT /T 9.0 Tf 62.00 605.80 Td (r2) Tj ET
+BT /T 9.0 Tf 116.67 605.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 605.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 592.80 Td (r2) Tj ET
+BT /T 9.0 Tf 116.67 592.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 592.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 579.80 Td (r2) Tj ET
+BT /T 9.0 Tf 116.67 579.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 579.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 566.80 Td (r2) Tj ET
+BT /T 9.0 Tf 116.67 566.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 566.80 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 553.80 Td (r2) Tj ET
+BT /T 9.0 Tf 116.67 553.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 553.80 Td (1.9 s) Tj ET
+BT /T 9.0 Tf 62.00 540.80 Td (r3) Tj ET
+BT /T 9.0 Tf 116.67 540.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 540.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 527.80 Td (r3) Tj ET
+BT /T 9.0 Tf 116.67 527.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 527.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 514.80 Td (r3) Tj ET
+BT /T 9.0 Tf 116.67 514.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 514.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 501.80 Td (r3) Tj ET
+BT /T 9.0 Tf 116.67 501.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 501.80 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 488.80 Td (r3) Tj ET
+BT /T 9.0 Tf 116.67 488.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 488.80 Td (1.8 s) Tj ET
+BT /T 9.0 Tf 62.00 475.80 Td (r4) Tj ET
+BT /T 9.0 Tf 116.67 475.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 475.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 462.80 Td (r4) Tj ET
+BT /T 9.0 Tf 116.67 462.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 462.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 449.80 Td (r4) Tj ET
+BT /T 9.0 Tf 116.67 449.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 449.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 436.80 Td (r4) Tj ET
+BT /T 9.0 Tf 116.67 436.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 436.80 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 423.80 Td (r4) Tj ET
+BT /T 9.0 Tf 116.67 423.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 423.80 Td (2.2 s) Tj ET
+BT /T 9.0 Tf 62.00 410.80 Td (r5) Tj ET
+BT /T 9.0 Tf 116.67 410.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 410.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 397.80 Td (r5) Tj ET
+BT /T 9.0 Tf 116.67 397.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 397.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 384.80 Td (r5) Tj ET
+BT /T 9.0 Tf 116.67 384.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 384.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 371.80 Td (r5) Tj ET
+BT /T 9.0 Tf 116.67 371.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 371.80 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 358.80 Td (r5) Tj ET
+BT /T 9.0 Tf 116.67 358.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 358.80 Td (0.6 s) Tj ET
+BT /T 9.0 Tf 62.00 345.80 Td (r6) Tj ET
+BT /T 9.0 Tf 116.67 345.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 345.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 332.80 Td (r6) Tj ET
+BT /T 9.0 Tf 116.67 332.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 332.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 319.80 Td (r6) Tj ET
+BT /T 9.0 Tf 116.67 319.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 319.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 306.80 Td (r6) Tj ET
+BT /T 9.0 Tf 116.67 306.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 306.80 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 293.80 Td (r6) Tj ET
+BT /T 9.0 Tf 116.67 293.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 293.80 Td (0.6 s) Tj ET
+BT /T 9.0 Tf 62.00 280.80 Td (r7) Tj ET
+BT /T 9.0 Tf 116.67 280.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 280.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 267.80 Td (r7) Tj ET
+BT /T 9.0 Tf 116.67 267.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 267.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 254.80 Td (r7) Tj ET
+BT /T 9.0 Tf 116.67 254.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 254.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 241.80 Td (r7) Tj ET
+BT /T 9.0 Tf 116.67 241.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 241.80 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 228.80 Td (r7) Tj ET
+BT /T 9.0 Tf 116.67 228.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 228.80 Td (0.6 s) Tj ET
+BT /T 9.0 Tf 62.00 215.80 Td (r8) Tj ET
+BT /T 9.0 Tf 116.67 215.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 215.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 202.80 Td (r8) Tj ET
+BT /T 9.0 Tf 116.67 202.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 202.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 189.80 Td (r8) Tj ET
+BT /T 9.0 Tf 116.67 189.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 189.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 176.80 Td (r8) Tj ET
+BT /T 9.0 Tf 116.67 176.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 176.80 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 163.80 Td (r8) Tj ET
+BT /T 9.0 Tf 116.67 163.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 163.80 Td (0.6 s) Tj ET
+BT /T 9.0 Tf 62.00 150.80 Td (r9) Tj ET
+BT /T 9.0 Tf 116.67 150.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 150.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 137.80 Td (r9) Tj ET
+BT /T 9.0 Tf 116.67 137.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 137.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 124.80 Td (r9) Tj ET
+BT /T 9.0 Tf 116.67 124.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 124.80 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 111.80 Td (r9) Tj ET
+BT /T 9.0 Tf 116.67 111.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 111.80 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 98.80 Td (r9) Tj ET
+BT /T 9.0 Tf 116.67 98.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 98.80 Td (1.0 s) Tj ET
+BT /T 9.0 Tf 62.00 85.80 Td (r10) Tj ET
+BT /T 9.0 Tf 116.67 85.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 85.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 72.80 Td (r10) Tj ET
+BT /T 9.0 Tf 116.67 72.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 72.80 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+q 0.80 w 60.00 68.80 m 552.00 68.80 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 505.50 752.00 Td (page 10 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+35 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+36 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 34 0 R /Resources 35 0 R >>
+endobj
+
+37 0 obj
+<< /Length 7739 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 720.00 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 720.00 Td (Value) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (r10) Tj ET
+BT /T 9.0 Tf 116.67 706.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 706.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (r10) Tj ET
+BT /T 9.0 Tf 116.67 693.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 693.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (r10) Tj ET
+BT /T 9.0 Tf 116.67 680.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 680.00 Td (1.1 s) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (r11) Tj ET
+BT /T 9.0 Tf 116.67 667.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 667.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (r11) Tj ET
+BT /T 9.0 Tf 116.67 654.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 654.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (r11) Tj ET
+BT /T 9.0 Tf 116.67 641.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 641.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (r11) Tj ET
+BT /T 9.0 Tf 116.67 628.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 628.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (r11) Tj ET
+BT /T 9.0 Tf 116.67 615.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 615.00 Td (0.9 s) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (r12) Tj ET
+BT /T 9.0 Tf 116.67 602.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 602.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (r12) Tj ET
+BT /T 9.0 Tf 116.67 589.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 589.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (r12) Tj ET
+BT /T 9.0 Tf 116.67 576.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 576.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 563.00 Td (r12) Tj ET
+BT /T 9.0 Tf 116.67 563.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 563.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 550.00 Td (r12) Tj ET
+BT /T 9.0 Tf 116.67 550.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 550.00 Td (1.0 s) Tj ET
+BT /T 9.0 Tf 62.00 537.00 Td (r13) Tj ET
+BT /T 9.0 Tf 116.67 537.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 537.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 524.00 Td (r13) Tj ET
+BT /T 9.0 Tf 116.67 524.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 524.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 511.00 Td (r13) Tj ET
+BT /T 9.0 Tf 116.67 511.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 511.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 498.00 Td (r13) Tj ET
+BT /T 9.0 Tf 116.67 498.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 498.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 485.00 Td (r13) Tj ET
+BT /T 9.0 Tf 116.67 485.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 485.00 Td (1.0 s) Tj ET
+BT /T 9.0 Tf 62.00 472.00 Td (r14) Tj ET
+BT /T 9.0 Tf 116.67 472.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 472.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 459.00 Td (r14) Tj ET
+BT /T 9.0 Tf 116.67 459.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 459.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 446.00 Td (r14) Tj ET
+BT /T 9.0 Tf 116.67 446.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 446.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 433.00 Td (r14) Tj ET
+BT /T 9.0 Tf 116.67 433.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 433.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 420.00 Td (r14) Tj ET
+BT /T 9.0 Tf 116.67 420.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 420.00 Td (1.0 s) Tj ET
+BT /T 9.0 Tf 62.00 407.00 Td (r15) Tj ET
+BT /T 9.0 Tf 116.67 407.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 407.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 394.00 Td (r15) Tj ET
+BT /T 9.0 Tf 116.67 394.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 394.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 381.00 Td (r15) Tj ET
+BT /T 9.0 Tf 116.67 381.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 381.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 368.00 Td (r15) Tj ET
+BT /T 9.0 Tf 116.67 368.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 368.00 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 355.00 Td (r15) Tj ET
+BT /T 9.0 Tf 116.67 355.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 355.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 342.00 Td (r16) Tj ET
+BT /T 9.0 Tf 116.67 342.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 342.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 329.00 Td (r16) Tj ET
+BT /T 9.0 Tf 116.67 329.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 329.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 316.00 Td (r16) Tj ET
+BT /T 9.0 Tf 116.67 316.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 316.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 303.00 Td (r16) Tj ET
+BT /T 9.0 Tf 116.67 303.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 303.00 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 290.00 Td (r16) Tj ET
+BT /T 9.0 Tf 116.67 290.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 290.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 277.00 Td (r17) Tj ET
+BT /T 9.0 Tf 116.67 277.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 277.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 264.00 Td (r17) Tj ET
+BT /T 9.0 Tf 116.67 264.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 264.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 251.00 Td (r17) Tj ET
+BT /T 9.0 Tf 116.67 251.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 251.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 238.00 Td (r17) Tj ET
+BT /T 9.0 Tf 116.67 238.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 238.00 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 225.00 Td (r17) Tj ET
+BT /T 9.0 Tf 116.67 225.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 225.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 212.00 Td (r18) Tj ET
+BT /T 9.0 Tf 116.67 212.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 212.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 199.00 Td (r18) Tj ET
+BT /T 9.0 Tf 116.67 199.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 199.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 4 cores) Tj ET
+BT /T 9.0 Tf 62.00 186.00 Td (r18) Tj ET
+BT /T 9.0 Tf 116.67 186.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 186.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 173.00 Td (r18) Tj ET
+BT /T 9.0 Tf 116.67 173.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 173.00 Td (15.6 GB) Tj ET
+BT /T 9.0 Tf 62.00 160.00 Td (r18) Tj ET
+BT /T 9.0 Tf 116.67 160.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 160.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 147.00 Td (r19) Tj ET
+BT /T 9.0 Tf 116.67 147.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 147.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 134.00 Td (r19) Tj ET
+BT /T 9.0 Tf 116.67 134.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 134.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 121.00 Td (r19) Tj ET
+BT /T 9.0 Tf 116.67 121.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 121.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 108.00 Td (r19) Tj ET
+BT /T 9.0 Tf 116.67 108.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 108.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 95.00 Td (r19) Tj ET
+BT /T 9.0 Tf 116.67 95.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 95.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 82.00 Td (r20) Tj ET
+BT /T 9.0 Tf 116.67 82.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 82.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 69.00 Td (r20) Tj ET
+BT /T 9.0 Tf 116.67 69.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 69.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+q 0.80 w 60.00 65.00 m 552.00 65.00 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 505.50 752.00 Td (page 11 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+38 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+39 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 37 0 R /Resources 38 0 R >>
+endobj
+
+40 0 obj
+<< /Length 8909 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 720.00 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 720.00 Td (Value) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (r20) Tj ET
+BT /T 9.0 Tf 116.67 706.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 706.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (r20) Tj ET
+BT /T 9.0 Tf 116.67 693.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 693.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (r20) Tj ET
+BT /T 9.0 Tf 116.67 680.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 680.00 Td (0.5 s) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (r21) Tj ET
+BT /T 9.0 Tf 116.67 667.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 667.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (r21) Tj ET
+BT /T 9.0 Tf 116.67 654.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 654.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (r21) Tj ET
+BT /T 9.0 Tf 116.67 641.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 641.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (r21) Tj ET
+BT /T 9.0 Tf 116.67 628.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 628.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (r21) Tj ET
+BT /T 9.0 Tf 116.67 615.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 615.00 Td (0.4 s) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (r22) Tj ET
+BT /T 9.0 Tf 116.67 602.00 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 602.00 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (r22) Tj ET
+BT /T 9.0 Tf 116.67 589.00 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 589.00 Td (Intel\(R\) Xeon\(R\) CPU @ 2.20GHz, 8 cores) Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (r22) Tj ET
+BT /T 9.0 Tf 116.67 576.00 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 576.00 Td (NVIDIA L4, 23034 MiB) Tj ET
+BT /T 9.0 Tf 62.00 563.00 Td (r22) Tj ET
+BT /T 9.0 Tf 116.67 563.00 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 563.00 Td (31.3 GB) Tj ET
+BT /T 9.0 Tf 62.00 550.00 Td (r22) Tj ET
+BT /T 9.0 Tf 116.67 550.00 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 550.00 Td (0.5 s) Tj ET
+q 0.80 w 60.00 546.00 m 552.00 546.00 l S Q
+BT /Tb 13.0 Tf 60.00 513.00 Td (4 Files) Tj ET
+BT /T 10.0 Tf 60.00 494.80 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 490.80 m 552.00 490.80 l S Q
+BT /Tb 9.0 Tf 62.00 478.80 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 478.80 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 478.80 Td (Size) Tj ET
+q 0.40 w 60.00 476.80 m 552.00 476.80 l S Q
+BT /T 9.0 Tf 62.00 464.80 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 465.80 Td (86cacd14970cdea9c30d9142bd90b0db4effb7ea5fc147429b7073c5cffe411f) Tj ET
+BT /T 9.0 Tf 502.21 464.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 451.80 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 452.80 Td (54bfccd0bcc3b2c671c45dd223d7793bc649d6fd3b25937616f74fbd0e1c309e) Tj ET
+BT /T 9.0 Tf 502.21 451.80 Td (5.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 438.80 Td (r2.pdf) Tj ET
+BT /C 8.0 Tf 156.95 439.80 Td (b5753492f3fb0b015dace3955ff37831602c3aa46229d411d16d57eed8181ea9) Tj ET
+BT /T 9.0 Tf 502.21 438.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 425.80 Td (r2.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 426.80 Td (4f29186b5eaf7337f3ada815ac99e3b68143bdba070d3c0201df1873ac0817ad) Tj ET
+BT /T 9.0 Tf 502.21 425.80 Td (5.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 412.80 Td (r3.pdf) Tj ET
+BT /C 8.0 Tf 156.95 413.80 Td (5b51b64a9366c0dcca6ffcebec7d447173e9be471e2e4d68afffdf7195a515a3) Tj ET
+BT /T 9.0 Tf 502.21 412.80 Td (70 KB) Tj ET
+BT /T 9.0 Tf 62.00 399.80 Td (r3.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 400.80 Td (e5346341e95937da495125d82d4e19d780111ea0cce86a8f2049d7e49890f54d) Tj ET
+BT /T 9.0 Tf 502.21 399.80 Td (5.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 386.80 Td (r4.pdf) Tj ET
+BT /C 8.0 Tf 156.95 387.80 Td (8e2fd349b6e460747043777dbc5f608247476ff77fee660821caa6d45c93fb8d) Tj ET
+BT /T 9.0 Tf 502.21 386.80 Td (74 KB) Tj ET
+BT /T 9.0 Tf 62.00 373.80 Td (r4.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 374.80 Td (31327cd5c82af61685ad4727e37474d5c03ea6c6e7c0c795838d1e5c22ea39d9) Tj ET
+BT /T 9.0 Tf 502.21 373.80 Td (5.4 MB) Tj ET
+BT /T 9.0 Tf 62.00 360.80 Td (r5.pdf) Tj ET
+BT /C 8.0 Tf 156.95 361.80 Td (1b106fc1f6376a9477659f4417edfb7b984ee5139dfd7d2eaaf4c88146ab10d5) Tj ET
+BT /T 9.0 Tf 502.21 360.80 Td (70 KB) Tj ET
+BT /T 9.0 Tf 62.00 347.80 Td (r5.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 348.80 Td (e412a902153d43eedde941b3922070553e6a64fde95ed9ade7ceb40eaf624280) Tj ET
+BT /T 9.0 Tf 502.21 347.80 Td (939 KB) Tj ET
+BT /T 9.0 Tf 62.00 334.80 Td (r6.pdf) Tj ET
+BT /C 8.0 Tf 156.95 335.80 Td (c9abf7c54d6cb8fb3ca64859a0c45ab102f592697adb2f28fd24de041f1ac8be) Tj ET
+BT /T 9.0 Tf 502.21 334.80 Td (70 KB) Tj ET
+BT /T 9.0 Tf 62.00 321.80 Td (r6.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 322.80 Td (fd5b959e02ea446698070bef091cb03a573845b5a0ecf5fbd9f8315ea3a2e88f) Tj ET
+BT /T 9.0 Tf 502.21 321.80 Td (939 KB) Tj ET
+BT /T 9.0 Tf 62.00 308.80 Td (r7.pdf) Tj ET
+BT /C 8.0 Tf 156.95 309.80 Td (78dfd64bdb40ad3b50da8adf76820e8f95fee75d8416e48695417e7c02175d05) Tj ET
+BT /T 9.0 Tf 502.21 308.80 Td (70 KB) Tj ET
+BT /T 9.0 Tf 62.00 295.80 Td (r7.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 296.80 Td (cfd5f67fdbf543bf64309b639de927831d1c4f97e4e01f21bb3dcfd1ebaac092) Tj ET
+BT /T 9.0 Tf 502.21 295.80 Td (942 KB) Tj ET
+BT /T 9.0 Tf 62.00 282.80 Td (r8.pdf) Tj ET
+BT /C 8.0 Tf 156.95 283.80 Td (9effc847bab906e500bc2236c39ccc0bdd2a1832cab37d6fe98202d126b0c789) Tj ET
+BT /T 9.0 Tf 502.21 282.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 269.80 Td (r8.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 270.80 Td (c0a8da50811d44193cb82d21a00bc816bcb92049ee13ce9c1e347b1ebab141ea) Tj ET
+BT /T 9.0 Tf 502.21 269.80 Td (927 KB) Tj ET
+BT /T 9.0 Tf 62.00 256.80 Td (r9.pdf) Tj ET
+BT /C 8.0 Tf 156.95 257.80 Td (7afb4460784ac71468dacbe7ea87668a1739bbb797b4d8f63a79e36e9d55d4e5) Tj ET
+BT /T 9.0 Tf 502.21 256.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 243.80 Td (r9.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 244.80 Td (1b82d8b9baf7bf8657dd0b5326556ed23856203f4a7d21f6b6e6a05a14158422) Tj ET
+BT /T 9.0 Tf 502.21 243.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 230.80 Td (r10.pdf) Tj ET
+BT /C 8.0 Tf 156.95 231.80 Td (4e3927e43c3521c17142b753fc1272dbb335fea23e24290c4630b32720a64496) Tj ET
+BT /T 9.0 Tf 502.21 230.80 Td (73 KB) Tj ET
+BT /T 9.0 Tf 62.00 217.80 Td (r10.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 218.80 Td (224375ae8bc00d344039fd054786a2fa92178a00eb0a03e450cebeda3b64dbe1) Tj ET
+BT /T 9.0 Tf 502.21 217.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 204.80 Td (r11.pdf) Tj ET
+BT /C 8.0 Tf 156.95 205.80 Td (a6f5bb1d9384c0969467a27bf4c586e82801907e81510e555ad0a468344d0eb2) Tj ET
+BT /T 9.0 Tf 502.21 204.80 Td (70 KB) Tj ET
+BT /T 9.0 Tf 62.00 191.80 Td (r11.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 192.80 Td (120837266c2eb4685c5f92c7b86225d66025a9a9ffd19ae834ec6daad9f487f1) Tj ET
+BT /T 9.0 Tf 502.21 191.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 178.80 Td (r12.pdf) Tj ET
+BT /C 8.0 Tf 156.95 179.80 Td (4f7b1fe996e92d4c6b7912601fdddfd7e84584df1cb641a5342077fd8abbb054) Tj ET
+BT /T 9.0 Tf 502.21 178.80 Td (72 KB) Tj ET
+BT /T 9.0 Tf 62.00 165.80 Td (r12.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 166.80 Td (a08efbd5da2593f93db9bd700e8ff0b0145f60f9104e3916d57b61a61491792c) Tj ET
+BT /T 9.0 Tf 502.21 165.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 152.80 Td (r13.pdf) Tj ET
+BT /C 8.0 Tf 156.95 153.80 Td (4a41c34807884f25ac440214e6a0462e31ea8dd78d40a5f68f319a4fab101226) Tj ET
+BT /T 9.0 Tf 502.21 152.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 139.80 Td (r13.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 140.80 Td (6130ae6f6358397b16e6a048c23e38f94f38a6dfc2abcb9f71c4649125b6ad38) Tj ET
+BT /T 9.0 Tf 502.21 139.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 126.80 Td (r14.pdf) Tj ET
+BT /C 8.0 Tf 156.95 127.80 Td (ef840347dd35c582e61aa4416ce09c0eb5944cd15dd96dfd29534d5b34fe7886) Tj ET
+BT /T 9.0 Tf 502.21 126.80 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 113.80 Td (r14.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 114.80 Td (72fa046766e9d7f9d5970b4fdf32ee6cba76bb236290735637375e5d2198db33) Tj ET
+BT /T 9.0 Tf 502.21 113.80 Td (2.1 MB) Tj ET
+BT /T 9.0 Tf 62.00 100.80 Td (r15.pdf) Tj ET
+BT /C 8.0 Tf 156.95 101.80 Td (5dcd2963714e84f545f72cb11bdff19b69523afe95c9dafbe0d2c89ced4faf16) Tj ET
+BT /T 9.0 Tf 502.21 100.80 Td (69 KB) Tj ET
+BT /T 9.0 Tf 62.00 87.80 Td (r15.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 88.80 Td (a285f1833819f25cd74d23ff6a888105e6e7781c0c5d3c8f9629d5ec11eae074) Tj ET
+BT /T 9.0 Tf 502.21 87.80 Td (691 KB) Tj ET
+BT /T 9.0 Tf 62.00 74.80 Td (r16.pdf) Tj ET
+BT /C 8.0 Tf 156.95 75.80 Td (3f46f56089327bf840d24d8b14c84ed24b0c7e61aec1569beee57bfceafcb6ab) Tj ET
+BT /T 9.0 Tf 502.21 74.80 Td (69 KB) Tj ET
+q 0.80 w 60.00 70.80 m 552.00 70.80 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 505.50 752.00 Td (page 12 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+41 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+42 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 40 0 R /Resources 41 0 R >>
+endobj
+
+43 0 obj
+<< /Length 6281 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 720.00 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 720.00 Td (Size) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (r16.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 707.00 Td (2ce9e21b046b05de06eb9ca9c5251b38045a1cac188df4a5a7120b9c504c3d16) Tj ET
+BT /T 9.0 Tf 502.21 706.00 Td (691 KB) Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (r17.pdf) Tj ET
+BT /C 8.0 Tf 156.95 694.00 Td (7f2469771737d0ca53e7a53d509b183244012993f7592367ae98754eea3f62db) Tj ET
+BT /T 9.0 Tf 502.21 693.00 Td (69 KB) Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (r17.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 681.00 Td (4f6357f8ba3534b71c9a365f3cfa0a02a83b37b48ec7d5f2286a7c9dffe229ed) Tj ET
+BT /T 9.0 Tf 502.21 680.00 Td (664 KB) Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (r18.pdf) Tj ET
+BT /C 8.0 Tf 156.95 668.00 Td (4a4f656985732cb00c1951d5c6000ac388a2d5f9be343264e4c132ffb0901a51) Tj ET
+BT /T 9.0 Tf 502.21 667.00 Td (68 KB) Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (r18.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 655.00 Td (d24548a35bc6e48a86d0fd63431f401491c3b5471ca650c786747e36a3eb3db0) Tj ET
+BT /T 9.0 Tf 502.21 654.00 Td (670 KB) Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (r19.pdf) Tj ET
+BT /C 8.0 Tf 156.95 642.00 Td (1051b69d0cfc0af8407a89058d83cc17af286da2457870493f33fd53a276e842) Tj ET
+BT /T 9.0 Tf 502.21 641.00 Td (72 KB) Tj ET
+BT /T 9.0 Tf 62.00 628.00 Td (r19.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 629.00 Td (320a8c9cb3f873b9870dcb9dd0115f9a6df93fe4fbcbb41646a0d0a565583090) Tj ET
+BT /T 9.0 Tf 502.21 628.00 Td (568 KB) Tj ET
+BT /T 9.0 Tf 62.00 615.00 Td (r20.pdf) Tj ET
+BT /C 8.0 Tf 156.95 616.00 Td (0b9f5750c49fb0fb1e235780d8ac89fe3e09d0f092a0201f6596f2001eaf7b7a) Tj ET
+BT /T 9.0 Tf 502.21 615.00 Td (72 KB) Tj ET
+BT /T 9.0 Tf 62.00 602.00 Td (r20.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 603.00 Td (9b85cb69d6db2bfd1f64156054eda14d34c3a664360fdb5dc3b02b6355c85b98) Tj ET
+BT /T 9.0 Tf 502.21 602.00 Td (568 KB) Tj ET
+BT /T 9.0 Tf 62.00 589.00 Td (r21.pdf) Tj ET
+BT /C 8.0 Tf 156.95 590.00 Td (cc6c72fe3e4c8af72033fe8a161a7dbebbc785d4675342fa66c12ccee4f0d4d6) Tj ET
+BT /T 9.0 Tf 502.21 589.00 Td (68 KB) Tj ET
+BT /T 9.0 Tf 62.00 576.00 Td (r21.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 577.00 Td (6eeadb91f8931cb0541628154092b687bd754911c29316718007b9cf5380790c) Tj ET
+BT /T 9.0 Tf 502.21 576.00 Td (565 KB) Tj ET
+BT /T 9.0 Tf 62.00 563.00 Td (r22.pdf) Tj ET
+BT /C 8.0 Tf 156.95 564.00 Td (5d80d6171cd60ab2205dacb14bd36f4e1b776f5109f81b30f579e65bf85a86fb) Tj ET
+BT /T 9.0 Tf 502.21 563.00 Td (71 KB) Tj ET
+BT /T 9.0 Tf 62.00 550.00 Td (r22.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 551.00 Td (d601ea47d5f5a3494ba0d683ea18649e25d8ba997ac42acb2b331b048e0403d3) Tj ET
+BT /T 9.0 Tf 502.21 550.00 Td (565 KB) Tj ET
+q 0.80 w 60.00 546.00 m 552.00 546.00 l S Q
+BT /Tb 13.0 Tf 60.00 513.00 Td (5 Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 494.80 Td (Record: CC-BY 4.0. Code: MIT, as declared by the authors. Tags: ML, NLP, GRPO, APO, DPO, SFT, Alignment, ELRL,) Tj ET
+BT /T 10.0 Tf 60.00 480.80 Td (LR.) Tj ET
+BT /T 10.0 Tf 60.00 466.80 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 452.80 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 421.80 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 403.60 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 389.60 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 373.60 Td ([2] Sealed experiment report r1 \(sebeni-gemma-4-e2b-apo-50\), kv:2610.00041v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 359.60 Td (04966a415717e46f20dfd9742613c7f1a73a81fed2196af672409a2c554a1f54.) Tj ET
+BT /T 10.0 Tf 60.00 345.60 Td (https://kveritas.org/records/2610.00041v1/r1.pdf) Tj ET
+BT /T 10.0 Tf 60.00 329.60 Td ([3] Sealed experiment report r2 \(sebeni-gemma-4-e2b-dpo-50\), kv:2610.00041v1/r2. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 315.60 Td (13ccb04c72f4dd55b2c3da9c9cef6a29a86c36df53449d5298a80701d3cd52d1.) Tj ET
+BT /T 10.0 Tf 60.00 301.60 Td (https://kveritas.org/records/2610.00041v1/r2.pdf) Tj ET
+BT /T 10.0 Tf 60.00 285.60 Td ([4] Sealed experiment report r3 \(sebeni-gemma-4-e2b-grpo-50\), kv:2610.00041v1/r3. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 271.60 Td (d00670226ba6aceff75b860e724a719cc5d5e2185c658fafbe9755c448af0773.) Tj ET
+BT /T 10.0 Tf 60.00 257.60 Td (https://kveritas.org/records/2610.00041v1/r3.pdf) Tj ET
+BT /T 10.0 Tf 60.00 241.60 Td ([5] Sealed experiment report r4 \(sebeni-gemma-4-e2b-sft-50\), kv:2610.00041v1/r4. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 227.60 Td (3f61ddff5e1e1b9cd38e7a5e915b261a69f60f0bf9a63bde6dd54144a1314682.) Tj ET
+BT /T 10.0 Tf 60.00 213.60 Td (https://kveritas.org/records/2610.00041v1/r4.pdf) Tj ET
+BT /T 10.0 Tf 60.00 197.60 Td ([6] Sealed experiment report r5 \(sebeni-lfm2.5-230-apo-100\), kv:2610.00041v1/r5. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 183.60 Td (c3c1591a3c896b5a7c709d829e420b93c2d6a32d85a2459a174922e771be7434.) Tj ET
+BT /T 10.0 Tf 60.00 169.60 Td (https://kveritas.org/records/2610.00041v1/r5.pdf) Tj ET
+BT /T 10.0 Tf 60.00 153.60 Td ([7] Sealed experiment report r6 \(sebeni-lfm2.5-230-dpo-100\), kv:2610.00041v1/r6. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 139.60 Td (a8eca3de408a2638a22650827693ba3c3b6ca01ec0dd1d738779e820f63ae7cd.) Tj ET
+BT /T 10.0 Tf 60.00 125.60 Td (https://kveritas.org/records/2610.00041v1/r6.pdf) Tj ET
+BT /T 10.0 Tf 60.00 109.60 Td ([8] Sealed experiment report r7 \(sebeni-lfm2.5-230-grpo-100\), kv:2610.00041v1/r7. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 95.60 Td (85200b789a38dfece128b1bb07c2818ef5a150d5b5055be0ce997da0ee5d8ba8.) Tj ET
+BT /T 10.0 Tf 60.00 81.60 Td (https://kveritas.org/records/2610.00041v1/r7.pdf) Tj ET
+BT /T 10.0 Tf 60.00 65.60 Td ([9] Sealed experiment report r8 \(sebeni-lfm2.5-230-sft-100\), kv:2610.00041v1/r8. Data hash) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 505.50 752.00 Td (page 13 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+44 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+45 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 43 0 R /Resources 44 0 R >>
+endobj
+
+46 0 obj
+<< /Length 5002 >>
+stream
+0.3 w
+BT /T 10.0 Tf 60.00 722.00 Td (73105e4d2253c922bec34d48e64fe1f5df26520f6e822912ba8045a5ad17d070.) Tj ET
+BT /T 10.0 Tf 60.00 708.00 Td (https://kveritas.org/records/2610.00041v1/r8.pdf) Tj ET
+BT /T 10.0 Tf 60.00 692.00 Td ([10] Sealed experiment report r9 \(sebeni-qwen2.5-0.5b-sft-100\), kv:2610.00041v1/r9. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 678.00 Td (89235c39bf714afadfe8ec2a1eae879b68ed3b5476c72204fc63fcf781288af6.) Tj ET
+BT /T 10.0 Tf 60.00 664.00 Td (https://kveritas.org/records/2610.00041v1/r9.pdf) Tj ET
+BT /T 10.0 Tf 60.00 648.00 Td ([11] Sealed experiment report r10 \(sebeni-qwen3-0.6b-apo-50\), kv:2610.00041v1/r10. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 634.00 Td (bc797885a7ffd31fee42961eeb2393e204aab725e676299a40204f76b384afd6.) Tj ET
+BT /T 10.0 Tf 60.00 620.00 Td (https://kveritas.org/records/2610.00041v1/r10.pdf) Tj ET
+BT /T 10.0 Tf 60.00 604.00 Td ([12] Sealed experiment report r11 \(sebeni-qwen3-0.6b-dpo-50\), kv:2610.00041v1/r11. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 590.00 Td (d614230166a544a2dca4b6f2b2116bfebe4d4d3c4cad21012e2d029627c5926e.) Tj ET
+BT /T 10.0 Tf 60.00 576.00 Td (https://kveritas.org/records/2610.00041v1/r11.pdf) Tj ET
+BT /T 10.0 Tf 60.00 560.00 Td ([13] Sealed experiment report r12 \(sebeni-qwen3-0.6b-grpo-50\), kv:2610.00041v1/r12. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 546.00 Td (c4a8a550ff62b34391812a4dab80c7b5a04870b5deab8cfa40aecc3f26a5f32f.) Tj ET
+BT /T 10.0 Tf 60.00 532.00 Td (https://kveritas.org/records/2610.00041v1/r12.pdf) Tj ET
+BT /T 10.0 Tf 60.00 516.00 Td ([14] Sealed experiment report r13 \(sebeni-qwen3-0.6b-sft-100\), kv:2610.00041v1/r13. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 502.00 Td (b24282941316fec2cd171e99e22a5b5868dc4205550e6ed78bf02310fd7d20fe.) Tj ET
+BT /T 10.0 Tf 60.00 488.00 Td (https://kveritas.org/records/2610.00041v1/r13.pdf) Tj ET
+BT /T 10.0 Tf 60.00 472.00 Td ([15] Sealed experiment report r14 \(sebeni-qwen3-0.6b-sft-50\), kv:2610.00041v1/r14. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 458.00 Td (e15452906712e25f123d564364ce8308adeef09a3eaa242cb94fc3016042e61b.) Tj ET
+BT /T 10.0 Tf 60.00 444.00 Td (https://kveritas.org/records/2610.00041v1/r14.pdf) Tj ET
+BT /T 10.0 Tf 60.00 428.00 Td ([16] Sealed experiment report r15 \(sebeni-smollm2-135-apo-100\), kv:2610.00041v1/r15. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 414.00 Td (a7fab9cc3ac4fd339aa2655d6e02e7ef1c28bc6505679bfdc335118adfcbe270.) Tj ET
+BT /T 10.0 Tf 60.00 400.00 Td (https://kveritas.org/records/2610.00041v1/r15.pdf) Tj ET
+BT /T 10.0 Tf 60.00 384.00 Td ([17] Sealed experiment report r16 \(sebeni-smollm2-135-dpo-100\), kv:2610.00041v1/r16. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 370.00 Td (f63156e409a6b4efd4eb75204f6278276d8184d53e244f0bcfd4dfb4136bddc0.) Tj ET
+BT /T 10.0 Tf 60.00 356.00 Td (https://kveritas.org/records/2610.00041v1/r16.pdf) Tj ET
+BT /T 10.0 Tf 60.00 340.00 Td ([18] Sealed experiment report r17 \(sebeni-smollm2-135-grpo-100\), kv:2610.00041v1/r17. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 326.00 Td (206dd6d83034ce30e08fae242162d9028312d5d3fb0c2f433aad3df7e9b9e1b9.) Tj ET
+BT /T 10.0 Tf 60.00 312.00 Td (https://kveritas.org/records/2610.00041v1/r17.pdf) Tj ET
+BT /T 10.0 Tf 60.00 296.00 Td ([19] Sealed experiment report r18 \(sebeni-smollm2-135-sft-100\), kv:2610.00041v1/r18. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 282.00 Td (568d840347201178166f981a0733fbdcf644551cae66705728148f8892748ee6.) Tj ET
+BT /T 10.0 Tf 60.00 268.00 Td (https://kveritas.org/records/2610.00041v1/r18.pdf) Tj ET
+BT /T 10.0 Tf 60.00 252.00 Td ([20] Sealed experiment report r19 \(sebeni-tinyllama-1.1b-apo-50\), kv:2610.00041v1/r19. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 238.00 Td (dae92f7046d21d8eba122bfebc2cac0b0c6f54d39ce5135f1d9835fe1e2f2231.) Tj ET
+BT /T 10.0 Tf 60.00 224.00 Td (https://kveritas.org/records/2610.00041v1/r19.pdf) Tj ET
+BT /T 10.0 Tf 60.00 208.00 Td ([21] Sealed experiment report r20 \(sebeni-tinyllama-1.1b-dpo-50\), kv:2610.00041v1/r20. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 194.00 Td (fc816fad926bc175c5e36204931fdc87c2569dc6c97e48ba97eeb2fd32ceae79.) Tj ET
+BT /T 10.0 Tf 60.00 180.00 Td (https://kveritas.org/records/2610.00041v1/r20.pdf) Tj ET
+BT /T 10.0 Tf 60.00 164.00 Td ([22] Sealed experiment report r21 \(sebeni-tinyllama-1.1b-grpo-50\), kv:2610.00041v1/r21. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 150.00 Td (f8ab933aaf6092f14eab8b4a8ca77a55314b7f8afc95df541f524c5997dd1804.) Tj ET
+BT /T 10.0 Tf 60.00 136.00 Td (https://kveritas.org/records/2610.00041v1/r21.pdf) Tj ET
+BT /T 10.0 Tf 60.00 120.00 Td ([23] Sealed experiment report r22 \(sebeni-tinyllama-1.1b-sft-50\), kv:2610.00041v1/r22. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 106.00 Td (22537d944a5cf42522146bc324dc63c2befdd841bea0d46cb229859c324d9aef.) Tj ET
+BT /T 10.0 Tf 60.00 92.00 Td (https://kveritas.org/records/2610.00041v1/r22.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00041v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 505.50 752.00 Td (page 14 of 14) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+47 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+48 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 46 0 R /Resources 47 0 R >>
+endobj
+
+49 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R 15 0 R 18 0 R 21 0 R 24 0 R 27 0 R 30 0 R 33 0 R 36 0 R 39 0 R 42 0 R 45 0 R 48 0 R] /Count 14 >>
+endobj
+
+50 0 obj
+<< /Type /Catalog /Pages 49 0 R >>
+endobj
+
+xref
+0 51
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000007422 00000 n 
+0000007513 00000 n 
+0000007622 00000 n 
+0000017774 00000 n 
+0000017866 00000 n 
+0000017978 00000 n 
+0000026583 00000 n 
+0000026675 00000 n 
+0000026787 00000 n 
+0000035391 00000 n 
+0000035483 00000 n 
+0000035595 00000 n 
+0000044195 00000 n 
+0000044287 00000 n 
+0000044399 00000 n 
+0000053001 00000 n 
+0000053093 00000 n 
+0000053205 00000 n 
+0000061817 00000 n 
+0000061909 00000 n 
+0000062021 00000 n 
+0000070094 00000 n 
+0000070186 00000 n 
+0000070298 00000 n 
+0000078943 00000 n 
+0000079035 00000 n 
+0000079147 00000 n 
+0000086529 00000 n 
+0000086621 00000 n 
+0000086733 00000 n 
+0000094525 00000 n 
+0000094617 00000 n 
+0000094729 00000 n 
+0000103691 00000 n 
+0000103783 00000 n 
+0000103895 00000 n 
+0000110229 00000 n 
+0000110321 00000 n 
+0000110433 00000 n 
+0000115488 00000 n 
+0000115580 00000 n 
+0000115692 00000 n 
+0000115843 00000 n 
+trailer
+<< /Size 51 /Root 50 0 R >>
+startxref
+115895
+%%EOF
