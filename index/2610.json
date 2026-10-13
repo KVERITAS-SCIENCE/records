@@ -1,19 +1,5 @@
 [
   {
-    "id": "kv:2610.00001v1",
-    "title": "Sebeni morphotactic post-training on MULTI13: SFT, DPO and APO arms with SmolLM2-135M",
-    "authors": [
-      "Sebastien Diarra"
-    ],
-    "published": "2026-10-06",
-    "reports": 3,
-    "path": "records/2610/2610.00001/v1",
-    "submitted_by": "Sebastien Diarra",
-    "purpose": "Official implementation",
-    "type": "Research paper",
-    "field": "Natural language processing"
-  },
-  {
     "id": "kv:2610.00002v1",
     "title": "Reproduction of omihub777/ViT-CIFAR: ViT from scratch on CIFAR-10",
     "authors": [
@@ -418,20 +404,6 @@
     "type": "Artifact evaluation",
     "field": "Systems and performance",
     "path": "records/2610/2610.00030/v1"
-  },
-  {
-    "id": "kv:2610.00001v2",
-    "title": "Sebeni morphotactic post-training on MULTI13: SFT, DPO, APO and GRPO arms with SmolLM2-135M",
-    "authors": [
-      "Sebastien Diarra"
-    ],
-    "submitted_by": "Sebastien Diarra",
-    "published": "2026-10-10",
-    "reports": 4,
-    "purpose": "Official implementation",
-    "type": "Research paper",
-    "field": "Natural language processing",
-    "path": "records/2610/2610.00001/v2"
   },
   {
     "id": "kv:2610.00031v1",
