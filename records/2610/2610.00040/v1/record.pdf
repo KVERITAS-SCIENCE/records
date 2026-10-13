@@ -1,0 +1,239 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5355 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 87.52 692.00 Td (Reproduction of dynaroars/neuralsat: VNN-COMP 2023) Tj ET
+BT /Tb 18.0 Tf 221.50 666.80 Td (ACAS Xu benchmark) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00040v1 \267 Published 2026-10-13) Tj ET
+BT /T 10.0 Tf 126.60 590.80 Td (Independent reproduction \267 Benchmark or leaderboard entry \267 Security and cryptography) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran NeuralSAT \(src/main.py, default settings, as vnncomp_scripts/run_instance.sh calls it\) at the pinned) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (commit on all 186 instances of the VNN-COMP 2023 acasxu benchmark \(45 ACAS Xu networks,) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (properties 1 to 10, per-instance timeout from instances.csv, 116 s for most\), one instance at a time, counting) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (unsat, sat, timeout and error verdicts and the wall-clock time per instance. Benchmark files come from the) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (ChristopherBrix/vnncomp2023_benchmarks repository; their SHA-256 hashes are printed at the start of the) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (run. One instance \(network 1_9, property 7\) did not honour its 116 s timeout: the process ran for about 17.7) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (hours without writing a result and is counted as error, which accounts for most of the run's duration. The) Tj ET
+BT /T 10.0 Tf 88.00 446.10 Td (src/example folder \(109 MB of sample networks\) was moved out since the run does not use it. Newer) Tj ET
+BT /T 10.0 Tf 88.00 432.10 Td (packages than requirements.txt pins \(PyTorch 2.11 with CUDA 12.8, gurobipy 13 with its restricted) Tj ET
+BT /T 10.0 Tf 88.00 418.10 Td (license\). One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 318.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 385.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 371.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 358.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 345.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00040v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 331.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 283.90 Td (1 Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 265.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 261.70 m 552.00 261.70 l S Q
+BT /Tb 9.0 Tf 62.00 249.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 249.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 249.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 249.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 249.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 249.70 Td (Signer) Tj ET
+q 0.40 w 60.00 247.70 m 552.00 247.70 l S Q
+BT /T 9.0 Tf 62.00 235.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 235.70 Td (NeuralSAT: VNN-COMP 202...) Tj ET
+BT /T 9.0 Tf 242.17 235.70 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 235.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 235.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 235.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 231.70 m 552.00 231.70 l S Q
+BT /Tb 13.0 Tf 60.00 198.70 Td (2 Results) Tj ET
+BT /Tb 10.0 Tf 60.00 174.50 Td (r1: NeuralSAT: VNN-COMP 2023 ACAS Xu \(186 instances\)) Tj ET
+q 0.80 w 60.00 169.50 m 552.00 169.50 l S Q
+BT /Tb 9.0 Tf 62.00 157.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 157.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 157.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 157.50 Td (Step) Tj ET
+q 0.40 w 60.00 155.50 m 552.00 155.50 l S Q
+BT /T 9.0 Tf 62.00 143.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 143.50 Td (instance_wall_s) Tj ET
+BT /T 9.0 Tf 303.18 143.50 Td (15.9079) Tj ET
+BT /T 9.0 Tf 418.94 143.50 Td (186) Tj ET
+q 0.80 w 60.00 139.50 m 552.00 139.50 l S Q
+q 0.80 w 60.00 133.50 m 552.00 133.50 l S Q
+BT /Tb 9.0 Tf 62.00 121.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 121.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 121.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 121.50 Td (Phase) Tj ET
+q 0.40 w 60.00 119.50 m 552.00 119.50 l S Q
+BT /T 9.0 Tf 62.00 107.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 107.50 Td (acasxu_unsat) Tj ET
+BT /T 9.0 Tf 303.18 107.50 Td (138) Tj ET
+BT /T 9.0 Tf 418.94 107.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 94.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 94.50 Td (acasxu_sat) Tj ET
+BT /T 9.0 Tf 303.18 94.50 Td (45) Tj ET
+BT /T 9.0 Tf 418.94 94.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 81.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 81.50 Td (acasxu_timeout) Tj ET
+BT /T 9.0 Tf 303.18 81.50 Td (2) Tj ET
+BT /T 9.0 Tf 418.94 81.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 68.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 68.50 Td (acasxu_unknown) Tj ET
+BT /T 9.0 Tf 303.18 68.50 Td (0) Tj ET
+BT /T 9.0 Tf 418.94 68.50 Td () Tj ET
+q 0.80 w 60.00 64.50 m 552.00 64.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00040v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 4585 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Phase) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (acasxu_error) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (acasxu_solved) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (183) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (acasxu_instances) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (186) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (acasxu_solved_mean_wall_s) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (15.45) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+q 0.80 w 60.00 663.00 m 552.00 663.00 l S Q
+BT /Tb 13.0 Tf 60.00 630.00 Td (3 Setup) Tj ET
+q 0.80 w 60.00 621.80 m 552.00 621.80 l S Q
+BT /Tb 9.0 Tf 62.00 609.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 609.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 609.80 Td (Value) Tj ET
+q 0.40 w 60.00 607.80 m 552.00 607.80 l S Q
+BT /T 9.0 Tf 62.00 595.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 595.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 595.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 582.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 582.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 582.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 569.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 569.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 569.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 556.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 556.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 556.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 543.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 543.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 543.80 Td (66823.6 s) Tj ET
+q 0.80 w 60.00 539.80 m 552.00 539.80 l S Q
+BT /Tb 13.0 Tf 60.00 506.80 Td (4 Files) Tj ET
+BT /T 10.0 Tf 60.00 488.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 484.60 m 552.00 484.60 l S Q
+BT /Tb 9.0 Tf 62.00 472.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 472.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 472.60 Td (Size) Tj ET
+q 0.40 w 60.00 470.60 m 552.00 470.60 l S Q
+BT /T 9.0 Tf 62.00 458.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 459.60 Td (e418af4f44f19d2be78bb09cf00a9bbc044a7491fb72c25d039ac9bdd8ad169c) Tj ET
+BT /T 9.0 Tf 502.21 458.60 Td (7.2 MB) Tj ET
+BT /T 9.0 Tf 62.00 445.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 446.60 Td (5284d74da77ca2025ee1da99c4da131bcb4787f7acfd6f22ccae1fbf8e25a5ec) Tj ET
+BT /T 9.0 Tf 502.21 445.60 Td (1.2 MB) Tj ET
+q 0.80 w 60.00 441.60 m 552.00 441.60 l S Q
+BT /Tb 13.0 Tf 60.00 408.60 Td (5 Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 390.40 Td (Paper: https://arxiv.org/abs/2307.10266) Tj ET
+BT /T 10.0 Tf 60.00 376.40 Td (Reproduction of: https://github.com/dynaroars/neuralsat/tree/c5097698a32a6dc04d176dcf72b61a931b89cdac) Tj ET
+BT /T 10.0 Tf 60.00 362.40 Td (Record: CC-BY 4.0. Code: MIT, as declared by the authors. Tags: neural-network-verification, vnn-comp, acas-xu,) Tj ET
+BT /T 10.0 Tf 60.00 348.40 Td (formal-methods.) Tj ET
+BT /T 10.0 Tf 60.00 334.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 320.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 289.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 271.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 257.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 241.20 Td ([2] Sealed experiment report r1 \(NeuralSAT: VNN-COMP 2023 ACAS Xu \(186 instances\)\), kv:2610.00040v1/r1. Data) Tj ET
+BT /T 10.0 Tf 60.00 227.20 Td (hash 3b3ef9f60b7761126e7fdbbc5d74125b5c270e74bce9f27f4d886441f1916cb0.) Tj ET
+BT /T 10.0 Tf 60.00 213.20 Td (https://kveritas.org/records/2610.00040v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00040v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006013 00000 n 
+0000006104 00000 n 
+0000006213 00000 n 
+0000010851 00000 n 
+0000010943 00000 n 
+0000011055 00000 n 
+0000011121 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+11173
+%%EOF

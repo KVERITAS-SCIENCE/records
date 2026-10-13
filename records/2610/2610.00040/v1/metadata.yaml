@@ -1,0 +1,69 @@
+id: kv:2610.00040v1
+version: 1
+title: 'Reproduction of dynaroars/neuralsat: VNN-COMP 2023 ACAS Xu benchmark'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran NeuralSAT (src/main.py, default settings, as vnncomp_scripts/run_instance.sh calls it)
+  at the pinned commit on all 186 instances of the VNN-COMP 2023 acasxu benchmark (45 ACAS Xu networks,
+  properties 1 to 10, per-instance timeout from instances.csv, 116 s for most), one instance at a time,
+  counting unsat, sat, timeout and error verdicts and the wall-clock time per instance. Benchmark files
+  come from the ChristopherBrix/vnncomp2023_benchmarks repository; their SHA-256 hashes are printed at
+  the start of the run. One instance (network 1_9, property 7) did not honour its 116 s timeout: the process
+  ran for about 17.7 hours without writing a result and is counted as error, which accounts for most of
+  the run''s duration. The src/example folder (109 MB of sample networks) was moved out since the run
+  does not use it. Newer packages than requirements.txt pins (PyTorch 2.11 with CUDA 12.8, gurobipy 13
+  with its restricted license). One NVIDIA RTX 5060 Ti.'
+tags:
+- neural-network-verification
+- vnn-comp
+- acas-xu
+- formal-methods
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Security and cryptography
+paper: https://arxiv.org/abs/2307.10266
+original_code: https://github.com/dynaroars/neuralsat/tree/c5097698a32a6dc04d176dcf72b61a931b89cdac
+published: '2026-10-13'
+status: published
+issue: 42
+results:
+- metric: acasxu_unsat
+  value: 138
+- metric: acasxu_sat
+  value: 45
+- metric: acasxu_timeout
+  value: 2
+- metric: acasxu_unknown
+  value: 0
+- metric: acasxu_error
+  value: 1
+- metric: acasxu_solved
+  value: 183
+- metric: acasxu_instances
+  value: 186
+- metric: acasxu_solved_mean_wall_s
+  value: 15.45
+reports:
+- id: r1
+  label: 'NeuralSAT: VNN-COMP 2023 ACAS Xu (186 instances)'
+  session: 24e93d13-4469-4d61-9f1c-9afc2796fb8f
+  data_hash: 3b3ef9f60b7761126e7fdbbc5d74125b5c270e74bce9f27f4d886441f1916cb0
+  sealed_at: '2026-10-11T16:23:29.490406952Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00040/v1/reports/r1.pdf
+      sha256: e418af4f44f19d2be78bb09cf00a9bbc044a7491fb72c25d039ac9bdd8ad169c
+      size: 7519197
+    bundle:
+      path: bundles/2610.00040v1/r1.kvbundle.zip
+      sha256: 5284d74da77ca2025ee1da99c4da131bcb4787f7acfd6f22ccae1fbf8e25a5ec
+      size: 1278634
+files:
+  record:
+    path: records/2610/2610.00040/v1/record.pdf
+    sha256: 8e135b62caa1f90c6984237f849a157c7130023c15b055a68776693a80edbb43
+    size: 11541
