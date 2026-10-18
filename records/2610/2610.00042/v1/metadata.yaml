@@ -1,0 +1,55 @@
+id: kv:2610.00042v1
+version: 1
+title: 'Reproduction of SYSTRAN/faster-whisper: large-v3 WER, speed and memory benchmarks'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran the three scripts in the repository''s benchmark/ folder at the pinned commit, unchanged,
+  with the Whisper large-v3 model on CUDA: wer_benchmark.py over all 2703 utterances of LibriSpeech clean
+  validation (streamed from the Hugging Face hub, normalized with the bundled English normalizer), speed_benchmark.py
+  on the bundled benchmark.m4a (3 repeats of 10 transcriptions, minimum time reported) and memory_benchmark.py
+  with --gpu_memory (peak GPU memory and power while transcribing benchmark.m4a). The tests/ and docker/
+  folders are withheld as hash-only entries. CTranslate2 4.8 with cuBLAS and cuDNN 9 from PyPI, datasets
+  3.6. One NVIDIA RTX 5060 Ti.'
+tags:
+- speech-recognition
+- whisper
+- ctranslate2
+- benchmark
+license: MIT
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Natural language processing
+original_code: https://github.com/SYSTRAN/faster-whisper/tree/a52b026ac844c02117865e61968547639b60a6f8
+published: '2026-10-18'
+status: published
+issue: 43
+results:
+- metric: librispeech_clean_val_wer
+  value: 2.92
+- metric: benchmark_m4a_min_transcribe_s
+  value: 46.408
+- metric: benchmark_m4a_max_gpu_mem_mib
+  value: 5348
+reports:
+- id: r1
+  label: 'faster-whisper large-v3: WER, speed, memory'
+  session: 9d7bcbe2-a7fb-42cc-9325-954dccb2c28f
+  data_hash: f2b4af0bfbf1b20524d96f22a17b1ef7f63b8d1026cf8dbdf80420c0dbd52f21
+  sealed_at: '2026-10-11T17:18:09.647424781Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00042/v1/reports/r1.pdf
+      sha256: 98fe97cab8d9840046127c9096e99023c4dac5950a223a30e41e0e4cc5491476
+      size: 6954243
+    bundle:
+      path: bundles/2610.00042v1/r1.kvbundle.zip
+      sha256: b14744aef44990309f121f667f1fd986232b576b91ea12a01a0b561dc2a7e5a6
+      size: 54505
+files:
+  record:
+    path: records/2610/2610.00042/v1/record.pdf
+    sha256: f4ace440f66a0450d7c67f7c7b2b514f8a2be1818281fa3470c0434869ee4e97
+    size: 9885

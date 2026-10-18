@@ -560,5 +560,19 @@
     "type": "Research paper",
     "field": "Machine learning",
     "path": "records/2610/2610.00041/v1"
+  },
+  {
+    "id": "kv:2610.00042v1",
+    "title": "Reproduction of SYSTRAN/faster-whisper: large-v3 WER, speed and memory benchmarks",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-18",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Benchmark or leaderboard entry",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00042/v1"
   }
 ]
