@@ -1,0 +1,67 @@
+id: kv:2610.00043v1
+version: 1
+title: 'Reproduction of huggingface/open_asr_leaderboard: Whisper large-v3-turbo on the seven English
+  test sets'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran transformers/run_whisper.sh at the pinned commit, unchanged: openai/whisper-large-v3-turbo
+  with batch size 64 on the full test splits of AMI, GigaSpeech, VoxPopuli, Earnings-22, LibriSpeech test-clean
+  and test-other and SPGISpeech from hf-audio/open-asr-leaderboard, reporting WER and RTFx per set, then
+  normalizer/eval_utils.score_results. The dataset and model weights were downloaded before the sealed
+  run, which ran offline. Folders for the other toolkits (nemo_asr, espnet, ctranslate2 and so on) are
+  withheld as hash-only entries since this run does not use them. PyTorch 2.11 (CUDA 12.8), transformers
+  5.19, datasets 5.1 with torchcodec for audio decoding. One NVIDIA RTX 5060 Ti.'
+tags:
+- speech-recognition
+- whisper
+- leaderboard
+- wer
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Natural language processing
+paper: https://arxiv.org/abs/2510.06961
+original_code: https://github.com/huggingface/open_asr_leaderboard/tree/60e2e3b897ea6bd50adff236c8dc55569d485cdc
+published: '2026-10-21'
+status: published
+issue: 44
+results:
+- metric: ami_cleaned_test_wer
+  value: 14.31
+- metric: gigaspeech_cleaned_test_wer
+  value: 9.21
+- metric: voxpopuli_cleaned_aa_test_wer
+  value: 5.44
+- metric: earnings22_test_wer
+  value: 11.07
+- metric: librispeech_test_clean_wer
+  value: 1.99
+- metric: librispeech_test_other_wer
+  value: 4.26
+- metric: spgispeech_test_wer
+  value: 3.07
+- metric: mean_wer_7_sets
+  value: 7.05
+reports:
+- id: r1
+  label: 'Whisper large-v3-turbo: 7 English ASR test sets'
+  session: 48c9dde4-e788-4bbe-8ba1-3c1aeb65acd1
+  data_hash: 68cfae92f6b1c3c20a90ccc7a48432ab90ee8ca0f47051901f37f0970d06205b
+  sealed_at: '2026-10-11T19:07:56.746096919Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00043/v1/reports/r1.pdf
+      sha256: 3f3514cd578961ae6c2dddb57dd7fc3860b35a759e46c06a343369253280c379
+      size: 7340194
+    bundle:
+      path: bundles/2610.00043v1/r1.kvbundle.zip
+      sha256: e821bff26d4be24b05d388c1aa6be3b70ba320326597440f28e9813d63408e19
+      size: 165827
+files:
+  record:
+    path: records/2610/2610.00043/v1/record.pdf
+    sha256: edefad535cdacdc768f1014892006e6a0d49f0ab15219ad24c3ca9c086f34251
+    size: 13669

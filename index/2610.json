@@ -574,5 +574,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Natural language processing",
     "path": "records/2610/2610.00042/v1"
+  },
+  {
+    "id": "kv:2610.00043v1",
+    "title": "Reproduction of huggingface/open_asr_leaderboard: Whisper large-v3-turbo on the seven English test sets",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-21",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Natural language processing",
+    "path": "records/2610/2610.00043/v1"
   }
 ]

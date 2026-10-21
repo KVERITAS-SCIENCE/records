@@ -1,0 +1,288 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5674 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 102.50 692.00 Td (Reproduction of huggingface/open_asr_leaderboard:) Tj ET
+BT /Tb 18.0 Tf 102.26 666.80 Td (Whisper large-v3-turbo on the seven English test sets) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00043v1 \267 Published 2026-10-21) Tj ET
+BT /T 10.0 Tf 149.93 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Natural language processing) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran transformers/run_whisper.sh at the pinned commit, unchanged: openai/whisper-large-v3-turbo with) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (batch size 64 on the full test splits of AMI, GigaSpeech, VoxPopuli, Earnings-22, LibriSpeech test-clean and) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (test-other and SPGISpeech from hf-audio/open-asr-leaderboard, reporting WER and RTFx per set, then) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (normalizer/eval_utils.score_results. The dataset and model weights were downloaded before the sealed run,) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (which ran offline. Folders for the other toolkits \(nemo_asr, espnet, ctranslate2 and so on\) are withheld as) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (hash-only entries since this run does not use them. PyTorch 2.11 \(CUDA 12.8\), transformers 5.19, datasets) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (5.1 with torchcodec for audio decoding. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 360.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 427.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 413.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 400.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 387.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00043v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 373.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 325.90 Td (1 Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 307.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 303.70 m 552.00 303.70 l S Q
+BT /Tb 9.0 Tf 62.00 291.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 291.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 291.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 291.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 291.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 291.70 Td (Signer) Tj ET
+q 0.40 w 60.00 289.70 m 552.00 289.70 l S Q
+BT /T 9.0 Tf 62.00 277.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 277.70 Td (Whisper large-v3-turbo: 7 Eng...) Tj ET
+BT /T 9.0 Tf 242.17 277.70 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 277.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 277.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 277.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 273.70 m 552.00 273.70 l S Q
+BT /Tb 13.0 Tf 60.00 240.70 Td (2 Results) Tj ET
+BT /Tb 10.0 Tf 60.00 216.50 Td (r1: Whisper large-v3-turbo: 7 English ASR test sets) Tj ET
+q 0.80 w 60.00 211.50 m 552.00 211.50 l S Q
+BT /Tb 9.0 Tf 62.00 199.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 199.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 199.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 199.50 Td (Step) Tj ET
+q 0.40 w 60.00 197.50 m 552.00 197.50 l S Q
+BT /T 9.0 Tf 62.00 185.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 185.50 Td (ami_cleaned_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 185.50 Td (14.31) Tj ET
+BT /T 9.0 Tf 418.94 185.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 172.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 172.50 Td (ami_cleaned_test_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 172.50 Td (56.9) Tj ET
+BT /T 9.0 Tf 418.94 172.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 159.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 159.50 Td (gigaspeech_cleaned_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 159.50 Td (9.21) Tj ET
+BT /T 9.0 Tf 418.94 159.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 146.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 146.50 Td (gigaspeech_cleaned_test_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 146.50 Td (99.64) Tj ET
+BT /T 9.0 Tf 418.94 146.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 133.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 133.50 Td (voxpopuli_cleaned_aa_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 133.50 Td (5.44) Tj ET
+BT /T 9.0 Tf 418.94 133.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 120.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 120.50 Td (voxpopuli_cleaned_aa_test_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 120.50 Td (166.15) Tj ET
+BT /T 9.0 Tf 418.94 120.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 107.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 107.50 Td (earnings22_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 107.50 Td (11.07) Tj ET
+BT /T 9.0 Tf 418.94 107.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 94.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 94.50 Td (earnings22_test_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 94.50 Td (105.52) Tj ET
+BT /T 9.0 Tf 418.94 94.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 81.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 81.50 Td (librispeech_test_clean_wer) Tj ET
+BT /T 9.0 Tf 303.18 81.50 Td (1.99) Tj ET
+BT /T 9.0 Tf 418.94 81.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 68.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 68.50 Td (librispeech_test_clean_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 68.50 Td (105.38) Tj ET
+BT /T 9.0 Tf 418.94 68.50 Td () Tj ET
+q 0.80 w 60.00 64.50 m 552.00 64.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00043v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 6394 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Step) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (librispeech_test_other_wer) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (4.26) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (librispeech_test_other_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (93.43) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (spgispeech_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (3.07) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (spgispeech_test_rtfx) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (127.46) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+q 0.80 w 60.00 663.00 m 552.00 663.00 l S Q
+q 0.80 w 60.00 657.00 m 552.00 657.00 l S Q
+BT /Tb 9.0 Tf 62.00 645.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 645.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 645.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 645.00 Td (Phase) Tj ET
+q 0.40 w 60.00 643.00 m 552.00 643.00 l S Q
+BT /T 9.0 Tf 62.00 631.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 631.00 Td (ami_cleaned_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 631.00 Td (14.31) Tj ET
+BT /T 9.0 Tf 418.94 631.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 618.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 618.00 Td (gigaspeech_cleaned_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 618.00 Td (9.21) Tj ET
+BT /T 9.0 Tf 418.94 618.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 605.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 605.00 Td (voxpopuli_cleaned_aa_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 605.00 Td (5.44) Tj ET
+BT /T 9.0 Tf 418.94 605.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 592.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 592.00 Td (earnings22_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 592.00 Td (11.07) Tj ET
+BT /T 9.0 Tf 418.94 592.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 579.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 579.00 Td (librispeech_test_clean_wer) Tj ET
+BT /T 9.0 Tf 303.18 579.00 Td (1.99) Tj ET
+BT /T 9.0 Tf 418.94 579.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 566.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 566.00 Td (librispeech_test_other_wer) Tj ET
+BT /T 9.0 Tf 303.18 566.00 Td (4.26) Tj ET
+BT /T 9.0 Tf 418.94 566.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 553.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 553.00 Td (spgispeech_test_wer) Tj ET
+BT /T 9.0 Tf 303.18 553.00 Td (3.07) Tj ET
+BT /T 9.0 Tf 418.94 553.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 540.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 540.00 Td (mean_wer_7_sets) Tj ET
+BT /T 9.0 Tf 303.18 540.00 Td (7.05) Tj ET
+BT /T 9.0 Tf 418.94 540.00 Td () Tj ET
+q 0.80 w 60.00 536.00 m 552.00 536.00 l S Q
+BT /Tb 13.0 Tf 60.00 503.00 Td (3 Setup) Tj ET
+q 0.80 w 60.00 494.80 m 552.00 494.80 l S Q
+BT /Tb 9.0 Tf 62.00 482.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 482.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 482.80 Td (Value) Tj ET
+q 0.40 w 60.00 480.80 m 552.00 480.80 l S Q
+BT /T 9.0 Tf 62.00 468.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 468.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 468.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 455.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 455.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 455.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 442.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 442.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 442.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 429.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 429.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 429.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 416.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 416.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 416.80 Td (6426.3 s) Tj ET
+q 0.80 w 60.00 412.80 m 552.00 412.80 l S Q
+BT /Tb 13.0 Tf 60.00 379.80 Td (4 Files) Tj ET
+BT /T 10.0 Tf 60.00 361.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 357.60 m 552.00 357.60 l S Q
+BT /Tb 9.0 Tf 62.00 345.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 345.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 345.60 Td (Size) Tj ET
+q 0.40 w 60.00 343.60 m 552.00 343.60 l S Q
+BT /T 9.0 Tf 62.00 331.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 332.60 Td (3f3514cd578961ae6c2dddb57dd7fc3860b35a759e46c06a343369253280c379) Tj ET
+BT /T 9.0 Tf 502.21 331.60 Td (7.0 MB) Tj ET
+BT /T 9.0 Tf 62.00 318.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 319.60 Td (e821bff26d4be24b05d388c1aa6be3b70ba320326597440f28e9813d63408e19) Tj ET
+BT /T 9.0 Tf 502.21 318.60 Td (162 KB) Tj ET
+q 0.80 w 60.00 314.60 m 552.00 314.60 l S Q
+BT /Tb 13.0 Tf 60.00 281.60 Td (5 Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 263.40 Td (Paper: https://arxiv.org/abs/2510.06961) Tj ET
+BT /T 10.0 Tf 60.00 249.40 Td (Reproduction of:) Tj ET
+BT /T 10.0 Tf 60.00 235.40 Td (https://github.com/huggingface/open_asr_leaderboard/tree/60e2e3b897ea6bd50adff236c8dc55569d485cdc) Tj ET
+BT /T 10.0 Tf 60.00 221.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: speech-recognition, whisper, leaderboard, wer.) Tj ET
+BT /T 10.0 Tf 60.00 207.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 193.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 162.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 144.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 130.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 114.20 Td ([2] Sealed experiment report r1 \(Whisper large-v3-turbo: 7 English ASR test sets\), kv:2610.00043v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 100.20 Td (68cfae92f6b1c3c20a90ccc7a48432ab90ee8ca0f47051901f37f0970d06205b.) Tj ET
+BT /T 10.0 Tf 60.00 86.20 Td (https://kveritas.org/records/2610.00043v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00043v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006332 00000 n 
+0000006423 00000 n 
+0000006532 00000 n 
+0000012979 00000 n 
+0000013071 00000 n 
+0000013183 00000 n 
+0000013249 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+13301
+%%EOF
