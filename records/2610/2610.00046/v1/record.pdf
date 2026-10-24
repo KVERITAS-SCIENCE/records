@@ -1,0 +1,249 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5365 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 97.98 692.00 Td (Reproduction of WongKinYiu/yolov9: COCO val2017) Tj ET
+BT /Tb 18.0 Tf 161.49 666.80 Td (evaluation of YOLOv9-S, M, C and E) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00046v1 \267 Published 2026-10-24) Tj ET
+BT /T 10.0 Tf 173.38 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Computer vision) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Evaluated the four released converted checkpoints \(yolov9-s, -m, -c and -e from release v0.1\) with the) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (repository's val.py at the pinned commit on COCO val2017 \(5000 images, labels from the yolov5) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (coco2017labels-segments archive\), using the README's settings: image size 640, confidence 0.001, IoU) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (0.7, --save-json, with box mAP computed by pycocotools. Batch size 32, except 16 for YOLOv9-E, which) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (does not fit in 16 GB of GPU memory at 32. Weight file SHA-256 hashes are printed in the run. The figure/) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (folder is withheld as hash-only entries. Changes to the environment only: PyTorch 2.11 \(CUDA 12.8\) with) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 to load the pickled checkpoints, NumPy 2.3 \(np.trapz\)) Tj ET
+BT /T 10.0 Tf 88.00 446.10 Td (and Pillow 9.5 \(FreeTypeFont.getsize\), plus IPython which models/common.py imports. One NVIDIA RTX) Tj ET
+BT /T 10.0 Tf 88.00 432.10 Td (5060 Ti.) Tj ET
+q 0.6 w 60.00 332.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 399.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 385.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 372.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 359.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00046v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 345.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 297.90 Td (1 Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 279.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 275.70 m 552.00 275.70 l S Q
+BT /Tb 9.0 Tf 62.00 263.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 263.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 263.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 263.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 263.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 263.70 Td (Signer) Tj ET
+q 0.40 w 60.00 261.70 m 552.00 261.70 l S Q
+BT /T 9.0 Tf 62.00 249.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 249.70 Td (YOLOv9-S/M/C/E on COCO ...) Tj ET
+BT /T 9.0 Tf 242.17 249.70 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 249.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 249.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 249.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 245.70 m 552.00 245.70 l S Q
+BT /Tb 13.0 Tf 60.00 212.70 Td (2 Results) Tj ET
+BT /Tb 10.0 Tf 60.00 188.50 Td (r1: YOLOv9-S/M/C/E on COCO val2017) Tj ET
+q 0.80 w 60.00 183.50 m 552.00 183.50 l S Q
+BT /Tb 9.0 Tf 62.00 171.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 171.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 171.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 171.50 Td (Step) Tj ET
+q 0.40 w 60.00 169.50 m 552.00 169.50 l S Q
+BT /T 9.0 Tf 62.00 157.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 157.50 Td (yolov9_s_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 157.50 Td (0.468) Tj ET
+BT /T 9.0 Tf 418.94 157.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 144.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 144.50 Td (yolov9_m_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 144.50 Td (0.514) Tj ET
+BT /T 9.0 Tf 418.94 144.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 131.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 131.50 Td (yolov9_c_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 131.50 Td (0.53) Tj ET
+BT /T 9.0 Tf 418.94 131.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 118.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 118.50 Td (yolov9_e_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 118.50 Td (0.556) Tj ET
+BT /T 9.0 Tf 418.94 118.50 Td () Tj ET
+q 0.80 w 60.00 114.50 m 552.00 114.50 l S Q
+q 0.80 w 60.00 108.50 m 552.00 108.50 l S Q
+BT /Tb 9.0 Tf 62.00 96.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 96.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 96.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 96.50 Td (Phase) Tj ET
+q 0.40 w 60.00 94.50 m 552.00 94.50 l S Q
+BT /T 9.0 Tf 62.00 82.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 82.50 Td (yolov9_s_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 82.50 Td (0.468) Tj ET
+BT /T 9.0 Tf 418.94 82.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 69.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 69.50 Td (yolov9_s_coco_map50) Tj ET
+BT /T 9.0 Tf 303.18 69.50 Td (0.634) Tj ET
+BT /T 9.0 Tf 418.94 69.50 Td () Tj ET
+q 0.80 w 60.00 65.50 m 552.00 65.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00046v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 4879 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Phase) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (yolov9_m_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.514) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (yolov9_m_coco_map50) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.681) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (yolov9_c_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.53) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (yolov9_c_coco_map50) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.703) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (yolov9_e_coco_map50_95) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.556) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 641.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 641.00 Td (yolov9_e_coco_map50) Tj ET
+BT /T 9.0 Tf 303.18 641.00 Td (0.728) Tj ET
+BT /T 9.0 Tf 418.94 641.00 Td () Tj ET
+q 0.80 w 60.00 637.00 m 552.00 637.00 l S Q
+BT /Tb 13.0 Tf 60.00 604.00 Td (3 Setup) Tj ET
+q 0.80 w 60.00 595.80 m 552.00 595.80 l S Q
+BT /Tb 9.0 Tf 62.00 583.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 583.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 583.80 Td (Value) Tj ET
+q 0.40 w 60.00 581.80 m 552.00 581.80 l S Q
+BT /T 9.0 Tf 62.00 569.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 569.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 569.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 556.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 556.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 556.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 543.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 543.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 543.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 530.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 530.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 530.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 517.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 517.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 517.80 Td (536.2 s) Tj ET
+q 0.80 w 60.00 513.80 m 552.00 513.80 l S Q
+BT /Tb 13.0 Tf 60.00 480.80 Td (4 Files) Tj ET
+BT /T 10.0 Tf 60.00 462.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 458.60 m 552.00 458.60 l S Q
+BT /Tb 9.0 Tf 62.00 446.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 446.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 446.60 Td (Size) Tj ET
+q 0.40 w 60.00 444.60 m 552.00 444.60 l S Q
+BT /T 9.0 Tf 62.00 432.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 433.60 Td (4bcb474defd72737c9637a9d0b600f956ef744d5a5da94876ca90b1fcc42d12f) Tj ET
+BT /T 9.0 Tf 502.21 432.60 Td (4.7 MB) Tj ET
+BT /T 9.0 Tf 62.00 419.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 420.60 Td (3ce346aed89bb05e97081602a0d8c66ad7fd35980ff3016a4a9b9997c18e61ab) Tj ET
+BT /T 9.0 Tf 502.21 419.60 Td (398 KB) Tj ET
+q 0.80 w 60.00 415.60 m 552.00 415.60 l S Q
+BT /Tb 13.0 Tf 60.00 382.60 Td (5 Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 364.40 Td (Paper: https://arxiv.org/abs/2402.13616) Tj ET
+BT /T 10.0 Tf 60.00 350.40 Td (Reproduction of: https://github.com/WongKinYiu/yolov9/tree/5b1ea9a8b3f0ffe4fe0e203ec6232d788bb3fcff) Tj ET
+BT /T 10.0 Tf 60.00 336.40 Td (Record: CC-BY 4.0. Code: GPL-3.0, as declared by the authors. Tags: object-detection, yolo, coco.) Tj ET
+BT /T 10.0 Tf 60.00 322.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 308.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 277.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 259.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 245.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 229.20 Td ([2] Sealed experiment report r1 \(YOLOv9-S/M/C/E on COCO val2017\), kv:2610.00046v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 215.20 Td (9c3296aa8fff5c7aad23be9ab545b8b6df894c5507f876101f0dc569109aec1b.) Tj ET
+BT /T 10.0 Tf 60.00 201.20 Td (https://kveritas.org/records/2610.00046v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00046v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006023 00000 n 
+0000006114 00000 n 
+0000006223 00000 n 
+0000011155 00000 n 
+0000011247 00000 n 
+0000011359 00000 n 
+0000011425 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+11477
+%%EOF

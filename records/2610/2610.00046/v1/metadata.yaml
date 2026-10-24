@@ -1,0 +1,66 @@
+id: kv:2610.00046v1
+version: 1
+title: 'Reproduction of WongKinYiu/yolov9: COCO val2017 evaluation of YOLOv9-S, M, C and E'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Evaluated the four released converted checkpoints (yolov9-s, -m, -c and -e from release v0.1)
+  with the repository''s val.py at the pinned commit on COCO val2017 (5000 images, labels from the yolov5
+  coco2017labels-segments archive), using the README''s settings: image size 640, confidence 0.001, IoU
+  0.7, --save-json, with box mAP computed by pycocotools. Batch size 32, except 16 for YOLOv9-E, which
+  does not fit in 16 GB of GPU memory at 32. Weight file SHA-256 hashes are printed in the run. The figure/
+  folder is withheld as hash-only entries. Changes to the environment only: PyTorch 2.11 (CUDA 12.8) with
+  TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 to load the pickled checkpoints, NumPy 2.3 (np.trapz) and Pillow
+  9.5 (FreeTypeFont.getsize), plus IPython which models/common.py imports. One NVIDIA RTX 5060 Ti.'
+tags:
+- object-detection
+- yolo
+- coco
+license: GPL-3.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2402.13616
+original_code: https://github.com/WongKinYiu/yolov9/tree/5b1ea9a8b3f0ffe4fe0e203ec6232d788bb3fcff
+published: '2026-10-24'
+status: published
+issue: 45
+results:
+- metric: yolov9_s_coco_map50_95
+  value: 0.468
+- metric: yolov9_s_coco_map50
+  value: 0.634
+- metric: yolov9_m_coco_map50_95
+  value: 0.514
+- metric: yolov9_m_coco_map50
+  value: 0.681
+- metric: yolov9_c_coco_map50_95
+  value: 0.53
+- metric: yolov9_c_coco_map50
+  value: 0.703
+- metric: yolov9_e_coco_map50_95
+  value: 0.556
+- metric: yolov9_e_coco_map50
+  value: 0.728
+reports:
+- id: r1
+  label: YOLOv9-S/M/C/E on COCO val2017
+  session: a4ca4542-80d0-4c01-b0eb-0929ddd61891
+  data_hash: 9c3296aa8fff5c7aad23be9ab545b8b6df894c5507f876101f0dc569109aec1b
+  sealed_at: '2026-10-11T19:28:58.118813258Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00046/v1/reports/r1.pdf
+      sha256: 4bcb474defd72737c9637a9d0b600f956ef744d5a5da94876ca90b1fcc42d12f
+      size: 4942342
+    bundle:
+      path: bundles/2610.00046v1/r1.kvbundle.zip
+      sha256: 3ce346aed89bb05e97081602a0d8c66ad7fd35980ff3016a4a9b9997c18e61ab
+      size: 407307
+files:
+  record:
+    path: records/2610/2610.00046/v1/record.pdf
+    sha256: 9c521c16fc2d421fc2c795140b62b6134fd8c6d278ac397c47a457a3a341947a
+    size: 11845
