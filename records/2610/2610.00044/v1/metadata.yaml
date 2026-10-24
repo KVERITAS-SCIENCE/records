@@ -1,0 +1,58 @@
+id: kv:2610.00044v1
+version: 1
+title: 'Reproduction of cloneofsimo/minRF: rectified-flow DiT on MNIST'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran rf.py at the pinned commit, unchanged, in its default MNIST setting: a class-conditional
+  rectified-flow model with a small DiT (Llama-style, dim 64, 6 layers, 0.61M parameters), Adam at learning
+  rate 5e-4, batch size 256, 100 epochs, sampling 16 images after each epoch. The reported values are
+  the per-epoch training losses rf.py prints for ten bins of the flow time t. wandb was disabled and the
+  sample GIFs are withheld as hash-only entries (the last-frame PNGs are kept). The repository''s CIFAR-10
+  setting (--cifar, 13.3M parameters) was attempted but ran out of memory on its first step at its fixed
+  batch size of 256 on this 16 GB GPU, so it is not part of this record. PyTorch 2.11 (CUDA 12.8). One
+  NVIDIA RTX 5060 Ti.'
+tags:
+- rectified-flow
+- diffusion
+- dit
+- mnist
+license: Apache-2.0
+purpose: Independent reproduction
+type: Benchmark or leaderboard entry
+field: Machine learning
+original_code: https://github.com/cloneofsimo/minRF/tree/4fc10e0cc8ba976152c7936a1af9717209f03e18
+published: '2026-10-24'
+status: published
+issue: 47
+results:
+- metric: mnist_final_mean_bin_loss
+  value: 0.118766
+- metric: mnist_final_bin0_loss
+  value: 0.110813
+- metric: mnist_final_bin5_loss
+  value: 0.095862
+- metric: mnist_final_bin9_loss
+  value: 0.187066
+reports:
+- id: r1
+  label: 'minRF: rectified-flow DiT, MNIST 100 epochs'
+  session: 37f0a7f9-f8de-4849-8a3e-5f0fc9db6040
+  data_hash: f105ddf31520ef52e26955ad38d44cd2e732a78685afe112c514b19c80474ec8
+  sealed_at: '2026-10-11T23:24:35.595149364Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00044/v1/reports/r1.pdf
+      sha256: 3d273e8496f1aba78d8a6d48756358a7c511e15d06d620a4e7fb3e118035862f
+      size: 7138209
+    bundle:
+      path: bundles/2610.00044v1/r1.kvbundle.zip
+      sha256: cdca2c46d5b235508c8ba4bbfcaa574fa38abf2915b92f1ce0582e6050c2fc85
+      size: 14621235
+files:
+  record:
+    path: records/2610/2610.00044/v1/record.pdf
+    sha256: 21edb2fe18e98004df9a548b69aa04c0f68299f6b5fbe657eba19a638a78cb1a
+    size: 10096
