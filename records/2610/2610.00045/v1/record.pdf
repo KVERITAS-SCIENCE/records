@@ -1,0 +1,249 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic /Encoding /WinAnsiEncoding >>
+endobj
+
+7 0 obj
+<< /Length 5456 >>
+stream
+0.3 w
+BT /Tb 18.0 Tf 108.50 692.00 Td (Reproduction of IDEA-Research/GroundingDINO:) Tj ET
+BT /Tb 18.0 Tf 107.50 666.80 Td (zero-shot COCO detection with GroundingDINO-T) Tj ET
+BT /T 12.0 Tf 267.18 639.60 Td (K-Veritas Team) Tj ET
+BT /Ti 10.0 Tf 245.59 622.80 Td (Submitted by K-Veritas Team) Tj ET
+BT /T 10.0 Tf 221.56 604.80 Td (kv:2610.00045v1 \267 Published 2026-10-24) Tj ET
+BT /T 10.0 Tf 173.38 590.80 Td (Independent reproduction \267 Artifact evaluation \267 Computer vision) Tj ET
+BT /Tb 10.5 Tf 286.46 560.30 Td (Abstract) Tj ET
+BT /T 10.0 Tf 88.00 544.10 Td (Ran demo/test_ap_on_coco.py at the pinned commit with the GroundingDINO_SwinT_OGC config and the) Tj ET
+BT /T 10.0 Tf 88.00 530.10 Td (released groundingdino_swint_ogc.pth weights on all 5000 COCO val2017 images, zero-shot: the 80) Tj ET
+BT /T 10.0 Tf 88.00 516.10 Td (category names joined into one text prompt, top 300 boxes per image, box AP from pycocotools. Weight) Tj ET
+BT /T 10.0 Tf 88.00 502.10 Td (and annotation SHA-256 hashes are printed in the run; bert-base-uncased was cached beforehand and the) Tj ET
+BT /T 10.0 Tf 88.00 488.10 Td (run was offline. One change to the code: the multi-scale deformable attention CUDA extension) Tj ET
+BT /T 10.0 Tf 88.00 474.10 Td (\(ms_deform_attn_cuda.cu\) used value.type\(\) in two AT_DISPATCH macros, which current PyTorch no) Tj ET
+BT /T 10.0 Tf 88.00 460.10 Td (longer accepts, so it now uses value.scalar_type\(\); the extension was compiled for this GPU with CUDA) Tj ET
+BT /T 10.0 Tf 88.00 446.10 Td (12.8. PyTorch 2.11, transformers 4.49. One NVIDIA RTX 5060 Ti.) Tj ET
+q 0.6 w 60.00 346.90 492.00 85.20 re S Q
+BT /Tb 10.0 Tf 69.00 413.10 Td (About this record) Tj ET
+BT /T 9.5 Tf 69.00 399.60 Td (Title, authors and abstract were provided by the authors and reviewed for completeness, not for scientific soundness. Every) Tj ET
+BT /T 9.5 Tf 69.00 386.30 Td (number in this record is copied from the signed data of the sealed reports [2], which remain authoritative.) Tj ET
+BT /T 9.5 Tf 69.00 373.00 Td (This cover page is not signed. Check it against the SHA-256 listed at https://kveritas.org/records/2610.00045v1, and verify) Tj ET
+BT /T 9.5 Tf 69.00 359.70 Td (each report with its code bundle: kveritas verify <report.pdf> --bundle <bundle.zip>.) Tj ET
+BT /Tb 13.0 Tf 60.00 311.90 Td (1 Sealed reports) Tj ET
+BT /T 10.0 Tf 60.00 293.70 Td (The experiments were sealed with K-Veritas [1], which binds each result to the code, hardware and time that produced it.) Tj ET
+q 0.80 w 60.00 289.70 m 552.00 289.70 l S Q
+BT /Tb 9.0 Tf 62.00 277.70 Td (Report) Tj ET
+BT /Tb 9.0 Tf 117.44 277.70 Td (Label) Tj ET
+BT /Tb 9.0 Tf 242.17 277.70 Td (Sealed) Tj ET
+BT /Tb 9.0 Tf 311.46 277.70 Td (Runs) Tj ET
+BT /Tb 9.0 Tf 346.11 277.70 Td (Invocations) Tj ET
+BT /Tb 9.0 Tf 415.41 277.70 Td (Signer) Tj ET
+q 0.40 w 60.00 275.70 m 552.00 275.70 l S Q
+BT /T 9.0 Tf 62.00 263.70 Td (r1 [2]) Tj ET
+BT /T 9.0 Tf 117.44 263.70 Td (GroundingDINO-T: zero-shot ...) Tj ET
+BT /T 9.0 Tf 242.17 263.70 Td (2026-10-11) Tj ET
+BT /T 9.0 Tf 311.46 263.70 Td (1) Tj ET
+BT /T 9.0 Tf 346.11 263.70 Td (1) Tj ET
+BT /T 9.0 Tf 415.41 263.70 Td (Signed by the K-Veritas server) Tj ET
+q 0.80 w 60.00 259.70 m 552.00 259.70 l S Q
+BT /Tb 13.0 Tf 60.00 226.70 Td (2 Results) Tj ET
+BT /Tb 10.0 Tf 60.00 202.50 Td (r1: GroundingDINO-T: zero-shot COCO val2017) Tj ET
+q 0.80 w 60.00 197.50 m 552.00 197.50 l S Q
+BT /Tb 9.0 Tf 62.00 185.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 185.50 Td (Metric) Tj ET
+BT /Tb 9.0 Tf 303.18 185.50 Td (Final value) Tj ET
+BT /Tb 9.0 Tf 418.94 185.50 Td (Step) Tj ET
+q 0.40 w 60.00 183.50 m 552.00 183.50 l S Q
+BT /T 9.0 Tf 62.00 171.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 171.50 Td (coco_val2017_ap) Tj ET
+BT /T 9.0 Tf 303.18 171.50 Td (0.485) Tj ET
+BT /T 9.0 Tf 418.94 171.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 158.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 158.50 Td (coco_val2017_ap50) Tj ET
+BT /T 9.0 Tf 303.18 158.50 Td (0.6442) Tj ET
+BT /T 9.0 Tf 418.94 158.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 145.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 145.50 Td (coco_val2017_ap75) Tj ET
+BT /T 9.0 Tf 303.18 145.50 Td (0.5294) Tj ET
+BT /T 9.0 Tf 418.94 145.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 132.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 132.50 Td (coco_val2017_ap_small) Tj ET
+BT /T 9.0 Tf 303.18 132.50 Td (0.3392) Tj ET
+BT /T 9.0 Tf 418.94 132.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 119.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 119.50 Td (coco_val2017_ap_medium) Tj ET
+BT /T 9.0 Tf 303.18 119.50 Td (0.5178) Tj ET
+BT /T 9.0 Tf 418.94 119.50 Td () Tj ET
+BT /T 9.0 Tf 62.00 106.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 106.50 Td (coco_val2017_ap_large) Tj ET
+BT /T 9.0 Tf 303.18 106.50 Td (0.6336) Tj ET
+BT /T 9.0 Tf 418.94 106.50 Td () Tj ET
+q 0.80 w 60.00 102.50 m 552.00 102.50 l S Q
+q 0.80 w 60.00 96.50 m 552.00 96.50 l S Q
+BT /Tb 9.0 Tf 62.00 84.50 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 84.50 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 84.50 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 84.50 Td (Phase) Tj ET
+q 0.40 w 60.00 82.50 m 552.00 82.50 l S Q
+BT /T 9.0 Tf 62.00 70.50 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 70.50 Td (coco_val2017_ap) Tj ET
+BT /T 9.0 Tf 303.18 70.50 Td (0.485) Tj ET
+BT /T 9.0 Tf 418.94 70.50 Td () Tj ET
+q 0.80 w 60.00 66.50 m 552.00 66.50 l S Q
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00045v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 1 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+8 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 7 0 R /Resources 8 0 R >>
+endobj
+
+10 0 obj
+<< /Length 4778 >>
+stream
+0.3 w
+q 0.80 w 60.00 732.00 m 552.00 732.00 l S Q
+BT /Tb 9.0 Tf 62.00 720.00 Td (Run) Tj ET
+BT /Tb 9.0 Tf 110.24 720.00 Td (Inline claim) Tj ET
+BT /Tb 9.0 Tf 303.18 720.00 Td (Value) Tj ET
+BT /Tb 9.0 Tf 418.94 720.00 Td (Phase) Tj ET
+q 0.40 w 60.00 718.00 m 552.00 718.00 l S Q
+BT /T 9.0 Tf 62.00 706.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 706.00 Td (coco_val2017_ap50) Tj ET
+BT /T 9.0 Tf 303.18 706.00 Td (0.6442) Tj ET
+BT /T 9.0 Tf 418.94 706.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 693.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 693.00 Td (coco_val2017_ap75) Tj ET
+BT /T 9.0 Tf 303.18 693.00 Td (0.5294) Tj ET
+BT /T 9.0 Tf 418.94 693.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 680.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 680.00 Td (coco_val2017_ap_small) Tj ET
+BT /T 9.0 Tf 303.18 680.00 Td (0.3392) Tj ET
+BT /T 9.0 Tf 418.94 680.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 667.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 667.00 Td (coco_val2017_ap_medium) Tj ET
+BT /T 9.0 Tf 303.18 667.00 Td (0.5178) Tj ET
+BT /T 9.0 Tf 418.94 667.00 Td () Tj ET
+BT /T 9.0 Tf 62.00 654.00 Td (1) Tj ET
+BT /T 9.0 Tf 110.24 654.00 Td (coco_val2017_ap_large) Tj ET
+BT /T 9.0 Tf 303.18 654.00 Td (0.6336) Tj ET
+BT /T 9.0 Tf 418.94 654.00 Td () Tj ET
+q 0.80 w 60.00 650.00 m 552.00 650.00 l S Q
+BT /Tb 13.0 Tf 60.00 617.00 Td (3 Setup) Tj ET
+q 0.80 w 60.00 608.80 m 552.00 608.80 l S Q
+BT /Tb 9.0 Tf 62.00 596.80 Td (Report) Tj ET
+BT /Tb 9.0 Tf 116.67 596.80 Td (Item) Tj ET
+BT /Tb 9.0 Tf 226.00 596.80 Td (Value) Tj ET
+q 0.40 w 60.00 594.80 m 552.00 594.80 l S Q
+BT /T 9.0 Tf 62.00 582.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 582.80 Td (Operating system) Tj ET
+BT /T 9.0 Tf 226.00 582.80 Td (linux / amd64) Tj ET
+BT /T 9.0 Tf 62.00 569.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 569.80 Td (CPU) Tj ET
+BT /T 9.0 Tf 226.00 569.80 Td (Intel\(R\) Xeon\(R\) W-2145 CPU @ 3.70GHz, 16 cores) Tj ET
+BT /T 9.0 Tf 62.00 556.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 556.80 Td (GPU) Tj ET
+BT /T 9.0 Tf 226.00 556.80 Td (NVIDIA GeForce RTX 5060 Ti, 16311 MiB) Tj ET
+BT /T 9.0 Tf 62.00 543.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 543.80 Td (Memory) Tj ET
+BT /T 9.0 Tf 226.00 543.80 Td (31.0 GB) Tj ET
+BT /T 9.0 Tf 62.00 530.80 Td (r1) Tj ET
+BT /T 9.0 Tf 116.67 530.80 Td (Total run time) Tj ET
+BT /T 9.0 Tf 226.00 530.80 Td (1203.0 s) Tj ET
+q 0.80 w 60.00 526.80 m 552.00 526.80 l S Q
+BT /Tb 13.0 Tf 60.00 493.80 Td (4 Files) Tj ET
+BT /T 10.0 Tf 60.00 475.60 Td (Each report and code bundle must hash to these values. A bundle belongs to the report whose signed data names its hash.) Tj ET
+q 0.80 w 60.00 471.60 m 552.00 471.60 l S Q
+BT /Tb 9.0 Tf 62.00 459.60 Td (File) Tj ET
+BT /Tb 9.0 Tf 156.95 459.60 Td (SHA-256) Tj ET
+BT /Tb 9.0 Tf 502.21 459.60 Td (Size) Tj ET
+q 0.40 w 60.00 457.60 m 552.00 457.60 l S Q
+BT /T 9.0 Tf 62.00 445.60 Td (r1.pdf) Tj ET
+BT /C 8.0 Tf 156.95 446.60 Td (d28d1b81b7fb1c65ef3ffa23cfadf92055baae2ff4934e96c5ed5f507f393295) Tj ET
+BT /T 9.0 Tf 502.21 445.60 Td (6.7 MB) Tj ET
+BT /T 9.0 Tf 62.00 432.60 Td (r1.kvbundle.zip) Tj ET
+BT /C 8.0 Tf 156.95 433.60 Td (b8d807082cc966a5073b7329cfee5d5591f02e71253d24c004a1a7cff8a9558d) Tj ET
+BT /T 9.0 Tf 502.21 432.60 Td (2.8 MB) Tj ET
+q 0.80 w 60.00 428.60 m 552.00 428.60 l S Q
+BT /Tb 13.0 Tf 60.00 395.60 Td (5 Links and licence) Tj ET
+BT /T 10.0 Tf 60.00 377.40 Td (Paper: https://arxiv.org/abs/2303.05499) Tj ET
+BT /T 10.0 Tf 60.00 363.40 Td (Reproduction of:) Tj ET
+BT /T 10.0 Tf 60.00 349.40 Td (https://github.com/IDEA-Research/GroundingDINO/tree/856dde20aee659246248e20734ef9ba5214f5e44) Tj ET
+BT /T 10.0 Tf 60.00 335.40 Td (Record: CC-BY 4.0. Code: Apache-2.0, as declared by the authors. Tags: open-set-detection, zero-shot, grounding, coco.) Tj ET
+BT /T 10.0 Tf 60.00 321.40 Td (Listed, not endorsed. Review checks the artifact, never the science. Reports are never edited; changing them makes a new) Tj ET
+BT /T 10.0 Tf 60.00 307.40 Td (version. Other fields are corrected in place, and every correction is logged in metadata.yaml.) Tj ET
+BT /Tb 13.0 Tf 60.00 276.40 Td (References) Tj ET
+BT /T 10.0 Tf 60.00 258.20 Td ([1] M. K. Keita and C. Homan. Computer Science Conferences Should Require Nonrepudiable Experimental Results.) Tj ET
+BT /T 10.0 Tf 60.00 244.20 Td (NeurIPS 2026 Position Paper Track. arXiv:2605.08586.) Tj ET
+BT /T 10.0 Tf 60.00 228.20 Td ([2] Sealed experiment report r1 \(GroundingDINO-T: zero-shot COCO val2017\), kv:2610.00045v1/r1. Data hash) Tj ET
+BT /T 10.0 Tf 60.00 214.20 Td (691cffa200af6c0575a879ea5b1ca268e4e10591af7286339b9b4bab146559bf.) Tj ET
+BT /T 10.0 Tf 60.00 200.20 Td (https://kveritas.org/records/2610.00045v1/r1.pdf) Tj ET
+q 0.4 0.4 0.4 rg BT /Ti 8.5 Tf 60.00 752.00 Td (K-Veritas Records \267 kv:2610.00045v1) Tj ET Q
+q 0.4 0.4 0.4 rg BT /T 8.5 Tf 514.00 752.00 Td (page 2 of 2) Tj ET Q
+q 0.75 0.75 0.75 RG 0.4 w 60.00 746.00 m 552.00 746.00 l S Q
+endstream
+endobj
+
+11 0 obj
+<< /Font << /H 1 0 R /Hb 2 0 R /C 3 0 R /T 4 0 R /Tb 5 0 R /Ti 6 0 R >> >>
+endobj
+
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612.0 792.0] /Contents 10 0 R /Resources 11 0 R >>
+endobj
+
+13 0 obj
+<< /Type /Pages /Kids [9 0 R 12 0 R] /Count 2 >>
+endobj
+
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000107 00000 n 
+0000000210 00000 n 
+0000000306 00000 n 
+0000000406 00000 n 
+0000000505 00000 n 
+0000000606 00000 n 
+0000006114 00000 n 
+0000006205 00000 n 
+0000006314 00000 n 
+0000011145 00000 n 
+0000011237 00000 n 
+0000011349 00000 n 
+0000011415 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R >>
+startxref
+11467
+%%EOF

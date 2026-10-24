@@ -1,0 +1,63 @@
+id: kv:2610.00045v1
+version: 1
+title: 'Reproduction of IDEA-Research/GroundingDINO: zero-shot COCO detection with GroundingDINO-T'
+authors:
+- name: K-Veritas Team
+submitted_by:
+  name: K-Veritas Team
+abstract: 'Ran demo/test_ap_on_coco.py at the pinned commit with the GroundingDINO_SwinT_OGC config and
+  the released groundingdino_swint_ogc.pth weights on all 5000 COCO val2017 images, zero-shot: the 80
+  category names joined into one text prompt, top 300 boxes per image, box AP from pycocotools. Weight
+  and annotation SHA-256 hashes are printed in the run; bert-base-uncased was cached beforehand and the
+  run was offline. One change to the code: the multi-scale deformable attention CUDA extension (ms_deform_attn_cuda.cu)
+  used value.type() in two AT_DISPATCH macros, which current PyTorch no longer accepts, so it now uses
+  value.scalar_type(); the extension was compiled for this GPU with CUDA 12.8. PyTorch 2.11, transformers
+  4.49. One NVIDIA RTX 5060 Ti.'
+tags:
+- open-set-detection
+- zero-shot
+- grounding
+- coco
+license: Apache-2.0
+purpose: Independent reproduction
+type: Artifact evaluation
+field: Computer vision
+paper: https://arxiv.org/abs/2303.05499
+original_code: https://github.com/IDEA-Research/GroundingDINO/tree/856dde20aee659246248e20734ef9ba5214f5e44
+published: '2026-10-24'
+status: published
+issue: 46
+results:
+- metric: coco_val2017_ap
+  value: 0.485
+- metric: coco_val2017_ap50
+  value: 0.6442
+- metric: coco_val2017_ap75
+  value: 0.5294
+- metric: coco_val2017_ap_small
+  value: 0.3392
+- metric: coco_val2017_ap_medium
+  value: 0.5178
+- metric: coco_val2017_ap_large
+  value: 0.6336
+reports:
+- id: r1
+  label: 'GroundingDINO-T: zero-shot COCO val2017'
+  session: adc21a3b-7863-4e2b-9920-38d49550f3a0
+  data_hash: 691cffa200af6c0575a879ea5b1ca268e4e10591af7286339b9b4bab146559bf
+  sealed_at: '2026-10-11T19:59:18.491734837Z'
+  signer: K-Veritas server
+  files:
+    report:
+      path: records/2610/2610.00045/v1/reports/r1.pdf
+      sha256: d28d1b81b7fb1c65ef3ffa23cfadf92055baae2ff4934e96c5ed5f507f393295
+      size: 7030866
+    bundle:
+      path: bundles/2610.00045v1/r1.kvbundle.zip
+      sha256: b8d807082cc966a5073b7329cfee5d5591f02e71253d24c004a1a7cff8a9558d
+      size: 2943131
+files:
+  record:
+    path: records/2610/2610.00045/v1/record.pdf
+    sha256: 58a1b71856fe4fcf836e9ae4ac250ac8a24a0994503f69b87fb8198067357754
+    size: 11835

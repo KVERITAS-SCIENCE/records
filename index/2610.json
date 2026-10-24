@@ -602,5 +602,19 @@
     "type": "Benchmark or leaderboard entry",
     "field": "Machine learning",
     "path": "records/2610/2610.00044/v1"
+  },
+  {
+    "id": "kv:2610.00045v1",
+    "title": "Reproduction of IDEA-Research/GroundingDINO: zero-shot COCO detection with GroundingDINO-T",
+    "authors": [
+      "K-Veritas Team"
+    ],
+    "submitted_by": "K-Veritas Team",
+    "published": "2026-10-24",
+    "reports": 1,
+    "purpose": "Independent reproduction",
+    "type": "Artifact evaluation",
+    "field": "Computer vision",
+    "path": "records/2610/2610.00045/v1"
   }
 ]
